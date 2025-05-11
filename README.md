@@ -1,3 +1,10 @@
+# Updates by me after clone
+- i18n support
+  - use i18n-intl
+  - create messages dir. to manage translations
+  - create LanguageSwitcher.tsx to show icon on Header as button
+
+---
 # Startup - Free Next.js Startup Website Template
 
 Startup free, open-source, and premium-quality startup website template for Next.js comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
