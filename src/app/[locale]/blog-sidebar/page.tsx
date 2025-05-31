@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 const BlogSidebarPage = async ({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) => {
-  const { locale } = params;
+  const { locale } = await params;
   return (
     <>
       <section className="overflow-hidden pt-[180px] pb-[120px]">
