@@ -16,9 +16,10 @@ import Video from "@/app/[locale]/components/Video";
 import { Metadata } from "next";
 import { locales } from "@/i18n/routing";
 
-export async function generateStaticParams(): Promise<{ locale: string }[]> {
+export function generateStaticParams(): { locale: string }[] {
   return locales.map((locale) => ({ locale }));
 }
+
 
 export const metadata: Metadata = {
   title: "Free Next.js Template for Startup and SaaS",
