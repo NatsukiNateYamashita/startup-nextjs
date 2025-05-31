@@ -1,7 +1,12 @@
-import { Feature } from "@/app/[locale]/types/feature";
+import { JSX } from "react";
 
-const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph } = feature;
+interface SingleFeatureProps {
+  icon: JSX.Element;
+  title: string;
+  paragraph: string;
+}
+
+export default async function SingleFeature({ icon, title, paragraph }: SingleFeatureProps) {
   return (
     <div className="w-full">
       <div className="wow fadeInUp" data-wow-delay=".15s">
@@ -18,5 +23,3 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
     </div>
   );
 };
-
-export default SingleFeature;

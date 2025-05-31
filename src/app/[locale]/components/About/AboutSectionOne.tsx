@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { getTranslations } from "next-intl/server";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -7,8 +8,9 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = () => {
-  const List = ({ text }) => (
+export default async function AboutSectionOne({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "AboutPage" });
+  const List = ({ text }: { text: string }) => (
     <p className="text-body-color mb-5 flex items-center text-lg font-medium">
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
         {checkIcon}
@@ -24,8 +26,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title={t("sectionOne.title")}
+                paragraph={t("sectionOne.paragraph")}
                 mb="44px"
               />
 
@@ -35,15 +37,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text={t("sectionOne.list1")} />
+                    <List text={t("sectionOne.list2")} />
+                    <List text={t("sectionOne.list3")} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text={t("sectionOne.list4")} />
+                    <List text={t("sectionOne.list5")} />
+                    <List text={t("sectionOne.list6")} />
                   </div>
                 </div>
               </div>
@@ -70,6 +72,4 @@ const AboutSectionOne = () => {
       </div>
     </section>
   );
-};
-
-export default AboutSectionOne;
+}

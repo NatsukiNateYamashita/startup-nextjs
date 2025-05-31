@@ -2,5 +2,168 @@
   "HomePage": {
     "title": "你好，世界！",
     "about": "这个页面"
+  },
+  "HeroPage": {
+    "heading": "免费开源的Next.js模板，适用于创业和SaaS",
+    "description": "Startup 是免费的Next.js初创公司和 SaaS 商业网站的模板，其中包含启动完整商业网站所需的所有基本页面、组件和部分，内置于 Next 13.x 和 Tailwind CSS。",
+    "getProButton": "🔥 获取 Pro",
+    "githubButton": "在 GitHub 上加星标"
+  },
+  "FeaturesPage": {
+    "title": "主要特点",
+    "paragraph": "Lorem Ipsum 的段落有许多变体，但大多数都遭受了某种形式的改变。",
+    "feature1": {
+      "title": "专为初创公司打造",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature2": {
+      "title": "高品质设计",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature3": {
+      "title": "Next.js 13 （最新）",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature4": {
+      "title": "顺风 CSS",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature5": {
+      "title": "完全可定制",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature6": {
+      "title": "免费和开源",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    }
+  },
+  "VideoPage": {
+    "title": "我们随时准备提供帮助",
+    "paragraph": "Lorem Ipsum 的段落有许多变体，但大多数都遭受了某种形式的改变。"
+  },
+  "AboutPage": {
+    "sectionOne": {
+      "title": "专为初创公司、SaaS 和商业网站而设计。",
+      "paragraph": "主要 “主旨” 是专注于教育与会者如何通过交互式小组讨论和圆桌会议最好地保护高度脆弱的业务应用程序。",
+      "list1": "优质",
+      "list2": "顺风 CSS",
+      "list3": "终身使用",
+      "list4": "Next.js",
+      "list5": "丰富的文档",
+      "list6": "开发人员友好"
+    },
+    "sectionTwo": {
+      "item1": {
+        "title": "无 Bug 代码",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "item2": {
+        "title": "顶级支持",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt."
+      },
+      "item3": {
+        "title": "Next.js",
+        "paragraph": "Lorem ipsum dolor sit amet， sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+      }
+    }
+  },
+  "TestimonialsPage": {
+    "title": "我们的用户怎么说",
+    "paragraph": "Lorem Ipsum 的段落有许多变体，但大多数都遭受了某种形式的改变。",
+    "testimonial1": {
+      "name": "穆沙罗夫·奇",
+      "designation": "创始人 @TailGrids",
+      "content": "我们的会员印象深刻。它很直观。它很干净。它不会分心。如果您正在建立一个社区。"
+    },
+    "testimonial2": {
+      "name": "德维德·魏利姆",
+      "designation": "创始人 @UIdeck",
+      "content": "我们的会员印象深刻。它很直观。它很干净。它不会分心。如果您正在建立一个社区。"
+    },
+    "testimonial3": {
+      "name": "Lethium Frenci",
+      "designation": "创始人 @Lineicons",
+      "content": "我们的会员印象深刻。它很直观。它很干净。它不会分心。如果您正在建立一个社区。"
+    }
+  },
+  "PricingPage": {
+    "title": "简单实惠的定价",
+    "paragraph": "Lorem Ipsum 的段落有许多变体，但大多数都遭受了某种形式的改变。",
+    "monthly": "每月",
+    "yearly": "每年",
+    "plans": {
+      "lite": {
+        "name": "建兴",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "basic": {
+        "name": "基本",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "plus": {
+        "name": "加",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      }
+    },
+    "offer": {
+      "allUI": "所有 UI 组件",
+      "unlimited": "与无限项目一起使用",
+      "commercial": "商用",
+      "email": "电子邮件支持",
+      "lifetime": "终身访问",
+      "updates": "终身免费更新"
+    },
+    "startTrial": "开始免费试用"
+  },
+  "BlogPage": {
+    "title": "我们的最新博客",
+    "paragraph": "Lorem Ipsum 的段落有许多变体，但大多数都遭受了某种形式的改变。",
+    "blog1": {
+      "title": "现代网站的最佳 UI 组件",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "塞缪尔·乔希",
+      "designation": "平面设计师",
+      "tag": "创造性",
+      "date": "2025"
+    },
+    "blog2": {
+      "title": "提高设计技能的 9 种简单方法",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "穆沙罗夫·奇",
+      "designation": "内容编写器",
+      "tag": "计算机",
+      "date": "2025"
+    },
+    "blog3": {
+      "title": "快速提高编码速度的提示。",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "Lethium Deo",
+      "designation": "平面设计师",
+      "tag": "设计",
+      "date": "2025"
+    },
+    "by": "由",
+    "date": "日期"
+  },
+  "ContactPage": {
+    "title": "需要帮助？打开工单",
+    "paragraph": "我们的支持团队将尽快通过电子邮件回复您。",
+    "form": {
+      "nameLabel": "您的姓名",
+      "namePlaceholder": "输入您的姓名",
+      "emailLabel": "您的电子邮件",
+      "emailPlaceholder": "输入您的电子邮件",
+      "messageLabel": "您的信息",
+      "messagePlaceholder": "输入您的信息",
+      "submit": "提交工单"
+    },
+    "newsletter": {
+      "title": "订阅以接收未来的更新",
+      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "namePlaceholder": "输入您的姓名",
+      "emailPlaceholder": "输入您的电子邮件",
+      "subscribe": "订阅",
+      "noSpam": "保证没有垃圾邮件，因此请不要发送任何垃圾邮件。"
+    }
   }
 }

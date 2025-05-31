@@ -6,8 +6,8 @@ import { routing } from "@/i18n/routing";
 const locales = routing.locales;
 
 const localeLabels: Record<string, string> = {
-  en: "EN",
   ja: "日",
+  en: "EN",
   "zh-TW": "繁",
   "zh-CN": "简",
 };
@@ -52,7 +52,7 @@ export default function LanguageSwitcher() {
         zIndex: 9999,
       });
     }
-  }, [open, dropdownRef.current]);
+  }, [open]);
 
   const handleSelect = (locale: string) => {
     if (locale !== currentLocale) {

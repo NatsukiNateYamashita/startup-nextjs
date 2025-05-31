@@ -2,5 +2,168 @@
   "HomePage": {
     "title": "你好，世界！",
     "about": "這個頁面"
+  },
+  "HeroPage": {
+    "heading": "免費開源的Next.js範本，適用於創業和SaaS",
+    "description": "Startup 是免費的Next.js初創公司和 SaaS 商業網站的範本，其中包含啟動完整商業網站所需的所有基本頁面、元件和部分，內置於 Next 13.x 和 Tailwind CSS。",
+    "getProButton": "🔥 獲取 Pro",
+    "githubButton": "在 GitHub 上加星標"
+  },
+  "FeaturesPage": {
+    "title": "主要特點",
+    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。",
+    "feature1": {
+      "title": "專為初創公司打造",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature2": {
+      "title": "高品質設計",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature3": {
+      "title": "Next.js 13 （最新）",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature4": {
+      "title": "順風 CSS",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature5": {
+      "title": "完全可定製",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    },
+    "feature6": {
+      "title": "免費和開源",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
+    }
+  },
+  "VideoPage": {
+    "title": "我們隨時準備提供説明",
+    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。"
+  },
+  "AboutPage": {
+    "sectionOne": {
+      "title": "專為初創公司、SaaS 和商業網站而設計。",
+      "paragraph": "主要主旨是專注於教育出席者如何通過互動式小組討論和圓桌會議最好地保護高度脆弱的業務應用程式。",
+      "list1": "優質",
+      "list2": "順風 CSS",
+      "list3": "終身使用",
+      "list4": "Next.js",
+      "list5": "豐富的文件",
+      "list6": "開發人員友好"
+    },
+    "sectionTwo": {
+      "item1": {
+        "title": "無 Bug 代碼",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "item2": {
+        "title": "頂級支援",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt."
+      },
+      "item3": {
+        "title": "Next.js",
+        "paragraph": "Lorem ipsum dolor sit amet， sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+      }
+    }
+  },
+  "TestimonialsPage": {
+    "title": "我們的用戶怎麼說",
+    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。",
+    "testimonial1": {
+      "name": "穆沙羅夫·奇",
+      "designation": "創始人 @TailGrids",
+      "content": "我們的會員印象深刻。它很直觀。它很乾淨。它不會分心。如果您正在建立一個社區。"
+    },
+    "testimonial2": {
+      "name": "德維德·魏利姆",
+      "designation": "創始人 @UIdeck",
+      "content": "我們的會員印象深刻。它很直觀。它很乾淨。它不會分心。如果您正在建立一個社區。"
+    },
+    "testimonial3": {
+      "name": "Lethium Frenci",
+      "designation": "創始人 @Lineicons",
+      "content": "我們的會員印象深刻。它很直觀。它很乾淨。它不會分心。如果您正在建立一個社區。"
+    }
+  },
+  "PricingPage": {
+    "title": "簡單實惠的定價",
+    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。",
+    "monthly": "每月",
+    "yearly": "每年",
+    "plans": {
+      "lite": {
+        "name": "建興",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "basic": {
+        "name": "基本",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "plus": {
+        "name": "加",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      }
+    },
+    "offer": {
+      "allUI": "所有 UI 元件",
+      "unlimited": "與無限專案一起使用",
+      "commercial": "商用",
+      "email": "電子郵件支援",
+      "lifetime": "終身訪問",
+      "updates": "終身免費更新"
+    },
+    "startTrial": "開始免費試用"
+  },
+  "BlogPage": {
+    "title": "我們的最新博客",
+    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。",
+    "blog1": {
+      "title": "現代網站的最佳UI元件",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "撒母耳·喬希",
+      "designation": "平面設計師",
+      "tag": "創造性",
+      "date": "2025"
+    },
+    "blog2": {
+      "title": "提高設計技能的9種簡單方法",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "穆沙羅夫·奇",
+      "designation": "內容編寫器",
+      "tag": "計算機",
+      "date": "2025"
+    },
+    "blog3": {
+      "title": "快速提高編碼速度的提示。",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "Lethium Deo",
+      "designation": "平面設計師",
+      "tag": "設計",
+      "date": "2025"
+    },
+    "by": "由",
+    "date": "日期"
+  },
+  "ContactPage": {
+    "title": "需要説明？打開工單",
+    "paragraph": "我們的支持團隊將儘快通過電子郵件回復您。",
+    "form": {
+      "nameLabel": "您的姓名",
+      "namePlaceholder": "輸入您的姓名",
+      "emailLabel": "您的電子郵件",
+      "emailPlaceholder": "輸入您的電子郵件",
+      "messageLabel": "您的資訊",
+      "messagePlaceholder": "輸入您的資訊",
+      "submit": "提交工單"
+    },
+    "newsletter": {
+      "title": "訂閱以接收未來的更新",
+      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "namePlaceholder": "輸入您的姓名",
+      "emailPlaceholder": "輸入您的電子郵件",
+      "subscribe": "訂閱",
+      "noSpam": "保證沒有垃圾郵件，因此請不要發送任何垃圾郵件。"
+    }
   }
 }

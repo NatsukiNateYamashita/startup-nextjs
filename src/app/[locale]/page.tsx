@@ -22,22 +22,22 @@ export const metadata: Metadata = {
 };
 
 export default async function Home({ params }: { params: { locale: string } }) {
-  const { locale } = await params;
+  const { locale } = params;
   const t = await getTranslations({ locale: locale, namespace: "HomePage" });
-  console.log("page.tsx t('title'):", t("title"));
+  // console.log("page.tsx t('title'):", t("title"));
   return (
     <>
       <ScrollUp />
-      <Hero />
-      <Features />
-      <Video />
+      <Hero locale={locale} />
+      <Features locale={locale} />
+      <Video locale={locale} />
       <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+      <AboutSectionOne locale={locale} />
+      <AboutSectionTwo locale={locale} />
+      <Testimonials locale={locale} />
+      <Pricing locale={locale} />
+      <Blog locale={locale} />
+      <Contact locale={locale} />
     </>
   );
 }

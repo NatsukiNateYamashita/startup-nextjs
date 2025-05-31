@@ -2,5 +2,168 @@
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"
+  },
+  "HeroPage": {
+    "heading": "Free and Open-Source Next.js Template for Startup & SaaS",
+    "description": "Startup is free Next.js template for startups and SaaS business websites comes with all the essential pages, components, and sections you need to launch a complete business website, built-with Next 13.x and Tailwind CSS.",
+    "getProButton": "🔥 Get Pro",
+    "githubButton": "Star on GitHub"
+  },
+  "FeaturesPage": {
+    "title": "Main Features",
+    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "feature1": {
+      "title": "Crafted for Startups",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    },
+    "feature2": {
+      "title": "High-quality Design",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    },
+    "feature3": {
+      "title": "Next.js 13 (Latest)",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    },
+    "feature4": {
+      "title": "Tailwind CSS",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    },
+    "feature5": {
+      "title": "Fully Customizable",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    },
+    "feature6": {
+      "title": "Free and Open-Source",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    }
+  },
+  "VideoPage": {
+    "title": "We are ready to help",
+    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+  },
+  "AboutPage": {
+    "sectionOne": {
+      "title": "Crafted for Startup, SaaS and Business Sites.",
+      "paragraph": "The main 'thrust' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables.",
+      "list1": "Premium quality",
+      "list2": "Tailwind CSS",
+      "list3": "Use for lifetime",
+      "list4": "Next.js",
+      "list5": "Rich documentation",
+      "list6": "Developer friendly"
+    },
+    "sectionTwo": {
+      "item1": {
+        "title": "Bug free code",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "item2": {
+        "title": "Premier support",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      },
+      "item3": {
+        "title": "Next.js",
+        "paragraph": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+      }
+    }
+  },
+  "TestimonialsPage": {
+    "title": "What Our Users Says",
+    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "testimonial1": {
+      "name": "Musharof Chy",
+      "designation": "Founder @TailGrids",
+      "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+    },
+    "testimonial2": {
+      "name": "Devid Weilium",
+      "designation": "Founder @UIdeck",
+      "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+    },
+    "testimonial3": {
+      "name": "Lethium Frenci",
+      "designation": "Founder @Lineicons",
+      "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+    }
+  },
+  "PricingPage": {
+    "title": "Simple and Affordable Pricing",
+    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "basic": {
+        "name": "Basic",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "plus": {
+        "name": "Plus",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      }
+    },
+    "offer": {
+      "allUI": "All UI Components",
+      "unlimited": "Use with Unlimited Projects",
+      "commercial": "Commercial Use",
+      "email": "Email Support",
+      "lifetime": "Lifetime Access",
+      "updates": "Free Lifetime Updates"
+    },
+    "startTrial": "Start Free Trial"
+  },
+  "BlogPage": {
+    "title": "Our Latest Blogs",
+    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "blog1": {
+      "title": "Best UI components for modern websites",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "author": "Samuyl Joshi",
+      "designation": "Graphic Designer",
+      "tag": "creative",
+      "date": "2025"
+    },
+    "blog2": {
+      "title": "9 simple ways to improve your design skills",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "author": "Musharof Chy",
+      "designation": "Content Writer",
+      "tag": "computer",
+      "date": "2025"
+    },
+    "blog3": {
+      "title": "Tips to quickly improve your coding speed.",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "author": "Lethium Deo",
+      "designation": "Graphic Designer",
+      "tag": "design",
+      "date": "2025"
+    },
+    "by": "By",
+    "date": "Date"
+  },
+  "ContactPage": {
+    "title": "Need Help? Open a Ticket",
+    "paragraph": "Our support team will get back to you ASAP via email.",
+    "form": {
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "Enter your email",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Enter your Message",
+      "submit": "Submit Ticket"
+    },
+    "newsletter": {
+      "title": "Subscribe to receive future updates",
+      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "noSpam": "No spam guaranteed, So please don't send any spam mail."
+    }
   }
 }

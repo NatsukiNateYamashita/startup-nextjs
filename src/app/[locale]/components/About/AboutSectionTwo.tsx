@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-const AboutSectionTwo = () => {
+export default async function AboutSectionTwo({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "AboutPage" });
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -28,29 +30,26 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  {t("sectionTwo.item1.title")}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {t("sectionTwo.item1.paragraph")}
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  {t("sectionTwo.item2.title")}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  {t("sectionTwo.item2.paragraph")}
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                  {t("sectionTwo.item3.title")}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                  {t("sectionTwo.item3.paragraph")}
                 </p>
               </div>
             </div>
@@ -59,6 +58,4 @@ const AboutSectionTwo = () => {
       </div>
     </section>
   );
-};
-
-export default AboutSectionTwo;
+}

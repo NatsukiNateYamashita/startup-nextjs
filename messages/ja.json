@@ -2,5 +2,168 @@
   "HomePage": {
     "title": "こんにちは、世界！",
     "about": "このページに移動する"
+  },
+  "HeroPage": {
+    "heading": "スタートアップとSaaSのための無料のオープンソースNext.jsテンプレート",
+    "description": "スタートアップは、スタートアップとSaaSビジネスWebサイトのための無料のNext.jsテンプレートであり、Next13.xとTailwindCSSで構築された完全なビジネスWebサイトを立ち上げるために必要なすべての重要なページ、コンポーネント、およびセクションが付属しています。",
+    "getProButton": "🔥 プロになる",
+    "githubButton": "GitHubでスターを付ける"
+  },
+  "FeaturesPage": {
+    "title": "主な特徴",
+    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。",
+    "feature1": {
+      "title": "スタートアップのためのクラフト",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
+    },
+    "feature2": {
+      "title": "高品質なデザイン",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
+    },
+    "feature3": {
+      "title": "Next.js 13 (最新)",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
+    },
+    "feature4": {
+      "title": "追い風CSS",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
+    },
+    "feature5": {
+      "title": "完全にカスタマイズ可能",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
+    },
+    "feature6": {
+      "title": "無料でオープンソース",
+      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
+    }
+  },
+  "VideoPage": {
+    "title": "私たちは助ける準備ができています",
+    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。"
+  },
+  "AboutPage": {
+    "sectionOne": {
+      "title": "スタートアップ、SaaS、ビジネスサイト向けに作成されています。",
+      "paragraph": "主な「推進力」は、インタラクティブなパネルディスカッションや円卓会議を使用して、非常に脆弱なビジネスアプリケーションを最適に保護する方法について参加者を教育することに焦点を当てることです。",
+      "list1": "プレミアム品質",
+      "list2": "追い風CSS",
+      "list3": "生涯使用",
+      "list4": "Next.js",
+      "list5": "豊富なドキュメント",
+      "list6": "開発者フレンドリー"
+    },
+    "sectionTwo": {
+      "item1": {
+        "title": "バグのないコード",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "item2": {
+        "title": "プレミアサポート",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      },
+      "item3": {
+        "title": "Next.js",
+        "paragraph": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+      }
+    }
+  },
+  "TestimonialsPage": {
+    "title": "ユーザーの声",
+    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。",
+    "testimonial1": {
+      "name": "ムシャロフ・チー",
+      "designation": "ファウンダー@TailGrids",
+      "content": "私たちのメンバーはとても感動しています。直感的です。きれいです。気を散らすものはありません。コミュニティを構築している場合。"
+    },
+    "testimonial2": {
+      "name": "デビッド・ワイリウム",
+      "designation": "ファウンダー@UIdeck",
+      "content": "私たちのメンバーはとても感動しています。直感的です。きれいです。気を散らすものはありません。コミュニティを構築している場合。"
+    },
+    "testimonial3": {
+      "name": "レシウム・フレンチ",
+      "designation": "ファウンダー@Lineicons",
+      "content": "私たちのメンバーはとても感動しています。直感的です。きれいです。気を散らすものはありません。コミュニティを構築している場合。"
+    }
+  },
+  "PricingPage": {
+    "title": "シンプルでお手頃価格",
+    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。",
+    "monthly": "マンスリー",
+    "yearly": "毎年",
+    "plans": {
+      "lite": {
+        "name": "ライト",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "basic": {
+        "name": "基本的な",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      },
+      "plus": {
+        "name": "プラス",
+        "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+      }
+    },
+    "offer": {
+      "allUI": "すべてのUIコンポーネント",
+      "unlimited": "無制限のプロジェクトで使用",
+      "commercial": "商用利用",
+      "email": "メールサポート",
+      "lifetime": "ライフタイムアクセス",
+      "updates": "無料のライフタイムアップデート"
+    },
+    "startTrial": "無料トライアルを開始"
+  },
+  "BlogPage": {
+    "title": "最新のブログ",
+    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。",
+    "blog1": {
+      "title": "最新のWebサイトに最適なUIコンポーネント",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
+      "author": "サムイル・ジョシ",
+      "designation": "グラフィックデザイナー",
+      "tag": "創造的な",
+      "date": "2025"
+    },
+    "blog2": {
+      "title": "デザインスキルを向上させる9つの簡単な方法",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
+      "author": "ムシャロフ・チー",
+      "designation": "コンテンツライター",
+      "tag": "コンピュータ",
+      "date": "2025"
+    },
+    "blog3": {
+      "title": "コーディング速度をすばやく向上させるためのヒント。",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
+      "author": "レシウム・デオ",
+      "designation": "グラフィックデザイナー",
+      "tag": "設計",
+      "date": "2025"
+    },
+    "by": "によって",
+    "date": "日付"
+  },
+  "ContactPage": {
+    "title": "ヘルプが必要ですか?チケットを開く",
+    "paragraph": "当社のサポートチームができるだけ早く電子メールでご連絡いたします。",
+    "form": {
+      "nameLabel": "お名前 *",
+      "namePlaceholder": "名前を入力してください",
+      "emailLabel": "あなたのメール",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "messageLabel": "あなたのメッセージ",
+      "messagePlaceholder": "メッセージを入力してください",
+      "submit": "チケットを送信"
+    },
+    "newsletter": {
+      "title": "今後のアップデートを受け取るために購読する",
+      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "namePlaceholder": "名前を入力してください",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "subscribe": "購読する",
+      "noSpam": "スパムは一切送らないことを保証します。だから、あなたもスパムメールを送らないでください。"
+    }
   }
 }
