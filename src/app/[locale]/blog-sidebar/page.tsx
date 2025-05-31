@@ -12,7 +12,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const BlogSidebarPage = ({ locale }: { locale: string }) => {
+const BlogSidebarPage = async ({
+  params,
+}: {
+  params: { locale: string };
+}) => {
+  const { locale } = params;
   return (
     <>
       <section className="overflow-hidden pt-[180px] pb-[120px]">
