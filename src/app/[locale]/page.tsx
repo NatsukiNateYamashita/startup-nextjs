@@ -25,8 +25,13 @@ export const metadata: Metadata = {
   description: "This is Home for Startup Nextjs Template",
   // other metadata
 };
+interface PageProps {
+  params: {
+    locale: string;
+  };
+}
 
-export default async function Home({ params }: { params: { locale: string } }) {
+export default async function Home({ params }: PageProps) {
   const { locale } = params;
   const t = await getTranslations({ locale: locale, namespace: "HomePage" });
   // console.log("page.tsx t('title'):", t("title"));
