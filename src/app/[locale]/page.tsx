@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import type { PageProps } from "next";
 
 import AboutSectionOne from "@/app/[locale]/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/app/[locale]/components/About/AboutSectionTwo";
