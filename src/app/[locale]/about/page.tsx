@@ -1,7 +1,6 @@
 import AboutSectionOne from "@/app/[locale]/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/app/[locale]/components/About/AboutSectionTwo";
 import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +9,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const AboutPage = () => {
+const AboutPage = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
   return (
     <>
       <Breadcrumb
