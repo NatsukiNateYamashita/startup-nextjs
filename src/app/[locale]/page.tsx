@@ -16,7 +16,7 @@ import Video from "@/app/[locale]/components/Video";
 import { Metadata } from "next";
 import { locales } from "@/i18n/routing";
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ locale: string }[]> {
   return locales.map((locale) => ({ locale }));
 }
 
