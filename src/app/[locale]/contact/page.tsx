@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ContactPage = () => {
+const ContactPage = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
   return (
     <>
       <Breadcrumb
@@ -17,7 +22,7 @@ const ContactPage = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
 
-      <Contact />
+      <Contact locale={locale} />
     </>
   );
 };
