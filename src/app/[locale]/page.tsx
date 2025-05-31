@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import type { PageProps } from "next";
 
 import AboutSectionOne from "@/app/[locale]/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/app/[locale]/components/About/AboutSectionTwo";
@@ -26,8 +27,8 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-export default async function Home({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale: locale, namespace: "HomePage" });
   // console.log("page.tsx t('title'):", t("title"));
   return (
