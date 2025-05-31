@@ -14,6 +14,11 @@ import Pricing from "@/app/[locale]/components/Pricing";
 import Testimonials from "@/app/[locale]/components/Testimonials";
 import Video from "@/app/[locale]/components/Video";
 import { Metadata } from "next";
+import { locales } from "@/i18n/routing";
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   title: "Free Next.js Template for Startup and SaaS",
