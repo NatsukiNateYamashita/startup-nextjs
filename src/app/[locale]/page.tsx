@@ -14,12 +14,11 @@ import Pricing from "@/app/[locale]/components/Pricing";
 import Testimonials from "@/app/[locale]/components/Testimonials";
 import Video from "@/app/[locale]/components/Video";
 import { Metadata } from "next";
-import { locales } from "@/i18n/routing";
+// import { locales } from "@/i18n/routing";
 
-export function generateStaticParams(): { locale: string }[] {
-  return locales.map((locale) => ({ locale }));
-}
-
+// export async function generateStaticParams() {
+//   return locales.map((locale) => ({ locale }));
+// }
 
 export const metadata: Metadata = {
   title: "Free Next.js Template for Startup and SaaS",
@@ -27,13 +26,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-type Props = {
-  params: {
-    locale: string;
-  };
-};
-
-export default async function Home({ params }: Props) {
+export default async function Home({ params }: { params: { locale: string } }) {
   const { locale } = params;
   const t = await getTranslations({ locale: locale, namespace: "HomePage" });
   // console.log("page.tsx t('title'):", t("title"));
