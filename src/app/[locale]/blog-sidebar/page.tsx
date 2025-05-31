@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const BlogSidebarPage = () => {
+const BlogSidebarPage = ({ locale }: { locale: string }) => {
   return (
     <>
       <section className="overflow-hidden pt-[180px] pb-[120px]">
@@ -459,7 +459,7 @@ const BlogSidebarPage = () => {
                 </div>
               </div>
 
-              <NewsLatterBox />
+              <NewsLatterBox locale={locale} />
             </div>
           </div>
         </div>
