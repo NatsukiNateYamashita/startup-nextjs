@@ -43,11 +43,11 @@
   },
   "AboutPage": {
     "pageName": "About Us",
-    "description": "This is the description for the About page",
-    "title1": "Introduction",
-    "paragraph1": "Learn more about our story and mission.",
-    "title2": "Our Vision",
-    "paragraph2": "We aim to reshape the digital landscape through innovative solutions.",
+    "description": "これはAboutページのディスクリプションです",
+    "title1": "導入",
+    "paragraph1": "私たちのストーリーとミッションについてもっと学びましょう。",
+    "title2": "私たちのビジョン",
+    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。",
     "sectionOne": {
       "title": "Crafted for Startup, SaaS and Business Sites.",
       "paragraph": "The main 'thrust' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables.",
@@ -125,10 +125,10 @@
     "title": "Our Latest Blogs",
     "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
     "pageName": "Blog Posts",
-    "description": "Check out our latest blog posts.",
+    "description": "最新のブログ投稿をチェックしてください。",
     "pagination": {
-      "prev": "Previous",
-      "next": "Next"
+      "prev": "前へ",
+      "next": "次へ"
     },
     "blog1": {
       "title": "Best UI components for modern websites",
@@ -163,7 +163,7 @@
     "date": "12 Jan 2024",
     "comments": "50",
     "views": "35",
-    "readMore": "Read More",
+    "readMore": "続きを見る",
     "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.",
     "mainContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet.",
     "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.",

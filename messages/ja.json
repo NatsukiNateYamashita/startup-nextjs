@@ -68,11 +68,11 @@
       }
     },
     "pageName": "我々について",
-    "description": "これは、[バージョン情報] ページの説明です",
-    "title1": "紹介",
-    "paragraph1": "私たちのストーリーとミッションについてもっと知る。",
+    "description": "これはAboutページのディスクリプションです",
+    "title1": "導入",
+    "paragraph1": "私たちのストーリーとミッションについてもっと学びましょう。",
     "title2": "私たちのビジョン",
-    "paragraph2": "私たちは、革新的なソリューションを通じてデジタルランドスケープを再構築することを目指しています。"
+    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。"
   },
   "TestimonialsPage": {
     "title": "ユーザーの声",
@@ -187,7 +187,7 @@
     "date": "2024年1月12日",
     "comments": "50",
     "views": "35",
-    "readMore": "続きを読む",
+    "readMore": "続きを見る",
     "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet.",
     "popularTags": "人気のタグ :",
     "sharePost": "シェア この記事 :",

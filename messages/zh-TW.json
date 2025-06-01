@@ -68,11 +68,11 @@
       }
     },
     "pageName": "關於我們",
-    "description": "這是 About （關於） 頁面的說明",
-    "title1": "介紹",
-    "paragraph1": "詳細了解我們的故事和使命。",
-    "title2": "我們的願景",
-    "paragraph2": "我們的目標是通過創新的解決方案重塑數位格局。"
+    "description": "これはAboutページのディスクリプションです",
+    "title1": "導入",
+    "paragraph1": "私たちのストーリーとミッショリーミッショミッショシーリーとちのストトーとミッシーリについてもっと学びましょう。",
+    "title2": "私たちのビジョン",
+    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。"
   },
   "TestimonialsPage": {
     "title": "我們的用戶怎麼說",
@@ -187,7 +187,7 @@
     "date": "12 1月 2024",
     "comments": "50",
     "views": "35",
-    "readMore": "閱讀更多",
+    "readMore": "続きを見る",
     "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet.",
     "popularTags": "熱門標籤 ：",
     "sharePost": "分享這個帖子 ：",

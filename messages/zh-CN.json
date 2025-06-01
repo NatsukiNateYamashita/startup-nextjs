@@ -68,11 +68,11 @@
       }
     },
     "pageName": "关于我们",
-    "description": "这是 About （关于） 页面的说明",
-    "title1": "介绍",
-    "paragraph1": "详细了解我们的故事和使命。",
-    "title2": "我们的愿景",
-    "paragraph2": "我们的目标是通过创新的解决方案重塑数字格局。"
+    "description": "これはAboutページのディスクリプションです",
+    "title1": "導入",
+    "paragraph1": "私たちのストーリーとミッションについてもっと学びましょう。",
+    "title2": "私たちのビジョン",
+    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。"
   },
   "TestimonialsPage": {
     "title": "我们的用户怎么说",
@@ -187,6 +187,7 @@
     "date": "12 1月 2024",
     "comments": "50",
     "views": "35",
+    "readMore": "続きを見る",
     "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet.",
     "popularTags": "热门标签 ：",
     "sharePost": "分享这个帖子 ：",
@@ -202,8 +203,7 @@
     "listItem1": "Consectetur adipiscing elit in voluptate velit.",
     "listItem2": "Mattis vulputate cupidatat.",
     "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin",
-    "readMore": "阅读更多"
+    "listItem4": "Ligula ullamcorper malesuada proin"
   },
   "BlogSidebarPage": {
     "title": "10个令人惊叹的网站免费下载库存照片和数字资产",
