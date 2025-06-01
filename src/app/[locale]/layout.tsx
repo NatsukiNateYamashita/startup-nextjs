@@ -31,7 +31,7 @@ export default async function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`} suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale}>
           <ClientLayout>
             {children}

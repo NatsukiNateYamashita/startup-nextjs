@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Metadata } from "next";
+import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Error Page | Free Next.js Template for Startup and SaaS",
@@ -8,7 +9,9 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ErrorPage = () => {
+const ErrorPage = async () => {
+  const messages = await getMessages();
+
   return (
     <>
       <section className="relative z-10 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
@@ -142,17 +145,16 @@ const ErrorPage = () => {
                   </svg>
                 </div>
                 <h3 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
-                  Sorry, the page can’t be found
+                  {messages.ErrorPage.heading}
                 </h3>
                 <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The page you were looking for appears to have been moved,
-                  deleted or does not exist.
+                  {messages.ErrorPage.paragraph}
                 </p>
                 <Link
                   href="/"
                   className="px-8 py-3 text-base font-bold text-white duration-300 rounded-md bg-primary shadow-signUp hover:bg-white hover:text-primary md:px-9 lg:px-8 xl:px-9"
                 >
-                  Back to Homepage
+                  {messages.ErrorPage.backToHomeButton}
                 </Link>
               </div>
             </div>

@@ -1,7 +1,8 @@
 {
   "HomePage": {
     "title": "こんにちは、世界！",
-    "about": "このページに移動する"
+    "about": "このページに移動する",
+    "description": "これはスタートアップのホームです Nextjsテンプレート"
   },
   "HeroPage": {
     "heading": "スタートアップとSaaSのための無料のオープンソースNext.jsテンプレート",
@@ -65,7 +66,13 @@
         "title": "Next.js",
         "paragraph": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
       }
-    }
+    },
+    "pageName": "我々について",
+    "description": "これはAboutページのディスクリプションです",
+    "title1": "導入",
+    "paragraph1": "私たちのストーリーとミッションについてもっと学びましょう。",
+    "title2": "私たちのビジョン",
+    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。"
   },
   "TestimonialsPage": {
     "title": "ユーザーの声",
@@ -143,7 +150,13 @@
       "date": "2025"
     },
     "by": "によって",
-    "date": "日付"
+    "date": "日付",
+    "pageName": "ブログ記事",
+    "description": "最新のブログ投稿をチェックしてください。",
+    "pagination": {
+      "prev": "前へ",
+      "next": "次へ"
+    }
   },
   "ContactPage": {
     "title": "ヘルプが必要ですか?チケットを開く",
@@ -164,6 +177,114 @@
       "emailPlaceholder": "メールアドレスを入力してください",
       "subscribe": "購読する",
       "noSpam": "スパムは一切送らないことを保証します。だから、あなたもスパムメールを送らないでください。"
-    }
+    },
+    "pageName": "お問い合わせページ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero."
+  },
+  "BlogDetailsPage": {
+    "title": "ストックフォトとデジタルアセットを無料でダウンロードできる10の素晴らしいサイト",
+    "author": "ムシャロフ・チー",
+    "date": "2024年1月12日",
+    "comments": "50",
+    "views": "35",
+    "readMore": "続きを見る",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet.",
+    "popularTags": "人気のタグ :",
+    "sharePost": "シェア この記事 :",
+    "designTag": "設計",
+    "developmentTag": "発達",
+    "infoTag": "情報",
+    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
+    "mainContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque nec nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
+    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
+    "mainContent4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputatat.",
+    "sectionTitle": "Ui/Ux デザイナーのためのデジタルマーケットプレイス。",
+    "sectionContent": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputate cupidatat.",
+    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
+    "listItem2": "Mattis vulputate cupidatat.",
+    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
+    "listItem4": "Ligula ullamcorper malesuada proin"
+  },
+  "BlogSidebarPage": {
+    "title": "ストックフォトとデジタルアセットを無料でダウンロードできる10の素晴らしいサイト",
+    "author": "ムシャロフ・チー",
+    "date": "2024年1月12日",
+    "comments": "50",
+    "views": "35",
+    "searchPlaceholder": "ここで検索...",
+    "relatedPostsTitle": "関連記事",
+    "relatedPost1Title": "あなたのオンライン販売を伸ばすための最良の方法。",
+    "relatedPost1Date": "2025年2月12日",
+    "relatedPost2Title": "あなたを助ける50の最高のウェブデザインのヒントとコツ。",
+    "relatedPost2Date": "2024年2月15日",
+    "relatedPost3Title": "レビューされた8つの最高のランディングページビルダー",
+    "relatedPost3Date": "2024年6月5日",
+    "popularCategoryTitle": "人気カテゴリー",
+    "popularTagsTitle": "人気のタグ",
+    "sharePost": "シェア この記事 :",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet.",
+    "popularTags": "人気のタグ :",
+    "designTag": "設計",
+    "developmentTag": "発達",
+    "infoTag": "情報",
+    "themesTag": "テーマ",
+    "uiKitTag": "UIキット",
+    "tailwindTag": "追い風",
+    "startupTag": "スタートアップ",
+    "businessTag": "事",
+    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
+    "mainContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque nec nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
+    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
+    "mainContent4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulutat.",
+    "sectionTitle": "Ui/Ux デザイナーのためのデジタルマーケットプレイス。",
+    "sectionContent": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulutat.",
+    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
+    "listItem2": "マティス・ヴルト。",
+    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
+    "listItem4": "Ligula ullamcorper malesuada proin"
+  },
+  "SigninPage": {
+    "signInTitle": "アカウントにサインインします",
+    "signInDescription": "アカウントにログインして、チェックアウトを迅速化します。",
+    "signInWithGoogle": "Google でログイン",
+    "signInWithGithub": "Github でサインイン",
+    "orSignInWithEmail": "または、メールアドレスでサインインします",
+    "yourEmailLabel": "あなたのメール",
+    "enterYourEmailPlaceholder": "メールアドレスを入力してください",
+    "yourPasswordLabel": "パスワード",
+    "enterYourPasswordPlaceholder": "パスワードを入力します",
+    "keepMeSignedIn": "サインインしたままにする",
+    "forgotPassword": "パスワードをお忘れですか?",
+    "signInButton": "サインイン",
+    "noAccount": "アカウントをお持ちではありませんか?",
+    "signUpLink": "サインアップ"
+  },
+  "SignupPage": {
+    "signUpTitle": "アカウントを作成",
+    "signUpDescription": "それは完全に無料で超簡単です",
+    "signUpWithGoogle": "Google でログイン",
+    "signUpWithGithub": "Github でサインイン",
+    "orRegisterWithEmail": "または、メールで登録してください",
+    "fullNameLabel": "フルネーム",
+    "enterFullNamePlaceholder": "フルネームを入力してください",
+    "workEmailLabel": "仕事用メール",
+    "enterWorkEmailPlaceholder": "メールアドレスを入力してください",
+    "yourPasswordLabel": "パスワード",
+    "enterYourPasswordPlaceholder": "パスワードを入力します",
+    "agreeToTerms": "アカウントを作成することにより、お客様は以下に同意したことになります。",
+    "termsAndConditionsLink": "規約と条件",
+    "andOur": "、そして私たちの",
+    "privacyPolicyLink": "プライバシーポリシー",
+    "signUpButton": "サインアップ",
+    "alreadyUsing": "すでにスタートアップを使用していますか?",
+    "signInLink": "サインイン"
+  },
+  "Breadcrumb": {
+    "home": "家"
+  },
+  "ErrorPage": {
+    "heading": "申し訳ありませんが、ページが見つかりません",
+    "paragraph": "探していたページが移動、削除された、または存在しないようです。",
+    "backToHomeButton": "ホームページに戻る"
   }
 }
