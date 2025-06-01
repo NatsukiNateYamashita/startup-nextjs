@@ -1,50 +1,47 @@
 import { Blog } from "@/app/[locale]/types/blog";
-import { getTranslations } from "next-intl/server";
 
-const getBlogData = async (locale: string): Promise<Blog[]> => {
-  const t = await getTranslations({ locale, namespace: "BlogPage" });
-
-  return [
-    {
-      id: 1,
-      title: t("blog1.title"),
-      paragraph: t("blog1.paragraph"),
-      image: "/images/blog/blog-01.jpg",
-      author: {
-        name: t("blog1.author"),
-        image: "/images/blog/author-01.png",
-        designation: t("blog1.designation"),
-      },
-      tags: [t("blog1.tag")],
-      publishDate: t("blog1.date"),
+const blogData: Blog[] = [
+  {
+    id: 1,
+    title: "Best UI components for modern websites",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+    image: "/images/blog/blog-01.jpg",
+    author: {
+      name: "Samuyl Joshi",
+      image: "/images/blog/author-01.png",
+      designation: "Graphic Designer",
     },
-    {
-      id: 2,
-      title: t("blog2.title"),
-      paragraph: t("blog2.paragraph"),
-      image: "/images/blog/blog-02.jpg",
-      author: {
-        name: t("blog2.author"),
-        image: "/images/blog/author-02.png",
-        designation: t("blog2.designation"),
-      },
-      tags: [t("blog2.tag")],
-      publishDate: t("blog2.date"),
+    tags: ["creative"],
+    publishDate: "2025",
+  },
+  {
+    id: 2,
+    title: "9 simple ways to improve your design skills",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+    image: "/images/blog/blog-02.jpg",
+    author: {
+      name: "Musharof Chy",
+      image: "/images/blog/author-02.png",
+      designation: "Content Writer",
     },
-    {
-      id: 3,
-      title: t("blog3.title"),
-      paragraph: t("blog3.paragraph"),
-      image: "/images/blog/blog-03.jpg",
-      author: {
-        name: t("blog3.author"),
-        image: "/images/blog/author-03.png",
-        designation: t("blog3.designation"),
-      },
-      tags: [t("blog3.tag")],
-      publishDate: t("blog3.date"),
+    tags: ["computer"],
+    publishDate: "2025",
+  },
+  {
+    id: 3,
+    title: "Tips to quickly improve your coding speed.",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+    image: "/images/blog/blog-03.jpg",
+    author: {
+      name: "Lethium Deo",
+      image: "/images/blog/author-03.png",
+      designation: "Graphic Designer",
     },
-  ];
-};
-
-export default getBlogData;
+    tags: ["design"],
+    publishDate: "2025",
+  },
+];
+export default blogData;

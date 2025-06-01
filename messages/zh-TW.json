@@ -1,8 +1,7 @@
 {
   "HomePage": {
     "title": "你好，世界！",
-    "about": "這個頁面",
-    "description": "這是創業 Nextjs 範本的主頁"
+    "about": "這個頁面"
   },
   "HeroPage": {
     "heading": "免費開源的Next.js範本，適用於創業和SaaS",
@@ -66,13 +65,7 @@
         "title": "Next.js",
         "paragraph": "Lorem ipsum dolor sit amet， sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
       }
-    },
-    "pageName": "關於我們",
-    "description": "これはAboutページのディスクリプションです",
-    "title1": "導入",
-    "paragraph1": "私たちのストーリーとミッショリーミッショミッショシーリーとちのストトーとミッシーリについてもっと学びましょう。",
-    "title2": "私たちのビジョン",
-    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。"
+    }
   },
   "TestimonialsPage": {
     "title": "我們的用戶怎麼說",
@@ -150,13 +143,7 @@
       "date": "2025"
     },
     "by": "由",
-    "date": "日期",
-    "pageName": "博客文章",
-    "description": "最新のブログ投稿をチェックしてください。",
-    "pagination": {
-      "prev": "前へ",
-      "next": "次へ"
-    }
+    "date": "日期"
   },
   "ContactPage": {
     "title": "需要説明？打開工單",
@@ -177,114 +164,6 @@
       "emailPlaceholder": "輸入您的電子郵件",
       "subscribe": "訂閱",
       "noSpam": "保證沒有垃圾郵件，因此請不要發送任何垃圾郵件。"
-    },
-    "pageName": "聯繫頁面",
-    "description": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero."
-  },
-  "BlogDetailsPage": {
-    "title": "10個令人驚歎的網站免費下載庫存照片和數字資產",
-    "author": "穆沙羅夫·奇",
-    "date": "12 1月 2024",
-    "comments": "50",
-    "views": "35",
-    "readMore": "続きを見る",
-    "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet.",
-    "popularTags": "熱門標籤 ：",
-    "sharePost": "分享這個帖子 ：",
-    "designTag": "設計",
-    "developmentTag": "發展",
-    "infoTag": "資訊",
-    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
-    "mainContent2": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque neć nğ nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
-    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
-    "mainContent4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputatat.",
-    "sectionTitle": "Ui/Ux 設計師的數字市場。",
-    "sectionContent": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputate cupidatat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "Mattis vulputate cupidatat.",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin"
-  },
-  "BlogSidebarPage": {
-    "title": "10個令人驚歎的網站免費下載庫存照片和數字資產",
-    "author": "穆沙羅夫·奇",
-    "date": "12 1月 2024",
-    "comments": "50",
-    "views": "35",
-    "searchPlaceholder": "在這裡搜尋...",
-    "relatedPostsTitle": "相關文章",
-    "relatedPost1Title": "提高在線銷售的最佳方式。",
-    "relatedPost1Date": "12 2月 2025",
-    "relatedPost2Title": "50個最好的網頁設計技巧和竅門，將説明你。",
-    "relatedPost2Date": "15 2 月， 2024",
-    "relatedPost3Title": "8 個最佳著陸頁構建器，已審查",
-    "relatedPost3Date": "05 6 月， 2024",
-    "popularCategoryTitle": "熱門類別",
-    "popularTagsTitle": "熱門標籤",
-    "sharePost": "分享這個帖子 ：",
-    "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet.",
-    "popularTags": "熱門標籤 ：",
-    "designTag": "設計",
-    "developmentTag": "發展",
-    "infoTag": "資訊",
-    "themesTag": "主題",
-    "uiKitTag": "UI 套件",
-    "tailwindTag": "順風",
-    "startupTag": "啟動",
-    "businessTag": "商",
-    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
-    "mainContent2": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque neć nğ nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
-    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
-    "mainContent4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulutat.",
-    "sectionTitle": "Ui/Ux 設計師的數字市場。",
-    "sectionContent": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulutat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "馬蒂斯·武魯特。",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin"
-  },
-  "SigninPage": {
-    "signInTitle": "登錄您的帳戶",
-    "signInDescription": "登錄您的帳戶以更快地結帳。",
-    "signInWithGoogle": "使用Google登錄",
-    "signInWithGithub": "使用 Github 登錄",
-    "orSignInWithEmail": "或者，使用您的電子郵件登錄",
-    "yourEmailLabel": "您的電子郵件",
-    "enterYourEmailPlaceholder": "輸入您的電子郵件",
-    "yourPasswordLabel": "您的密碼",
-    "enterYourPasswordPlaceholder": "輸入您的密碼",
-    "keepMeSignedIn": "使我保持登錄狀態",
-    "forgotPassword": "忘記密碼？",
-    "signInButton": "登錄",
-    "noAccount": "您沒有帳戶嗎？",
-    "signUpLink": "登記"
-  },
-  "SignupPage": {
-    "signUpTitle": "創建您的帳戶",
-    "signUpDescription": "這是完全免費且超級簡單的",
-    "signUpWithGoogle": "使用Google登錄",
-    "signUpWithGithub": "使用 Github 登錄",
-    "orRegisterWithEmail": "或者，使用您的電子郵件註冊",
-    "fullNameLabel": "全名",
-    "enterFullNamePlaceholder": "輸入您的全名",
-    "workEmailLabel": "工作電子郵件",
-    "enterWorkEmailPlaceholder": "輸入您的電子郵件",
-    "yourPasswordLabel": "您的密碼",
-    "enterYourPasswordPlaceholder": "輸入您的密碼",
-    "agreeToTerms": "創建帳戶即表示您同意",
-    "termsAndConditionsLink": "條款與細則",
-    "andOur": "和我們的",
-    "privacyPolicyLink": "隱私策略",
-    "signUpButton": "登記",
-    "alreadyUsing": "已在使用 Startup？",
-    "signInLink": "登錄"
-  },
-  "Breadcrumb": {
-    "home": "家"
-  },
-  "ErrorPage": {
-    "heading": "抱歉，找不到該頁面",
-    "paragraph": "您要尋找的頁面似乎已被移動、刪除或不存在。",
-    "backToHomeButton": "返回首頁"
+    }
   }
 }

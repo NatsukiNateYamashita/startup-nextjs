@@ -1,7 +1,7 @@
 {
   "HomePage": {
-    "title": "Free Next.js Template for Startup and SaaS",
-    "description": "This is Home for Startup Nextjs Template"
+    "title": "Hello world!",
+    "about": "Go to the about page"
   },
   "HeroPage": {
     "heading": "Free and Open-Source Next.js Template for Startup & SaaS",
@@ -42,12 +42,6 @@
     "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
   },
   "AboutPage": {
-    "pageName": "About Us",
-    "description": "これはAboutページのディスクリプションです",
-    "title1": "導入",
-    "paragraph1": "私たちのストーリーとミッションについてもっと学びましょう。",
-    "title2": "私たちのビジョン",
-    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。",
     "sectionOne": {
       "title": "Crafted for Startup, SaaS and Business Sites.",
       "paragraph": "The main 'thrust' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables.",
@@ -124,12 +118,6 @@
   "BlogPage": {
     "title": "Our Latest Blogs",
     "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
-    "pageName": "Blog Posts",
-    "description": "最新のブログ投稿をチェックしてください。",
-    "pagination": {
-      "prev": "前へ",
-      "next": "次へ"
-    },
     "blog1": {
       "title": "Best UI components for modern websites",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
@@ -157,104 +145,6 @@
     "by": "By",
     "date": "Date"
   },
-  "BlogDetailsPage": {
-    "title": "10 amazing sites to download stock photos & digital assets for free",
-    "author": "Musharof Chy",
-    "date": "12 Jan 2024",
-    "comments": "50",
-    "views": "35",
-    "readMore": "続きを見る",
-    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.",
-    "mainContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet.",
-    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.",
-    "mainContent4": "consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputatat.",
-    "sectionTitle": "Digital marketplace for Ui/Ux designers.",
-    "sectionContent": "consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate cupidatat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "Mattis vulputate cupidatat.",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin",
-    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua. Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet.",
-    "popularTags": "Popular Tags :",
-    "sharePost": "Share this post :",
-    "designTag": "Design",
-    "developmentTag": "Development",
-    "infoTag": "Info"
-  },
-  "BlogSidebarPage": {
-    "title": "10 amazing sites to download stock photos & digital assets for free",
-    "author": "Musharof Chy",
-    "date": "12 Jan 2024",
-    "comments": "50",
-    "views": "35",
-    "searchPlaceholder": "Search here...",
-    "relatedPostsTitle": "Related Posts",
-    "relatedPost1Title": "Best way to boost your online sales.",
-    "relatedPost1Date": "12 Feb 2025",
-    "relatedPost2Title": "50 Best web design tips & tricks that will help you.",
-    "relatedPost2Date": "15 Feb, 2024",
-    "relatedPost3Title": "The 8 best landing page builders, reviewed",
-    "relatedPost3Date": "05 Jun, 2024",
-    "popularCategoryTitle": "Popular Category",
-    "popularTagsTitle": "Popular Tags",
-    "sharePost": "Share this post :",
-    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.",
-    "mainContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet.",
-    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.",
-    "mainContent4": "consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulutat.",
-    "sectionTitle": "Digital marketplace for Ui/Ux designers.",
-    "sectionContent": "consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulutat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "Mattis vulut.",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin",
-    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua. Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet.",
-    "popularTags": "Popular Tags :",
-    "designTag": "Design",
-    "developmentTag": "Development",
-    "infoTag": "Info",
-    "themesTag": "Themes",
-    "uiKitTag": "UI Kit",
-    "tailwindTag": "Tailwind",
-    "startupTag": "Startup",
-    "businessTag": "Business"
-  },
-  "SigninPage": {
-    "signInTitle": "Sign in to your account",
-    "signInDescription": "Login to your account for a faster checkout.",
-    "signInWithGoogle": "Sign in with Google",
-    "signInWithGithub": "Sign in with Github",
-    "orSignInWithEmail": "Or, sign in with your email",
-    "yourEmailLabel": "Your Email",
-    "enterYourEmailPlaceholder": "Enter your Email",
-    "yourPasswordLabel": "Your Password",
-    "enterYourPasswordPlaceholder": "Enter your Password",
-    "keepMeSignedIn": "Keep me signed in",
-    "forgotPassword": "Forgot Password?",
-    "signInButton": "Sign in",
-    "noAccount": "Don't you have an account?",
-    "signUpLink": "Sign up"
-  },
-  "SignupPage": {
-    "signUpTitle": "Create your account",
-    "signUpDescription": "It's totally free and super easy",
-    "signUpWithGoogle": "Sign in with Google",
-    "signUpWithGithub": "Sign in with Github",
-    "orRegisterWithEmail": "Or, register with your email",
-    "fullNameLabel": "Full Name",
-    "enterFullNamePlaceholder": "Enter your full name",
-    "workEmailLabel": "Work Email",
-    "enterWorkEmailPlaceholder": "Enter your Email",
-    "yourPasswordLabel": "Your Password",
-    "enterYourPasswordPlaceholder": "Enter your Password",
-    "agreeToTerms": "By creating account means you agree to the",
-    "termsAndConditionsLink": "Terms and Conditions",
-    "andOur": ", and our",
-    "privacyPolicyLink": "Privacy Policy",
-    "signUpButton": "Sign up",
-    "alreadyUsing": "Already using Startup?",
-    "signInLink": "Sign in"
-  },
   "ContactPage": {
     "title": "Need Help? Open a Ticket",
     "paragraph": "Our support team will get back to you ASAP via email.",
@@ -274,16 +164,6 @@
       "emailPlaceholder": "Enter your email",
       "subscribe": "Subscribe",
       "noSpam": "No spam guaranteed, So please don't send any spam mail."
-    },
-    "pageName": "Contact Page",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-  },
-  "Breadcrumb": {
-    "home": "Home"
-  },
-  "ErrorPage": {
-    "heading": "Sorry, the page can't be found",
-    "paragraph": "The page you were looking for appears to have been moved, deleted or does not exist.",
-    "backToHomeButton": "Back to Homepage"
+    }
   }
 }

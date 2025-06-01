@@ -1,8 +1,7 @@
 {
   "HomePage": {
     "title": "你好，世界！",
-    "about": "这个页面",
-    "description": "这是创业 Nextjs 模板的主页"
+    "about": "这个页面"
   },
   "HeroPage": {
     "heading": "免费开源的Next.js模板，适用于创业和SaaS",
@@ -66,13 +65,7 @@
         "title": "Next.js",
         "paragraph": "Lorem ipsum dolor sit amet， sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
       }
-    },
-    "pageName": "关于我们",
-    "description": "これはAboutページのディスクリプションです",
-    "title1": "導入",
-    "paragraph1": "私たちのストーリーとミッションについてもっと学びましょう。",
-    "title2": "私たちのビジョン",
-    "paragraph2": "私たちは革新的なソリューションを通じてデジタル環境を再構築することを目指しています。"
+    }
   },
   "TestimonialsPage": {
     "title": "我们的用户怎么说",
@@ -150,13 +143,7 @@
       "date": "2025"
     },
     "by": "由",
-    "date": "日期",
-    "pageName": "博客文章",
-    "description": "最新のブログ投稿をチェックしてください。",
-    "pagination": {
-      "prev": "前へ",
-      "next": "次へ"
-    }
+    "date": "日期"
   },
   "ContactPage": {
     "title": "需要帮助？打开工单",
@@ -177,114 +164,6 @@
       "emailPlaceholder": "输入您的电子邮件",
       "subscribe": "订阅",
       "noSpam": "保证没有垃圾邮件，因此请不要发送任何垃圾邮件。"
-    },
-    "pageName": "联系页面",
-    "description": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero."
-  },
-  "BlogDetailsPage": {
-    "title": "10个令人惊叹的网站免费下载库存照片和数字资产",
-    "author": "穆沙罗夫·奇",
-    "date": "12 1月 2024",
-    "comments": "50",
-    "views": "35",
-    "readMore": "続きを見る",
-    "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet.",
-    "popularTags": "热门标签 ：",
-    "sharePost": "分享这个帖子 ：",
-    "designTag": "设计",
-    "developmentTag": "发展",
-    "infoTag": "信息",
-    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
-    "mainContent2": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque neć nğ nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
-    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
-    "mainContent4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputatat.",
-    "sectionTitle": "Ui/Ux 设计师的数字市场。",
-    "sectionContent": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputate cupidatat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "Mattis vulputate cupidatat.",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin"
-  },
-  "BlogSidebarPage": {
-    "title": "10个令人惊叹的网站免费下载库存照片和数字资产",
-    "author": "穆沙罗夫·奇",
-    "date": "12 1月 2024",
-    "comments": "50",
-    "views": "35",
-    "searchPlaceholder": "在这里搜索...",
-    "relatedPostsTitle": "相关文章",
-    "relatedPost1Title": "提高在线销售的最佳方式。",
-    "relatedPost1Date": "12 2月 2025",
-    "relatedPost2Title": "50个最好的网页设计技巧和窍门，将帮助你。",
-    "relatedPost2Date": "15 2 月， 2024",
-    "relatedPost3Title": "8 个最佳着陆页构建器，已审查",
-    "relatedPost3Date": "05 6 月， 2024",
-    "popularCategoryTitle": "热门类别",
-    "popularTagsTitle": "热门标签",
-    "sharePost": "分享这个帖子 ：",
-    "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet.",
-    "popularTags": "热门标签 ：",
-    "designTag": "设计",
-    "developmentTag": "发展",
-    "infoTag": "信息",
-    "themesTag": "主题",
-    "uiKitTag": "UI 套件",
-    "tailwindTag": "顺风",
-    "startupTag": "启动",
-    "businessTag": "商",
-    "mainContent1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
-    "mainContent2": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque neć nğ nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
-    "mainContent3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
-    "mainContent4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulutat.",
-    "sectionTitle": "Ui/Ux 设计师的数字市场。",
-    "sectionContent": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulutat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "马蒂斯·武鲁特。",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin"
-  },
-  "SigninPage": {
-    "signInTitle": "登录您的帐户",
-    "signInDescription": "登录您的帐户以更快地结帐。",
-    "signInWithGoogle": "使用 Google 登录",
-    "signInWithGithub": "使用 Github 登录",
-    "orSignInWithEmail": "或者，使用您的电子邮件登录",
-    "yourEmailLabel": "您的电子邮件",
-    "enterYourEmailPlaceholder": "输入您的电子邮件",
-    "yourPasswordLabel": "您的密码",
-    "enterYourPasswordPlaceholder": "输入您的密码",
-    "keepMeSignedIn": "使我保持登录状态",
-    "forgotPassword": "忘记密码？",
-    "signInButton": "登录",
-    "noAccount": "您没有帐户吗？",
-    "signUpLink": "登记"
-  },
-  "SignupPage": {
-    "signUpTitle": "创建您的帐户",
-    "signUpDescription": "这是完全免费且超级简单的",
-    "signUpWithGoogle": "使用 Google 登录",
-    "signUpWithGithub": "使用 Github 登录",
-    "orRegisterWithEmail": "或者，使用您的电子邮件注册",
-    "fullNameLabel": "全名",
-    "enterFullNamePlaceholder": "输入您的全名",
-    "workEmailLabel": "工作电子邮件",
-    "enterWorkEmailPlaceholder": "输入您的电子邮件",
-    "yourPasswordLabel": "您的密码",
-    "enterYourPasswordPlaceholder": "输入您的密码",
-    "agreeToTerms": "创建帐户即表示您同意",
-    "termsAndConditionsLink": "条款与细则",
-    "andOur": "和我们的",
-    "privacyPolicyLink": "隐私策略",
-    "signUpButton": "登记",
-    "alreadyUsing": "已在使用 Startup？",
-    "signInLink": "登录"
-  },
-  "Breadcrumb": {
-    "home": "家"
-  },
-  "ErrorPage": {
-    "heading": "抱歉，找不到该页面",
-    "paragraph": "您正在寻找的页面似乎已被移动、删除或不存在。",
-    "backToHomeButton": "返回首页"
+    }
   }
 }

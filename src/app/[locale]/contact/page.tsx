@@ -2,7 +2,6 @@ import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
 import Contact from "@/app/[locale]/components/Contact";
 
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Contact Page | Free Next.js Template for Startup and SaaS",
@@ -16,14 +15,11 @@ const ContactPage = async ({
   params: Promise<{ locale: string }>;
 }) => {
   const { locale } = await params;
-  const t = await getTranslations("ContactPage");
-
   return (
     <>
       <Breadcrumb
-        pageName={t("pageName")}
-        description={t("description")}
-        locale={locale}
+        pageName="Contact Page"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
 
       <Contact locale={locale} />
