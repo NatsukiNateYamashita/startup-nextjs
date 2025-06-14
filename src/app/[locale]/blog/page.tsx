@@ -1,21 +1,28 @@
 import SingleBlog from "@/app/[locale]/components/Blog/SingleBlog";
 import blogData from "@/app/[locale]/components/Blog/blogData";
 import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-const Blog = async ({
-  params,
-}: {
-  params: { locale: string };
-}) => {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogPage" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    // other metadata
+  };
+}
+
+const Blog = async ({ params }: Props) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("BlogPage");
 
   return (
@@ -33,7 +40,7 @@ const Blog = async ({
                 key={blog.id}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
-                <SingleBlog blog={blog} locale={params.locale} />
+                <SingleBlog blog={blog} locale={locale} />
               </div>
             ))}
           </div>
