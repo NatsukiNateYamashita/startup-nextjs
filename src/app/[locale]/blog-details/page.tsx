@@ -1,23 +1,30 @@
 import SharePost from "@/app/[locale]/components/Blog/SharePost";
 import TagButton from "@/app/[locale]/components/Blog/TagButton";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import NewsLatterBox from "@/app/[locale]/components/Contact/NewsLatterBox";
 
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-const BlogDetailsPage = async ({
-  params,
-}: {
-  params: { locale: string };
-}) => {
-  const t = await getTranslations("BlogDetailsPage");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogDetailsPage" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    // other metadata
+  };
+}
+
+const BlogDetailsPage = async ({ params }: Props) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "BlogDetailsPage" });
 
   return (
     <>
@@ -43,7 +50,7 @@ const BlogDetailsPage = async ({
                       </div>
                       <div className="w-full">
                         <span className="text-body-color mb-1 text-base font-medium">
-                          {t("by")} <span>Musharof Chy</span>
+                          {t("by")}{" "}<span>Musharof Chy</span>
                         </span>
                       </div>
                     </div>
@@ -257,40 +264,58 @@ const BlogDetailsPage = async ({
                             r="37.5"
                             fill="url(#paint2_radial_111:596)"
                           />
-                          <defs>
-                            <radialGradient
-                              id="paint2_radial_111:596"
-                              cx="0"
-                              cy="0"
-                              r="1"
-                              gradientUnits="userSpaceOnUse"
-                              gradientTransform="translate(37.5 37.5) rotate(90) scale(40.2574)"
-                            >
-                              <stop stopColor="white" stopOpacity="0.1" />
-                              <stop offset="1" stopColor="white" stopOpacity="0" />
-                            </radialGradient>
-                          </defs>
+                          <g opacity="0.8" filter="url(#filter0_f_111:596)">
+                            <circle cx="2.5"
+                            cy="-12.5"
+                            r="17.5"
+                            fill="white"
+                            />
+                          </g>
                         </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_111:596"
+                            x="-35"
+                            y="-50"
+                            width="75"
+                            height="75"
+                            filterUnits="userSpaceOnUse"
+                            colorInterpolationFilters="sRGB"
+                          >
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="10"
+                              result="effect1_foregroundBlur_111:596"
+                            />
+                          </filter>
+                          <radialGradient
+                            id="paint2_radial_111:596"
+                            cx="0"
+                            cy="0"
+                            r="1"
+                            gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(37.5 37.5) rotate(90) scale(40.5)"
+                          >
+                            <stop stopOpacity="0.47" />
+                            <stop offset="1" stopOpacity="0" />
+                          </radialGradient>
+                        </defs>
                       </svg>
                     </span>
                   </div>
-                  <div className="items-center justify-between sm:flex">
-                    <div className="mb-5">
-                      <h5 className="text-xl font-semibold text-black dark:text-white">
-                        Share This Post:
-                      </h5>
-                    </div>
-                    <div className="mb-5">
-                      <SharePost />
-                    </div>
-                  </div>
+                  <SharePost />
                 </div>
               </div>
             </div>
-
             <div className="w-full px-4 lg:w-4/12">
               <div>
-                <NewsLatterBox locale={params.locale} />
+                <NewsLatterBox locale={locale} />
               </div>
             </div>
           </div>

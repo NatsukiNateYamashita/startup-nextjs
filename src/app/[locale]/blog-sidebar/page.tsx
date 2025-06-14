@@ -3,21 +3,28 @@ import SharePost from "@/app/[locale]/components/Blog/SharePost";
 import TagButton from "@/app/[locale]/components/Blog/TagButton";
 import NewsLatterBox from "@/app/[locale]/components/Contact/NewsLatterBox";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-const BlogSidebarPage = async ({
-  params,
-}: {
-  params: { locale: string };
-}) => {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogDetailsPage" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    // other metadata
+  };
+}
+
+const BlogSidebarPage = async ({ params }: Props) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("BlogDetailsPage");
   const t2 = await getTranslations("BlogSidebarPage");
 
@@ -45,7 +52,7 @@ const BlogSidebarPage = async ({
                       </div>
                       <div className="w-full">
                         <span className="text-body-color mb-1 text-base font-medium">
-                          {t("by")} <span> Musharof Chy</span>
+                          {t("by")}{" "}<span> Musharof Chy</span>
                         </span>
                       </div>
                     </div>
@@ -248,94 +255,23 @@ const BlogSidebarPage = async ({
                               cy="0"
                               r="1"
                               gradientUnits="userSpaceOnUse"
-                              gradientTransform="translate(37.5 37.5) rotate(90) scale(40.2574)"
+                              gradientTransform="translate(37.5 37.5) rotate(90) scale(40.5)"
                             >
-                              <stop stopColor="white" stopOpacity="0.1" />
-                              <stop offset="1" stopColor="white" stopOpacity="0" />
+                              <stop stopOpacity="0.47" />
+                              <stop offset="1" stopOpacity="0" />
                             </radialGradient>
                           </defs>
                         </g>
                       </svg>
                     </span>
                   </div>
-                  <div className="items-center justify-between sm:flex">
-                    <div className="mb-5">
-                      <h5 className="text-xl font-semibold text-black dark:text-white">
-                        Share This Post:
-                      </h5>
-                    </div>
-                    <div className="mb-5">
-                      <SharePost />
-                    </div>
-                  </div>
+                  <SharePost />
                 </div>
               </div>
             </div>
-
             <div className="w-full px-4 lg:w-4/12">
               <div>
-                <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:bg-opacity-10">
-                  <h3 className="border-body-color/[0.1] border-b py-8 px-9 text-2xl font-semibold text-black dark:border-white/[0.1] dark:text-white">
-                    {t2("recentPosts")}
-                  </h3>
-                  <div className="p-8">
-                    <h5>
-                      <a
-                        href="#0"
-                        className="font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary"
-                      >
-                        The role of marketing in the success of your business
-                      </a>
-                    </h5>
-                    <p className="text-body-color text-sm">
-                      12 May, 2025
-                    </p>
-                  </div>
-                  <div className="p-8">
-                    <h5>
-                      <a
-                        href="#0"
-                        className="font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary"
-                      >
-                        The role of marketing in the success of your business
-                      </a>
-                    </h5>
-                    <p className="text-body-color text-sm">
-                      12 May, 2025
-                    </p>
-                  </div>
-                  <div className="p-8">
-                    <h5>
-                      <a
-                        href="#0"
-                        className="font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary"
-                      >
-                        The role of marketing in the success of your business
-                      </a>
-                    </h5>
-                    <p className="text-body-color text-sm">
-                      12 May, 2025
-                    </p>
-                  </div>
-                </div>
-
-                <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:bg-opacity-10">
-                  <h3 className="border-body-color/[0.1] border-b py-8 px-9 text-2xl font-semibold text-black dark:border-white/[0.1] dark:text-white">
-                    {t2("tags")}
-                  </h3>
-                  <div className="p-8">
-                    <div className="flex flex-wrap items-center">
-                      <TagButton text="Design" />
-                      <TagButton text="Development" />
-                      <TagButton text="Graphic" />
-                      <TagButton text="Marketing" />
-                      <TagButton text="Research" />
-                      <TagButton text="Tutorials" />
-                    </div>
-                  </div>
-                </div>
-
-                <NewsLatterBox locale={params.locale} />
+                <NewsLatterBox locale={locale} />
               </div>
             </div>
           </div>
