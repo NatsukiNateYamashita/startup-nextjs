@@ -143,7 +143,34 @@
       "date": "2025"
     },
     "by": "By",
-    "date": "Date"
+    "date": "Date",
+    "pageName": "Blog Grid",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "prevButton": "Prev",
+    "nextButton": "Next",
+    "dots": "..."
+  },
+  "BlogDetailsPage": {
+    "title": "10 amazing sites to download stock photos & digital assets for free",
+    "by": "By",
+    "designTag": "Design",
+    "bodyParagraph1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.",
+    "bodyParagraph2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet.",
+    "malesuada": "malesuada",
+    "bodyParagraph3": "Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.",
+    "ametDictum": "Amet dictum sit amet justo",
+    "subtitle": "Digital marketplace for Ui/Ux designers.",
+    "bodyParagraph4": "consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate cupidatat.",
+    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
+    "listItem2": "Mattis vulputate cupidatat.",
+    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
+    "listItem4": "Ligula ullamcorper malesuada proin",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua. Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet."
+  },
+  "BlogSidebarPage": {
+    "recentPosts": "Recent Posts",
+    "tags": "Tags",
+    "by": "By"
   },
   "ContactPage": {
     "title": "Need Help? Open a Ticket",
@@ -165,5 +192,52 @@
       "subscribe": "Subscribe",
       "noSpam": "No spam guaranteed, So please don't send any spam mail."
     }
+  },
+  "signin": {
+    "title": "Sign in to your account",
+    "description": "Login to your account for a faster checkout.",
+    "signInWithGoogle": "Sign in with Google",
+    "signInWithGithub": "Sign in with Github",
+    "orSignInWithEmail": "Or, sign in with your email",
+    "yourEmail": "Your Email",
+    "enterYourEmailPlaceholder": "Enter your Email",
+    "yourPassword": "Your Password",
+    "enterYourPasswordPlaceholder": "Enter your Password",
+    "keepMeSignedIn": "Keep me signed in",
+    "forgotPassword": "Forgot Password?",
+    "signInButton": "Sign in",
+    "noAccount": "Don't you have an account?",
+    "signUpLink": "Sign up",
+    "metaTitle": "Sign In Page | Free Next.js Template for Startup and SaaS",
+    "metaDescription": "This is Sign In Page for Startup Nextjs Template"
+  },
+  "signup": {
+    "title": "Create your account",
+    "description": "It's totally free and super easy",
+    "signInWithGoogle": "Sign in with Google",
+    "signInWithGithub": "Sign in with Github",
+    "orRegisterWithEmail": "Or, register with your email",
+    "fullName": "Full Name",
+    "enterFullNamePlaceholder": "Enter your full name",
+    "workEmail": "Work Email",
+    "enterEmailPlaceholder": "Enter your Email",
+    "yourPassword": "Your Password",
+    "enterPasswordPlaceholder": "Enter your Password",
+    "agreementPart1": "By creating account means you agree to the",
+    "termsAndConditions": "Terms and Conditions",
+    "agreementPart2": ", and our",
+    "privacyPolicy": "Privacy Policy",
+    "signUpButton": "Sign up",
+    "alreadyHaveAccount": "Already using Startup?",
+    "signInLink": "Sign in",
+    "metaTitle": "Sign Up Page | Free Next.js Template for Startup and SaaS",
+    "metaDescription": "This is Sign Up Page for Startup Nextjs Template"
+  },
+  "error": {
+    "title": "Sorry, the page can't be found",
+    "description": "The page you were looking for appears to have been moved, deleted or does not exist.",
+    "backToHomepage": "Back to Homepage",
+    "metaTitle": "Error Page | Free Next.js Template for Startup and SaaS",
+    "metaDescription": "This is Error Page for Startup Nextjs Template"
   }
 }

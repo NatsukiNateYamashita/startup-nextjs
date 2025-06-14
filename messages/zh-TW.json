@@ -143,7 +143,12 @@
       "date": "2025"
     },
     "by": "由",
-    "date": "日期"
+    "date": "日期",
+    "pageName": "博客網格",
+    "description": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
+    "prevButton": "昨日",
+    "nextButton": "下一個",
+    "dots": "..."
   },
   "ContactPage": {
     "title": "需要説明？打開工單",
@@ -165,5 +170,74 @@
       "subscribe": "訂閱",
       "noSpam": "保證沒有垃圾郵件，因此請不要發送任何垃圾郵件。"
     }
+  },
+  "signin": {
+    "title": "登錄您的帳戶",
+    "description": "登錄您的帳戶以更快地結帳。",
+    "signInWithGoogle": "使用Google登錄",
+    "signInWithGithub": "使用 Github 登錄",
+    "orSignInWithEmail": "或者，使用您的電子郵件登錄",
+    "yourEmail": "您的電子郵件",
+    "enterYourEmailPlaceholder": "輸入您的電子郵件",
+    "yourPassword": "您的密碼",
+    "enterYourPasswordPlaceholder": "輸入您的密碼",
+    "keepMeSignedIn": "使我保持登錄狀態",
+    "forgotPassword": "忘記密碼？",
+    "signInButton": "登錄",
+    "noAccount": "您沒有帳戶嗎？",
+    "signUpLink": "登記",
+    "metaTitle": "登錄頁面 |用於初創公司和 SaaS 的免費 Next.js 範本",
+    "metaDescription": "這是啟動 Nextjs 範本的登錄頁面"
+  },
+  "signup": {
+    "title": "創建您的帳戶",
+    "description": "這是完全免費且超級簡單的",
+    "signInWithGoogle": "使用Google登錄",
+    "signInWithGithub": "使用 Github 登錄",
+    "orRegisterWithEmail": "或者，使用您的電子郵件註冊",
+    "fullName": "全名",
+    "enterFullNamePlaceholder": "輸入您的全名",
+    "workEmail": "工作電子郵件",
+    "enterEmailPlaceholder": "輸入您的電子郵件",
+    "yourPassword": "您的密碼",
+    "enterPasswordPlaceholder": "輸入您的密碼",
+    "agreementPart1": "創建帳戶即表示您同意",
+    "termsAndConditions": "條款與細則",
+    "agreementPart2": "和我們的",
+    "privacyPolicy": "隱私策略",
+    "signUpButton": "登記",
+    "alreadyHaveAccount": "已在使用 Startup？",
+    "signInLink": "登錄",
+    "metaTitle": "註冊頁面 |用於初創公司和 SaaS 的免費 Next.js 範本",
+    "metaDescription": "這是啟動 Nextjs 範本的註冊頁面"
+  },
+  "error": {
+    "title": "抱歉，找不到該頁面",
+    "description": "您要尋找的頁面似乎已被移動、刪除或不存在。",
+    "backToHomepage": "返回首頁",
+    "metaTitle": "錯誤頁面 |用於初創公司和 SaaS 的免費 Next.js 範本",
+    "metaDescription": "這是啟動 Nextjs 範本的錯誤頁面"
+  },
+  "BlogDetailsPage": {
+    "title": "10個令人驚歎的網站免費下載庫存照片和數字資產",
+    "by": "由",
+    "designTag": "設計",
+    "bodyParagraph1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
+    "bodyParagraph2": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque neć nğ nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
+    "malesuada": "馬勒蘇阿達",
+    "bodyParagraph3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
+    "ametDictum": "Amet 格言 sit amet justo",
+    "subtitle": "Ui/Ux 設計師的數字市場。",
+    "bodyParagraph4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputate cupidatat.",
+    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
+    "listItem2": "Mattis vulputate cupidatat.",
+    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
+    "listItem4": "Ligula ullamcorper malesuada proin",
+    "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet."
+  },
+  "BlogSidebarPage": {
+    "recentPosts": "最近的文章",
+    "tags": "標籤",
+    "by": "由"
   }
 }

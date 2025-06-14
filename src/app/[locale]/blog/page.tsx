@@ -1,6 +1,7 @@
 import SingleBlog from "@/app/[locale]/components/Blog/SingleBlog";
 import blogData from "@/app/[locale]/components/Blog/blogData";
 import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
+import { getTranslations } from "next-intl/server";
 
 import { Metadata } from "next";
 
@@ -10,12 +11,18 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const Blog = () => {
+const Blog = async ({
+  params,
+}: {
+  params: { locale: string };
+}) => {
+  const t = await getTranslations("BlogPage");
+
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName={t("pageName")}
+        description={t("description")}
       />
 
       <section className="pt-[120px] pb-[120px]">
@@ -26,7 +33,7 @@ const Blog = () => {
                 key={blog.id}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
-                <SingleBlog blog={blog} />
+                <SingleBlog blog={blog} locale={params.locale} />
               </div>
             ))}
           </div>
@@ -39,7 +46,7 @@ const Blog = () => {
                     href="#0"
                     className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
-                    Prev
+                    {t("prevButton")}
                   </a>
                 </li>
                 <li className="mx-1">
@@ -68,7 +75,7 @@ const Blog = () => {
                 </li>
                 <li className="mx-1">
                   <span className="bg-body-color/15 text-body-color flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md px-4 text-sm">
-                    ...
+                    {t("dots")}
                   </span>
                 </li>
                 <li className="mx-1">
@@ -84,7 +91,7 @@ const Blog = () => {
                     href="#0"
                     className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
-                    Next
+                    {t("nextButton")}
                   </a>
                 </li>
               </ul>

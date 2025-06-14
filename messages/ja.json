@@ -143,7 +143,12 @@
       "date": "2025"
     },
     "by": "によって",
-    "date": "日付"
+    "date": "日付",
+    "pageName": "ブロググリッド",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
+    "prevButton": "前",
+    "nextButton": "次に",
+    "dots": "..."
   },
   "ContactPage": {
     "title": "ヘルプが必要ですか?チケットを開く",
@@ -165,5 +170,74 @@
       "subscribe": "購読する",
       "noSpam": "スパムは一切送らないことを保証します。だから、あなたもスパムメールを送らないでください。"
     }
+  },
+  "signin": {
+    "title": "アカウントにサインインします",
+    "description": "アカウントにログインして、チェックアウトを迅速化します。",
+    "signInWithGoogle": "Google でログイン",
+    "signInWithGithub": "Github でサインイン",
+    "orSignInWithEmail": "または、メールアドレスでサインインします",
+    "yourEmail": "あなたのメール",
+    "enterYourEmailPlaceholder": "メールアドレスを入力してください",
+    "yourPassword": "パスワード",
+    "enterYourPasswordPlaceholder": "パスワードを入力します",
+    "keepMeSignedIn": "サインインしたままにする",
+    "forgotPassword": "パスワードをお忘れですか?",
+    "signInButton": "サインイン",
+    "noAccount": "アカウントをお持ちではありませんか?",
+    "signUpLink": "サインアップ",
+    "metaTitle": "サインインページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
+    "metaDescription": "これはスタートアップのサインインページです Nextjsテンプレート"
+  },
+  "signup": {
+    "title": "アカウントを作成",
+    "description": "それは完全に無料で超簡単です",
+    "signInWithGoogle": "Google でログイン",
+    "signInWithGithub": "Github でサインイン",
+    "orRegisterWithEmail": "または、メールで登録してください",
+    "fullName": "フルネーム",
+    "enterFullNamePlaceholder": "フルネームを入力してください",
+    "workEmail": "仕事用メール",
+    "enterEmailPlaceholder": "メールアドレスを入力してください",
+    "yourPassword": "パスワード",
+    "enterPasswordPlaceholder": "パスワードを入力します",
+    "agreementPart1": "アカウントを作成することにより、お客様は以下に同意したことになります。",
+    "termsAndConditions": "規約と条件",
+    "agreementPart2": "、そして私たちの",
+    "privacyPolicy": "プライバシーポリシー",
+    "signUpButton": "サインアップ",
+    "alreadyHaveAccount": "すでにスタートアップを使用していますか?",
+    "signInLink": "サインイン",
+    "metaTitle": "会員登録ページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
+    "metaDescription": "これはスタートアップのサインアップページです Nextjsテンプレート"
+  },
+  "error": {
+    "title": "申し訳ありませんが、ページが見つかりません",
+    "description": "探していたページが移動、削除された、または存在しないようです。",
+    "backToHomepage": "ホームページに戻る",
+    "metaTitle": "エラーページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
+    "metaDescription": "これはスタートアップNextjsテンプレートのエラーページです"
+  },
+  "BlogDetailsPage": {
+    "title": "ストックフォトとデジタルアセットを無料でダウンロードできる10の素晴らしいサイト",
+    "by": "によって",
+    "designTag": "設計",
+    "bodyParagraph1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
+    "bodyParagraph2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque nec nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
+    "malesuada": "マレスアダ",
+    "bodyParagraph3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
+    "ametDictum": "Amet dictum sit amet justo",
+    "subtitle": "Ui/Ux デザイナーのためのデジタルマーケットプレイス。",
+    "bodyParagraph4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputate cupidatat.",
+    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
+    "listItem2": "Mattis vulputate cupidatat.",
+    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
+    "listItem4": "Ligula ullamcorper malesuada proin",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet."
+  },
+  "BlogSidebarPage": {
+    "recentPosts": "最近の投稿",
+    "tags": "タグ",
+    "by": ""
   }
 }
