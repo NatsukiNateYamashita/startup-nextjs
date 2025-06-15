@@ -33,7 +33,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight dark:text-white">
+                <h2 className="mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight dark:text-body-color-dark-dark-dark-dark-dark">
                   {t("title")}
                 </h2>
                 <div className="border-body-color/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4 dark:border-white/10">
@@ -132,7 +132,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                   </div>
                   <p className="text-body-color mb-8 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {t("bodyParagraph2")}
-                    <strong className="text-primary dark:text-white">
+                    <strong className="text-primary dark:text-body-color-dark-dark-dark-dark-dark">
                       {t("malesuada")}
                     </strong>
                     proin libero nunc consequat interdum varius. Quam
@@ -141,14 +141,14 @@ const BlogDetailsPage = async ({ params }: Props) => {
                   </p>
                   <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {t("bodyParagraph3")}
-                    <span className="text-primary underline dark:text-white">
+                    <span className="text-primary underline dark:text-body-color-dark-dark-dark-dark-dark">
                       {t("ametDictum")}
                     </span>
                     donec enim diam. Varius sit amet mattis vulputate enim nulla
                     aliquet porttitor. Odio pellentesque diam volutpat commodo
                     sed.
                   </p>
-                  <h3 className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
+                  <h3 className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-body-color-dark-dark-dark-dark-dark">
                     {t("subtitle")}
                   </h3>
                   <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">

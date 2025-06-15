@@ -1,7 +1,8 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "title": "Hello World!",
+    "paragraph": "Welcome to our website.",
+    "button": "Learn More"
   },
   "HeroPage": {
     "heading": "Free and Open-Source Next.js Template for Startup & SaaS",
@@ -10,55 +11,39 @@
     "githubButton": "Star on GitHub"
   },
   "FeaturesPage": {
-    "title": "Main Features",
-    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
-    "feature1": {
-      "title": "Crafted for Startups",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
-    },
-    "feature2": {
-      "title": "High-quality Design",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
-    },
-    "feature3": {
-      "title": "Next.js 13 (Latest)",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
-    },
-    "feature4": {
-      "title": "Tailwind CSS",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
-    },
-    "feature5": {
-      "title": "Fully Customizable",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
-    },
-    "feature6": {
-      "title": "Free and Open-Source",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
-    }
+    "title": "Features",
+    "paragraph": "Discover the key features that our service offers.",
+    "feature1Title": "Simple Usability",
+    "feature1Paragraph": "Start using our service easily with an intuitive interface.",
+    "feature2Title": "Advanced Analytics",
+    "feature2Paragraph": "Support your business decisions with detailed data analysis and reporting.",
+    "feature3Title": "Secure Environment",
+    "feature3Paragraph": "Your data is safely protected with the latest security technology."
   },
   "VideoPage": {
     "title": "We are ready to help",
     "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
   },
   "AboutPage": {
+    "title": "About Us",
+    "paragraph": "Learn about our story and mission.",
     "sectionOne": {
-      "title": "Crafted for Startup, SaaS and Business Sites.",
-      "paragraph": "The main 'thrust' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables.",
-      "list1": "Premium quality",
+      "title": "Designed for startups, SaaS and business websites.",
+      "paragraph": "The main theme is to focus on educating attendees on how to best protect highly vulnerable business applications through interactive group discussions and roundtables.",
+      "list1": "Premium",
       "list2": "Tailwind CSS",
-      "list3": "Use for lifetime",
+      "list3": "Lifetime Use",
       "list4": "Next.js",
-      "list5": "Rich documentation",
-      "list6": "Developer friendly"
+      "list5": "Rich Documentation",
+      "list6": "Developer Friendly"
     },
     "sectionTwo": {
       "item1": {
-        "title": "Bug free code",
+        "title": "Bug Free Code",
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       "item2": {
-        "title": "Premier support",
+        "title": "Premium Support",
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
       },
       "item3": {
@@ -117,77 +102,75 @@
   },
   "BlogPage": {
     "title": "Our Latest Blogs",
-    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "paragraph": "Check out our latest articles and updates.",
     "blog1": {
-      "title": "Best UI components for modern websites",
+      "title": "Best UI Components for Modern Websites",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-      "author": "Samuyl Joshi",
+      "author": "Samuel Joshi",
       "designation": "Graphic Designer",
-      "tag": "creative",
+      "tag": "Creative",
       "date": "2025"
     },
     "blog2": {
-      "title": "9 simple ways to improve your design skills",
+      "title": "9 Simple Ways to Improve Your Design Skills",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
       "author": "Musharof Chy",
       "designation": "Content Writer",
-      "tag": "computer",
+      "tag": "Computer",
       "date": "2025"
     },
     "blog3": {
-      "title": "Tips to quickly improve your coding speed.",
+      "title": "Tips to Quickly Improve Your Coding Speed.",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
       "author": "Lethium Deo",
       "designation": "Graphic Designer",
-      "tag": "design",
+      "tag": "Design",
       "date": "2025"
     },
     "by": "By",
     "date": "Date",
     "pageName": "Blog Grid",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
-    "prevButton": "Prev",
+    "prevButton": "Previous",
     "nextButton": "Next",
     "dots": "..."
   },
   "BlogDetailsPage": {
-    "title": "10 amazing sites to download stock photos & digital assets for free",
-    "description": "This is Blog Details Page for Startup Nextjs Template",
-    "by": "By",
+    "title": "Blog Details",
+    "by": "By ",
     "designTag": "Design",
-    "bodyParagraph1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.",
-    "bodyParagraph2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet.",
-    "malesuada": "malesuada",
-    "bodyParagraph3": "Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.",
-    "ametDictum": "Amet dictum sit amet justo",
-    "subtitle": "Digital marketplace for Ui/Ux designers.",
-    "bodyParagraph4": "consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate cupidatat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "Mattis vulputate cupidatat.",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin",
-    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt utionals labore et dolore magna aliqua. Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet."
+    "bodyParagraph1": "This is a detailed blog post.",
+    "bodyParagraph2": "The article continues.",
+    "bodyParagraph3": "More content.",
+    "bodyParagraph4": "Final paragraph.",
+    "subtitle": "Subtitle",
+    "listItem1": "List item 1",
+    "listItem2": "List item 2",
+    "listItem3": "List item 3",
+    "listItem4": "List item 4",
+    "quote": "This is a quote.",
+    "malesuada": "Important content",
+    "ametDictum": "Emphasized content"
   },
   "BlogSidebarPage": {
-    "recentPosts": "Recent Posts",
-    "tags": "Tags",
-    "by": "By"
+    "title": "Blog Sidebar",
+    "description": "Blog page with sidebar."
   },
   "ContactPage": {
     "title": "Need Help? Open a Ticket",
-    "paragraph": "Our support team will get back to you ASAP via email.",
+    "paragraph": "Our support team will get back to you via email as soon as possible.",
     "form": {
       "nameLabel": "Your Name",
       "namePlaceholder": "Enter your name",
       "emailLabel": "Your Email",
       "emailPlaceholder": "Enter your email",
       "messageLabel": "Your Message",
-      "messagePlaceholder": "Enter your Message",
+      "messagePlaceholder": "Enter your message",
       "submit": "Submit Ticket"
     },
     "newsletter": {
-      "title": "Subscribe to receive future updates",
-      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "title": "Subscribe to Our Newsletter",
+      "paragraph": "Get the latest news and updates delivered to your inbox.",
       "namePlaceholder": "Enter your name",
       "emailPlaceholder": "Enter your email",
       "subscribe": "Subscribe",
@@ -240,5 +223,31 @@
     "backToHomepage": "Back to Homepage",
     "metaTitle": "Error Page | Free Next.js Template for Startup and SaaS",
     "metaDescription": "This is Error Page for Startup Nextjs Template"
+  },
+  "SignInPage": {
+    "title": "Sign In",
+    "paragraph": "Sign in to your account.",
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot Password?"
+    }
+  },
+  "SignUpPage": {
+    "title": "Sign Up",
+    "paragraph": "Create a new account.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Sign Up"
+    }
+  },
+  "ErrorPage": {
+    "title": "Error",
+    "paragraph": "Sorry, an error occurred.",
+    "button": "Back to Home"
   }
 }

@@ -12,7 +12,7 @@ const SingleBlog = async ({ blog, locale }: { blog: Blog, locale: string }) => {
 
   return (
     <>
-      <div className="group shadow-one hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-white duration-300">
+      <div className="group shadow-one hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-white/80 backdrop-blur-sm duration-300">
         <Link
           href={`/${locale}/blog-details`}
           className="relative block aspect-37/22 w-full"
@@ -26,33 +26,33 @@ const SingleBlog = async ({ blog, locale }: { blog: Blog, locale: string }) => {
           <h3>
             <Link
               href={`/${locale}/blog-details`}
-              className="hover:text-primary dark:hover:text-primary mb-4 block text-xl font-bold text-black sm:text-2xl dark:text-white"
+              className="hover:text-primary dark:hover:text-primary mb-4 block text-xl font-bold text-body-color sm:text-2xl dark:text-body-color-dark"
             >
               {t(blogTitleKey)}
             </Link>
           </h3>
-          <p className="border-body-color/10 text-body-color mb-6 border-b pb-6 text-base font-medium dark:border-white/10">
+          <p className="border-body-color/10 text-body-color/80 mb-6 border-b pb-6 text-base font-medium dark:border-body-color-dark/10 dark:text-body-color-dark/80">
             {t(blogParagraphKey)}
           </p>
           <div className="flex items-center">
-            <div className="border-body-color/10 mr-5 flex items-center border-r pr-5 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5 dark:border-white/10">
+            <div className="mr-5 flex items-center border-r border-body-color/10 pr-5 dark:border-body-color-dark/10">
               <div className="mr-4">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image src={blog.author.image} alt="author" fill />
                 </div>
               </div>
               <div className="w-full">
-                <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
+                <h4 className="text-body-color mb-1 text-sm font-medium dark:text-body-color-dark">
                   {t("by")} {blog.author.name}
                 </h4>
-                <p className="text-body-color text-xs">{blog.author.designation}</p>
+                <p className="text-body-color/80 text-xs dark:text-body-color-dark/80">{blog.author.designation}</p>
               </div>
             </div>
             <div className="inline-block">
-              <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
+              <h4 className="text-body-color mb-1 text-sm font-medium dark:text-body-color-dark">
                 {t("date")}
               </h4>
-              <p className="text-body-color text-xs">{publishDate}</p>
+              <p className="text-body-color/80 text-xs dark:text-body-color-dark/80">{publishDate}</p>
             </div>
           </div>
         </div>

@@ -11,17 +11,19 @@ const PricingBox = (props: {
     <div className="w-full">
       <div className="shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark relative z-10 rounded-xs bg-white px-8 py-10">
         <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
+          <h3 className="price text-body-color dark:text-body-color-dark mb-2 text-[32px] font-bold">
             $<span className="amount">{price}</span>
             <span className="time text-body-color text-lg font-medium">
               /{duration}
             </span>
           </h3>
-          <h4 className="text-dark mb-2 text-xl font-bold dark:text-white">
+          <h4 className="text-body-color dark:text-body-color-dark mb-2 text-xl font-bold">
             {packageName}
           </h4>
         </div>
-        <p className="text-body-color mb-7 text-base">{subtitle}</p>
+        <p className="text-body-color dark:text-body-color-dark mb-7 text-base">
+          {subtitle}
+        </p>
         <div className="border-body-color/10 mb-8 border-b pb-8 dark:border-white/10">
           <button className="bg-primary/80 hover:shadow-signUp flex w-full items-center justify-center rounded-xs p-3 text-base font-semibold text-white transition duration-300 ease-in-out">
             Start Free Trial
@@ -55,8 +57,8 @@ const PricingBox = (props: {
                 y2="83.2919"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_70:153"
@@ -66,8 +68,8 @@ const PricingBox = (props: {
                 y2="103.645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
