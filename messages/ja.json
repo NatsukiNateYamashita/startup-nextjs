@@ -1,8 +1,8 @@
 {
   "HomePage": {
-    "title": "こんにちは、世界！",
-    "paragraph": "私たちのウェブサイトへようこそ。",
-    "button": "詳細を見る"
+    "title": "ハローワールド！",
+    "paragraph": "当社のウェブサイトへようこそ。",
+    "button": "詳細情報"
   },
   "HeroPage": {
     "heading": "スタートアップとSaaSのための無料のオープンソースNext.jsテンプレート",
@@ -11,42 +11,30 @@
     "githubButton": "GitHubでスターを付ける"
   },
   "FeaturesPage": {
-    "title": "機能",
-    "paragraph": "私たちのサービスが提供する主要な機能をご紹介します。",
+    "title": "顔立ち",
+    "paragraph": "私たちのサービスが提供する主な機能をご覧ください。",
     "feature1Title": "シンプルな操作性",
-    "feature1Paragraph": "直感的なインターフェースで、誰でも簡単に使い始めることができます。",
+    "feature1Paragraph": "直感的なインターフェースで簡単にサービスを使い始めることができます。",
     "feature2Title": "高度な分析",
-    "feature2Paragraph": "詳細なデータ分析とレポート機能で、ビジネスの意思決定をサポートします。",
+    "feature2Paragraph": "詳細なデータ分析とレポート作成により、ビジネス上の意思決定をサポートします。",
     "feature3Title": "セキュアな環境",
-    "feature3Paragraph": "最新のセキュリティ技術で、あなたのデータを安全に保護します。",
-    "feature4": {
-      "title": "追い風CSS",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
-    },
-    "feature5": {
-      "title": "完全にカスタマイズ可能",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
-    },
-    "feature6": {
-      "title": "無料でオープンソース",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore?Fugit repellat ut maiores."
-    }
+    "feature3Paragraph": "お客様のデータは、最新のセキュリティ技術で安全に保護されます。"
   },
   "VideoPage": {
     "title": "私たちは助ける準備ができています",
     "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。"
   },
   "AboutPage": {
-    "title": "会社概要",
-    "paragraph": "私たちのストーリーとミッションについて。",
+    "title": "我々について",
+    "paragraph": "私たちのストーリーとミッションについてご覧ください。",
     "sectionOne": {
-      "title": "スタートアップ、SaaS、ビジネスウェブサイト向けに設計。",
-      "paragraph": "メインテーマは、インタラクティブなグループディスカッションとラウンドテーブルを通じて、脆弱性の高いビジネスアプリケーションを最適に保護する方法について参加者に教育することです。",
+      "title": "スタートアップ、SaaS、ビジネスWebサイト向けに設計されています。",
+      "paragraph": "主なテーマは、インタラクティブなグループディスカッションや円卓会議を通じて、非常に脆弱なビジネスアプリケーションを最適に保護する方法について参加者を教育することに焦点を当てることです。",
       "list1": "プレミアム",
-      "list2": "Tailwind CSS",
-      "list3": "ライフタイム使用",
+      "list2": "追い風CSS",
+      "list3": "生涯使用",
       "list4": "Next.js",
-      "list5": "充実したドキュメント",
+      "list5": "豊富なドキュメント",
       "list6": "開発者フレンドリー"
     },
     "sectionTwo": {
@@ -113,59 +101,81 @@
     "startTrial": "無料トライアルを開始"
   },
   "BlogPage": {
-    "title": "最新のブログ記事",
-    "paragraph": "最新の記事と更新情報をご覧ください。",
+    "title": "最新のブログ",
+    "paragraph": "最新の記事とアップデートをご覧ください。",
     "blog1": {
-      "title": "モダンなウェブサイトのための最高のUIコンポーネント",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "title": "最新のWebサイトに最適なUIコンポーネント",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
       "author": "サミュエル・ジョシ",
       "designation": "グラフィックデザイナー",
-      "tag": "クリエイティブ",
+      "tag": "創造的な",
       "date": "2025"
     },
     "blog2": {
       "title": "デザインスキルを向上させる9つの簡単な方法",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
       "author": "ムシャロフ・チー",
       "designation": "コンテンツライター",
       "tag": "コンピュータ",
       "date": "2025"
     },
     "blog3": {
-      "title": "コーディング速度を素早く向上させるためのヒント",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "title": "コーディング速度をすばやく向上させるためのヒント。",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
       "author": "レシウム・デオ",
       "designation": "グラフィックデザイナー",
-      "tag": "デザイン",
+      "tag": "設計",
       "date": "2025"
     },
-    "by": "著者",
+    "by": "によって",
     "date": "日付",
     "pageName": "ブロググリッド",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
-    "prevButton": "前へ",
-    "nextButton": "次へ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
+    "prevButton": "先の",
+    "nextButton": "次に",
     "dots": "..."
   },
+  "BlogDetailsPage": {
+    "title": "ブログ詳細",
+    "by": "によって",
+    "designTag": "設計",
+    "bodyParagraph1": "これは詳細なブログ記事です。",
+    "bodyParagraph2": "記事は続きます。",
+    "bodyParagraph3": "より多くのコンテンツ。",
+    "bodyParagraph4": "最後の段落。",
+    "subtitle": "字幕",
+    "listItem1": "リスト項目 1",
+    "listItem2": "リスト項目 2",
+    "listItem3": "リスト項目3",
+    "listItem4": "リスト項目4",
+    "quote": "これは引用です。",
+    "malesuada": "重要なコンテンツ",
+    "ametDictum": "強調されたコンテンツ",
+    "description": "これは詳細なブログ記事です。"
+  },
+  "BlogSidebarPage": {
+    "title": "ブログサイドバー",
+    "description": "サイドバー付きのブログページ。"
+  },
   "ContactPage": {
-    "title": "お問い合わせ",
-    "paragraph": "サポートチームができるだけ早くメールでご返信いたします。",
+    "title": "ヘルプが必要ですか?チケットを開く",
+    "paragraph": "サポートチームができるだけ早くメールでご連絡いたします。",
     "form": {
-      "nameLabel": "お名前",
-      "namePlaceholder": "お名前を入力してください",
-      "emailLabel": "メールアドレス",
+      "nameLabel": "お名前 *",
+      "namePlaceholder": "名前を入力してください",
+      "emailLabel": "あなたのメール",
       "emailPlaceholder": "メールアドレスを入力してください",
-      "messageLabel": "メッセージ",
+      "messageLabel": "あなたのメッセージ",
       "messagePlaceholder": "メッセージを入力してください",
-      "submit": "送信する"
+      "submit": "チケットを送信"
     },
     "newsletter": {
-      "title": "ニュースレターの購読",
-      "paragraph": "最新のニュースと更新情報をメールで受け取る",
-      "namePlaceholder": "お名前を入力してください",
+      "title": "ニュースレターを購読する",
+      "paragraph": "最新のニュースやアップデート情報をメールでお届けします。",
+      "namePlaceholder": "名前を入力してください",
       "emailPlaceholder": "メールアドレスを入力してください",
-      "submit": "購読する",
-      "noSpam": "スパムは一切送らないことを保証します。だから、あなたもスパムメールを送らないでください。"
+      "subscribe": "購読する",
+      "noSpam": "スパムは保証されませんので、スパムメールは送信しないでください。"
     }
   },
   "signin": {
@@ -209,31 +219,36 @@
     "metaDescription": "これはスタートアップのサインアップページです Nextjsテンプレート"
   },
   "error": {
-    "title": "エラー",
-    "paragraph": "申し訳ありません。エラーが発生しました。",
-    "button": "ホームに戻る",
+    "title": "申し訳ありませんが、ページが見つかりません",
+    "description": "探していたページが移動、削除された、または存在しないようです。",
+    "backToHomepage": "ホームページに戻る",
     "metaTitle": "エラーページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
     "metaDescription": "これはスタートアップNextjsテンプレートのエラーページです"
   },
-  "BlogDetailsPage": {
-    "title": "ブログ詳細",
-    "by": "著者：",
-    "designTag": "デザイン",
-    "bodyParagraph1": "これは詳細なブログ記事です。",
-    "bodyParagraph2": "記事の続きです。",
-    "bodyParagraph3": "さらに内容が続きます。",
-    "bodyParagraph4": "最後の段落です。",
-    "subtitle": "小見出し",
-    "listItem1": "リスト項目1",
-    "listItem2": "リスト項目2",
-    "listItem3": "リスト項目3",
-    "listItem4": "リスト項目4",
-    "quote": "これは引用文です。",
-    "malesuada": "重要な内容",
-    "ametDictum": "強調された内容"
+  "SignInPage": {
+    "title": "サインイン",
+    "paragraph": "アカウントにサインインします。",
+    "form": {
+      "email": "電子メール",
+      "password": "パスワード",
+      "submit": "サインイン",
+      "forgotPassword": "パスワードをお忘れですか?"
+    }
   },
-  "BlogSidebarPage": {
-    "title": "ブログサイドバー",
-    "description": "サイドバー付きのブログページ。"
+  "SignUpPage": {
+    "title": "サインアップ",
+    "paragraph": "新しいアカウントを作成します。",
+    "form": {
+      "name": "名前",
+      "email": "電子メール",
+      "password": "パスワード",
+      "confirmPassword": "パスワードの確認",
+      "submit": "サインアップ"
+    }
+  },
+  "ErrorPage": {
+    "title": "エラー",
+    "paragraph": "申し訳ございませんが、エラーが発生しました。",
+    "button": "ホームに戻る"
   }
 }

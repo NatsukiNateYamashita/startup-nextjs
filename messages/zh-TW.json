@@ -1,8 +1,8 @@
 {
   "HomePage": {
-    "title": "你好，世界！",
-    "paragraph": "歡迎來到我們的網站。",
-    "button": "了解更多"
+    "title": "世界您好！",
+    "paragraph": "歡迎訪問我們的網站。",
+    "button": "瞭解更多資訊"
   },
   "HeroPage": {
     "heading": "免費開源的Next.js範本，適用於創業和SaaS",
@@ -11,26 +11,14 @@
     "githubButton": "在 GitHub 上加星標"
   },
   "FeaturesPage": {
-    "title": "功能",
-    "paragraph": "探索我們服務提供的主要功能。",
+    "title": "特徵",
+    "paragraph": "瞭解我們服務提供的主要功能。",
     "feature1Title": "簡單易用",
-    "feature1Paragraph": "通過直觀的界面，輕鬆開始使用我們的服務。",
-    "feature2Title": "進階分析",
-    "feature2Paragraph": "通過詳細的數據分析和報告功能，支持您的業務決策。",
+    "feature1Paragraph": "通過直觀的介面輕鬆開始使用我們的服務。",
+    "feature2Title": "高級分析",
+    "feature2Paragraph": "通過詳細的數據分析和報告來支援您的業務決策。",
     "feature3Title": "安全環境",
-    "feature3Paragraph": "使用最新的安全技術，安全保護您的數據。",
-    "feature4": {
-      "title": "順風 CSS",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature5": {
-      "title": "完全可定製",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature6": {
-      "title": "免費和開源",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    }
+    "feature3Paragraph": "您的數據受到最新安全技術的安全保護。"
   },
   "VideoPage": {
     "title": "我們隨時準備提供説明",
@@ -40,10 +28,10 @@
     "title": "關於我們",
     "paragraph": "了解我們的故事和使命。",
     "sectionOne": {
-      "title": "專為初創公司、SaaS和商業網站而設計。",
-      "paragraph": "主要主旨是專注於教育出席者如何通過互動式小組討論和圓桌會議最好地保護高度脆弱的業務應用程式。",
-      "list1": "優質",
-      "list2": "Tailwind CSS",
+      "title": "專為初創公司、SaaS 和商業網站設計。",
+      "paragraph": "主要主題是專注於教育出席者如何通過互動式小組討論和圓桌會議最好地保護高度脆弱的業務應用程式。",
+      "list1": "獎賞",
+      "list2": "順風 CSS",
       "list3": "終身使用",
       "list4": "Next.js",
       "list5": "豐富的文件",
@@ -51,16 +39,16 @@
     },
     "sectionTwo": {
       "item1": {
-        "title": "無Bug代碼",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "title": "無錯誤代碼",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       "item2": {
-        "title": "頂級支援",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        "title": "高級支援",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt."
       },
       "item3": {
         "title": "Next.js",
-        "paragraph": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+        "paragraph": "Lorem ipsum dolor sit amet， sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
       }
     }
   },
@@ -113,55 +101,77 @@
     "startTrial": "開始免費試用"
   },
   "BlogPage": {
-    "title": "我們的最新部落格",
+    "title": "我們的最新博客",
     "paragraph": "查看我們的最新文章和更新。",
     "blog1": {
       "title": "現代網站的最佳UI元件",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
       "author": "撒母耳·喬希",
       "designation": "平面設計師",
-      "tag": "創意",
+      "tag": "創造性",
       "date": "2025"
     },
     "blog2": {
       "title": "提高設計技能的9種簡單方法",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
       "author": "穆沙羅夫·奇",
       "designation": "內容編寫器",
-      "tag": "電腦",
+      "tag": "計算機",
       "date": "2025"
     },
     "blog3": {
-      "title": "快速提高編碼速度的提示",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-      "author": "萊西姆·德奧",
+      "title": "快速提高編碼速度的提示。",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "Lethium Deo",
       "designation": "平面設計師",
       "tag": "設計",
       "date": "2025"
     },
-    "by": "作者",
+    "by": "由",
     "date": "日期",
-    "pageName": "部落格網格",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
-    "prevButton": "上一頁",
-    "nextButton": "下一頁",
+    "pageName": "博客網格",
+    "description": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
+    "prevButton": "以前",
+    "nextButton": "下一個",
     "dots": "..."
   },
+  "BlogDetailsPage": {
+    "title": "博客詳細資訊",
+    "by": "由",
+    "designTag": "設計",
+    "bodyParagraph1": "這是一篇詳細的博客文章。",
+    "bodyParagraph2": "文章繼續說。",
+    "bodyParagraph3": "更多內容。",
+    "bodyParagraph4": "最後一段。",
+    "subtitle": "字幕",
+    "listItem1": "清單項 1",
+    "listItem2": "清單項 2",
+    "listItem3": "清單項 3",
+    "listItem4": "清單項 4",
+    "quote": "這是一句話。",
+    "malesuada": "重要內容",
+    "ametDictum": "強調的內容",
+    "description": "這是一篇詳細的博客文章。"
+  },
+  "BlogSidebarPage": {
+    "title": "博客側邊欄",
+    "description": "帶有側邊欄的博客頁面。"
+  },
   "ContactPage": {
-    "title": "需要幫助？開啟工單",
-    "paragraph": "我們的支援團隊將盡快通過電子郵件回覆您。",
+    "title": "需要説明？打開工單",
+    "paragraph": "我們的支持團隊將儘快通過電子郵件回復您。",
     "form": {
       "nameLabel": "您的姓名",
       "namePlaceholder": "輸入您的姓名",
       "emailLabel": "您的電子郵件",
       "emailPlaceholder": "輸入您的電子郵件",
-      "messageLabel": "您的訊息",
-      "messagePlaceholder": "輸入您的訊息",
+      "messageLabel": "您的資訊",
+      "messagePlaceholder": "輸入您的資訊",
       "submit": "提交工單"
     },
     "newsletter": {
-      "title": "訂閱我們的電子報",
-      "paragraph": "獲取最新消息和更新資訊。",
+      "title": "訂閱我們的時事通訊",
+      "paragraph": "將最新消息和更新發送到您的收件匣。",
       "namePlaceholder": "輸入您的姓名",
       "emailPlaceholder": "輸入您的電子郵件",
       "subscribe": "訂閱",
@@ -215,25 +225,30 @@
     "metaTitle": "錯誤頁面 |用於初創公司和 SaaS 的免費 Next.js 範本",
     "metaDescription": "這是啟動 Nextjs 範本的錯誤頁面"
   },
-  "BlogDetailsPage": {
-    "title": "部落格詳情",
-    "by": "作者：",
-    "designTag": "設計",
-    "bodyParagraph1": "這是一篇詳細的部落格文章。",
-    "bodyParagraph2": "文章內容繼續。",
-    "bodyParagraph3": "更多內容。",
-    "bodyParagraph4": "最後一段。",
-    "subtitle": "小標題",
-    "listItem1": "列表項目1",
-    "listItem2": "列表項目2",
-    "listItem3": "列表項目3",
-    "listItem4": "列表項目4",
-    "quote": "這是一段引用文字。",
-    "malesuada": "重要內容",
-    "ametDictum": "強調內容"
+  "SignInPage": {
+    "title": "登錄",
+    "paragraph": "登錄您的帳戶。",
+    "form": {
+      "email": "電子郵件",
+      "password": "密碼",
+      "submit": "登錄",
+      "forgotPassword": "忘記密碼？"
+    }
   },
-  "BlogSidebarPage": {
-    "title": "部落格側邊欄",
-    "description": "帶有側邊欄的部落格頁面。"
+  "SignUpPage": {
+    "title": "登記",
+    "paragraph": "創建新帳戶。",
+    "form": {
+      "name": "名字",
+      "email": "電子郵件",
+      "password": "密碼",
+      "confirmPassword": "確認密碼",
+      "submit": "登記"
+    }
+  },
+  "ErrorPage": {
+    "title": "錯誤",
+    "paragraph": "抱歉，發生錯誤。",
+    "button": "返回首頁"
   }
 }

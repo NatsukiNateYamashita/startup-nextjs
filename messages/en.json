@@ -150,7 +150,8 @@
     "listItem4": "List item 4",
     "quote": "This is a quote.",
     "malesuada": "Important content",
-    "ametDictum": "Emphasized content"
+    "ametDictum": "Emphasized content",
+    "description": "This is a detailed blog post."
   },
   "BlogSidebarPage": {
     "title": "Blog Sidebar",

@@ -35,7 +35,7 @@ const Contact = async ({ locale }: ContactProps) => {
                       <input
                         type="text"
                         placeholder={t("form.namePlaceholder")}
-                        className="w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color placeholder-body-color/60 shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-dark/50 dark:text-body-color-dark dark:shadow-signUp"
+                        className="w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-dark/50 dark:text-body-color-dark dark:placeholder-white dark:shadow-signUp"
                       />
                     </div>
                   </div>
@@ -50,7 +50,7 @@ const Contact = async ({ locale }: ContactProps) => {
                       <input
                         type="email"
                         placeholder={t("form.emailPlaceholder")}
-                        className="w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color placeholder-body-color/60 shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-dark/50 dark:text-body-color-dark dark:shadow-signUp"
+                        className="w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-dark/50 dark:text-body-color-dark dark:placeholder-white dark:shadow-signUp"
                       />
                     </div>
                   </div>
@@ -66,7 +66,7 @@ const Contact = async ({ locale }: ContactProps) => {
                         name="message"
                         rows={5}
                         placeholder={t("form.messagePlaceholder")}
-                        className="w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color placeholder-body-color/60 shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-dark/50 dark:text-body-color-dark dark:shadow-signUp"
+                        className="w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-dark/50 dark:text-body-color-dark dark:placeholder-white dark:shadow-signUp"
                       ></textarea>
                     </div>
                   </div>

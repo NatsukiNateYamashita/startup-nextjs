@@ -48,7 +48,7 @@ const NewsLatterBoxClient: React.FC<NewsLatterBoxClientProps> = ({
           placeholder={namePlaceholder}
           value={name}
           onChange={e => setName(e.target.value)}
-          className="border-stroke mb-4 w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color placeholder-body-color/60 shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:border-transparent dark:bg-gray-dark/50 dark:text-body-color-dark dark:shadow-signUp"
+          className="border-stroke mb-4 w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:border-transparent dark:bg-gray-dark dark:text-body-color-dark dark:placeholder-white dark:shadow-signUp"
         />
         <input
           type="email"
@@ -56,7 +56,7 @@ const NewsLatterBoxClient: React.FC<NewsLatterBoxClientProps> = ({
           placeholder={emailPlaceholder}
           value={email}
           onChange={e => setEmail(e.target.value)}
-          className="border-stroke mb-4 w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color placeholder-body-color/60 shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:border-transparent dark:bg-gray-dark/50 dark:text-body-color-dark dark:shadow-signUp"
+          className="border-stroke mb-4 w-full rounded-md border border-transparent bg-white/50 backdrop-blur-sm px-6 py-3 text-base text-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:border-transparent dark:bg-gray-dark/50 dark:text-body-color-dark dark:placeholder-white dark:shadow-signUp"
         />
         <button
           type="submit"
@@ -340,4 +340,4 @@ const NewsLatterBoxClient: React.FC<NewsLatterBoxClientProps> = ({
   );
 };
 
-export default NewsLatterBoxClient; 
+export default NewsLatterBoxClient;

@@ -1,8 +1,8 @@
 {
   "HomePage": {
-    "title": "你好，世界！",
-    "paragraph": "欢迎来到我们的网站。",
-    "button": "了解更多"
+    "title": "世界您好！",
+    "paragraph": "欢迎访问我们的网站。",
+    "button": "了解更多信息"
   },
   "HeroPage": {
     "heading": "免费开源的Next.js模板，适用于创业和SaaS",
@@ -11,26 +11,14 @@
     "githubButton": "在 GitHub 上加星标"
   },
   "FeaturesPage": {
-    "title": "功能",
-    "paragraph": "探索我们服务提供的主要功能。",
+    "title": "特征",
+    "paragraph": "了解我们服务提供的主要功能。",
     "feature1Title": "简单易用",
-    "feature1Paragraph": "通过直观的界面，轻松开始使用我们的服务。",
+    "feature1Paragraph": "通过直观的界面轻松开始使用我们的服务。",
     "feature2Title": "高级分析",
-    "feature2Paragraph": "通过详细的数据分析和报告功能，支持您的业务决策。",
+    "feature2Paragraph": "通过详细的数据分析和报告来支持您的业务决策。",
     "feature3Title": "安全环境",
-    "feature3Paragraph": "使用最新的安全技术，安全保护您的数据。",
-    "feature4": {
-      "title": "顺风 CSS",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature5": {
-      "title": "完全可定制",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature6": {
-      "title": "免费和开源",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    }
+    "feature3Paragraph": "您的数据受到最新安全技术的安全保护。"
   },
   "VideoPage": {
     "title": "我们随时准备提供帮助",
@@ -38,7 +26,31 @@
   },
   "AboutPage": {
     "title": "关于我们",
-    "paragraph": "了解我们的故事和使命。"
+    "paragraph": "了解我们的故事和使命。",
+    "sectionOne": {
+      "title": "专为初创公司、SaaS 和商业网站设计。",
+      "paragraph": "主要主题是专注于教育与会者如何通过交互式小组讨论和圆桌会议最好地保护高度脆弱的业务应用程序。",
+      "list1": "奖赏",
+      "list2": "顺风 CSS",
+      "list3": "终身使用",
+      "list4": "Next.js",
+      "list5": "丰富的文档",
+      "list6": "开发人员友好"
+    },
+    "sectionTwo": {
+      "item1": {
+        "title": "无错误代码",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "item2": {
+        "title": "高级支持",
+        "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt."
+      },
+      "item3": {
+        "title": "Next.js",
+        "paragraph": "Lorem ipsum dolor sit amet， sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+      }
+    }
   },
   "TestimonialsPage": {
     "title": "我们的用户怎么说",
@@ -89,21 +101,77 @@
     "startTrial": "开始免费试用"
   },
   "BlogPage": {
-    "title": "博客",
-    "paragraph": "查看我们的最新文章和更新。"
+    "title": "我们的最新博客",
+    "paragraph": "查看我们的最新文章和更新。",
+    "blog1": {
+      "title": "现代网站的最佳 UI 组件",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "塞缪尔·乔希",
+      "designation": "平面设计师",
+      "tag": "创造性",
+      "date": "2025"
+    },
+    "blog2": {
+      "title": "提高设计技能的 9 种简单方法",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "穆沙罗夫·奇",
+      "designation": "内容编写器",
+      "tag": "计算机",
+      "date": "2025"
+    },
+    "blog3": {
+      "title": "快速提高编码速度的提示。",
+      "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
+      "author": "Lethium Deo",
+      "designation": "平面设计师",
+      "tag": "设计",
+      "date": "2025"
+    },
+    "by": "由",
+    "date": "日期",
+    "pageName": "博客网格",
+    "description": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
+    "prevButton": "以前",
+    "nextButton": "下一个",
+    "dots": "..."
+  },
+  "BlogDetailsPage": {
+    "title": "博客详细信息",
+    "by": "由",
+    "designTag": "设计",
+    "bodyParagraph1": "这是一篇详细的博客文章。",
+    "bodyParagraph2": "文章继续说。",
+    "bodyParagraph3": "更多内容。",
+    "bodyParagraph4": "最后一段。",
+    "subtitle": "字幕",
+    "listItem1": "列表项 1",
+    "listItem2": "列表项 2",
+    "listItem3": "列表项 3",
+    "listItem4": "列表项 4",
+    "quote": "这是一句话。",
+    "malesuada": "重要内容",
+    "ametDictum": "强调的内容",
+    "description": "这是一篇详细的博客文章。"
+  },
+  "BlogSidebarPage": {
+    "title": "博客侧边栏",
+    "description": "带有侧边栏的博客页面。"
   },
   "ContactPage": {
-    "title": "联系我们",
-    "paragraph": "如有任何问题，请随时与我们联系。",
+    "title": "需要帮助？打开工单",
+    "paragraph": "我们的支持团队将尽快通过电子邮件回复您。",
     "form": {
-      "name": "姓名",
-      "email": "电子邮件",
-      "message": "留言",
-      "submit": "发送"
+      "nameLabel": "您的姓名",
+      "namePlaceholder": "输入您的姓名",
+      "emailLabel": "您的电子邮件",
+      "emailPlaceholder": "输入您的电子邮件",
+      "messageLabel": "您的信息",
+      "messagePlaceholder": "输入您的信息",
+      "submit": "提交工单"
     },
     "newsletter": {
-      "title": "订阅以接收未来的更新",
-      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "title": "订阅我们的时事通讯",
+      "paragraph": "将最新消息和更新发送到您的收件箱。",
       "namePlaceholder": "输入您的姓名",
       "emailPlaceholder": "输入您的电子邮件",
       "subscribe": "订阅",
@@ -157,25 +225,30 @@
     "metaTitle": "错误页面 |用于初创公司和 SaaS 的免费 Next.js 模板",
     "metaDescription": "这是启动 Nextjs 模板的错误页面"
   },
-  "BlogDetailsPage": {
-    "title": "博客详情",
-    "by": "作者：",
-    "designTag": "设计",
-    "bodyParagraph1": "这是一篇详细的博客文章。",
-    "bodyParagraph2": "文章内容继续。",
-    "bodyParagraph3": "更多内容。",
-    "bodyParagraph4": "最后一段。",
-    "subtitle": "小标题",
-    "listItem1": "列表项1",
-    "listItem2": "列表项2",
-    "listItem3": "列表项3",
-    "listItem4": "列表项4",
-    "quote": "这是一段引用文字。",
-    "malesuada": "重要内容",
-    "ametDictum": "强调内容"
+  "SignInPage": {
+    "title": "登录",
+    "paragraph": "登录您的帐户。",
+    "form": {
+      "email": "电子邮件",
+      "password": "密码",
+      "submit": "登录",
+      "forgotPassword": "忘记密码？"
+    }
   },
-  "BlogSidebarPage": {
-    "title": "博客侧边栏",
-    "description": "带有侧边栏的博客页面。"
+  "SignUpPage": {
+    "title": "登记",
+    "paragraph": "创建新帐户。",
+    "form": {
+      "name": "名字",
+      "email": "电子邮件",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "登记"
+    }
+  },
+  "ErrorPage": {
+    "title": "错误",
+    "paragraph": "抱歉，发生错误。",
+    "button": "返回首页"
   }
 }
