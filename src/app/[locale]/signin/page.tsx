@@ -32,7 +32,7 @@ const SigninPage = async ({ params }: Props) => {
                 <h3 className="mb-3 text-center text-2xl font-bold text-black sm:text-3xl dark:text-white">
                   {t("title")}
                 </h3>
-                <p className="text-body-color mb-11 text-center text-base font-medium">
+                <p className="text-body-color/80 dark:text-body-color-dark/80 mb-11 text-center text-base font-medium">
                   {t("description")}
                 </p>
                 <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:hover:shadow-none">
@@ -88,7 +88,7 @@ const SigninPage = async ({ params }: Props) => {
                 </button>
                 <div className="mb-8 flex items-center justify-center">
                   <span className="bg-body-color/50 hidden h-[1px] w-full max-w-[70px] sm:block"></span>
-                  <p className="text-body-color w-full px-5 text-center text-base font-medium">
+                  <p className="text-body-color/80 dark:text-body-color-dark/80 w-full px-5 text-center text-base font-medium">
                     {t("orSignInWithEmail")}
                   </p>
                   <span className="bg-body-color/50 hidden h-[1px] w-full max-w-[70px] sm:block"></span>
@@ -126,7 +126,7 @@ const SigninPage = async ({ params }: Props) => {
                     <div className="mb-4 sm:mb-0">
                       <label
                         htmlFor="checkboxLabel"
-                        className="text-body-color flex cursor-pointer items-center text-sm font-medium select-none"
+                        className="text-body-color/80 dark:text-body-color-dark/80 flex cursor-pointer items-center text-sm font-medium select-none"
                       >
                         <div className="relative">
                           <input
@@ -171,7 +171,7 @@ const SigninPage = async ({ params }: Props) => {
                     </button>
                   </div>
                 </form>
-                <p className="text-body-color text-center text-base font-medium">
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-center text-base font-medium">
                   {t("noAccount")}{" "}
                   <Link href="/signup" className="text-primary hover:underline">
                     {t("signUpLink")}
@@ -221,8 +221,8 @@ const SigninPage = async ({ params }: Props) => {
                 y2="453.581"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_95:1005"
@@ -232,8 +232,8 @@ const SigninPage = async ({ params }: Props) => {
                 y2="1192.04"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

@@ -22,33 +22,33 @@ export default async function AboutSectionTwo({ locale }: { locale: string }) {
                 src="/images/about/about-image-2-dark.svg"
                 alt="about image"
                 fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                className="drop-shadow-three hidden dark:block dark:drop-shadow-none"
               />
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
               <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   {t("sectionTwo.item1.title")}
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
                   {t("sectionTwo.item1.paragraph")}
                 </p>
               </div>
               <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   {t("sectionTwo.item2.title")}
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
                   {t("sectionTwo.item2.paragraph")}
                 </p>
               </div>
               <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   {t("sectionTwo.item3.title")}
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
                   {t("sectionTwo.item3.paragraph")}
                 </p>
               </div>

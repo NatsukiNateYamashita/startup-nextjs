@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
+      <footer className="dark:bg-gray-dark relative z-10 bg-white/80 pt-16 backdrop-blur-sm md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
@@ -26,7 +26,7 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                <p className="text-body-color/80 dark:text-body-color-dark/80 mb-9 text-base leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Integer lobortis.
                 </p>
@@ -36,7 +36,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
                   >
                     <svg
                       width="18"
@@ -56,7 +56,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
                   >
                     <svg
                       width="18"
@@ -78,7 +78,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
                   >
                     <svg
                       width="18"
@@ -94,7 +94,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary duration-300"
                   >
                     <svg
                       width="17"
@@ -111,14 +111,14 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
                   Useful Links
                 </h2>
                 <ul>
                   <li>
                     <Link
                       href="/blog"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       Blog
                     </Link>
@@ -126,7 +126,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       Pricing
                     </Link>
@@ -134,7 +134,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       About
                     </Link>
@@ -145,14 +145,14 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
                   Terms
                 </h2>
                 <ul>
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       TOS
                     </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       Privacy Policy
                     </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       Refund Policy
                     </Link>
@@ -179,14 +179,14 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
                   Support & Help
                 </h2>
                 <ul>
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       Open Support Ticket
                     </Link>
@@ -194,7 +194,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       Terms of Use
                     </Link>
@@ -202,7 +202,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       About
                     </Link>
@@ -212,9 +212,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+          <div className="h-px w-full bg-linear-to-r from-transparent via-[#D8A77B83] to-transparent dark:via-[#D8A77B83]"></div>
           <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
+            <p className="text-body-color/80 dark:text-body-color-dark text-center text-base">
               Template by{" "}
               <a
                 href="http://uideck.com"
@@ -236,7 +236,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="absolute right-0 top-14 z-[-1]">
+        <div className="absolute top-14 right-0 z-[-1]">
           <svg
             width="55"
             height="99"
@@ -244,7 +244,7 @@ const Footer = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
+            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#D8A77B" />
             <mask
               id="mask0_94:899"
               style={{ maskType: "alpha" }}
@@ -254,17 +254,10 @@ const Footer = () => {
               width="99"
               height="99"
             >
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="#4A6CF7"
-              />
+              <circle cx="49.5" cy="49.5" r="49.5" fill="#E17B47" />
             </mask>
             <g mask="url(#mask0_94:899)">
               <circle
-                opacity="0.8"
                 cx="49.5"
                 cy="49.5"
                 r="49.5"
@@ -304,8 +297,8 @@ const Footer = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
               >
-                <stop stopOpacity="0.47" />
-                <stop offset="1" stopOpacity="0" />
+                <stop stopColor="#E17B47" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </radialGradient>
             </defs>
           </svg>
@@ -365,8 +358,8 @@ const Footer = () => {
                 y2="59.8878"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_94:889"
@@ -376,8 +369,8 @@ const Footer = () => {
                 y2="20.668"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
+                <stop stopColor="#E17B47" stopOpacity="0" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_94:889"
@@ -387,8 +380,8 @@ const Footer = () => {
                 y2="25.1062"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_94:889"
@@ -398,8 +391,8 @@ const Footer = () => {
                 y2="80.6826"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
+                <stop stopColor="#E17B47" stopOpacity="0" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_94:889"
@@ -409,8 +402,8 @@ const Footer = () => {
                 y2="58.2156"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E17B47" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_94:889"
@@ -420,8 +413,8 @@ const Footer = () => {
                 y2="41.6598"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
+                <stop stopColor="#E17B47" stopOpacity="0" />
+                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
               </linearGradient>
             </defs>
           </svg>

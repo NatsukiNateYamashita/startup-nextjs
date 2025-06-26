@@ -17,7 +17,7 @@ const Breadcrumb = ({
                 <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
                   {pageName}
                 </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
+                <p className="text-base font-medium leading-relaxed text-body-color/80 dark:text-body-color-dark/80">
                   {description}
                 </p>
               </div>
@@ -28,11 +28,11 @@ const Breadcrumb = ({
                   <li className="flex items-center">
                     <Link
                       href="/"
-                      className="pr-1 text-base font-medium text-body-color hover:text-primary"
+                      className="pr-1 text-base font-medium text-body-color/80 dark:text-body-color-dark/80 hover:text-primary"
                     >
                       Home
                     </Link>
-                    <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
+                    <span className="mr-3 text-base font-medium text-body-color/80 dark:text-body-color-dark/80">&gt;</span>
                   </li>
                   <li className="text-base font-medium text-primary">
                     {pageName}
@@ -66,8 +66,8 @@ const Breadcrumb = ({
                   y2="-97.1485"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                  <stop stopColor="#E17B47" />
+                  <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -99,8 +99,8 @@ const Breadcrumb = ({
                   y2="37.0429"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                  <stop stopColor="#E17B47" />
+                  <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_0:1"
@@ -110,8 +110,8 @@ const Breadcrumb = ({
                   y2="32.3398"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                  <stop stopColor="#E17B47" />
+                  <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>

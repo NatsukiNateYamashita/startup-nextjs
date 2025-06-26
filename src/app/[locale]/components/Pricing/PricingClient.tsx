@@ -47,7 +47,7 @@ const PricingClient: React.FC<PricingClientProps> = ({
               className={`${
                 isMonthly
                   ? "pointer-events-none text-primary"
-                  : "text-dark dark:text-white"
+                  : "text-body-color dark:text-body-color-dark"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
               {monthlyLabel}
@@ -57,7 +57,7 @@ const PricingClient: React.FC<PricingClientProps> = ({
               className="flex cursor-pointer items-center"
             >
               <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
+                <div className="h-5 w-14 rounded-full bg-dark shadow-inner"></div>
                 <div
                   className={`${
                     isMonthly ? "" : "translate-x-full"
@@ -71,7 +71,7 @@ const PricingClient: React.FC<PricingClientProps> = ({
               onClick={() => setIsMonthly(false)}
               className={`${
                 isMonthly
-                  ? "text-dark dark:text-white"
+                  ? "text-body-color dark:text-body-color-dark"
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >

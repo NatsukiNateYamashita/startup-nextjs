@@ -1,7 +1,8 @@
 {
   "HomePage": {
-    "title": "你好，世界！",
-    "about": "這個頁面"
+    "title": "世界您好！",
+    "paragraph": "歡迎訪問我們的網站。",
+    "button": "瞭解更多資訊"
   },
   "HeroPage": {
     "heading": "免費開源的Next.js範本，適用於創業和SaaS",
@@ -10,42 +11,26 @@
     "githubButton": "在 GitHub 上加星標"
   },
   "FeaturesPage": {
-    "title": "主要特點",
-    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。",
-    "feature1": {
-      "title": "專為初創公司打造",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature2": {
-      "title": "高品質設計",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature3": {
-      "title": "Next.js 13 （最新）",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature4": {
-      "title": "順風 CSS",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature5": {
-      "title": "完全可定製",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    },
-    "feature6": {
-      "title": "免費和開源",
-      "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium.Repellendus quisquam numquam perferendis earum sapiente non tempore？Fugit repellat ut maiores."
-    }
+    "title": "特徵",
+    "paragraph": "瞭解我們服務提供的主要功能。",
+    "feature1Title": "簡單易用",
+    "feature1Paragraph": "通過直觀的介面輕鬆開始使用我們的服務。",
+    "feature2Title": "高級分析",
+    "feature2Paragraph": "通過詳細的數據分析和報告來支援您的業務決策。",
+    "feature3Title": "安全環境",
+    "feature3Paragraph": "您的數據受到最新安全技術的安全保護。"
   },
   "VideoPage": {
     "title": "我們隨時準備提供説明",
     "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。"
   },
   "AboutPage": {
+    "title": "關於我們",
+    "paragraph": "了解我們的故事和使命。",
     "sectionOne": {
-      "title": "專為初創公司、SaaS 和商業網站而設計。",
-      "paragraph": "主要主旨是專注於教育出席者如何通過互動式小組討論和圓桌會議最好地保護高度脆弱的業務應用程式。",
-      "list1": "優質",
+      "title": "專為初創公司、SaaS 和商業網站設計。",
+      "paragraph": "主要主題是專注於教育出席者如何通過互動式小組討論和圓桌會議最好地保護高度脆弱的業務應用程式。",
+      "list1": "獎賞",
       "list2": "順風 CSS",
       "list3": "終身使用",
       "list4": "Next.js",
@@ -54,11 +39,11 @@
     },
     "sectionTwo": {
       "item1": {
-        "title": "無 Bug 代碼",
+        "title": "無錯誤代碼",
         "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       "item2": {
-        "title": "頂級支援",
+        "title": "高級支援",
         "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt."
       },
       "item3": {
@@ -117,7 +102,7 @@
   },
   "BlogPage": {
     "title": "我們的最新博客",
-    "paragraph": "Lorem Ipsum 的段落有許多變體，但大多數都遭受了某種形式的改變。",
+    "paragraph": "查看我們的最新文章和更新。",
     "blog1": {
       "title": "現代網站的最佳UI元件",
       "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.Cras sit amet dictum neque， laoreet dolor.",
@@ -146,9 +131,31 @@
     "date": "日期",
     "pageName": "博客網格",
     "description": "Lorem ipsum dolor sit amet， consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
-    "prevButton": "昨日",
+    "prevButton": "以前",
     "nextButton": "下一個",
     "dots": "..."
+  },
+  "BlogDetailsPage": {
+    "title": "博客詳細資訊",
+    "by": "由",
+    "designTag": "設計",
+    "bodyParagraph1": "這是一篇詳細的博客文章。",
+    "bodyParagraph2": "文章繼續說。",
+    "bodyParagraph3": "更多內容。",
+    "bodyParagraph4": "最後一段。",
+    "subtitle": "字幕",
+    "listItem1": "清單項 1",
+    "listItem2": "清單項 2",
+    "listItem3": "清單項 3",
+    "listItem4": "清單項 4",
+    "quote": "這是一句話。",
+    "malesuada": "重要內容",
+    "ametDictum": "強調的內容",
+    "description": "這是一篇詳細的博客文章。"
+  },
+  "BlogSidebarPage": {
+    "title": "博客側邊欄",
+    "description": "帶有側邊欄的博客頁面。"
   },
   "ContactPage": {
     "title": "需要説明？打開工單",
@@ -163,8 +170,8 @@
       "submit": "提交工單"
     },
     "newsletter": {
-      "title": "訂閱以接收未來的更新",
-      "paragraph": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+      "title": "訂閱我們的時事通訊",
+      "paragraph": "將最新消息和更新發送到您的收件匣。",
       "namePlaceholder": "輸入您的姓名",
       "emailPlaceholder": "輸入您的電子郵件",
       "subscribe": "訂閱",
@@ -218,26 +225,30 @@
     "metaTitle": "錯誤頁面 |用於初創公司和 SaaS 的免費 Next.js 範本",
     "metaDescription": "這是啟動 Nextjs 範本的錯誤頁面"
   },
-  "BlogDetailsPage": {
-    "title": "10個令人驚歎的網站免費下載庫存照片和數字資產",
-    "by": "由",
-    "designTag": "設計",
-    "bodyParagraph1": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat.",
-    "bodyParagraph2": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis enim lobortis scelerisque fermentum.Neque sodales ut etiam sit amet.Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.Quam pellentesque neć nğ nam aliquam sem et tortor consequat.Pellentesque adipiscing commodo elit at imperdiet.",
-    "malesuada": "馬勒蘇阿達",
-    "bodyParagraph3": "Semper auctor neque vitae tempus quam pellentesque nec.Amet dictum sit amet justo donec enim diam.Varius sit amet mattis vulputate enim nulla aliquet porttitor.Odio pellentesque diam volutpat commodo sed.",
-    "ametDictum": "Amet 格言 sit amet justo",
-    "subtitle": "Ui/Ux 設計師的數字市場。",
-    "bodyParagraph4": "Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat mattis vulputate cupidatat.",
-    "listItem1": "Consectetur adipiscing elit in voluptate velit.",
-    "listItem2": "Mattis vulputate cupidatat.",
-    "listItem3": "Vulputate enim nulla aliquet porttitor odio pellentesque",
-    "listItem4": "Ligula ullamcorper malesuada proin",
-    "quote": "Lorem ipsum dolor sit amet， consectetur adipiscing elit， sed do eiusmod incididunt utionals labore et dolore magna aliqua.Quis lobortis scelerisque fermentum， The Neque ut etiam sit amet."
+  "SignInPage": {
+    "title": "登錄",
+    "paragraph": "登錄您的帳戶。",
+    "form": {
+      "email": "電子郵件",
+      "password": "密碼",
+      "submit": "登錄",
+      "forgotPassword": "忘記密碼？"
+    }
   },
-  "BlogSidebarPage": {
-    "recentPosts": "最近的文章",
-    "tags": "標籤",
-    "by": "由"
+  "SignUpPage": {
+    "title": "登記",
+    "paragraph": "創建新帳戶。",
+    "form": {
+      "name": "名字",
+      "email": "電子郵件",
+      "password": "密碼",
+      "confirmPassword": "確認密碼",
+      "submit": "登記"
+    }
+  },
+  "ErrorPage": {
+    "title": "錯誤",
+    "paragraph": "抱歉，發生錯誤。",
+    "button": "返回首頁"
   }
 }

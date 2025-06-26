@@ -11,7 +11,7 @@ const checkIcon = (
 export default async function AboutSectionOne({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "AboutPage" });
   const List = ({ text }: { text: string }) => (
-    <p className="text-body-color mb-5 flex items-center text-lg font-medium">
+    <p className="text-body-color mb-5 flex items-center text-lg font-medium dark:text-body-color-dark">
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
         {checkIcon}
       </span>

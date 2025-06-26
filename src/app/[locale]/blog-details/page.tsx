@@ -33,7 +33,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight dark:text-white">
+                <h2 className="dark:text-body-color-dark-dark-dark-dark-dark mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight">
                   {t("title")}
                 </h2>
                 <div className="border-body-color/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4 dark:border-white/10">
@@ -49,13 +49,13 @@ const BlogDetailsPage = async ({ params }: Props) => {
                         </div>
                       </div>
                       <div className="w-full">
-                        <span className="text-body-color mb-1 text-base font-medium">
-                          {t("by")}{" "}<span>Musharof Chy</span>
+                        <span className="text-body-color dark:text-body-color-dark mb-1 text-base font-medium">
+                          {t("by")} <span>Musharof Chy</span>
                         </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
-                      <p className="text-body-color mr-5 flex items-center text-base font-medium">
+                      <p className="text-body-color dark:text-body-color-dark mr-5 flex items-center text-base font-medium">
                         <span className="mr-3">
                           <svg
                             width="15"
@@ -76,7 +76,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                         </span>
                         12 Jan 2024
                       </p>
-                      <p className="text-body-color mr-5 flex items-center text-base font-medium">
+                      <p className="text-body-color dark:text-body-color-dark mr-5 flex items-center text-base font-medium">
                         <span className="mr-3">
                           <svg
                             width="18"
@@ -91,7 +91,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                         </span>
                         50
                       </p>
-                      <p className="text-body-color flex items-center text-base font-medium">
+                      <p className="text-body-color dark:text-body-color-dark flex items-center text-base font-medium">
                         <span className="mr-3">
                           <svg
                             width="20"
@@ -117,7 +117,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color dark:text-body-color-dark mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {t("bodyParagraph1")}
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded-sm">
@@ -130,46 +130,44 @@ const BlogDetailsPage = async ({ params }: Props) => {
                       />
                     </div>
                   </div>
-                  <p className="text-body-color mb-8 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color dark:text-body-color-dark mb-8 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {t("bodyParagraph2")}
-                    <strong className="text-primary dark:text-white">
-                      {t("malesuada")}
-                    </strong>
+                    <strong className="text-primary">{t("malesuada")}</strong>
                     proin libero nunc consequat interdum varius. Quam
                     pellentesque nec nam aliquam sem et tortor consequat.
                     Pellentesque adipiscing commodo elit at imperdiet.
                   </p>
-                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color dark:text-body-color-dark mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {t("bodyParagraph3")}
-                    <span className="text-primary underline dark:text-white">
+                    <span className="text-primary dark:text-body-color-dark underline">
                       {t("ametDictum")}
                     </span>
                     donec enim diam. Varius sit amet mattis vulputate enim nulla
                     aliquet porttitor. Odio pellentesque diam volutpat commodo
                     sed.
                   </p>
-                  <h3 className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
+                  <h3 className="font-xl dark:text-body-color-dark mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     {t("subtitle")}
                   </h3>
-                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color dark:text-body-color-dark mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {t("bodyParagraph4")}
                   </p>
-                  <ul className="text-body-color mb-10 list-inside list-disc">
-                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
+                  <ul className="text-body-color dark:text-body-color-dark mb-10 list-inside list-disc">
+                    <li className="text-body-color dark:text-body-color-dark mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       {t("listItem1")}
                     </li>
-                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
+                    <li className="text-body-color dark:text-body-color-dark mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       {t("listItem2")}
                     </li>
-                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
+                    <li className="text-body-color dark:text-body-color-dark mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       {t("listItem3")}
                     </li>
-                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
+                    <li className="text-body-color dark:text-body-color-dark mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       {t("listItem4")}
                     </li>
                   </ul>
                   <div className="bg-primary/10 relative z-10 mb-10 overflow-hidden rounded-md p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-body-color text-center text-base font-medium italic">
+                    <p className="text-body-color dark:text-body-color-dark text-center text-base font-medium italic">
                       {t("quote")}
                     </p>
                     <span className="absolute top-0 left-0 z-[-1]">
@@ -237,7 +235,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                           cx="37.5"
                           cy="37.5"
                           r="37.5"
-                          fill="#4A6CF7"
+                          fill="#E17B47"
                         />
                         <mask
                           id="mask0_111:596"
@@ -253,7 +251,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                             cx="37.5"
                             cy="37.5"
                             r="37.5"
-                            fill="#4A6CF7"
+                            fill="#E17B47"
                           />
                         </mask>
                         <g mask="url(#mask0_111:596)">
@@ -265,11 +263,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                             fill="url(#paint2_radial_111:596)"
                           />
                           <g opacity="0.8" filter="url(#filter0_f_111:596)">
-                            <circle cx="2.5"
-                            cy="-12.5"
-                            r="17.5"
-                            fill="white"
-                            />
+                            <circle cx="2.5" cy="-12.5" r="17.5" fill="white" />
                           </g>
                         </g>
                         <defs>
@@ -282,7 +276,10 @@ const BlogDetailsPage = async ({ params }: Props) => {
                             filterUnits="userSpaceOnUse"
                             colorInterpolationFilters="sRGB"
                           >
-                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                            <feFlood
+                              floodOpacity="0"
+                              result="BackgroundImageFix"
+                            />
                             <feBlend
                               mode="normal"
                               in="SourceGraphic"
