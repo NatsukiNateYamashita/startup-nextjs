@@ -82,8 +82,8 @@ export default async function Testimonials({ locale }: { locale: string }) {
               y2="459.865"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#E17B47" />
-              <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+              <stop stopColor="var(--color-primary)" />
+              <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_83:2"
@@ -93,8 +93,8 @@ export default async function Testimonials({ locale }: { locale: string }) {
               y2="675.565"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#E17B47" />
-              <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+              <stop stopColor="var(--color-primary)" />
+              <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -134,8 +134,8 @@ export default async function Testimonials({ locale }: { locale: string }) {
               y2="8.15715"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#E17B47" stopOpacity="0" />
-              <stop offset="1" stopColor="#E17B47" />
+              <stop stopColor="var(--color-primary)" stopOpacity="0" />
+              <stop offset="1" stopColor="var(--color-primary)" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_72:302"
@@ -145,8 +145,8 @@ export default async function Testimonials({ locale }: { locale: string }) {
               y2="-2.84285"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#E17B47" stopOpacity="0" />
-              <stop offset="1" stopColor="#E17B47" />
+              <stop stopColor="var(--color-primary)" stopOpacity="0" />
+              <stop offset="1" stopColor="var(--color-primary)" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_72:302"
@@ -156,8 +156,8 @@ export default async function Testimonials({ locale }: { locale: string }) {
               y2="19.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#E17B47" stopOpacity="0" />
-              <stop offset="1" stopColor="#E17B47" />
+              <stop stopColor="var(--color-primary)" stopOpacity="0" />
+              <stop offset="1" stopColor="var(--color-primary)" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_72:302"
@@ -167,8 +167,8 @@ export default async function Testimonials({ locale }: { locale: string }) {
               y2="31.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#E17B47" stopOpacity="0" />
-              <stop offset="1" stopColor="#E17B47" />
+              <stop stopColor="var(--color-primary)" stopOpacity="0" />
+              <stop offset="1" stopColor="var(--color-primary)" />
             </linearGradient>
           </defs>
         </svg>

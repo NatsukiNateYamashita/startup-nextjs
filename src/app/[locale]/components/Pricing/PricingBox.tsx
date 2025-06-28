@@ -57,8 +57,8 @@ const PricingBox = (props: {
                 y2="83.2919"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_70:153"
@@ -68,8 +68,8 @@ const PricingBox = (props: {
                 y2="103.645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

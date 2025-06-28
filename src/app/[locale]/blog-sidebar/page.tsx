@@ -221,7 +221,7 @@ const BlogSidebarPage = async ({ params }: Props) => {
                           cx="37.5"
                           cy="37.5"
                           r="37.5"
-                          fill="#E17B47"
+                          fill="var(--color-primary)"
                         />
                         <mask
                           id="mask0_111:596"
@@ -237,7 +237,7 @@ const BlogSidebarPage = async ({ params }: Props) => {
                             cx="37.5"
                             cy="37.5"
                             r="37.5"
-                            fill="#4A6CF7"
+                            fill="var(--color-primary)"
                           />
                         </mask>
                         <g mask="url(#mask0_111:596)">

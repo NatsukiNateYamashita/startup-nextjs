@@ -254,7 +254,7 @@ const Footer = () => {
               width="99"
               height="99"
             >
-              <circle cx="49.5" cy="49.5" r="49.5" fill="#E17B47" />
+              <circle cx="49.5" cy="49.5" r="49.5" fill="var(--color-primary)" />
             </mask>
             <g mask="url(#mask0_94:899)">
               <circle
@@ -297,8 +297,8 @@ const Footer = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
               >
-                <stop stopColor="#E17B47" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </radialGradient>
             </defs>
           </svg>
@@ -358,8 +358,8 @@ const Footer = () => {
                 y2="59.8878"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_94:889"
@@ -369,8 +369,8 @@ const Footer = () => {
                 y2="20.668"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.51" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_94:889"
@@ -380,8 +380,8 @@ const Footer = () => {
                 y2="25.1062"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_94:889"
@@ -391,8 +391,8 @@ const Footer = () => {
                 y2="80.6826"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.51" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_94:889"
@@ -402,8 +402,8 @@ const Footer = () => {
                 y2="58.2156"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_94:889"
@@ -413,8 +413,8 @@ const Footer = () => {
                 y2="41.6598"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.51" />
               </linearGradient>
             </defs>
           </svg>
