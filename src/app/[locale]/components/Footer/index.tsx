@@ -4,6 +4,17 @@ import { getTranslations } from "next-intl/server";
 
 const Footer = async () => {
   const t = await getTranslations('Footer');
+  
+  // Safe fallback function for translations
+  const safeT = (key: string, fallback: string = '') => {
+    try {
+      return t(key) || fallback;
+    } catch (error) {
+      console.error(`Translation error for key: ${key}`, error);
+      return fallback;
+    }
+  };
+  
   return (
     <>
       <footer className="dark:bg-gray-dark relative z-10 bg-white/80 pt-16 backdrop-blur-sm md:pt-20 lg:pt-24">
@@ -28,7 +39,7 @@ const Footer = async () => {
                   />
                 </Link>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-9 text-base leading-relaxed">
-                  {t('description')}
+                  {safeT('description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.')}
                 </p>
                 <div className="flex items-center">
                   <a
@@ -112,7 +123,7 @@ const Footer = async () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  {t('usefulLinks')}
+                  {safeT('usefulLinks', 'Useful Links')}
                 </h2>
                 <ul>
                   <li>
@@ -120,7 +131,7 @@ const Footer = async () => {
                       href="/blog"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('links.blog')}
+                      {safeT('links.blog', 'Blog')}
                     </Link>
                   </li>
                   <li>
@@ -128,7 +139,7 @@ const Footer = async () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('links.pricing')}
+                      {safeT('links.pricing', 'Pricing')}
                     </Link>
                   </li>
                   <li>
@@ -136,7 +147,7 @@ const Footer = async () => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('links.about')}
+                      {safeT('links.about', 'About')}
                     </Link>
                   </li>
                 </ul>
@@ -146,7 +157,7 @@ const Footer = async () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  {t('terms')}
+                  {safeT('terms', 'Terms')}
                 </h2>
                 <ul>
                   <li>
@@ -154,7 +165,7 @@ const Footer = async () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('termsLinks.tos')}
+                      {safeT('termsLinks.tos', 'Terms of Service')}
                     </Link>
                   </li>
                   <li>
@@ -162,7 +173,7 @@ const Footer = async () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('termsLinks.privacy')}
+                      {safeT('termsLinks.privacy', 'Privacy Policy')}
                     </Link>
                   </li>
                   <li>
@@ -170,7 +181,7 @@ const Footer = async () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('termsLinks.refund')}
+                      {safeT('termsLinks.refund', 'Refund Policy')}
                     </Link>
                   </li>
                 </ul>
@@ -180,7 +191,7 @@ const Footer = async () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  {t('support')}
+                  {safeT('support', 'Support & Help')}
                 </h2>
                 <ul>
                   <li>
@@ -188,7 +199,7 @@ const Footer = async () => {
                       href="/contact"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('supportLinks.support')}
+                      {safeT('supportLinks.support', 'Open Support Ticket')}
                     </Link>
                   </li>
                   <li>
@@ -196,7 +207,7 @@ const Footer = async () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('supportLinks.termsOfUse')}
+                      {safeT('supportLinks.termsOfUse', 'Terms of Use')}
                     </Link>
                   </li>
                   <li>
@@ -204,7 +215,7 @@ const Footer = async () => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('supportLinks.about')}
+                      {safeT('supportLinks.about', 'About')}
                     </Link>
                   </li>
                 </ul>
@@ -215,23 +226,23 @@ const Footer = async () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D8A77B83] to-transparent dark:via-[#D8A77B83]"></div>
           <div className="py-8">
             <p className="text-body-color/80 dark:text-body-color-dark text-center text-base">
-              {t('copyright')}{" "}
+              {safeT('copyright', 'Template by')}{" "}
               <a
                 href="http://uideck.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
-                {t('uideck')}
+                {safeT('uideck', 'UIdeck')}
               </a>{" "}
-              {t('and')}{" "}
+              {safeT('and', 'and')}{" "}
               <a
                 href="https://nextjstemplates.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
-                {t('nextjsTemplates')}
+                {safeT('nextjsTemplates', 'Next.js Templates')}
               </a>
             </p>
           </div>
