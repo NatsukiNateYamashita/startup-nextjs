@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
 import "@/app/[locale]/styles/index.css";
 import ClientLayout from "@/app/[locale]/ClientLayout";
+import Footer from "@/app/[locale]/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default async function RootLayout({
           <ClientLayout>
             {children}
           </ClientLayout>
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

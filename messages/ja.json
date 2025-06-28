@@ -250,5 +250,30 @@
     "title": "エラー",
     "paragraph": "申し訳ございませんが、エラーが発生しました。",
     "button": "ホームに戻る"
+  },
+  "Footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
+    "usefulLinks": "便利なリンク",
+    "links": {
+      "blog": "ブログ",
+      "pricing": "料金",
+      "about": "About"
+    },
+    "terms": "利用規約",
+    "termsLinks": {
+      "tos": "利用規約", 
+      "privacy": "プライバシーポリシー",
+      "refund": "返金ポリシー"
+    },
+    "support": "サポート・ヘルプ",
+    "supportLinks": {
+      "support": "サポートチケットを開く",
+      "termsOfUse": "利用規約",
+      "about": "About"
+    },
+    "copyright": "テンプレート提供",
+    "and": "と",
+    "uideck": "UIdeck",
+    "nextjsTemplates": "Next.js Templates"
   }
 }

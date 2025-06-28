@@ -250,5 +250,30 @@
     "title": "錯誤",
     "paragraph": "抱歉，發生錯誤。",
     "button": "返回首頁"
+  },
+  "Footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
+    "usefulLinks": "實用連結",
+    "links": {
+      "blog": "部落格",
+      "pricing": "價格",
+      "about": "關於"
+    },
+    "terms": "條款",
+    "termsLinks": {
+      "tos": "服務條款", 
+      "privacy": "隱私政策",
+      "refund": "退款政策"
+    },
+    "support": "支援和幫助",
+    "supportLinks": {
+      "support": "開啟支援票證",
+      "termsOfUse": "使用條款",
+      "about": "關於"
+    },
+    "copyright": "範本提供",
+    "and": "和",
+    "uideck": "UIdeck",
+    "nextjsTemplates": "Next.js Templates"
   }
 }

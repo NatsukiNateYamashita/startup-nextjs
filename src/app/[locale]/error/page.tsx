@@ -53,7 +53,7 @@ const ErrorPage = async ({ params }: Props) => {
                       cx="227.5"
                       cy="81.5"
                       r="68.5"
-                      fill="#4A6CF7"
+                      fill="var(--color-primary)"
                     />
                     <mask
                       id="mask0_116:1137"
@@ -69,7 +69,7 @@ const ErrorPage = async ({ params }: Props) => {
                         cx="227.5"
                         cy="81.5"
                         r="68.5"
-                        fill="#4A6CF7"
+                        fill="var(--color-primary)"
                       />
                     </mask>
                     <g mask="url(#mask0_116:1137)">
@@ -125,8 +125,8 @@ const ErrorPage = async ({ params }: Props) => {
                         y2="27.0837"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stopColor="#4A6CF7" stopOpacity="0" />
-                        <stop offset="1" stopColor="#4A6CF7" />
+                        <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                        <stop offset="1" stopColor="var(--color-primary)" />
                       </linearGradient>
                       <linearGradient
                         id="paint1_linear_116:1137"
@@ -136,8 +136,8 @@ const ErrorPage = async ({ params }: Props) => {
                         y2="-2.91631"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stopColor="#4A6CF7" stopOpacity="0" />
-                        <stop offset="1" stopColor="#4A6CF7" />
+                        <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                        <stop offset="1" stopColor="var(--color-primary)" />
                       </linearGradient>
                       <radialGradient
                         id="paint2_radial_116:1137"
@@ -250,8 +250,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="131.859"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_116:1140"
@@ -261,8 +261,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="145.47"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_116:1140"
@@ -272,8 +272,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="56.4069"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_116:1140"
@@ -283,8 +283,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="62.4026"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_116:1140"
@@ -294,8 +294,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="113.682"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_116:1140"
@@ -305,8 +305,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="142.533"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint6_linear_116:1140"
@@ -316,8 +316,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="70.8279"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" />
               </linearGradient>
               <linearGradient
                 id="paint7_linear_116:1140"
@@ -327,8 +327,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="84.4391"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint8_linear_116:1140"
@@ -338,8 +338,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="-2.65624"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop offset="1" stopColor="var(--color-primary)" />
               </linearGradient>
               <linearGradient
                 id="paint9_linear_116:1140"
@@ -349,8 +349,8 @@ const ErrorPage = async ({ params }: Props) => {
                 y2="3.33924"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
