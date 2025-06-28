@@ -250,5 +250,30 @@
     "title": "Error",
     "paragraph": "Sorry, an error occurred.",
     "button": "Back to Home"
+  },
+  "Footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
+    "usefulLinks": "Useful Links",
+    "links": {
+      "blog": "Blog",
+      "pricing": "Pricing",
+      "about": "About"
+    },
+    "terms": "Terms",
+    "termsLinks": {
+      "tos": "TOS", 
+      "privacy": "Privacy Policy",
+      "refund": "Refund Policy"
+    },
+    "support": "Support & Help",
+    "supportLinks": {
+      "support": "Open Support Ticket",
+      "termsOfUse": "Terms of Use",
+      "about": "About"
+    },
+    "copyright": "Template by",
+    "and": "and",
+    "uideck": "UIdeck",
+    "nextjsTemplates": "Next.js Templates"
   }
 }

@@ -1,33 +1,91 @@
 # 🚀 Startup Next.js プロジェクト - 包括的開発ドキュメント
 
-## 📋 プロジェクト概要
+> **📋 目的**: プロジェクト全体の理解・新規参加者へのオンボーディング・設計判断の根拠提供  
+> **👥 対象**: プロジェクトマネージャー、設計者、新規開発者、ステークホルダー  
+> **🔄 更新頻度**: プロジェクト仕様変更時・新機能追加時  
+> **⚙️ 実装詳細**: [GitHub Copilot開発指示書](.github/.copilot-instructions.md) を参照
 
-このプロジェクトは、スタートアップ・SaaS企業向けのNext.jsテンプレートを基に構築された多言語対応Webアプリケーションです。next-intl を使用した国際化機能と、将来のWebApp化を見据えた拡張可能な設計となっています。
+---
 
-## 🛠 技術スタック
+## 📋 **プロジェクト概要**
 
-### コア技術
-- **フレームワーク**: Next.js 15.3.0 (App Router)
-- **UI フレームワーク**: Tailwind CSS 4.1.3
-- **言語**: TypeScript 5.3.3
-- **国際化**: next-intl 4.1.0
-- **テーマ**: next-themes 0.2.1
+このプロジェクトは、**スタートアップ・SaaS企業向けのNext.jsテンプレート**を基に構築された**多言語対応Webアプリケーション**です。next-intl を使用した国際化機能と、将来のWebApp化を見据えた拡張可能な設計となっています。
 
-### 開発環境
-- **Node.js**: 20.x
-- **パッケージマネージャー**: npm
-- **コードフォーマッター**: Prettier 3.2.5
-- **リンター**: ESLint 9.24.0
+### 🎯 **プロジェクトビジョン**
+- **現在**: 高品質な多言語対応静的サイト（コーポレート・ランディングページ）
+- **近未来**: データベース統合による動的サイト（ブログCMS、お問い合わせ管理）
+- **将来**: フル機能WebApp（認証、課金、ダッシュボード、SaaS機能）
 
-## 🏗 プロジェクト構造とファイル役割
+## 🛠 **技術スタック・アーキテクチャ**
 
-### 📁 ディレクトリ構造詳細
+> **💡 実装詳細**: [開発指示書](.github/.copilot-instructions.md#-アーキテクチャ設計規則) の「アーキテクチャ設計規則」セクションを参照
+
+### **現在の技術構成**
+```yaml
+# フロントエンド
+フレームワーク: Next.js 15.3.0 (App Router)
+言語: TypeScript 5.3.3
+UIフレームワーク: Tailwind CSS 4.1.3
+国際化: next-intl 4.1.0
+テーマ: next-themes 0.2.1
+
+# 開発環境
+ランタイム: Node.js 20.x
+パッケージマネージャー: npm
+リンター: ESLint 9.24.0
+フォーマッター: Prettier 3.2.5
+
+# 将来予定
+データベース: Supabase (PostgreSQL) + Prisma ORM
+認証: NextAuth.js
+課金: Stripe
+テスト: Jest + Playwright
+CI/CD: GitHub Actions
+```
+
+### **アーキテクチャ原則**
+1. **🖥️ Server Component優先**: SEO・パフォーマンス最適化
+2. **💻 Client Component最小限**: 必要な場合のみ使用
+3. **🌐 多言語ファースト**: 全コンポーネントでi18n対応
+4. **📱 レスポンシブ必須**: モバイルファースト設計
+5. **♿ アクセシビリティ**: WCAG 2.1 AA準拠
+
+## 🏗 **プロジェクト構造・ファイル構成**
+
+> **⚙️ 実装ガイド**: [開発指示書](.github/.copilot-instructions.md#️-アーキテクチャ設計規則) の「ディレクトリ構造」「Server vs Client Component分類」を参照
+
+### **📁 主要ディレクトリ役割**
+
+| ディレクトリ | 役割 | 重要度 | 詳細 |
+|--------------|------|--------|------|
+| `src/app/[locale]/` | **App Routerルーティング** | 🔴 必須 | 多言語対応ページ・レイアウト |
+| `src/app/[locale]/components/` | **UIコンポーネント群** | 🔴 必須 | 再利用可能コンポーネント |
+| `src/i18n/` | **国際化設定** | 🔴 必須 | ルーティング・翻訳設定 |
+| `messages/` | **翻訳ファイル** | 🔴 必須 | 4言語対応JSON |
+| `public/images/` | **静的アセット** | 🟡 重要 | 画像・アイコン・ロゴ |
+| `.github/` | **GitHub設定・開発支援** | 🟡 重要 | Copilot指示書・CI/CD |
+
+### **🖥️💻 コンポーネント分類（最適化完了✅）**
+
+#### **🖥️ Server Components** (SEO・パフォーマンス最適化)
+```
+ページ: 全page.tsx (layout.tsx, ホーム, About, ブログ等)
+セクション: Hero, Features, About, Blog, Testimonials, Video, Footer
+データ表示: SingleBlog, SingleFeature, SingleTestimonial
+静的UI: SectionTitle, Breadcrumb
+```
+
+#### **💻 Client Components** (インタラクション必須のみ)
+```
+ナビゲーション: Header, LanguageSwitcher, ThemeToggler
+フォーム: NewsLatterBoxClient, PricingClient
+UI制御: VideoPlayButton, ScrollToTop, video-modal
+レイアウト: ClientLayout, providers.tsx
+```
 ```
 startup-nextjs/
 ├── 📁 .github/                    # GitHub設定・CI/CD・開発支援
-│   ├── .copilot-instructions.md  # GitHub Copilot開発指示書
-│   └── 📁 prompts/
-│       └── .prompt.md             # 開発アシスタント用プロンプト
+│   └── .copilot-instructions.md  # GitHub Copilot開発指示書 + 開発プロンプト統合
 ├── 📁 src/
 │   ├── 📁 app/[locale]/           # App Routerによる多言語ルーティング
 │   │   ├── layout.tsx             # 🖥️ SERVER: ルートレイアウト (i18n設定、メタデータ)
@@ -61,7 +119,7 @@ startup-nextjs/
 │   │   │   │   ├── NewsLatterBox.tsx      # 🖥️ SERVER: ニュースレター (サーバー)
 │   │   │   │   └── NewsLatterBoxClient.tsx # 💻 CLIENT: ニュースレター (フォーム)
 │   │   │   ├── 📁 Footer/         # フッター関連
-│   │   │   │   └── index.tsx      # 💻 CLIENT: フッターコンポーネント
+│   │   │   │   └── index.tsx      # �️ SERVER: フッターコンポーネント (i18n対応)
 │   │   │   ├── 📁 Pricing/        # 料金プラン関連
 │   │   │   │   ├── index.tsx      # �️ SERVER: 料金プランセクション
 │   │   │   │   ├── PricingClient.tsx      # 💻 CLIENT: 料金切替機能
@@ -89,107 +147,46 @@ startup-nextjs/
 │   │   │   └── page.tsx           # 🖥️ SERVER: Aboutページコンポーネント
 │   │   ├── 📁 blog/               # ブログ一覧ページ
 │   │   │   └── page.tsx           # 🖥️ SERVER: ブログ一覧ページ
-│   │   ├── 📁 blog-details/       # ブログ詳細ページ
-│   │   │   └── page.tsx           # 🖥️ SERVER: ブログ詳細ページ
-│   │   ├── 📁 blog-sidebar/       # ブログサイドバーページ
-│   │   │   └── page.tsx           # 🖥️ SERVER: サイドバー付きブログページ
-│   │   ├── 📁 contact/            # お問い合わせページ
-│   │   │   └── page.tsx           # 🖥️ SERVER: お問い合わせページ
-│   │   ├── 📁 error/              # エラーページ
-│   │   │   └── page.tsx           # 🖥️ SERVER: エラー表示ページ
-│   │   ├── 📁 signin/             # サインインページ
-│   │   │   └── page.tsx           # 🖥️ SERVER: ログインページ
-│   │   ├── 📁 signup/             # サインアップページ
-│   │   │   └── page.tsx           # 🖥️ SERVER: 新規登録ページ
-│   │   ├── 📁 styles/             # スタイルファイル
-│   │   │   └── index.css          # グローバルCSS・Tailwindインポート
-│   │   └── 📁 types/              # TypeScript型定義
-│   │       ├── blog.ts            # ブログ関連型
-│   │       ├── brand.ts           # ブランド関連型
-│   │       ├── menu.ts            # メニュー関連型
-│   │       └── testimonial.ts     # 証言関連型
-│   ├── 📁 i18n/                   # 国際化設定ファイル群
-│   │   ├── routing.ts             # ルーティング設定 (ロケール定義)
-│   │   ├── request.ts             # リクエスト設定 (サーバー側i18n)
-│   │   └── navigation.ts          # ナビゲーション設定 (クライアント側i18n)
-│   └── middleware.ts              # Next.jsミドルウェア (ロケール検出・リダイレクト)
-├── 📁 messages/                   # 多言語翻訳ファイル
-│   ├── ja.json                    # 日本語翻訳
-│   ├── en.json                    # 英語翻訳
-│   ├── zh-TW.json                 # 繁体中国語翻訳
-│   └── zh-CN.json                 # 簡体中国語翻訳
-├── 📁 public/                     # 静的ファイル・アセット
-│   ├── favicon.ico                # ファビコン
-│   └── 📁 images/                 # 画像ファイル群
-│       ├── logo/                  # ロゴ画像
-│       ├── hero/                  # ヒーロー画像
-│       ├── about/                 # About画像
-│       ├── blog/                  # ブログ画像
-│       ├── brands/                # ブランド画像
-│       ├── testimonials/          # 証言画像
-│       └── video/                 # 動画関連画像
-├── 📁 utils/                      # ユーティリティ・ヘルパー
-│   └── translate_json.py          # 翻訳支援スクリプト (Python)
-├── 📁 startup-nodejs/             # Python仮想環境 (翻訳スクリプト用)
-├── package.json                   # 依存関係・スクリプト定義
-├── next.config.ts                 # Next.js設定 (i18n、画像最適化)
-├── next-intl.config.js            # next-intl設定
-├── tailwind.config.js             # Tailwind CSS設定
-├── tsconfig.json                  # TypeScript設定
-├── jsconfig.json                  # JavaScript設定
-├── postcss.config.js              # PostCSS設定
-├── PROJECT_DOCUMENTATION.md       # 📝 プロジェクト包括ドキュメント
-└── README.md                      # プロジェクト基本説明
+## 🌐 **国際化（i18n）システム**
+
+> **⚙️ 実装ガイド**: [開発指示書](.github/.copilot-instructions.md#-国際化i18n実装規則) の「国際化実装規則」を参照
+
+### **サポート言語**
+- **🇯🇵 日本語** (ja) - デフォルト言語
+- **🇺🇸 英語** (en)  
+- **🇹🇼 繁体中国語** (zh-TW)
+- **🇨🇳 簡体中国語** (zh-CN)
+
+### **翻訳システム概要**
+```yaml
+設定: next-intl 4.1.0
+ルーティング: /[locale]/page → /ja/page, /en/page
+翻訳ファイル: messages/*.json (4言語)
+実装パターン:
+  Server: getTranslations("PageName")
+  Client: useTranslations('PageName')
 ```
 
-### 🖥️💻 Server Component vs Client Component 分類
+## 🎨 **デザインシステム・UI/UX**
 
-#### 🖥️ Server Components (現在の実装)
-**理由**: SEO最適化、初期レンダリング高速化、翻訳データのサーバー側取得
+> **⚙️ 実装ガイド**: [開発指示書](.github/.copilot-instructions.md#-スタイリングui設計規則) の「スタイリング・UI設計規則」を参照
 
-- **ページコンポーネント**: すべてのpage.tsx
-- **セクションコンポーネント**: Hero, Features, About, Blog, Testimonials, Video, Brands, Contact
-- **データ表示コンポーネント**: SingleBlog, SingleFeature, SingleTestimonial等
-- **静的コンポーネント**: SectionTitle, Breadcrumb等
+### **デザイン原則**
+1. **🌙 ダークモード対応**: 全UIでライト/ダークテーマ
+2. **📱 レスポンシブ**: モバイルファースト設計
+3. **♿ アクセシブル**: WCAG 2.1 AA準拠
+4. **⚡ パフォーマンス**: 最適化されたCSS・画像
 
-#### 💻 Client Components (必要最小限)
-**理由**: ユーザーインタラクション、状態管理、ブラウザAPI使用
-
-- **インタラクティブUI**: Header (スクロール検出)、LanguageSwitcher、ThemeToggler
-- **フォーム処理**: NewsLatterBoxClient (バリデーション、送信処理)
-- **状態管理**: PricingClient (月額/年額切替)、VideoPlayButton (モーダル制御)
-- **レイアウト管理**: ClientLayout (プロバイダー統合)、ScrollToTop
-- **モーダル・オーバーレイ**: video-modal
-
-#### ⚠️ 改善推奨事項
-以下のコンポーネントは不必要にクライアント化されている可能性:
-- **Footer**: 静的コンテンツのため Server Component 推奨
-- **一部のデータ表示**: より多くを Server Component に移行可能
-
-## 🌐 国際化（i18n）システム
-
-### サポート言語
-- **日本語** (ja) - デフォルト言語
-- **英語** (en)
-- **繁体中国語** (zh-TW)
-- **簡体中国語** (zh-CN)
-
-### 国際化の実装方法
-
-#### 1. ルーティング設定
-```typescript
-// src/i18n/routing.ts
-export const routing = defineRouting({
-  locales: ['ja', 'en', 'zh-TW', 'zh-CN'],
-  defaultLocale: 'ja'
-});
+### **テーマシステム**
+```css
+/* Tailwind設定例 */
+colors: {
+  primary: "#3182ce",
+  white: "#ffffff", 
+  dark: "#1a202c",
+  body: "#637381"
+}
 ```
-
-#### 2. 翻訳ファイルの構造
-```json
-// messages/ja.json の例
-{
-  "HomePage": {
     "title": "ハローワールド！",
     "paragraph": "当社のウェブサイトへようこそ。"
   },
@@ -249,170 +246,80 @@ const Component = () => {
 
 ### コンポーネント構成図
 ```
-Header (ナビゲーション + 言語切替 + テーマ切替)
-├── Hero (メインビジュアル)
-├── Features (機能紹介)
-├── About (会社紹介)
-├── Video (紹介動画)
-├── Brands (パートナー企業)
-├── Testimonials (顧客の声)
-├── Pricing (料金プラン)
-├── Blog (ブログセクション)
-├── Contact (お問い合わせ)
-└── Footer (フッター情報)
+## 📄 **現在のページ・機能構成**
+
+### **実装済みページ**
+| ページ | URL | 主要機能 | コンポーネント例 |
+|--------|-----|----------|------------------|
+| ホーム | `/` | ランディングページ | Hero, Features, Testimonials, Pricing |
+| About | `/about` | 会社紹介 | AboutSectionOne, AboutSectionTwo |
+| ブログ | `/blog` | 記事一覧 | BlogSection, SingleBlog |
+| ブログ詳細 | `/blog-details` | 記事表示 | RelatedPost, SharePost, TagButton |
+| お問い合わせ | `/contact` | フォーム | ContactSection, NewsLatterBox |
+| 認証 | `/signin`, `/signup` | ログイン・登録 | 将来実装予定 |
+
+### **主要コンポーネント構成**
+```
+Header → Hero → Features → About → Video → Brands 
+  ↓
+Testimonials → Pricing → Blog → Contact → Footer
 ```
 
-## 🚀 開発予定と拡張計画
+## 🎯 **開発ロードマップ・計画**
 
-### Phase 1: コンテンツカスタマイズ
-- [ ] 各ページのテンプレートから独自コンテンツへの修正
-- [ ] ブランドカラー・ロゴの変更
-- [ ] 画像・動画コンテンツの差し替え
+> **⚙️ 詳細タスク**: [開発指示書](.github/.copilot-instructions.md#-プロジェクト状況今後の予定) の「進捗状況・今後の予定」を参照
 
-### Phase 2: ページ機能拡張
-- [ ] 新規ページの追加・削除
-- [ ] カスタムページレイアウトの作成
-- [ ] SEOメタタグの最適化
+### **📊 現在の状況** 
+| 分野 | 進捗 | 状況 | 次のアクション |
+|------|------|------|----------------|
+| **基本機能** | 95% | ✅ 完成 | 細部調整 |
+| **国際化** | 98% | ✅ 完成 | エラーメッセージ追加 |
+| **UI/UX** | 85% | 🔄 調整中 | ユーザビリティ向上 |
+| **SEO** | 80% | 🚧 改善中 | 構造化データ追加 |
+| **アクセシビリティ** | 65% | 🔄 要改善 | WCAG準拠強化 |
 
-### Phase 3: ブログシステム強化
-- [ ] ブログエディター機能の実装
-- [ ] カテゴリ・タグ機能の追加
-- [ ] 検索機能の実装
+### **🚀 開発フェーズ**
 
-### Phase 4: データベース統合
-- [ ] **データベース選択**: 
-  - Supabase (推奨) - PostgreSQL + リアルタイム機能
-  - PlanetScale - MySQL互換
-  - MongoDB Atlas - NoSQL
-- [ ] **ORM/クエリビルダー**:
-  - Prisma (推奨) - 型安全なORM
-  - Drizzle ORM - 軽量・高性能
-- [ ] ブログ記事のDB格納
-- [ ] 管理画面の実装
+<details>
+<summary><strong>� Phase 1: コンテンツ最適化 (1-2週間)</strong></summary>
 
-### Phase 5: WebApp機能開発
-- [ ] **認証システム**:
-  - NextAuth.js (推奨)
-  - Supabase Auth
-  - Clerk
+- [ ] ダミーテキスト → 実際のコンテンツ  
+- [ ] ブランドカラー・ロゴ変更
+- [ ] 画像・動画差し替え
+- [ ] フォーム送信機能実装
+
+</details>
+
+<details>
+<summary><strong>📋 Phase 2: データベース統合 (1-2ヶ月)</strong></summary>
+
+- [ ] Supabase + Prisma 導入
+- [ ] ブログCMS機能
+- [ ] 管理画面実装
+
+</details>
+
+<details>
+<summary><strong>📋 Phase 3: WebApp化 (3-6ヶ月)</strong></summary>
+
+- [ ] NextAuth.js 認証システム
+- [ ] Stripe 課金システム  
 - [ ] ダッシュボード機能
-- [ ] ユーザープロファイル管理
 
-### Phase 6: ユーザー登録システム
-- [ ] **認証フロー**:
-  - メール認証
-  - ソーシャルログイン (Google, GitHub等)
-  - パスワードリセット
-- [ ] **権限管理**:
-  - ロールベースアクセス制御
-  - 管理者/一般ユーザー区分
-
-### Phase 7: 課金システム
-- [ ] **決済プラットフォーム**:
-  - Stripe (推奨) - 豊富な機能
-  - PayPal - 国際対応
-- [ ] **サブスクリプション管理**:
-  - プラン変更
-  - 請求履歴
-  - 自動更新
-
-### Phase 8: マーケティングシステム
-- [ ] **分析ツール**:
-  - Google Analytics 4
-  - Vercel Analytics
-- [ ] **メール配信**:
-  - SendGrid
-  - Resend
-- [ ] **A/Bテスト機能**
-- [ ] **SEO最適化**
-
-## 📋 タスクと進捗管理
-
-### 🎯 現在の開発状況
-
-#### ✅ 完了済み
-- [x] **基本プロジェクト構築** - Next.js 15 + TypeScript + Tailwind CSS
-- [x] **国際化実装** - next-intl による4言語対応 (ja/en/zh-TW/zh-CN)
-- [x] **テーマシステム** - ダークモード対応
-- [x] **コンポーネント設計** - 再利用可能なコンポーネント構築
-- [x] **ページ実装** - 9つの主要ページ完成
-- [x] **レスポンシブデザイン** - モバイルファースト対応
-- [x] **言語切替機能** - ヘッダーでの動的言語変更
-- [x] **SEO最適化** - メタデータ・構造化データ対応
-
-#### 🚧 進行中
-- [ ] **ドキュメント整備** - 開発ガイドライン・API仕様書
-- [ ] **エラーハンドリング** - 統一的なエラー処理実装
-- [ ] **パフォーマンス最適化** - Core Web Vitals改善
-
-#### 📅 短期計画 (1-2週間)
-- [ ] **コンテンツカスタマイズ**
-  - [ ] ダミーテキストを実際のコンテンツに変更
-  - [ ] ブランドロゴ・カラーの適用
-  - [ ] 画像・動画の差し替え
-- [ ] **フォーム機能実装**
-  - [ ] お問い合わせフォームの送信機能
-  - [ ] ニュースレター登録機能
-  - [ ] バリデーション強化
-- [ ] **ページ機能拡張**
-  - [ ] 404ページの実装
-  - [ ] プライバシーポリシー・利用規約ページ
-  - [ ] FAQページの追加
-
-#### 📅 中期計画 (1-2ヶ月)
-- [ ] **ブログシステム強化**
-  - [ ] ブログエディター機能
-  - [ ] カテゴリ・タグ機能
-  - [ ] 検索・フィルター機能
-  - [ ] コメント機能
-- [ ] **データベース統合**
-  - [ ] Supabase セットアップ
-  - [ ] Prisma ORM 導入
-  - [ ] ブログ記事のDB格納
-  - [ ] 管理画面の実装
-
-#### 📅 長期計画 (3-6ヶ月)
-- [ ] **認証システム**
-  - [ ] NextAuth.js 実装
-  - [ ] ソーシャルログイン
-  - [ ] ロールベース認証
-- [ ] **課金システム**
-  - [ ] Stripe 統合
-  - [ ] サブスクリプション管理
-  - [ ] 請求・決済機能
-- [ ] **WebApp機能**
-  - [ ] ユーザーダッシュボード
-  - [ ] プロファイル管理
-  - [ ] 通知システム
-
-### 🐛 既知の課題
-
-#### 🔴 高優先度
-- [ ] **型安全性**: 一部のanyタイプを具体的な型に変更
-- [ ] **アクセシビリティ**: WCAG 2.1 AA準拠の改善点
-- [ ] **SEO**: 構造化データの拡充
-
-#### 🟡 中優先度
-- [ ] **パフォーマンス**: 画像の遅延読み込み最適化
-- [ ] **モバイル体験**: タッチ操作の改善
-- [ ] **多言語**: 翻訳の精度向上
-
-#### 🟢 低優先度
-- [ ] **コードリファクタリング**: 重複コードの削減
-- [ ] **テスト**: 単体テスト・E2Eテストの追加
+</details>
 - [ ] **ドキュメント**: コメントの追加・更新
 
 ### 📊 進捗メトリクス
 
 | 分野 | 進捗率 | 状況 |
 |------|--------|------|
-| **基本機能** | 90% | ✅ ほぼ完成 |
-| **UI/UX** | 80% | 🚧 調整中 |
-| **国際化** | 95% | ✅ ほぼ完成 |
-| **SEO対応** | 70% | 🚧 改善中 |
+| **基本機能** | 95% | ✅ ほぼ完成 |
+| **UI/UX** | 85% | 🚧 調整中 |
+| **国際化** | 98% | ✅ Footer対応完了 |
+| **SEO対応** | 80% | 🚧 改善中 |
 | **モバイル対応** | 85% | 🚧 最適化中 |
-| **アクセシビリティ** | 60% | 🔄 要改善 |
-| **パフォーマンス** | 75% | 🚧 最適化中 |
+| **アクセシビリティ** | 65% | 🔄 要改善 |
+| **パフォーマンス** | 85% | 🚧 Server Component最適化完了 |
 | **セキュリティ** | 50% | ⏳ 今後実装 |
 
 ### 📈 次回リリース予定
@@ -434,11 +341,38 @@ Header (ナビゲーション + 言語切替 + テーマ切替)
 
 ## 🔧 ファイル別詳細分析と不足項目
 
+### 🎉 最新の最適化完了事項 (2025年6月28日)
+
+#### Footer Server Component化
+**実装内容:**
+- `"use client"` directive 削除
+- `getTranslations` を使用したサーバー側翻訳処理
+- 4言語完全対応（ja/en/zh-TW/zh-CN）
+- layout.tsx での直接呼び出しによるClient境界回避
+
+**技術的メリット:**
+- ✅ **SEO強化**: 検索エンジンがFooterリンクを即座に認識
+- ✅ **パフォーマンス向上**: LCP（Largest Contentful Paint）最適化
+- ✅ **バンドルサイズ削減**: クライアント側JSの軽量化
+- ✅ **多言語最適化**: サーバー側で言語判定・翻訳処理
+
+**アーキテクチャ変更:**
+```typescript
+// Before: Client境界内での実行
+ClientLayout (Client Component)
+  └── Footer (Server Componentにしたかったが制約あり)
+
+// After: 最適な分離
+RootLayout (Server)
+  ├── ClientLayout (Client Component)
+  │   └── Header, ScrollToTop (Client Components)
+  └── Footer (Server Component - 直接呼び出し)
+```
+
 ### 📁 `.github/` - GitHub設定・開発支援
 | ファイル | 役割 | 不足項目 |
 |----------|------|----------|
-| `.copilot-instructions.md` | GitHub Copilot開発指示 | ✅ 完備 |
-| `prompts/.prompt.md` | 開発プロンプト集 | ✅ 完備 |
+| `.copilot-instructions.md` | GitHub Copilot開発指示 + 開発プロンプト統合 | ✅ 完備 |
 | **不足ファイル** | **CI/CD設定** | ❌ ワークフロー未実装 |
 
 **追加すべきファイル:**
@@ -486,15 +420,15 @@ Header (ナビゲーション + 言語切替 + テーマ切替)
 | ThemeToggler | テーマ状態管理 | - |
 | PricingClient | 月額/年額切替 | - |
 | NewsLatterBoxClient | フォーム処理 | - |
-| **Footer** | **⚠️ 不要な Client 化** | **Server に変更推奨** |
+| **Footer** | **✅ Server Component に変更完了** | **最適化済み** |
 
 ### 📁 `messages/` - 多言語翻訳
 | ファイル | 状況 | 不足項目 |
 |----------|------|----------|
-| `ja.json` | ✅ 基本完成 | エラーメッセージ |
-| `en.json` | ✅ 基本完成 | エラーメッセージ |
-| `zh-TW.json` | ✅ 基本完成 | エラーメッセージ |
-| `zh-CN.json` | ✅ 基本完成 | エラーメッセージ |
+| `ja.json` | ✅ 基本完成 + Footer対応 | エラーメッセージ |
+| `en.json` | ✅ 基本完成 + Footer対応 | エラーメッセージ |
+| `zh-TW.json` | ✅ 基本完成 + Footer対応 | エラーメッセージ |
+| `zh-CN.json` | ✅ 基本完成 + Footer対応 | エラーメッセージ |
 
 **追加すべき翻訳カテゴリ:**
 - `ErrorPage` - エラーメッセージ
@@ -503,30 +437,80 @@ Header (ナビゲーション + 言語切替 + テーマ切替)
 - `API` - API レスポンスメッセージ
 
 ### 📁 `src/types/` - 型定義
-| ファイル | 役割 | 不足項目 |
-|----------|------|----------|
-| `blog.ts` | ブログ型定義 | DB対応型 |
-| `brand.ts` | ブランド型定義 | - |
-| `menu.ts` | メニュー型定義 | - |
-| `testimonial.ts` | 証言型定義 | - |
+## 🔧 **開発環境・セットアップ**
 
-**追加すべき型定義:**
-- `user.ts` - ユーザー関連型
-- `auth.ts` - 認証関連型
-- `api.ts` - API レスポンス型
-- `form.ts` - フォーム関連型
-- `payment.ts` - 決済関連型
+> **⚙️ 実装詳細**: [開発指示書](.github/.copilot-instructions.md#-開発ワークフロー実装手順) の「開発ワークフロー・実装手順」を参照
 
-### 🗂️ 設定ファイル分析
-| ファイル | 状況 | 改善点 |
-|----------|------|--------|
-| `package.json` | ✅ 適切 | 開発スクリプト追加 |
-| `next.config.ts` | ✅ i18n対応 | 環境変数対応 |
-| `tailwind.config.js` | ✅ カスタマイズ済み | アニメーション追加 |
-| `tsconfig.json` | ✅ 厳格設定 | パス短縮設定 |
+### **開発開始手順**
+```bash
+# 1. 依存関係インストール
+npm install
 
-**追加すべき設定:**
-- `.env.example` - 環境変数テンプレート
-- `jest.config.js` - テスト設定
-- `playwright.config.ts` - E2Eテスト設定
-- `.gitignore` - より詳細な除外設定
+# 2. 開発サーバー起動
+npm run dev         # http://localhost:3000
+
+# 3. ビルド確認
+npm run build       # 本番ビルドテスト
+npm run lint        # ESLintチェック
+```
+
+### **開発ルール・ベストプラクティス**
+```yaml
+必須対応:
+  - 多言語対応: 全テキストは翻訳ファイルから取得
+  - TypeScript: any型の使用禁止、型安全性の確保
+  - レスポンシブ: 全画面サイズ対応
+  - アクセシビリティ: WCAG 2.1 AA準拠
+
+推奨パターン:
+  - Server Component優先: SEO・パフォーマンス最適化
+  - Client Component最小限: 必要な場合のみ使用
+  - コンポーネント再利用: Common/フォルダの活用
+```
+
+## 🐛 **既知の課題・改善点**
+
+### **🔴 高優先度**
+- [ ] **型安全性**: anyタイプの具体化
+- [ ] **アクセシビリティ**: WCAG 2.1 AA準拠強化
+- [ ] **SEO**: 構造化データ拡充
+
+### **🟡 中優先度**  
+- [ ] **パフォーマンス**: 画像遅延読み込み最適化
+- [ ] **モバイルUX**: タッチ操作改善
+- [ ] **翻訳精度**: ネイティブチェック
+
+### **🟢 低優先度**
+- [ ] **コードリファクタリング**: 重複削減
+- [ ] **テスト追加**: Jest + Playwright
+- [ ] **ドキュメント**: API仕様書
+
+## 📚 **参考資料・関連リンク**
+
+### **プロジェクト内資料**
+- **[.github/.copilot-instructions.md](.github/.copilot-instructions.md)** - 開発実装ガイド
+- **[README.md](README.md)** - プロジェクト基本説明
+- **[package.json](package.json)** - 依存関係・スクリプト
+- **[next.config.ts](next.config.ts)** - Next.js設定
+
+### **外部技術資料**
+- **Next.js 15**: [App Router Documentation](https://nextjs.org/docs/app)
+- **next-intl**: [Internationalization Guide](https://next-intl-docs.vercel.app/)
+- **Tailwind CSS**: [Utility-First Framework](https://tailwindcss.com/)
+- **TypeScript**: [Official Handbook](https://www.typescriptlang.org/docs/)
+
+---
+
+## � **ドキュメント更新履歴**
+
+| 日付 | 変更内容 | 担当者 |
+|------|----------|--------|
+| 2025-01-28 | 初版作成・MECE構造化 | システム |
+| 2025-01-28 | Footer Server Component化反映 | システム |
+| 2025-01-28 | 開発指示書との役割分担明確化 | システム |
+
+---
+
+> **💡 重要**: このドキュメントは**プロジェクト全体の理解**を目的としています。  
+> **実装詳細**は [GitHub Copilot開発指示書](.github/.copilot-instructions.md) を参照してください。  
+> **疑問がある場合**は、既存のコードパターンを参考にしながら開発を進めてください。

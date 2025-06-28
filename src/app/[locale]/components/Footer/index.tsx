@@ -1,8 +1,9 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-const Footer = () => {
+const Footer = async () => {
+  const t = await getTranslations('Footer');
   return (
     <>
       <footer className="dark:bg-gray-dark relative z-10 bg-white/80 pt-16 backdrop-blur-sm md:pt-20 lg:pt-24">
@@ -27,8 +28,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-9 text-base leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  {t('description')}
                 </p>
                 <div className="flex items-center">
                   <a
@@ -112,7 +112,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  Useful Links
+                  {t('usefulLinks')}
                 </h2>
                 <ul>
                   <li>
@@ -120,7 +120,7 @@ const Footer = () => {
                       href="/blog"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Blog
+                      {t('links.blog')}
                     </Link>
                   </li>
                   <li>
@@ -128,7 +128,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Pricing
+                      {t('links.pricing')}
                     </Link>
                   </li>
                   <li>
@@ -136,7 +136,7 @@ const Footer = () => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      About
+                      {t('links.about')}
                     </Link>
                   </li>
                 </ul>
@@ -146,7 +146,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  Terms
+                  {t('terms')}
                 </h2>
                 <ul>
                   <li>
@@ -154,7 +154,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      TOS
+                      {t('termsLinks.tos')}
                     </Link>
                   </li>
                   <li>
@@ -162,7 +162,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Privacy Policy
+                      {t('termsLinks.privacy')}
                     </Link>
                   </li>
                   <li>
@@ -170,7 +170,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Refund Policy
+                      {t('termsLinks.refund')}
                     </Link>
                   </li>
                 </ul>
@@ -180,7 +180,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  Support & Help
+                  {t('support')}
                 </h2>
                 <ul>
                   <li>
@@ -188,7 +188,7 @@ const Footer = () => {
                       href="/contact"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Open Support Ticket
+                      {t('supportLinks.support')}
                     </Link>
                   </li>
                   <li>
@@ -196,7 +196,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Terms of Use
+                      {t('supportLinks.termsOfUse')}
                     </Link>
                   </li>
                   <li>
@@ -204,7 +204,7 @@ const Footer = () => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      About
+                      {t('supportLinks.about')}
                     </Link>
                   </li>
                 </ul>
@@ -215,23 +215,23 @@ const Footer = () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D8A77B83] to-transparent dark:via-[#D8A77B83]"></div>
           <div className="py-8">
             <p className="text-body-color/80 dark:text-body-color-dark text-center text-base">
-              Template by{" "}
+              {t('copyright')}{" "}
               <a
                 href="http://uideck.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
-                UIdeck
+                {t('uideck')}
               </a>{" "}
-              and{" "}
+              {t('and')}{" "}
               <a
                 href="https://nextjstemplates.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
-                Next.js Templates
+                {t('nextjsTemplates')}
               </a>
             </p>
           </div>

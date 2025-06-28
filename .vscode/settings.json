@@ -22,12 +22,5 @@
     {
       "text": "あなたは、私に対して、専門用語を使う場合は、わかりやすい言葉での説明を追加します。"
     }
-"github.copilot.chat.promptFiles": [
-    {
-      ".github/prompts": false
-    },
-    {
-      "/path/to/prompts": true
-    }
   ]
 }

@@ -250,5 +250,30 @@
     "title": "错误",
     "paragraph": "抱歉，发生错误。",
     "button": "返回首页"
+  },
+  "Footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
+    "usefulLinks": "有用链接",
+    "links": {
+      "blog": "博客",
+      "pricing": "价格",
+      "about": "关于"
+    },
+    "terms": "条款",
+    "termsLinks": {
+      "tos": "服务条款", 
+      "privacy": "隐私政策",
+      "refund": "退款政策"
+    },
+    "support": "支持和帮助",
+    "supportLinks": {
+      "support": "打开支持票证",
+      "termsOfUse": "使用条款",
+      "about": "关于"
+    },
+    "copyright": "模板提供",
+    "and": "和",
+    "uideck": "UIdeck",
+    "nextjsTemplates": "Next.js Templates"
   }
 }
