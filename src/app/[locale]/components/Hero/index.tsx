@@ -15,7 +15,8 @@ export default async function Hero({ locale }: { locale: string }) {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
-                  {t("heading")}
+                  {/* {t("heading")} */}
+                  "AI" makes the world of Nihongo more interesting.
                 </h1>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-12 text-base leading-relaxed! sm:text-lg md:text-xl">
                   {t("description")}
@@ -25,13 +26,13 @@ export default async function Hero({ locale }: { locale: string }) {
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
                     className="bg-primary hover:bg-primary/80 rounded-xs px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out"
                   >
-                    {t("getProButton")}
+                    {t("checkBlogButton")}
                   </Link>
                   <Link
                     href="https://github.com/NextJSTemplates/startup-nextjs"
                     className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    {t("githubButton")}
+                    {t("checkWebappButton")}
                   </Link>
                 </div>
               </div>
@@ -105,7 +106,11 @@ export default async function Hero({ locale }: { locale: string }) {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <radialGradient
                 id="paint1_radial_25:217"
@@ -115,8 +120,16 @@ export default async function Hero({ locale }: { locale: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
               >
-                <stop offset="0.145833" stopColor="var(--color-primary)" stopOpacity="0" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.08" />
+                <stop
+                  offset="0.145833"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.08"
+                />
               </radialGradient>
               <radialGradient
                 id="paint2_radial_25:217"
@@ -126,8 +139,16 @@ export default async function Hero({ locale }: { locale: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
               >
-                <stop offset="0.145833" stopColor="var(--color-primary)" stopOpacity="0" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.08" />
+                <stop
+                  offset="0.145833"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.08"
+                />
               </radialGradient>
               <linearGradient
                 id="paint3_linear_25:217"
@@ -138,7 +159,11 @@ export default async function Hero({ locale }: { locale: string }) {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_25:217"
@@ -171,7 +196,11 @@ export default async function Hero({ locale }: { locale: string }) {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
             </defs>
           </svg>
@@ -273,8 +302,16 @@ export default async function Hero({ locale }: { locale: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(220 63) rotate(90) scale(43)"
               >
-                <stop offset="0.145833" stopColor="var(--color-primary)" stopOpacity="0" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.08" />
+                <stop
+                  offset="0.145833"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.08"
+                />
               </radialGradient>
             </defs>
           </svg>

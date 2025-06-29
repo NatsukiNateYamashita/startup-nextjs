@@ -22,8 +22,6 @@ export default async function RootLayout({
 
   // ロケールごとにmessagesを読み込む
   const messages = (await import(`../../../messages/${locale}.json`)).default;
-  console.log("layout.tsx locale:", locale);
-  console.log("layout.tsx messages:", messages);
   return (
     <html suppressHydrationWarning lang={locale}>
       {/*

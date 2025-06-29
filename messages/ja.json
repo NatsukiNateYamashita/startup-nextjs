@@ -1,92 +1,104 @@
 {
   "HomePage": {
-    "title": "ハローワールド！",
-    "paragraph": "当社のウェブサイトへようこそ。",
-    "button": "詳細情報"
+    "title": "NIHONGO-AI. AI makes the world of Nihongo more interesting.",
+    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
   "HeroPage": {
-    "heading": "スタートアップとSaaSのための無料のオープンソースNext.jsテンプレート",
-    "description": "スタートアップは、スタートアップとSaaSビジネスWebサイトのための無料のNext.jsテンプレートであり、Next13.xとTailwindCSSで構築された完全なビジネスWebサイトを立ち上げるために必要なすべての重要なページ、コンポーネント、およびセクションが付属しています。",
-    "getProButton": "🔥 プロになる",
-    "githubButton": "GitHubでスターを付ける"
+    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
+    "checkBlogButton": "最新ブログをチェック",
+    "checkWebappButton": "ウェブアプリを使ってみる"
   },
   "FeaturesPage": {
-    "title": "顔立ち",
-    "paragraph": "私たちのサービスが提供する主な機能をご覧ください。",
-    "feature1Title": "シンプルな操作性",
-    "feature1Paragraph": "直感的なインターフェースで簡単にサービスを使い始めることができます。",
-    "feature2Title": "高度な分析",
-    "feature2Paragraph": "詳細なデータ分析とレポート作成により、ビジネス上の意思決定をサポートします。",
-    "feature3Title": "セキュアな環境",
-    "feature3Paragraph": "お客様のデータは、最新のセキュリティ技術で安全に保護されます。"
+    "paragraph": "主な機能と特徴",
+    "feature1Title": "AI搭載ウェブアプリケーション",
+    "feature1Paragraph": "学びをもっと自由に、もっと賢く。あなたの目的やレベルに合わせて、パーソナライズ。AIがスマートにあなたをサポートします。（学習者、教育者、教育機関向け機能を続々実装予定）",
+    "feature2Title": "専門家が届けるブログ",
+    "feature2Paragraph": "「リアルな日本語」と「生きた日本文化」を深掘り。学習者向けの楽しい知識から、教育者向けの専門的な考察まで、ここでしか読めない情報が満載です。日本語教材としても最適です。（各種便利機能続々実装予定）",
+    "feature3Title": "「あったらいいな」を実現",
+    "feature3Paragraph": "開発者がユーザーの皆様からのご感想ご要望を直接受け付けます。皆様の声が、NIHONGO-AIの進化を加速させます。共に、より良いプラットフォームを創り上げましょう。"
   },
   "VideoPage": {
-    "title": "私たちは助ける準備ができています",
-    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。"
+    "paragraph": "IT苦手でも問題なし! ビデオを見ながら使ってみましょう!"
   },
   "AboutPage": {
-    "title": "我々について",
-    "paragraph": "私たちのストーリーとミッションについてご覧ください。",
+    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "sectionOne": {
-      "title": "スタートアップ、SaaS、ビジネスWebサイト向けに設計されています。",
-      "paragraph": "主なテーマは、インタラクティブなグループディスカッションや円卓会議を通じて、非常に脆弱なビジネスアプリケーションを最適に保護する方法について参加者を教育することに焦点を当てることです。",
-      "list1": "プレミアム",
-      "list2": "追い風CSS",
-      "list3": "生涯使用",
-      "list4": "Next.js",
-      "list5": "豊富なドキュメント",
-      "list6": "開発者フレンドリー"
+      "title": "現代の日本語 x 最先端技術",
+      "paragraph": "日本語学習が、日本を丸ごと楽しむことに繋がる。日本語を教えることが、日本を丸ごと世界に伝えることに繋がる。そんな体験を提供します。",
+      "list1": "生きた日本語",
+      "list2": "生きた日本文化",
+      "list3": "最先端の日本語教育",
+      "list4": "高い実用性",
+      "list5": "高い専門性",
+      "list6": "最先端技術"
     },
     "sectionTwo": {
       "item1": {
-        "title": "バグフリーコード",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "title": "日本語学習者の皆様へ",
+        "issue1": "「楽しく効果的な学習したい」",
+        "issue2": "「教科書にない、リアルな表現が知りたい」",
+        "solution": "→ AI搭載ウェブアプリがあなたのレベルに合った学習仲間に。ブログでは、すぐに使える面白い日本語や文化の知識が学べます。"
       },
       "item2": {
-        "title": "プレミアムサポート",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        "title": "日本語教育者の皆様へ",
+        "issue1": "「若者言葉やネイティブな表現を教えたい」",
+        "issue2": "「生徒にとって魅力的なネタや道具がほしい」",
+        "solution": "→ 授業でそのまま使えるAI搭載ウェブアプリや、現場の課題に切り込むブログ記事が、あなたの教育を豊かにします。"
       },
       "item3": {
-        "title": "Next.js",
-        "paragraph": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+        "title": "日本が好きな皆様へ",
+        "issue1": "「アニメや文化の背景を深く理解したい」",
+        "issue2": "「旅行をもっと心から楽しみたい」",
+        "solution": "→ アニメが10倍面白くなる文化解説から、旅先で役立つ便利機能まで。あなたの「愛」をさらに深めます。"
       }
+    },
+    "sectionDeveloper": {
+      "paragraph": "当サイトの開発者詳細",
+      "developer1Title": "日本語教育教育者",
+      "developer1Paragraph": "日本語教師資格を取得し、日本語学校および進学塾で外国人に対する日本語教育の経験あり",
+      "developer2Title": "日本文化伝道者",
+      "developer2Paragraph": "埼玉親善大使、人力車夫として、日本文化の魅力を伝えることに情熱を注いだ経験あり",
+      "developer3Title": "AI（自然言語処理）専門家",
+      "developer3Paragraph": "情報工学大学院で自然言語処理を専攻し、AI技術を駆使して、データサイエンティストとして就業",
+      "developer4Title": "多言語話者",
+      "developer4Paragraph": "日本語は母語。英語、中国語はビジネスレベル。韓国語、台湾語は日常会話レベル。外国語学習の楽しさと難しさの体感者"
     }
   },
   "TestimonialsPage": {
     "title": "ユーザーの声",
-    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。",
+    "paragraph": "皆様のご感想ご要望をお寄せください。開発者の励みになります!",
     "testimonial1": {
-      "name": "ムシャロフ・チー",
-      "designation": "ファウンダー@TailGrids",
-      "content": "私たちのメンバーはとても感動しています。直感的です。きれいです。気を散らすものはありません。コミュニティを構築している場合。"
+      "name": "Maggie",
+      "designation": "台湾 / 日本語学習者",
+      "content": "独学で行き詰まっていましたが、ブログの文化コラムも面白くて、学習のモチベーションが上がります。"
     },
     "testimonial2": {
-      "name": "デビッド・ワイリウム",
-      "designation": "ファウンダー@UIdeck",
-      "content": "私たちのメンバーはとても感動しています。直感的です。きれいです。気を散らすものはありません。コミュニティを構築している場合。"
+      "name": "佐藤",
+      "designation": "日本 / 日本語教師",
+      "content": "ブログ記事は、そのまま授業のネタに使っています。生徒の反応も抜群です。これまで探すのに苦労していたリアルな教材がここにはあります。"
     },
     "testimonial3": {
-      "name": "レシウム・フレンチ",
-      "designation": "ファウンダー@Lineicons",
-      "content": "私たちのメンバーはとても感動しています。直感的です。きれいです。気を散らすものはありません。コミュニティを構築している場合。"
+      "name": "Mehdi",
+      "designation": "フランス / アニメファン",
+      "content": "ブログ記事の解説がなければ、スルーしてしまっていたアニメの1シーンから、日本文化、最近の日本事情の深淵を垣間見、日本への興味がさらに強まりました。"
     }
   },
   "PricingPage": {
     "title": "シンプルでお手頃価格",
-    "paragraph": "Lorem Ipsumのパッセージには多くのバリエーションがありますが、大多数は何らかの形で変更されています。",
-    "monthly": "マンスリー",
-    "yearly": "毎年",
+    "paragraph": "シンプルでお手頃な価格設定を準備中です。現在は全てのサービスを無料で使えます。",
+    "monthly": "月額",
+    "yearly": "年額",
     "plans": {
       "lite": {
         "name": "ライト",
         "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
       },
       "basic": {
-        "name": "基本的な",
+        "name": "ベーシック",
         "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
       },
       "plus": {
-        "name": "プラス",
+        "name": "プロ",
         "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
       }
     },
@@ -102,7 +114,7 @@
   },
   "BlogPage": {
     "title": "最新のブログ",
-    "paragraph": "最新の記事とアップデートをご覧ください。",
+    "paragraph": "最新のブログをご覧ください。",
     "blog1": {
       "title": "最新のWebサイトに最適なUIコンポーネント",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
@@ -158,8 +170,8 @@
     "description": "サイドバー付きのブログページ。"
   },
   "ContactPage": {
-    "title": "ヘルプが必要ですか?チケットを開く",
-    "paragraph": "サポートチームができるだけ早くメールでご連絡いたします。",
+    "title": "さらにお手伝いできることはありますか？",
+    "paragraph": "開発者へお気軽にご連絡ください。",
     "form": {
       "nameLabel": "お名前 *",
       "namePlaceholder": "名前を入力してください",
@@ -167,34 +179,34 @@
       "emailPlaceholder": "メールアドレスを入力してください",
       "messageLabel": "あなたのメッセージ",
       "messagePlaceholder": "メッセージを入力してください",
-      "submit": "チケットを送信"
+      "submit": "メールを送信"
     },
     "newsletter": {
       "title": "ニュースレターを購読する",
-      "paragraph": "最新のニュースやアップデート情報をメールでお届けします。",
+      "paragraph": "最新のブログやアップデート情報をメールでお届けします。",
       "namePlaceholder": "名前を入力してください",
       "emailPlaceholder": "メールアドレスを入力してください",
       "subscribe": "購読する",
-      "noSpam": "スパムは保証されませんので、スパムメールは送信しないでください。"
+      "noSpam": "当サイトは、個人開発のため、本当に必要な人だけ購読いただけますと幸いです。"
     }
   },
   "signin": {
-    "title": "アカウントにサインインします",
-    "description": "アカウントにログインして、チェックアウトを迅速化します。",
+    "title": "アカウントにログインします",
+    "description": "アカウントにログインする。",
     "signInWithGoogle": "Google でログイン",
-    "signInWithGithub": "Github でサインイン",
-    "orSignInWithEmail": "または、メールアドレスでサインインします",
+    "signInWithGithub": "Github でログイン",
+    "orSignInWithEmail": "または、メールアドレスでログインします",
     "yourEmail": "あなたのメール",
     "enterYourEmailPlaceholder": "メールアドレスを入力してください",
     "yourPassword": "パスワード",
     "enterYourPasswordPlaceholder": "パスワードを入力します",
-    "keepMeSignedIn": "サインインしたままにする",
+    "keepMeSignedIn": "ログインしたままにする",
     "forgotPassword": "パスワードをお忘れですか?",
-    "signInButton": "サインイン",
+    "signInButton": "ログイン",
     "noAccount": "アカウントをお持ちではありませんか?",
-    "signUpLink": "サインアップ",
-    "metaTitle": "サインインページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
-    "metaDescription": "これはスタートアップのサインインページです Nextjsテンプレート"
+    "signUpLink": "アカウント作成",
+    "metaTitle": "ログイン | NIHONGO-AI",
+    "metaDescription": "これはスタートアップのログインです Nextjsテンプレート"
   },
   "signup": {
     "title": "アカウントを作成",

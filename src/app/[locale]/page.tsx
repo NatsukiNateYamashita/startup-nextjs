@@ -20,11 +20,16 @@ import { Metadata } from "next";
 //   return locales.map((locale) => ({ locale }));
 // }
 
-export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "HomePage" });
+
+  return {
+    title: 'NIHONGO-AI. "AI" makes the world of Nihongo more interesting.',
+    description: t("description"),
+    // other metadata
+  };
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -36,7 +41,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Hero locale={locale} />
       <Features locale={locale} />
       <Video locale={locale} />
-      <Brands />
+      {/* <Brands /> */}
       <AboutSectionOne locale={locale} />
       <AboutSectionTwo locale={locale} />
       <Testimonials locale={locale} />

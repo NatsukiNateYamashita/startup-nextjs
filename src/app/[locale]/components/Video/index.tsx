@@ -10,7 +10,7 @@ export default async function Video({ locale }: { locale: string }) {
     <section className="relative z-10 py-16  bg-white pb-16 pt-[120px] dark:bg-gray-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title={t("title")}
+          title="Video for Quick Start"
           paragraph={t("paragraph")}
           center
           mb="80px"
