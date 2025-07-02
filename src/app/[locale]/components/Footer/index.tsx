@@ -221,27 +221,27 @@ const Footer = async ({ locale }: { locale: string }) => {
                 myDate = new Date() ;myYear = myDate.getFullYear
                 ();document.write(myYear);
               </script>{" "}
-              <a href="/">Natsuki Yamashita</a> All Rights Reserved.
+              <Link href="/">Natsuki Yamashita</Link> All Rights Reserved.
             </p>
             <p className="mt-4 text-body-color/70 dark:text-body-color-dark/70 text-center text-sm">
               Template by{" "}
-              <a
+              <Link
                 href="http://uideck.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
                 UIdeck
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a
+              <Link
                 href="https://nextjstemplates.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
                 Next.js Templates
-              </a>
+              </Link>
             </p>
           </div>
         </div>

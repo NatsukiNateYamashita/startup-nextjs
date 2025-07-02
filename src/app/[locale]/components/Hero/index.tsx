@@ -16,7 +16,7 @@ export default async function Hero({ locale }: { locale: string }) {
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
                   {/* {t("heading")} */}
-                  "AI" makes the world of Nihongo more interesting.
+                  {"\"AI\" makes the world of Nihongo more interesting."}
                 </h1>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-12 text-base leading-relaxed! sm:text-lg md:text-xl">
                   {t("description")}
