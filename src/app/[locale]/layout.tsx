@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
 import "@/app/[locale]/styles/index.css";
 import ClientLayout from "@/app/[locale]/ClientLayout";
+import Footer from "@/app/[locale]/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,6 @@ export default async function RootLayout({
 
   // ロケールごとにmessagesを読み込む
   const messages = (await import(`../../../messages/${locale}.json`)).default;
-  console.log("layout.tsx locale:", locale);
-  console.log("layout.tsx messages:", messages);
   return (
     <html suppressHydrationWarning lang={locale}>
       {/*
@@ -36,6 +35,7 @@ export default async function RootLayout({
           <ClientLayout>
             {children}
           </ClientLayout>
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

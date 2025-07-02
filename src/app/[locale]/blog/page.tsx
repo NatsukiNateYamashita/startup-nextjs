@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "BlogPage" });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     // other metadata
   };
 }
@@ -27,10 +27,7 @@ const Blog = async ({ params }: Props) => {
 
   return (
     <>
-      <Breadcrumb
-        pageName={t("pageName")}
-        description={t("description")}
-      />
+      <Breadcrumb pageName="Blog" description={t("description")} />
 
       <section className="pt-[120px] pb-[120px]">
         <div className="container">
@@ -51,15 +48,15 @@ const Blog = async ({ params }: Props) => {
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
-                    {t("prevButton")}
+                    prev.
                   </a>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
                     1
                   </a>
@@ -67,7 +64,7 @@ const Blog = async ({ params }: Props) => {
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
                     2
                   </a>
@@ -75,20 +72,20 @@ const Blog = async ({ params }: Props) => {
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
                     3
                   </a>
                 </li>
                 <li className="mx-1">
-                  <span className="bg-body-color/15 text-body-color flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md px-4 text-sm">
-                    {t("dots")}
+                  <span className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md px-4 text-sm">
+                    ...
                   </span>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
                     12
                   </a>
@@ -96,9 +93,9 @@ const Blog = async ({ params }: Props) => {
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-body-color/15 dark:bg-body-color-dark/15 text-body-color dark:text-body-color-dark hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
-                    {t("nextButton")}
+                    next
                   </a>
                 </li>
               </ul>

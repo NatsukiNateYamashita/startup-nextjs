@@ -33,7 +33,13 @@ export default async function AboutSectionTwo({ locale }: { locale: string }) {
                   {t("sectionTwo.item1.title")}
                 </h3>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
-                  {t("sectionTwo.item1.paragraph")}
+                  {t("sectionTwo.item1.issue1")}
+                </p>
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                  {t("sectionTwo.item1.issue2")}
+                </p>
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                  {t("sectionTwo.item1.solution")}
                 </p>
               </div>
               <div className="mb-9">
@@ -41,7 +47,13 @@ export default async function AboutSectionTwo({ locale }: { locale: string }) {
                   {t("sectionTwo.item2.title")}
                 </h3>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
-                  {t("sectionTwo.item2.paragraph")}
+                  {t("sectionTwo.item2.issue1")}
+                </p>
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                  {t("sectionTwo.item2.issue2")}
+                </p>
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                  {t("sectionTwo.item2.solution")}
                 </p>
               </div>
               <div className="mb-1">
@@ -49,7 +61,13 @@ export default async function AboutSectionTwo({ locale }: { locale: string }) {
                   {t("sectionTwo.item3.title")}
                 </h3>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
-                  {t("sectionTwo.item3.paragraph")}
+                  {t("sectionTwo.item3.issue1")}
+                </p>
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                  {t("sectionTwo.item3.issue2")}
+                </p>
+                <p className="text-body-color/80 dark:text-body-color-dark/80 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                  {t("sectionTwo.item3.solution")}
                 </p>
               </div>
             </div>

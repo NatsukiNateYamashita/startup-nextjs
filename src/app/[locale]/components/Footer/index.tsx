@@ -1,8 +1,10 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-const Footer = () => {
+const Footer = async ({ locale }: { locale: string }) => {
+  const t = await getTranslations({ locale: locale, namespace: 'Footer' });
+  
   return (
     <>
       <footer className="dark:bg-gray-dark relative z-10 bg-white/80 pt-16 backdrop-blur-sm md:pt-20 lg:pt-24">
@@ -27,8 +29,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-9 text-base leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  {t("description")}
                 </p>
                 <div className="flex items-center">
                   <a
@@ -112,7 +113,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  Useful Links
+                  {t("usefulLinks")}
                 </h2>
                 <ul>
                   <li>
@@ -120,15 +121,15 @@ const Footer = () => {
                       href="/blog"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Blog
+                      {t("links.blog")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/pricing"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Pricing
+                      {t("links.pricing")}
                     </Link>
                   </li>
                   <li>
@@ -136,7 +137,7 @@ const Footer = () => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      About
+                      {t("links.about")}
                     </Link>
                   </li>
                 </ul>
@@ -146,7 +147,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  Terms
+                  {t("terms")}
                 </h2>
                 <ul>
                   <li>
@@ -154,7 +155,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      TOS
+                      {t("termsLinks.termsOfUse")}
                     </Link>
                   </li>
                   <li>
@@ -162,7 +163,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Privacy Policy
+                      {t("termsLinks.privacy")}
                     </Link>
                   </li>
                   <li>
@@ -170,7 +171,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Refund Policy
+                      {t("termsLinks.refund")}
                     </Link>
                   </li>
                 </ul>
@@ -180,7 +181,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  Support & Help
+                  {t("support")}
                 </h2>
                 <ul>
                   <li>
@@ -188,15 +189,15 @@ const Footer = () => {
                       href="/contact"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Open Support Ticket
+                      {t("supportLinks.contact")}
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Terms of Use
+                      {t('supportLinks.termsOfUse')}
                     </Link>
                   </li>
                   <li>
@@ -204,9 +205,9 @@ const Footer = () => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      About
+                      {t('supportLinks.about')}
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -214,25 +215,33 @@ const Footer = () => {
 
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D8A77B83] to-transparent dark:via-[#D8A77B83]"></div>
           <div className="py-8">
-            <p className="text-body-color/80 dark:text-body-color-dark text-center text-base">
+            <p className="text-body-color/80 dark:text-body-color-dark/80 text-center text-base">
+              Copyright &copy;{" "}
+              <script type="text/javascript">
+                myDate = new Date() ;myYear = myDate.getFullYear
+                ();document.write(myYear);
+              </script>{" "}
+              <Link href="/">Natsuki Yamashita</Link> All Rights Reserved.
+            </p>
+            <p className="mt-4 text-body-color/70 dark:text-body-color-dark/70 text-center text-sm">
               Template by{" "}
-              <a
+              <Link
                 href="http://uideck.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
                 UIdeck
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a
+              <Link
                 href="https://nextjstemplates.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
                 Next.js Templates
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -254,7 +263,12 @@ const Footer = () => {
               width="99"
               height="99"
             >
-              <circle cx="49.5" cy="49.5" r="49.5" fill="#E17B47" />
+              <circle
+                cx="49.5"
+                cy="49.5"
+                r="49.5"
+                fill="var(--color-primary)"
+              />
             </mask>
             <g mask="url(#mask0_94:899)">
               <circle
@@ -297,8 +311,12 @@ const Footer = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
               >
-                <stop stopColor="#E17B47" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </radialGradient>
             </defs>
           </svg>
@@ -358,8 +376,12 @@ const Footer = () => {
                 y2="59.8878"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_94:889"
@@ -369,8 +391,12 @@ const Footer = () => {
                 y2="20.668"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.51"
+                />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_94:889"
@@ -380,8 +406,12 @@ const Footer = () => {
                 y2="25.1062"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_94:889"
@@ -391,8 +421,12 @@ const Footer = () => {
                 y2="80.6826"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.51"
+                />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_94:889"
@@ -402,8 +436,12 @@ const Footer = () => {
                 y2="58.2156"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_94:889"
@@ -413,8 +451,12 @@ const Footer = () => {
                 y2="41.6598"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" stopOpacity="0" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0.51" />
+                <stop stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.51"
+                />
               </linearGradient>
             </defs>
           </svg>

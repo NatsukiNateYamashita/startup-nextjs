@@ -14,17 +14,22 @@ import Pricing from "@/app/[locale]/components/Pricing";
 import Testimonials from "@/app/[locale]/components/Testimonials";
 import Video from "@/app/[locale]/components/Video";
 import { Metadata } from "next";
-// import { locales } from "@/i18n/routing";
 
-// export async function generateStaticParams() {
-//   return locales.map((locale) => ({ locale }));
-// }
 
-export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+type Props = {
+  params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "HomePage" });
+
+  return {
+    title: 'NIHONGO-AI. "AI" makes the world of Nihongo more interesting.',
+    description: t("metaDescription"),
+    // other metadata
+  };
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -36,7 +41,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Hero locale={locale} />
       <Features locale={locale} />
       <Video locale={locale} />
-      <Brands />
+      {/* <Brands /> */}
       <AboutSectionOne locale={locale} />
       <AboutSectionTwo locale={locale} />
       <Testimonials locale={locale} />

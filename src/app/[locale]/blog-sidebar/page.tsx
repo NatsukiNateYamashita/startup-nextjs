@@ -13,11 +13,11 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "BlogDetailsPage" });
+  const t = await getTranslations({ locale, namespace: "BlogPage" });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     // other metadata
   };
 }
@@ -26,7 +26,6 @@ const BlogSidebarPage = async ({ params }: Props) => {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("BlogDetailsPage");
-  const t2 = await getTranslations("BlogSidebarPage");
 
   return (
     <>
@@ -36,7 +35,7 @@ const BlogSidebarPage = async ({ params }: Props) => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h1 className="text-body-color dark:text-body-color-dark mb-8 text-3xl leading-tight font-bold sm:text-4xl sm:leading-tight">
-                  {t("title")}
+                 Blog Sidebar
                 </h1>
                 <div className="border-body-color/10 dark:border-body-color-dark/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4">
                   <div className="flex flex-wrap items-center">
@@ -52,7 +51,7 @@ const BlogSidebarPage = async ({ params }: Props) => {
                       </div>
                       <div className="w-full">
                         <span className="text-body-color dark:text-body-color-dark mb-1 text-base font-medium">
-                          {t("by")} <span> Musharof Chy</span>
+                          by <span> Musharof Chy</span>
                         </span>
                       </div>
                     </div>
@@ -221,7 +220,7 @@ const BlogSidebarPage = async ({ params }: Props) => {
                           cx="37.5"
                           cy="37.5"
                           r="37.5"
-                          fill="#E17B47"
+                          fill="var(--color-primary)"
                         />
                         <mask
                           id="mask0_111:596"
@@ -237,7 +236,7 @@ const BlogSidebarPage = async ({ params }: Props) => {
                             cx="37.5"
                             cy="37.5"
                             r="37.5"
-                            fill="#4A6CF7"
+                            fill="var(--color-primary)"
                           />
                         </mask>
                         <g mask="url(#mask0_111:596)">

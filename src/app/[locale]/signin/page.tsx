@@ -8,7 +8,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "signin" });
+  const t = await getTranslations({ locale, namespace: "SigninPage" });
 
   return {
     title: t("metaTitle"),
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const SigninPage = async ({ params }: Props) => {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "signin" });
+  const t = await getTranslations({ locale, namespace: "SigninPage" });
 
   return (
     <>
@@ -35,7 +35,7 @@ const SigninPage = async ({ params }: Props) => {
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-11 text-center text-base font-medium">
                   {t("description")}
                 </p>
-                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:hover:shadow-none">
+                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-form-bg px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-form-bg-dark dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       width="20"
@@ -72,7 +72,7 @@ const SigninPage = async ({ params }: Props) => {
                   {t("signInWithGoogle")}
                 </button>
 
-                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:hover:shadow-none">
+                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-form-bg px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-form-bg-dark dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       fill="currentColor"
@@ -105,7 +105,7 @@ const SigninPage = async ({ params }: Props) => {
                       type="email"
                       name="email"
                       placeholder={t("enterYourEmailPlaceholder")}
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-form-bg px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-form-bg-dark dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8">
@@ -119,7 +119,7 @@ const SigninPage = async ({ params }: Props) => {
                       type="password"
                       name="password"
                       placeholder={t("enterYourPasswordPlaceholder")}
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-form-bg px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-form-bg-dark dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
@@ -221,8 +221,8 @@ const SigninPage = async ({ params }: Props) => {
                 y2="453.581"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_95:1005"
@@ -232,8 +232,8 @@ const SigninPage = async ({ params }: Props) => {
                 y2="1192.04"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

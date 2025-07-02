@@ -8,7 +8,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "signup" });
+  const t = await getTranslations({ locale, namespace: "SignupPage" });
 
   return {
     title: t("metaTitle"),
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const SignupPage = async ({ params }: Props) => {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "signup" });
+  const t = await getTranslations({ locale, namespace: "SignupPage" });
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
@@ -31,10 +31,10 @@ const SignupPage = async ({ params }: Props) => {
                 <h3 className="mb-3 text-center text-2xl font-bold text-black sm:text-3xl dark:text-white">
                   {t("title")}
                 </h3>
-                <p className="text-body-color mb-11 text-center text-base font-medium">
+                <p className="text-body-color dark:text-body-color-dark mb-11 text-center text-base font-medium">
                   {t("description")}
                 </p>
-                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:hover:shadow-none">
+                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary bg-form-bg dark:bg-form-bg-dark mb-6 flex w-full items-center justify-center rounded-xs border px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       width="20"
@@ -68,10 +68,10 @@ const SignupPage = async ({ params }: Props) => {
                       </defs>
                     </svg>
                   </span>
-                  {t("signInWithGoogle")}
+                  {t("signupWithGoogle")}
                 </button>
 
-                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary mb-6 flex w-full items-center justify-center rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:hover:shadow-none">
+                <button className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color hover:border-primary hover:bg-primary/5 hover:text-primary dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary bg-form-bg dark:bg-form-bg-dark mb-6 flex w-full items-center justify-center rounded-xs border px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       fill="currentColor"
@@ -83,11 +83,11 @@ const SignupPage = async ({ params }: Props) => {
                       <path d="M32 1.7998C15 1.7998 1 15.5998 1 32.7998C1 46.3998 9.9 57.9998 22.3 62.1998C23.9 62.4998 24.4 61.4998 24.4 60.7998C24.4 60.0998 24.4 58.0998 24.3 55.3998C15.7 57.3998 13.9 51.1998 13.9 51.1998C12.5 47.6998 10.4 46.6998 10.4 46.6998C7.6 44.6998 10.5 44.6998 10.5 44.6998C13.6 44.7998 15.3 47.8998 15.3 47.8998C18 52.6998 22.6 51.2998 24.3 50.3998C24.6 48.3998 25.4 46.9998 26.3 46.1998C19.5 45.4998 12.2 42.7998 12.2 30.9998C12.2 27.5998 13.5 24.8998 15.4 22.7998C15.1 22.0998 14 18.8998 15.7 14.5998C15.7 14.5998 18.4 13.7998 24.3 17.7998C26.8 17.0998 29.4 16.6998 32.1 16.6998C34.8 16.6998 37.5 16.9998 39.9 17.7998C45.8 13.8998 48.4 14.5998 48.4 14.5998C50.1 18.7998 49.1 22.0998 48.7 22.7998C50.7 24.8998 51.9 27.6998 51.9 30.9998C51.9 42.7998 44.6 45.4998 37.8 46.1998C38.9 47.1998 39.9 49.1998 39.9 51.9998C39.9 56.1998 39.8 59.4998 39.8 60.4998C39.8 61.2998 40.4 62.1998 41.9 61.8998C54.1 57.7998 63 46.2998 63 32.5998C62.9 15.5998 49 1.7998 32 1.7998Z" />
                     </svg>
                   </span>
-                  {t("signInWithGithub")}
+                  {t("signupWithGithub")}
                 </button>
                 <div className="mb-8 flex items-center justify-center">
                   <span className="bg-body-color/50 hidden h-[1px] w-full max-w-[60px] sm:block"></span>
-                  <p className="text-body-color w-full px-5 text-center text-base font-medium">
+                  <p className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base font-medium">
                     {t("orRegisterWithEmail")}
                   </p>
                   <span className="bg-body-color/50 hidden h-[1px] w-full max-w-[60px] sm:block"></span>
@@ -105,7 +105,7 @@ const SignupPage = async ({ params }: Props) => {
                       type="text"
                       name="name"
                       placeholder={t("enterFullNamePlaceholder")}
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary bg-form-bg dark:bg-form-bg-dark w-full rounded-xs border px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8">
@@ -120,7 +120,7 @@ const SignupPage = async ({ params }: Props) => {
                       type="email"
                       name="email"
                       placeholder={t("enterEmailPlaceholder")}
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary bg-form-bg dark:bg-form-bg-dark w-full rounded-xs border px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8">
@@ -135,7 +135,7 @@ const SignupPage = async ({ params }: Props) => {
                       type="password"
                       name="password"
                       placeholder={t("enterPasswordPlaceholder")}
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+                      className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary bg-form-bg dark:bg-form-bg-dark w-full rounded-xs border px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8 flex">
@@ -169,12 +169,16 @@ const SignupPage = async ({ params }: Props) => {
                         </div>
                       </div>
                       <span>
-                        {t("agreementPart1")}
+                        <a className="text-body-color/80 dark:text-body-color-dark/80 cursor-pointer items-center text-sm font-medium select-none">
+                          {t("agreementPart1")}
+                        </a>
                         <a href="#0" className="text-primary hover:underline">
                           {" "}
                           {t("termsAndConditions")}{" "}
                         </a>
+                        <a className="text-body-color/80 dark:text-body-color-dark/80 cursor-pointer items-center text-sm font-medium select-none">
                         {t("agreementPart2")}
+                        </a>
                         <a href="#0" className="text-primary hover:underline">
                           {" "}
                           {t("privacyPolicy")}{" "}
@@ -188,7 +192,7 @@ const SignupPage = async ({ params }: Props) => {
                     </button>
                   </div>
                 </form>
-                <p className="text-body-color text-center text-base font-medium">
+                <p className="text-body-color dark:text-body-color-dark text-center text-base font-medium">
                   {t("alreadyHaveAccount")}{" "}
                   <Link href="/signin" className="text-primary hover:underline">
                     {t("signInLink")}
@@ -238,8 +242,12 @@ const SignupPage = async ({ params }: Props) => {
                 y2="453.581"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_95:1005"
@@ -249,8 +257,12 @@ const SignupPage = async ({ params }: Props) => {
                 y2="1192.04"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#E17B47" />
-                <stop offset="1" stopColor="#E17B47" stopOpacity="0" />
+                <stop stopColor="var(--color-primary)" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
             </defs>
           </svg>
