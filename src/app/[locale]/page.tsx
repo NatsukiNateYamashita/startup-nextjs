@@ -14,11 +14,11 @@ import Pricing from "@/app/[locale]/components/Pricing";
 import Testimonials from "@/app/[locale]/components/Testimonials";
 import Video from "@/app/[locale]/components/Video";
 import { Metadata } from "next";
-// import { locales } from "@/i18n/routing";
 
-// export async function generateStaticParams() {
-//   return locales.map((locale) => ({ locale }));
-// }
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: 'NIHONGO-AI. "AI" makes the world of Nihongo more interesting.',
-    description: t("description"),
+    description: t("metaDescription"),
     // other metadata
   };
 }
