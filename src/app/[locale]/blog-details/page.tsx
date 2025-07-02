@@ -12,11 +12,11 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "BlogDetailsPage" });
+  const t = await getTranslations({ locale, namespace: "BlogPage" });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     // other metadata
   };
 }
@@ -33,8 +33,8 @@ const BlogDetailsPage = async ({ params }: Props) => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="dark:text-body-color-dark-dark-dark-dark-dark mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight">
-                  {t("title")}
+                <h2 className="dark:text-body-color-dark mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight">
+                  Blog
                 </h2>
                 <div className="border-body-color/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4 dark:border-white/10">
                   <div className="flex flex-wrap items-center">
@@ -50,7 +50,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                       </div>
                       <div className="w-full">
                         <span className="text-body-color dark:text-body-color-dark mb-1 text-base font-medium">
-                          {t("by")} <span>Musharof Chy</span>
+                          by <span>Musharof Chy</span>
                         </span>
                       </div>
                     </div>

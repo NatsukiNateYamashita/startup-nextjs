@@ -1,279 +1,276 @@
 {
   "HomePage": {
-    "title": "Hello World!",
-    "paragraph": "Welcome to our website.",
-    "button": "Learn More"
+    "title": "NIHONGO-AI. AI makes the world of Nihongo more interesting.",
+    "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
   },
   "HeroPage": {
-    "heading": "Free and Open-Source Next.js Template for Startup & SaaS",
-    "description": "Startup is free Next.js template for startups and SaaS business websites comes with all the essential pages, components, and sections you need to launch a complete business website, built-with Next 13.x and Tailwind CSS.",
-    "getProButton": "🔥 Get Pro",
-    "githubButton": "Star on GitHub"
+    "description": "To Japanese language learners, Japanese educators, and everyone who loves Japan. It is a new platform that transcends language barriers and leads you to the depths of culture.",
+    "checkBlogButton": "Check out our latest blogs",
+    "checkWebappButton": "Get started with the web app"
   },
   "FeaturesPage": {
-    "title": "Features",
-    "paragraph": "Discover the key features that our service offers.",
-    "feature1Title": "Simple Usability",
-    "feature1Paragraph": "Start using our service easily with an intuitive interface.",
-    "feature2Title": "Advanced Analytics",
-    "feature2Paragraph": "Support your business decisions with detailed data analysis and reporting.",
-    "feature3Title": "Secure Environment",
-    "feature3Paragraph": "Your data is safely protected with the latest security technology."
+    "paragraph": "Main Functions and Features",
+    "feature1Title": "AI-powered web applications",
+    "feature1Paragraph": "Learn more freely and smarter. Personalize according to your purpose and level. AI will support you smartly. (Functions for learners, educators, and educational institutions will be implemented one after another)",
+    "feature2Title": "Blogs Delivered by Experts",
+    "feature2Paragraph": "Digging deeper into \"real Japanese\" and \"living Japan culture\". From fun knowledge for learners to expert insights for educators, you'll find information that can only be found here. It is also ideal as a Japanese teaching material. (Various useful functions will be implemented one after another)",
+    "feature3Title": "Realizing \"I wish I had it\"",
+    "feature3Paragraph": "Developers are happy to hear from users directly. Your voice will accelerate the evolution of NIHONGO-AI. Let's create a better platform together."
   },
   "VideoPage": {
-    "title": "We are ready to help",
-    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+    "paragraph": "No problem even if you are not good at IT! Let's use it while watching the video!"
   },
   "AboutPage": {
-    "title": "About Us",
-    "paragraph": "Learn about our story and mission.",
+    "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture.",
     "sectionOne": {
-      "title": "Designed for startups, SaaS and business websites.",
-      "paragraph": "The main theme is to focus on educating attendees on how to best protect highly vulnerable business applications through interactive group discussions and roundtables.",
-      "list1": "Premium",
-      "list2": "Tailwind CSS",
-      "list3": "Lifetime Use",
-      "list4": "Next.js",
-      "list5": "Rich Documentation",
-      "list6": "Developer Friendly"
+      "title": "Modern Japanese x State-of-the-art Technology",
+      "paragraph": "Learning Japanese leads to enjoying Japan as a whole. Teaching the Japanese language leads to conveying Japan as a whole to the world. We will provide you with such an experience.",
+      "list1": "Living Japanese",
+      "list2": "Living Japan culture",
+      "list3": "State-of-the-art Japanese education",
+      "list4": "High practicality",
+      "list5": "High level of expertise",
+      "list6": "State-of-the-art technology"
     },
     "sectionTwo": {
       "item1": {
-        "title": "Bug Free Code",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "title": "For Japanese learners",
+        "issue1": "\"I want to learn in a fun and effective way.\"",
+        "issue2": "\"I want to know realistic expressions that are not found in textbooks.\"",
+        "solution": "→ AI-powered web app to become a learning companion for your level. In the blog, you can learn interesting Japanese and cultural knowledge that you can use immediately."
       },
       "item2": {
-        "title": "Premium Support",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        "title": "To Japanese Educators",
+        "issue1": "\"I want to teach young people the language and native expressions.\"",
+        "issue2": "\"I want materials and tools that are attractive to students.\"",
+        "solution": "→ Enrich your education with AI-powered web apps that can be used directly in the classroom and blog posts that cut into issues in the field."
       },
       "item3": {
-        "title": "Next.js",
-        "paragraph": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+        "title": "To everyone who likes Japan",
+        "issue1": "\"I want to have a deep understanding of the background of anime and culture.\"",
+        "issue2": "\"I want to enjoy my travel more wholeheartedly.\"",
+        "solution": "→ From cultural commentary that makes anime 10 times more interesting, to useful features that are useful when traveling. Deepen your \"love\" even further."
       }
-    }
+    },
+    "sectionDeveloper": {
+      "paragraph": "Details of the developer of this site",
+      "developer1Title": "Japanese Educator",
+      "developer1Paragraph": "Obtained a Japanese teacher qualification and experience teaching Japanese to foreigners at a Japanese language school or preparatory school",
+      "developer2Title": "Japan Culture Evangelist",
+      "developer2Paragraph": "As a Saitama Goodwill Ambassador and rickshaw driver, he has a passion for conveying the charm of Japan culture",
+      "developer3Title": "AI (Natural Language Processing) Experts",
+      "developer3Paragraph": "Majored in natural language processing at the Graduate School of Information Engineering, and worked as a data scientist using AI technology",
+      "developer4Title": "polyglot",
+      "developer4Paragraph": "Japanese is my mother tongue. English and Chinese are business level. Korean and Taiwanese are at a conversational level. Experience the fun and difficulty of learning a foreign language"
+    },
+    "metaTitle": "About | NIHONGO-AI",
+    "metaDescription": "To Japanese language learners, Japanese educators, and everyone who loves Japan. It is a new platform that transcends language barriers and leads you to the depths of culture."
   },
   "TestimonialsPage": {
-    "title": "What Our Users Says",
-    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "title": "Testimonials",
+    "paragraph": "Let us know what you think and what you want. It's an encouragement for developers!",
     "testimonial1": {
-      "name": "Musharof Chy",
-      "designation": "Founder @TailGrids",
-      "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+      "name": "Maggie",
+      "designation": "Taiwan / Japanese Learner",
+      "content": "I was stuck in self-study, but the culture column on my blog is also interesting and motivates me to learn."
     },
     "testimonial2": {
-      "name": "Devid Weilium",
-      "designation": "Founder @UIdeck",
-      "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+      "name": "Sato",
+      "designation": "Japan / Japanese Teacher",
+      "content": "I use the blog posts as they are for my classes. The response of the students is also outstanding. Here are the real teaching materials that I have been struggling to find in the past."
     },
     "testimonial3": {
-      "name": "Lethium Frenci",
-      "designation": "Founder @Lineicons",
-      "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+      "name": "Mehdi",
+      "designation": "France / Anime Fan",
+      "content": "Without the explanation in the blog post, I got a glimpse of the abyss of Japan culture and the recent situation in Japan from one scene of anime that I would have passed through, and my interest in Japan became even stronger."
     }
   },
   "PricingPage": {
-    "title": "Simple and Affordable Pricing",
-    "paragraph": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
+    "title": "Simple and affordable",
+    "description": "We are preparing a simple and affordable setting. Currently, all services are free to use.",
+    "paragraph": "We are preparing a simple and affordable setting. Currently, all services are free to use.",
+    "monthly": "monthly amount",
+    "yearly": "Annual",
     "plans": {
       "lite": {
-        "name": "Lite",
+        "name": "light",
         "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
       },
       "basic": {
-        "name": "Basic",
+        "name": "basic",
         "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
       },
       "plus": {
-        "name": "Plus",
+        "name": "professional",
         "subtitle": "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
       }
     },
     "offer": {
       "allUI": "All UI Components",
-      "unlimited": "Use with Unlimited Projects",
-      "commercial": "Commercial Use",
+      "unlimited": "Use for unlimited projects",
+      "commercial": "Commercial use",
       "email": "Email Support",
       "lifetime": "Lifetime Access",
       "updates": "Free Lifetime Updates"
     },
-    "startTrial": "Start Free Trial"
+    "startTrial": "Start Free Trial",
+    "metaTitle": "Price | NIHONGO-AI",
+    "metaDescription": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
   },
   "BlogPage": {
-    "title": "Our Latest Blogs",
-    "paragraph": "Check out our latest articles and updates.",
+    "title": "Latest Blogs",
+    "paragraph": "Check out our latest blogs.",
     "blog1": {
       "title": "Best UI Components for Modern Websites",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit sit amet dictum neque, laoreet dolor.",
       "author": "Samuel Joshi",
-      "designation": "Graphic Designer",
-      "tag": "Creative",
+      "designation": "graphic designer",
+      "tag": "creative",
       "date": "2025"
     },
     "blog2": {
-      "title": "9 Simple Ways to Improve Your Design Skills",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-      "author": "Musharof Chy",
+      "title": "9 Easy Ways to Improve Your Design Skills",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit sit amet dictum neque, laoreet dolor.",
+      "author": "Musharov Qi",
       "designation": "Content Writer",
-      "tag": "Computer",
+      "tag": "computer",
       "date": "2025"
     },
     "blog3": {
-      "title": "Tips to Quickly Improve Your Coding Speed.",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-      "author": "Lethium Deo",
-      "designation": "Graphic Designer",
-      "tag": "Design",
+      "title": "Tips to quickly improve your coding speed.",
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit sit amet dictum neque, laoreet dolor.",
+      "author": "Recium Deo",
+      "designation": "graphic designer",
+      "tag": "design",
       "date": "2025"
     },
-    "by": "By",
-    "date": "Date",
-    "pageName": "Blog Grid",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
-    "prevButton": "Previous",
-    "nextButton": "Next",
-    "dots": "..."
+    "by": "by",
+    "date": "date",
+    "description": "To Japanese language learners, Japanese educators, and everyone who loves Japan. Check out our latest blog post.",
+    "metaTitle": "Blog | NIHONGO-AI",
+    "metaDescription": "To Japanese language learners, Japanese educators, and everyone who loves Japan. Check out our latest blog posts."
   },
   "BlogDetailsPage": {
-    "title": "Blog Details",
-    "by": "By ",
-    "designTag": "Design",
+    "designTag": "design",
     "bodyParagraph1": "This is a detailed blog post.",
-    "bodyParagraph2": "The article continues.",
+    "bodyParagraph2": "The article continues:",
     "bodyParagraph3": "More content.",
-    "bodyParagraph4": "Final paragraph.",
-    "subtitle": "Subtitle",
+    "bodyParagraph4": "The last paragraph.",
+    "subtitle": "subtitle",
     "listItem1": "List item 1",
     "listItem2": "List item 2",
     "listItem3": "List item 3",
     "listItem4": "List item 4",
     "quote": "This is a quote.",
-    "malesuada": "Important content",
-    "ametDictum": "Emphasized content",
+    "malesuada": "Important Content",
+    "ametDictum": "Highlighted content",
     "description": "This is a detailed blog post."
   },
-  "BlogSidebarPage": {
-    "title": "Blog Sidebar",
-    "description": "Blog page with sidebar."
-  },
   "ContactPage": {
-    "title": "Need Help? Open a Ticket",
-    "paragraph": "Our support team will get back to you via email as soon as possible.",
+    "description": "Please feel free to contact us using the form below. Casual communication is also possible from the various SNS icons on the left side of the bottom of this page.",
+    "title": "Is there anything more I can do to help you?",
+    "paragraph": "Please feel free to contact the developer. Please note that if you enter the wrong email address, you will not receive a reply.",
     "form": {
-      "nameLabel": "Your Name",
-      "namePlaceholder": "Enter your name",
+      "nameLabel": "Your name*",
+      "namePlaceholder": "Please enter your name",
       "emailLabel": "Your Email",
-      "emailPlaceholder": "Enter your email",
-      "messageLabel": "Your Message",
-      "messagePlaceholder": "Enter your message",
-      "submit": "Submit Ticket"
+      "emailPlaceholder": "Please enter your email address",
+      "messageLabel": "Your message",
+      "messagePlaceholder": "Please enter your message",
+      "submit": "Send Email"
     },
     "newsletter": {
-      "title": "Subscribe to Our Newsletter",
-      "paragraph": "Get the latest news and updates delivered to your inbox.",
-      "namePlaceholder": "Enter your name",
-      "emailPlaceholder": "Enter your email",
-      "subscribe": "Subscribe",
-      "noSpam": "No spam guaranteed, So please don't send any spam mail."
-    }
+      "title": "Subscribe Newsletter",
+      "paragraph": "The latest blogs and updates will be delivered to your inbox.",
+      "namePlaceholder": "Please enter your name",
+      "emailPlaceholder": "Please enter your email address",
+      "subscribe": "subscribe",
+      "noSpam": "We would appreciate it if you could subscribe to this site only if you really need it for personal development."
+    },
+    "metaTitle": "Contact | NIHONGO-AI",
+    "metaDescription": "This is a contact for the startup Nextjs template"
   },
-  "signin": {
-    "title": "Sign in to your account",
-    "description": "Login to your account for a faster checkout.",
+  "SigninPage": {
+    "title": "login",
+    "description": "Log in to your account.",
     "signInWithGoogle": "Sign in with Google",
-    "signInWithGithub": "Sign in with Github",
-    "orSignInWithEmail": "Or, sign in with your email",
+    "signInWithGithub": "Log in with Github",
+    "orSignInWithEmail": "Alternatively, log in with your email address",
     "yourEmail": "Your Email",
-    "enterYourEmailPlaceholder": "Enter your Email",
-    "yourPassword": "Your Password",
-    "enterYourPasswordPlaceholder": "Enter your Password",
-    "keepMeSignedIn": "Keep me signed in",
-    "forgotPassword": "Forgot Password?",
-    "signInButton": "Sign in",
-    "noAccount": "Don't you have an account?",
-    "signUpLink": "Sign up",
-    "metaTitle": "Sign In Page | Free Next.js Template for Startup and SaaS",
-    "metaDescription": "This is Sign In Page for Startup Nextjs Template"
+    "enterYourEmailPlaceholder": "Please enter your email address",
+    "yourPassword": "password",
+    "enterYourPasswordPlaceholder": "Enter your password",
+    "keepMeSignedIn": "Stay logged in",
+    "forgotPassword": "Forgot your password?",
+    "signInButton": "login",
+    "noAccount": "Don't have an account?",
+    "signUpLink": "Create an account",
+    "metaTitle": "Login | NIHONGO-AI",
+    "metaDescription": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
   },
-  "signup": {
-    "title": "Create your account",
-    "description": "It's totally free and super easy",
-    "signInWithGoogle": "Sign in with Google",
-    "signInWithGithub": "Sign in with Github",
-    "orRegisterWithEmail": "Or, register with your email",
-    "fullName": "Full Name",
-    "enterFullNamePlaceholder": "Enter your full name",
-    "workEmail": "Work Email",
-    "enterEmailPlaceholder": "Enter your Email",
-    "yourPassword": "Your Password",
-    "enterPasswordPlaceholder": "Enter your Password",
-    "agreementPart1": "By creating account means you agree to the",
-    "termsAndConditions": "Terms and Conditions",
-    "agreementPart2": ", and our",
+  "SignupPage": {
+    "title": "Create an account",
+    "description": "You can easily create an account for free",
+    "signupWithGoogle": "Sign up with Google",
+    "signupWithGithub": "Sign up on Github",
+    "orRegisterWithEmail": "Or register by email",
+    "fullName": "full name",
+    "enterFullNamePlaceholder": "Please enter your full name",
+    "workEmail": "Work email",
+    "enterEmailPlaceholder": "Please enter your email address",
+    "yourPassword": "password",
+    "enterPasswordPlaceholder": "Enter your password",
+    "agreementPart1": "By creating an account, you agree to the following:",
+    "termsAndConditions": "Terms & Conditions",
+    "agreementPart2": "And",
     "privacyPolicy": "Privacy Policy",
     "signUpButton": "Sign up",
-    "alreadyHaveAccount": "Already using Startup?",
-    "signInLink": "Sign in",
-    "metaTitle": "Sign Up Page | Free Next.js Template for Startup and SaaS",
-    "metaDescription": "This is Sign Up Page for Startup Nextjs Template"
+    "alreadyHaveAccount": "Already have an account?",
+    "signInLink": "login",
+    "metaTitle": "Sign Up | NIHONGO-AI",
+    "metaDescription": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
   },
-  "error": {
-    "title": "Sorry, the page can't be found",
-    "description": "The page you were looking for appears to have been moved, deleted or does not exist.",
+  "Error": {
+    "title": "Sorry, we can't find the page",
+    "description": "The page I was looking for seems to have moved, deleted, or no longer exists.",
     "backToHomepage": "Back to Homepage",
-    "metaTitle": "Error Page | Free Next.js Template for Startup and SaaS",
-    "metaDescription": "This is Error Page for Startup Nextjs Template"
-  },
-  "SignInPage": {
-    "title": "Sign In",
-    "paragraph": "Sign in to your account.",
-    "form": {
-      "email": "Email",
-      "password": "Password",
-      "submit": "Sign In",
-      "forgotPassword": "Forgot Password?"
-    }
+    "metaTitle": "Error | NIHONGO-AI",
+    "metaDescription": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
   },
   "SignUpPage": {
-    "title": "Sign Up",
+    "title": "Sign up",
     "paragraph": "Create a new account.",
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "password": "Password",
+      "name": "name",
+      "email": "email",
+      "password": "password",
       "confirmPassword": "Confirm Password",
-      "submit": "Sign Up"
+      "submit": "Sign up"
     }
   },
   "ErrorPage": {
-    "title": "Error",
-    "paragraph": "Sorry, an error occurred.",
-    "button": "Back to Home"
+    "description": "The page could not be found.",
+    "backToHomepage": "Back to Home"
   },
   "Footer": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
-    "usefulLinks": "Useful Links",
+    "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture.",
+    "usefulLinks": "Links",
     "links": {
       "blog": "Blog",
       "pricing": "Pricing",
       "about": "About"
     },
-    "terms": "Terms",
+    "terms": "Terms of Use",
     "termsLinks": {
-      "tos": "TOS", 
+      "termsOfUse": "Terms of Use",
       "privacy": "Privacy Policy",
       "refund": "Refund Policy"
     },
-    "support": "Support & Help",
+    "support": "support",
     "supportLinks": {
-      "support": "Open Support Ticket",
+      "contact": "Contact",
       "termsOfUse": "Terms of Use",
       "about": "About"
-    },
-    "copyright": "Template by",
-    "and": "and",
-    "uideck": "UIdeck",
-    "nextjsTemplates": "Next.js Templates"
+    }
   }
 }

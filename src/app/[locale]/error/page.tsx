@@ -8,7 +8,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "error" });
+  const t = await getTranslations({ locale, namespace: "Error" });
 
   return {
     title: t("metaTitle"),
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const ErrorPage = async ({ params }: Props) => {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "error" });
+  const t = await getTranslations({ locale, namespace: "ErrorPage" });
   return (
     <>
       <section className="relative z-10 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
@@ -154,9 +154,9 @@ const ErrorPage = async ({ params }: Props) => {
                   </svg>
                 </div>
                 <h3 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
-                  {t("title")}
+                  ERROR
                 </h3>
-                <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="mb-10 text-base font-medium leading-relaxed text-body-color/80 dark:text-body-color-dark/80 sm:text-lg sm:leading-relaxed">
                   {t("description")}
                 </p>
                 <Link

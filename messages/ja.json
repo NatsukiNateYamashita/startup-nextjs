@@ -62,7 +62,9 @@
       "developer3Paragraph": "情報工学大学院で自然言語処理を専攻し、AI技術を駆使して、データサイエンティストとして就業",
       "developer4Title": "多言語話者",
       "developer4Paragraph": "日本語は母語。英語、中国語はビジネスレベル。韓国語、台湾語は日常会話レベル。外国語学習の楽しさと難しさの体感者"
-    }
+    },
+    "metaTitle": "About | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
   "TestimonialsPage": {
     "title": "ユーザーの声",
@@ -85,6 +87,7 @@
   },
   "PricingPage": {
     "title": "シンプルでお手頃価格",
+    "description": "シンプルでお手頃な価格設定を準備中です。現在は全てのサービスを無料で使えます。",
     "paragraph": "シンプルでお手頃な価格設定を準備中です。現在は全てのサービスを無料で使えます。",
     "monthly": "月額",
     "yearly": "年額",
@@ -110,7 +113,9 @@
       "lifetime": "ライフタイムアクセス",
       "updates": "無料のライフタイムアップデート"
     },
-    "startTrial": "無料トライアルを開始"
+    "startTrial": "無料トライアルを開始",
+    "metaTitle": "価格 | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
   "BlogPage": {
     "title": "最新のブログ",
@@ -141,15 +146,11 @@
     },
     "by": "によって",
     "date": "日付",
-    "pageName": "ブロググリッド",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In varius eros eget sapien consectetur ultrices.Ut quis dapibus libero.",
-    "prevButton": "先の",
-    "nextButton": "次に",
-    "dots": "..."
+    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。最新のブログ記事をご覧ください。",
+    "metaTitle": "ブログ | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。最新のブログ記事をチェックしてください。"
   },
   "BlogDetailsPage": {
-    "title": "ブログ詳細",
-    "by": "によって",
     "designTag": "設計",
     "bodyParagraph1": "これは詳細なブログ記事です。",
     "bodyParagraph2": "記事は続きます。",
@@ -165,13 +166,10 @@
     "ametDictum": "強調されたコンテンツ",
     "description": "これは詳細なブログ記事です。"
   },
-  "BlogSidebarPage": {
-    "title": "ブログサイドバー",
-    "description": "サイドバー付きのブログページ。"
-  },
   "ContactPage": {
+    "description": "以下フォームよりお気軽にご連絡ください。カジュアルなコミュニケーションは、本ページ下部左側の各種SNSアイコンからも可能です。",
     "title": "さらにお手伝いできることはありますか？",
-    "paragraph": "開発者へお気軽にご連絡ください。",
+    "paragraph": "開発者へお気軽にご連絡ください。メールアドレスを間違えますと、返信が届きませんのでご注意ください。",
     "form": {
       "nameLabel": "お名前 *",
       "namePlaceholder": "名前を入力してください",
@@ -188,10 +186,12 @@
       "emailPlaceholder": "メールアドレスを入力してください",
       "subscribe": "購読する",
       "noSpam": "当サイトは、個人開発のため、本当に必要な人だけ購読いただけますと幸いです。"
-    }
+    },
+    "metaTitle": "Contact | NIHONGO-AI",
+    "metaDescription": "これはスタートアップNextjsテンプレートのコンタクト"
   },
-  "signin": {
-    "title": "アカウントにログインします",
+  "SigninPage": {
+    "title": "ログイン",
     "description": "アカウントにログインする。",
     "signInWithGoogle": "Google でログイン",
     "signInWithGithub": "Github でログイン",
@@ -206,13 +206,13 @@
     "noAccount": "アカウントをお持ちではありませんか?",
     "signUpLink": "アカウント作成",
     "metaTitle": "ログイン | NIHONGO-AI",
-    "metaDescription": "これはスタートアップのログインです Nextjsテンプレート"
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
-  "signup": {
-    "title": "アカウントを作成",
-    "description": "それは完全に無料で超簡単です",
-    "signInWithGoogle": "Google でログイン",
-    "signInWithGithub": "Github でサインイン",
+  "SignupPage": {
+    "title": "アカウント作成",
+    "description": "簡単に無料でアカウントを作成できます",
+    "signupWithGoogle": "Google でサインアップ",
+    "signupWithGithub": "Github でサインアップ",
     "orRegisterWithEmail": "または、メールで登録してください",
     "fullName": "フルネーム",
     "enterFullNamePlaceholder": "フルネームを入力してください",
@@ -222,30 +222,20 @@
     "enterPasswordPlaceholder": "パスワードを入力します",
     "agreementPart1": "アカウントを作成することにより、お客様は以下に同意したことになります。",
     "termsAndConditions": "規約と条件",
-    "agreementPart2": "、そして私たちの",
+    "agreementPart2": "および",
     "privacyPolicy": "プライバシーポリシー",
     "signUpButton": "サインアップ",
-    "alreadyHaveAccount": "すでにスタートアップを使用していますか?",
-    "signInLink": "サインイン",
-    "metaTitle": "会員登録ページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
-    "metaDescription": "これはスタートアップのサインアップページです Nextjsテンプレート"
+    "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+    "signInLink": "ログイン",
+    "metaTitle": "サインアップ | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
-  "error": {
+  "Error": {
     "title": "申し訳ありませんが、ページが見つかりません",
     "description": "探していたページが移動、削除された、または存在しないようです。",
     "backToHomepage": "ホームページに戻る",
-    "metaTitle": "エラーページ |スタートアップとSaaSのための無料のNext.jsテンプレート",
-    "metaDescription": "これはスタートアップNextjsテンプレートのエラーページです"
-  },
-  "SignInPage": {
-    "title": "サインイン",
-    "paragraph": "アカウントにサインインします。",
-    "form": {
-      "email": "電子メール",
-      "password": "パスワード",
-      "submit": "サインイン",
-      "forgotPassword": "パスワードをお忘れですか?"
-    }
+    "metaTitle": "エラー | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
   "SignUpPage": {
     "title": "サインアップ",
@@ -259,33 +249,28 @@
     }
   },
   "ErrorPage": {
-    "title": "エラー",
-    "paragraph": "申し訳ございませんが、エラーが発生しました。",
-    "button": "ホームに戻る"
+    "description": "ページが見つかりませんでした。",
+    "backToHomepage": "ホームに戻る"
   },
   "Footer": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
-    "usefulLinks": "便利なリンク",
+    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
+    "usefulLinks": "Links",
     "links": {
-      "blog": "ブログ",
-      "pricing": "料金",
+      "blog": "Blog",
+      "pricing": "Pricing",
       "about": "About"
     },
     "terms": "利用規約",
     "termsLinks": {
-      "tos": "利用規約", 
+      "termsOfUse": "利用規約",
       "privacy": "プライバシーポリシー",
       "refund": "返金ポリシー"
     },
-    "support": "サポート・ヘルプ",
+    "support": "サポート",
     "supportLinks": {
-      "support": "サポートチケットを開く",
+      "contact": "Contact",
       "termsOfUse": "利用規約",
       "about": "About"
-    },
-    "copyright": "テンプレート提供",
-    "and": "と",
-    "uideck": "UIdeck",
-    "nextjsTemplates": "Next.js Templates"
+    }
   }
 }

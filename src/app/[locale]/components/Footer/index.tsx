@@ -29,7 +29,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                   />
                 </Link>
                 <p className="text-body-color/80 dark:text-body-color-dark/80 mb-9 text-base leading-relaxed">
-                  {t('description')}
+                  {t("description")}
                 </p>
                 <div className="flex items-center">
                   <a
@@ -113,7 +113,7 @@ const Footer = async ({ locale }: { locale: string }) => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  {t('usefulLinks')}
+                  {t("usefulLinks")}
                 </h2>
                 <ul>
                   <li>
@@ -121,15 +121,15 @@ const Footer = async ({ locale }: { locale: string }) => {
                       href="/blog"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('links.blog')}
+                      {t("links.blog")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/pricing"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('links.pricing')}
+                      {t("links.pricing")}
                     </Link>
                   </li>
                   <li>
@@ -137,7 +137,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                       href="/about"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark/80 dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('links.about')}
+                      {t("links.about")}
                     </Link>
                   </li>
                 </ul>
@@ -147,7 +147,7 @@ const Footer = async ({ locale }: { locale: string }) => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  {t('terms')}
+                  {t("terms")}
                 </h2>
                 <ul>
                   <li>
@@ -155,7 +155,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('termsLinks.tos')}
+                      {t("termsLinks.termsOfUse")}
                     </Link>
                   </li>
                   <li>
@@ -163,7 +163,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('termsLinks.privacy')}
+                      {t("termsLinks.privacy")}
                     </Link>
                   </li>
                   <li>
@@ -171,7 +171,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('termsLinks.refund')}
+                      {t("termsLinks.refund")}
                     </Link>
                   </li>
                 </ul>
@@ -181,7 +181,7 @@ const Footer = async ({ locale }: { locale: string }) => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="text-body-color dark:text-body-color-dark mb-10 text-xl font-bold">
-                  {t('support')}
+                  {t("support")}
                 </h2>
                 <ul>
                   <li>
@@ -189,10 +189,10 @@ const Footer = async ({ locale }: { locale: string }) => {
                       href="/contact"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      {t('supportLinks.support')}
+                      {t("supportLinks.contact")}
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="text-body-color/80 hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
@@ -207,7 +207,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                     >
                       {t('supportLinks.about')}
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -215,24 +215,32 @@ const Footer = async ({ locale }: { locale: string }) => {
 
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D8A77B83] to-transparent dark:via-[#D8A77B83]"></div>
           <div className="py-8">
-            <p className="text-body-color/80 dark:text-body-color-dark text-center text-base">
-              {t('copyright')}{" "}
+            <p className="text-body-color/80 dark:text-body-color-dark/80 text-center text-base">
+              Copyright &copy;{" "}
+              <script type="text/javascript">
+                myDate = new Date() ;myYear = myDate.getFullYear
+                ();document.write(myYear);
+              </script>{" "}
+              <a href="/">Natsuki Yamashita</a> All Rights Reserved.
+            </p>
+            <p className="mt-4 text-body-color/70 dark:text-body-color-dark/70 text-center text-sm">
+              Template by{" "}
               <a
                 href="http://uideck.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
-                {t('uideck')}
+                UIdeck
               </a>{" "}
-              {t('and')}{" "}
+              and{" "}
               <a
                 href="https://nextjstemplates.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
               >
-                {t('nextjsTemplates')}
+                Next.js Templates
               </a>
             </p>
           </div>
@@ -255,7 +263,12 @@ const Footer = async ({ locale }: { locale: string }) => {
               width="99"
               height="99"
             >
-              <circle cx="49.5" cy="49.5" r="49.5" fill="var(--color-primary)" />
+              <circle
+                cx="49.5"
+                cy="49.5"
+                r="49.5"
+                fill="var(--color-primary)"
+              />
             </mask>
             <g mask="url(#mask0_94:899)">
               <circle
@@ -299,7 +312,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
               >
                 <stop stopColor="var(--color-primary)" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </radialGradient>
             </defs>
           </svg>
@@ -360,7 +377,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_94:889"
@@ -371,7 +392,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" stopOpacity="0" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.51" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.51"
+                />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_94:889"
@@ -382,7 +407,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_94:889"
@@ -393,7 +422,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" stopOpacity="0" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.51" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.51"
+                />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_94:889"
@@ -404,7 +437,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" stopOpacity="0.62" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0"
+                />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_94:889"
@@ -415,7 +452,11 @@ const Footer = async ({ locale }: { locale: string }) => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="var(--color-primary)" stopOpacity="0" />
-                <stop offset="1" stopColor="var(--color-primary)" stopOpacity="0.51" />
+                <stop
+                  offset="1"
+                  stopColor="var(--color-primary)"
+                  stopOpacity="0.51"
+                />
               </linearGradient>
             </defs>
           </svg>

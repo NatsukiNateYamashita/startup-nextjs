@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import AboutSectionOne from "@/app/[locale]/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/app/[locale]/components/About/AboutSectionTwo";
@@ -7,23 +7,24 @@ import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
 import Features from "@/app/[locale]/components/Features";
 import { Metadata } from "next";
 
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "AboutPage" });
 
   return {
-    title: "ABOUT NIHONGO-AI",
-    description: t("description"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     // other metadata
   };
 }
 
-const AboutPage = async ({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) => {
+const AboutPage = async ({ params }: Props) => {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale: locale, namespace: "AboutPage" });
   return (
     <>

@@ -8,9 +8,9 @@ from typing import Dict, List
 API_KEY = "BkvN1A8doHUIrdEeuIFyYa7yYUkiEPhOz2LEU7cfpHReyrM0sU1oJQQJ99BEACi0881XJ3w3AAAbACOGU2B1"
 ENDPOINT = "https://api.cognitive.microsofttranslator.com"
 LOCATION = "japaneast"
-SOURCE_LANG = "en"
-TARGET_LANGS = ["ja", "zh-CN", "zh-TW"]
-LANG_MAP = {"ja": "ja", "zh-CN": "zh-Hans", "zh-TW": "zh-Hant"}  # for API lang code mapping
+SOURCE_LANG = "ja"
+TARGET_LANGS = ["en", "zh-CN", "zh-TW"]
+LANG_MAP = {"ja": "ja", "en":"en", "zh-CN": "zh-Hans", "zh-TW": "zh-Hant"}  # for API lang code mapping
 MESSAGES_DIR = os.path.join(os.path.dirname(__file__), "../messages")
 
 assert SOURCE_LANG not in TARGET_LANGS, "source_language must not be in target_languages"

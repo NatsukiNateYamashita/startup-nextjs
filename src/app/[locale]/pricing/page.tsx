@@ -1,8 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import Pricing from "@/app/[locale]/components/Pricing";
 import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
-import Contact from "@/app/[locale]/components/Contact";
-
 import { Metadata } from "next";
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "ContactPage" });
+  const t = await getTranslations({ locale, namespace: "PricingPage" });
 
   return {
     title: t("metaTitle"),
@@ -20,17 +19,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const ContactPage = async ({ params }: Props) => {
+const PricingPage = async ({ params }: Props) => {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "ContactPage" });
+  const t = await getTranslations({ locale: locale, namespace: "PricingPage" });
   return (
     <>
-      <Breadcrumb pageName="Contact" description={t("description")} />
-
-      <Contact locale={locale} />
+      <Breadcrumb pageName="Pricing" description={t("description")} />
+\      <Pricing locale={locale} />
     </>
   );
 };
 
-export default ContactPage;
+export default PricingPage;
