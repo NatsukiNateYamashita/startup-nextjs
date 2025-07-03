@@ -129,6 +129,7 @@
       "searchResultsCount": "{count}件の記事が見つかりました",
       "showingResults": "検索結果を表示中",
       "clearSearch": "検索をクリア",
+      "clearButton": "検索をクリア",
       "filteredByTags": "タグ絞り込み",
       "allPosts": "全{count}件の記事",
       "noResultsWithFilters": "現在の検索条件では記事が見つかりませんでした",

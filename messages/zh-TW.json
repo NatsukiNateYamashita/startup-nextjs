@@ -129,6 +129,7 @@
       "searchResultsCount": "找到{count}篇文章",
       "showingResults": "顯示搜索結果",
       "clearSearch": "清除搜索",
+      "clearButton": "清除搜索",
       "filteredByTags": "按標籤篩選",
       "allPosts": "全部{count}篇文章",
       "noResultsWithFilters": "當前搜索條件未找到文章",

@@ -129,6 +129,7 @@
       "searchResultsCount": "{count} articles found",
       "showingResults": "Showing search results",
       "clearSearch": "Clear search",
+      "clearButton": "Clear search",
       "filteredByTags": "Filtered by tags",
       "allPosts": "All {count} articles",
       "noResultsWithFilters": "No articles found with current search criteria",
