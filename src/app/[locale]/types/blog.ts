@@ -1,9 +1,134 @@
-type Author = {
+import { Locale } from "@/i18n/routing";
+
+// 著者情報
+export type Author = {
   name: string;
   image: string;
   designation: string;
 };
 
+// レスポンシブ画像サイズ
+export interface ResponsiveSize {
+  width: number;
+  height: number;
+  breakpoint: string;
+}
+
+// ブログ画像
+export interface BlogImage {
+  filename: string;
+  alt: Record<Locale, string>;
+  caption: Record<Locale, string>;
+  width: number;
+  height: number;
+  sizes: ResponsiveSize[];
+}
+
+// 目次アイテム
+export interface TOCItem {
+  id: string;
+  level: number;
+  title: string;
+  children?: TOCItem[];
+}
+
+// SEOデータ
+export interface SEOData {
+  title: Record<Locale, string>;
+  description: Record<Locale, string>;
+  keywords: string[];
+  ogImage?: string;
+}
+
+// 文単位データ（Phase 4用）
+export interface BilingualSentence {
+  id: string;
+  ja: string;
+  en: string;
+  zhTW: string;
+  zhCN: string;
+  alignment: SentenceAlignment;
+}
+
+export interface SentenceAlignment {
+  confidence: number;
+  manually_verified: boolean;
+  source_sentence_id: string;
+  target_sentence_ids: string[];
+}
+
+export interface BilingualParagraph {
+  id: string;
+  sentences: string[];
+}
+
+export interface BilingualContent {
+  sentences: BilingualSentence[];
+  paragraphs: BilingualParagraph[];
+  metadata: {
+    aligned_languages: Locale[];
+    alignment_quality: number;
+    last_updated: string;
+  };
+}
+
+// 新しいブログ記事型
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: Record<Locale, string>;
+  excerpt: Record<Locale, string>;
+  content: Record<Locale, string>;
+  author: Author;
+  tags: string[];
+  publishDate: string;
+  heroImage: string;
+  images: BlogImage[];
+  readingTime: Record<Locale, number>;
+  featured: boolean;
+  status: 'published';
+  seoData: SEOData;
+  relatedPosts: string[];
+  tableOfContents: Record<Locale, TOCItem[]>;
+  bilingualContent?: BilingualContent; // Phase 4で使用
+}
+
+// 記事メタデータ
+export interface BlogMetadata {
+  id: string;
+  slug: string;
+  publishDate: string;
+  author: Author;
+  tags: string[];
+  heroImage: string;
+  featured: boolean;
+  status: 'published';
+}
+
+// 検索結果
+export interface SearchResult {
+  post: BlogPost;
+  score: number;
+  matchedFields: string[];
+  highlights: Record<string, string>;
+}
+
+// 検索インデックス
+export interface SearchIndex {
+  posts: BlogPost[];
+  tags: string[];
+  lastUpdated: string;
+}
+
+// ブログインデックス
+export interface BlogIndex {
+  posts: BlogMetadata[];
+  tags: string[];
+  lastUpdated: string;
+  totalPosts: number;
+}
+
+// 既存のBlog型（互換性のため残す）
 export type Blog = {
   id: number;
   title: string;

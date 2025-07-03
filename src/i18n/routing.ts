@@ -8,3 +8,6 @@ export const routing = defineRouting({
   defaultLocale: 'ja'
 });
 
+// 型を自動生成してエクスポート
+export type Locale = typeof routing.locales[number];
+

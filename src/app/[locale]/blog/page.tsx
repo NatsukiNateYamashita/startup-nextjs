@@ -1,7 +1,8 @@
 import SingleBlog from "@/app/[locale]/components/Blog/SingleBlog";
-import blogData from "@/app/[locale]/components/Blog/blogData";
+import { getAllPosts } from "@/lib/blog/markdown";
 import Breadcrumb from "@/app/[locale]/components/Common/Breadcrumb";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Locale } from "@/i18n/routing";
 
 import { Metadata } from "next";
 
@@ -25,6 +26,9 @@ const Blog = async ({ params }: Props) => {
   setRequestLocale(locale);
   const t = await getTranslations("BlogPage");
 
+  // マークダウンファイルから記事を取得
+  const blogPosts = await getAllPosts(locale as Locale);
+
   return (
     <>
       <Breadcrumb pageName="Blog" description={t("description")} />
@@ -32,12 +36,12 @@ const Blog = async ({ params }: Props) => {
       <section className="pt-[120px] pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
+            {blogPosts.map((blog) => (
               <div
                 key={blog.id}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
-                <SingleBlog blog={blog} locale={locale} />
+                <SingleBlog blog={blog} locale={locale as Locale} />
               </div>
             ))}
           </div>

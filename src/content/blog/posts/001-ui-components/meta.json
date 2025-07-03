@@ -1,0 +1,12 @@
+{
+  "author": {
+    "name": "サミュエル・ジョシ",
+    "image": "/images/blog/author-01.png",
+    "designation": "グラフィックデザイナー"
+  },
+  "tags": ["創造的な", "UIコンポーネント", "デザイン"],
+  "publishDate": "2025-01-15T09:00:00.000Z",
+  "heroImage": "/images/blog/blog-01.jpg",
+  "featured": true,
+  "relatedPosts": ["002-design-skills", "003-coding-tips"]
+}

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { Locale } from "@/i18n/routing";
 
 import AboutSectionOne from "@/app/[locale]/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/app/[locale]/components/About/AboutSectionTwo";
@@ -46,7 +47,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <AboutSectionTwo locale={locale} />
       <Testimonials locale={locale} />
       <Pricing locale={locale} />
-      <Blog locale={locale} />
+      <Blog locale={locale as Locale} />
       <Contact locale={locale} />
     </>
   );

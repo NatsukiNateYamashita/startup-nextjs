@@ -134,4 +134,82 @@ layer(base);
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
   }
+  
+  /* ブログコンテンツ専用スタイル */
+  .blog-details {
+    @apply text-body-color dark:text-body-color-dark;
+  }
+  
+  .blog-details h1 {
+    @apply text-3xl font-bold text-black dark:text-white mb-6 mt-12 first:mt-0;
+  }
+  
+  .blog-details h2 {
+    @apply text-2xl font-bold text-black dark:text-white mb-4 mt-10;
+  }
+  
+  .blog-details h3 {
+    @apply text-xl font-semibold text-black dark:text-white mb-3 mt-8;
+  }
+  
+  .blog-details h4 {
+    @apply text-lg font-semibold text-black dark:text-white mb-3 mt-6;
+  }
+  
+  .blog-details h5 {
+    @apply text-base font-semibold text-black dark:text-white mb-2 mt-6;
+  }
+  
+  .blog-details h6 {
+    @apply text-sm font-semibold text-black dark:text-white mb-2 mt-4;
+  }
+  
+  .blog-details p {
+    @apply mb-4 text-body-color dark:text-body-color-dark leading-relaxed;
+  }
+  
+  .blog-details ul {
+    @apply mb-4 pl-6 space-y-2;
+  }
+  
+  .blog-details ol {
+    @apply mb-4 pl-6 space-y-2;
+  }
+  
+  .blog-details li {
+    @apply text-body-color dark:text-body-color-dark leading-relaxed;
+    list-style-type: disc;
+  }
+  
+  .blog-details ol li {
+    list-style-type: decimal;
+  }
+  
+  .blog-details blockquote {
+    @apply border-l-4 border-primary pl-4 py-2 mb-4 italic bg-gray-50 dark:bg-gray-800;
+  }
+  
+  .blog-details a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+  
+  .blog-details strong {
+    @apply font-semibold text-black dark:text-white;
+  }
+  
+  .blog-details em {
+    @apply italic;
+  }
+  
+  .blog-details code {
+    @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .blog-details pre {
+    @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto;
+  }
+  
+  .blog-details pre code {
+    @apply bg-transparent p-0;
+  }
 }
