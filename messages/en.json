@@ -121,6 +121,38 @@
   "BlogPage": {
     "title": "Latest Blogs",
     "paragraph": "Check out our latest blogs.",
+    "search": {
+      "placeholder": "Search articles...",
+      "searchFor": "Searching for",
+      "searchQuery": "Search Query",
+      "noResults": "No search results found",
+      "searchResultsCount": "{count} articles found",
+      "showingResults": "Showing search results",
+      "clearSearch": "Clear search",
+      "filteredByTags": "Filtered by tags",
+      "allPosts": "All {count} articles",
+      "noResultsWithFilters": "No articles found with current search criteria",
+      "selectedTags": "Selected Tags",
+      "noPostsAvailable": "No articles available",
+      "searchSuggestions": "Try changing your search keywords or adjusting filters"
+    },
+    "filter": {
+      "allTags": "All Tags",
+      "filterByTag": "Filter by tag",
+      "selectedTags": "Selected Tags",
+      "clearFilters": "Clear filters"
+    },
+    "sort": {
+      "sortBy": "Sort by",
+      "newest": "Newest first",
+      "oldest": "Oldest first",
+      "titleAsc": "Title (A-Z)",
+      "titleDesc": "Title (Z-A)",
+      "relevant": "Most relevant",
+      "relevance": "Most relevant",
+      "date": "Date",
+      "title": "Title"
+    },
     "blog1": {
       "title": "Best UI Components for Modern Websites",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit sit amet dictum neque, laoreet dolor.",

@@ -121,6 +121,38 @@
   "BlogPage": {
     "title": "最新博客",
     "paragraph": "查看我们的最新博客。",
+    "search": {
+      "placeholder": "搜索文章...",
+      "searchFor": "搜索",
+      "searchQuery": "搜索关键词",
+      "noResults": "没有找到搜索结果",
+      "searchResultsCount": "找到{count}篇文章",
+      "showingResults": "显示搜索结果",
+      "clearSearch": "清除搜索",
+      "filteredByTags": "按标签筛选",
+      "allPosts": "全部{count}篇文章",
+      "noResultsWithFilters": "当前搜索条件未找到文章",
+      "selectedTags": "已选标签",
+      "noPostsAvailable": "没有可用文章",
+      "searchSuggestions": "请尝试更改搜索关键词或调整筛选器"
+    },
+    "filter": {
+      "allTags": "所有标签",
+      "filterByTag": "按标签过滤",
+      "selectedTags": "选中的标签",
+      "clearFilters": "清除过滤器"
+    },
+    "sort": {
+      "sortBy": "排序",
+      "newest": "最新优先",
+      "oldest": "最旧优先",
+      "titleAsc": "标题（升序）",
+      "titleDesc": "标题（降序）",
+      "relevant": "最相关",
+      "relevance": "最相关",
+      "date": "日期",
+      "title": "标题"
+    },
     "blog1": {
       "title": "现代网站的最佳 UI 组件",
       "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit. Cras sit sit amet dictum neque， laoreet dolor.",

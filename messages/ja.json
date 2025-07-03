@@ -121,6 +121,38 @@
   "BlogPage": {
     "title": "最新のブログ",
     "paragraph": "最新のブログをご覧ください。",
+    "search": {
+      "placeholder": "記事を検索...",
+      "searchFor": "検索中",
+      "searchQuery": "検索キーワード",
+      "noResults": "検索結果がありません",
+      "searchResultsCount": "{count}件の記事が見つかりました",
+      "showingResults": "検索結果を表示中",
+      "clearSearch": "検索をクリア",
+      "filteredByTags": "タグ絞り込み",
+      "allPosts": "全{count}件の記事",
+      "noResultsWithFilters": "現在の検索条件では記事が見つかりませんでした",
+      "selectedTags": "選択タグ",
+      "noPostsAvailable": "表示可能な記事がありません",
+      "searchSuggestions": "検索キーワードを変更するか、フィルタを調整してください"
+    },
+    "filter": {
+      "allTags": "すべてのタグ",
+      "filterByTag": "タグで絞り込み",
+      "selectedTags": "選択中のタグ",
+      "clearFilters": "フィルタをクリア"
+    },
+    "sort": {
+      "sortBy": "並び替え",
+      "newest": "新しい順",
+      "oldest": "古い順",
+      "titleAsc": "タイトル（昇順）",
+      "titleDesc": "タイトル（降順）",
+      "relevant": "関連度順",
+      "relevance": "関連度順",
+      "date": "日付順",
+      "title": "タイトル順"
+    },
     "blog1": {
       "title": "最新のWebサイトに最適なUIコンポーネント",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",

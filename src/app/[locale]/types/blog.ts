@@ -1,5 +1,11 @@
 import { Locale } from "@/i18n/routing";
 
+// 検索ハイライト
+export interface SearchHighlight {
+  query: string;
+  highlights: Record<string, string>;
+}
+
 // 著者情報
 export type Author = {
   name: string;

@@ -1,10 +1,26 @@
-import { BlogPost } from "@/app/[locale]/types/blog";
+import { BlogPost, SearchHighlight } from "@/app/[locale]/types/blog";
 import { Locale } from "@/i18n/routing";
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleBlog = ({ blog, locale }: { blog: BlogPost, locale: Locale }) => {
+const SingleBlog = ({ 
+  blog, 
+  locale, 
+  searchHighlight 
+}: { 
+  blog: BlogPost; 
+  locale: Locale; 
+  searchHighlight?: SearchHighlight;
+}) => {
   const { slug, title, excerpt, heroImage, tags, publishDate, author } = blog;
+
+  // Helper function to highlight search terms
+  const highlightText = (text: string, field: string): string => {
+    if (!searchHighlight || !searchHighlight.highlights[field]) {
+      return text;
+    }
+    return searchHighlight.highlights[field];
+  };
 
   return (
     <>
@@ -24,12 +40,24 @@ const SingleBlog = ({ blog, locale }: { blog: BlogPost, locale: Locale }) => {
               href={`/${locale}/blog/${slug}`}
               className="hover:text-primary dark:hover:text-primary mb-4 block text-xl font-bold text-body-color sm:text-2xl dark:text-body-color-dark"
             >
-              {title[locale] || 'Untitled'}
+              {searchHighlight ? (
+                <span dangerouslySetInnerHTML={{
+                  __html: highlightText(title[locale] || 'Untitled', `title.${locale}`)
+                }} />
+              ) : (
+                title[locale] || 'Untitled'
+              )}
             </Link>
           </h3>
-          <p className="border-body-color/10 text-body-color/80 mb-6 border-b pb-6 text-base font-medium dark:border-body-color-dark/10 dark:text-body-color-dark/80">
-            {excerpt[locale] || ''}
-          </p>
+          <div className="border-body-color/10 text-body-color/80 mb-6 border-b pb-6 text-base font-medium dark:border-body-color-dark/10 dark:text-body-color-dark/80">
+            {searchHighlight ? (
+              <span dangerouslySetInnerHTML={{
+                __html: highlightText(excerpt[locale] || '', `excerpt.${locale}`)
+              }} />
+            ) : (
+              excerpt[locale] || ''
+            )}
+          </div>
           <div className="flex items-center">
             <div className="mr-5 flex items-center border-r border-body-color/10 pr-5 dark:border-body-color-dark/10">
               <div className="mr-4">

@@ -121,6 +121,38 @@
   "BlogPage": {
     "title": "最新博客",
     "paragraph": "查看我們的最新博客。",
+    "search": {
+      "placeholder": "搜索文章...",
+      "searchFor": "搜索",
+      "searchQuery": "搜索關鍵詞",
+      "noResults": "沒有找到搜索結果",
+      "searchResultsCount": "找到{count}篇文章",
+      "showingResults": "顯示搜索結果",
+      "clearSearch": "清除搜索",
+      "filteredByTags": "按標籤篩選",
+      "allPosts": "全部{count}篇文章",
+      "noResultsWithFilters": "當前搜索條件未找到文章",
+      "selectedTags": "已選標籤",
+      "noPostsAvailable": "沒有可用文章",
+      "searchSuggestions": "請嘗試更改搜索關鍵詞或調整篩選器"
+    },
+    "filter": {
+      "allTags": "所有標籤",
+      "filterByTag": "按標籤過濾",
+      "selectedTags": "選中的標籤",
+      "clearFilters": "清除過濾器"
+    },
+    "sort": {
+      "sortBy": "排序",
+      "newest": "最新優先",
+      "oldest": "最舊優先",
+      "titleAsc": "標題（升序）",
+      "titleDesc": "標題（降序）",
+      "relevant": "最相關",
+      "relevance": "最相關",
+      "date": "日期",
+      "title": "標題"
+    },
     "blog1": {
       "title": "現代網站的最佳UI元件",
       "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit. Cras sit sit amet dictum neque， laoreet dolor.",
