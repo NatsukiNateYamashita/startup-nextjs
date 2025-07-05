@@ -7,19 +7,52 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
+import { visit } from 'unist-util-visit';
 import { BlogPost, BlogMetadata, TOCItem, Author } from '@/app/[locale]/types/blog';
 import { Locale } from '@/i18n/routing';
 
 // コンテンツディレクトリのパス
 const CONTENT_DIR = join(process.cwd(), 'src/content/blog/posts');
 
-// マークダウン処理のプロセッサー
-const markdownProcessor = remark()
-  .use(remarkParse)
-  .use(remarkGfm)
-  .use(remarkRehype, { allowDangerousHtml: true })
-  .use(rehypeRaw)
-  .use(rehypeStringify);
+/**
+ * マークダウン内の画像をBlogImageコンポーネントに変換するプラグイン
+ */
+function remarkBlogImages(postSlug: string) {
+  return function transformer(tree: any) {
+    visit(tree, 'image', (node: any) => {
+      // 画像のURLを解析
+      const { url, alt, title } = node;
+      
+      // ローカル画像の場合のみ変換
+      if (!url.startsWith('http')) {
+        // BlogImageコンポーネントのJSXに変換
+        const imageFilename = url.split('/').pop() || url;
+        
+        node.type = 'html';
+        node.value = `<div class="blog-image-container my-6">
+          <img 
+            src="/content/blog/posts/${postSlug}/images/${imageFilename}"
+            alt="${alt || imageFilename}"
+            class="w-full h-auto rounded-lg"
+            loading="lazy"
+          />
+          ${title ? `<p class="text-center text-sm text-gray-600 dark:text-gray-400 mt-2 italic">${title}</p>` : ''}
+        </div>`;
+      }
+    });
+  };
+}
+
+// マークダウン処理のプロセッサー（画像変換機能付き）
+function createMarkdownProcessor(postSlug: string) {
+  return remark()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(() => remarkBlogImages(postSlug)) // 画像変換プラグインを追加
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify);
+}
 
 /**
  * 指定されたスラッグと言語の記事を取得
@@ -51,7 +84,8 @@ export async function getMarkdownPost(slug: string, locale: Locale): Promise<Blo
       console.warn(`Meta file not found: ${metaPath}`);
     }
 
-    // HTMLに変換
+    // HTMLに変換（画像変換機能付き）
+    const markdownProcessor = createMarkdownProcessor(slug);
     const processedContent = await markdownProcessor.process(content);
     const htmlContent = processedContent.toString();
 
@@ -156,6 +190,8 @@ async function getAllLanguageContent(slug: string): Promise<Record<Locale, strin
       const markdownContent = await readFile(markdownPath, 'utf-8');
       const { content: rawContent } = matter(markdownContent);
       
+      // 各言語用のマークダウンプロセッサーを作成
+      const markdownProcessor = createMarkdownProcessor(slug);
       const processedContent = await markdownProcessor.process(rawContent);
       content[locale] = processedContent.toString();
     } catch (error) {
