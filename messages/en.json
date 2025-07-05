@@ -133,14 +133,12 @@
       "filteredByTags": "Filtered by tags",
       "allPosts": "All {count} articles",
       "noResultsWithFilters": "No articles found with current search criteria",
-      "selectedTags": "Selected Tags",
       "noPostsAvailable": "No articles available",
       "searchSuggestions": "Try changing your search keywords or adjusting filters"
     },
     "filter": {
       "allTags": "All Tags",
       "filterByTag": "Filter by tag",
-      "selectedTags": "Selected Tags",
       "clearFilters": "Clear filters"
     },
     "sort": {

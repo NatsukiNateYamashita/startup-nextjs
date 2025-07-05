@@ -133,14 +133,12 @@
       "filteredByTags": "按标签筛选",
       "allPosts": "全部{count}篇文章",
       "noResultsWithFilters": "当前搜索条件未找到文章",
-      "selectedTags": "已选标签",
       "noPostsAvailable": "没有可用文章",
       "searchSuggestions": "请尝试更改搜索关键词或调整筛选器"
     },
     "filter": {
       "allTags": "所有标签",
       "filterByTag": "按标签过滤",
-      "selectedTags": "选中的标签",
       "clearFilters": "清除过滤器"
     },
     "sort": {

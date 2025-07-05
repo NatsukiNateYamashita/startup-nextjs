@@ -122,6 +122,7 @@
     "title": "最新のブログ",
     "paragraph": "最新のブログをご覧ください。",
     "search": {
+      "searchByKeyword": "キーワードで検索",
       "placeholder": "記事を検索...",
       "searchFor": "検索中",
       "searchQuery": "検索キーワード",
@@ -133,14 +134,12 @@
       "filteredByTags": "タグ絞り込み",
       "allPosts": "全{count}件の記事",
       "noResultsWithFilters": "現在の検索条件では記事が見つかりませんでした",
-      "selectedTags": "選択タグ",
       "noPostsAvailable": "表示可能な記事がありません",
       "searchSuggestions": "検索キーワードを変更するか、フィルタを調整してください"
     },
     "filter": {
       "allTags": "すべてのタグ",
       "filterByTag": "タグで絞り込み",
-      "selectedTags": "選択中のタグ",
       "clearFilters": "フィルタをクリア"
     },
     "sort": {

@@ -46,19 +46,6 @@ const SearchResults: React.FC<SearchResultsProps> = ({
                   <span className="font-medium text-primary">&quot;{searchQuery}&quot;</span>
                 </div>
               )}
-              
-              {hasFilters && (
-                <div className="flex items-center gap-1">
-                  <span>{t('filteredByTags')}:</span>
-                  <div className="flex gap-1">
-                    {selectedTags.map((tag, index) => (
-                      <span key={tag} className="font-medium text-primary">
-                        {tag}{index < selectedTags.length - 1 && ','}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         ) : (
@@ -157,11 +144,6 @@ const NoResults: React.FC<NoResultsProps> = ({
                 {searchQuery && (
                   <p className="text-body-color/60 dark:text-body-color-dark/60">
                     {t('searchQuery')}: <span className="font-medium">&quot;{searchQuery}&quot;</span>
-                  </p>
-                )}
-                {selectedTags.length > 0 && (
-                  <p className="text-body-color/60 dark:text-body-color-dark/60">
-                    {t('selectedTags')}: <span className="font-medium">{selectedTags.join(', ')}</span>
                   </p>
                 )}
               </div>

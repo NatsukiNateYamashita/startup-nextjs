@@ -12,7 +12,6 @@
 - **🏷️ Tag Filter**: 複数タグ選択・動的フィルタリング
 - **📊 Sort Options**: 関連度・日付・タイトル順ソート
 - **✨ Highlight**: 検索語句のリアルタイムハイライト
-- **⌨️ Keyboard Shortcuts**: Ctrl+K で検索フォーカス
 - **📱 Mobile-First**: 完全レスポンシブ対応
 
 ## 📊 **技術実装詳細**
@@ -98,7 +97,6 @@ If you like the template, please star this repository to inspire the team to cre
 - Added multi-tag filtering with dynamic display
 - Implemented sorting (relevance, date, title)
 - Real-time search highlighting and results
-- Keyboard shortcuts (Ctrl+K for search focus)
 - Complete mobile-responsive design
 - Added 14 new i18n translation keys for 4 languages
 

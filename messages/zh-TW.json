@@ -133,14 +133,12 @@
       "filteredByTags": "按標籤篩選",
       "allPosts": "全部{count}篇文章",
       "noResultsWithFilters": "當前搜索條件未找到文章",
-      "selectedTags": "已選標籤",
       "noPostsAvailable": "沒有可用文章",
       "searchSuggestions": "請嘗試更改搜索關鍵詞或調整篩選器"
     },
     "filter": {
       "allTags": "所有標籤",
       "filterByTag": "按標籤過濾",
-      "selectedTags": "選中的標籤",
       "clearFilters": "清除過濾器"
     },
     "sort": {
