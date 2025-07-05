@@ -10,12 +10,13 @@ import remarkGfm from 'remark-gfm';
 import { visit } from 'unist-util-visit';
 import { BlogPost, BlogMetadata, TOCItem, Author } from '@/app/[locale]/types/blog';
 import { Locale } from '@/i18n/routing';
+import { getPostImages, IMAGE_PRESETS } from './images';
 
 // コンテンツディレクトリのパス
 const CONTENT_DIR = join(process.cwd(), 'src/content/blog/posts');
 
 /**
- * マークダウン内の画像をBlogImageコンポーネントに変換するプラグイン
+ * マークダウン内の画像をBlogImageコンポーネントに変換するプラグイン（Phase 3強化版）
  */
 function remarkBlogImages(postSlug: string) {
   return function transformer(tree: any) {
@@ -25,18 +26,33 @@ function remarkBlogImages(postSlug: string) {
       
       // ローカル画像の場合のみ変換
       if (!url.startsWith('http')) {
-        // BlogImageコンポーネントのJSXに変換
+        // 画像ファイル名を取得
         const imageFilename = url.split('/').pop() || url;
+        const imagePath = `/content/blog/posts/${postSlug}/images/${imageFilename}`;
         
+        // BlogImageコンポーネントのJSXに変換（Phase 3機能対応）
         node.type = 'html';
-        node.value = `<div class="blog-image-container my-6">
-          <img 
-            src="/content/blog/posts/${postSlug}/images/${imageFilename}"
-            alt="${alt || imageFilename}"
-            class="w-full h-auto rounded-lg"
-            loading="lazy"
-          />
-          ${title ? `<p class="text-center text-sm text-gray-600 dark:text-gray-400 mt-2 italic">${title}</p>` : ''}
+        node.value = `<div class="blog-image-wrapper my-8">
+          <div 
+            data-image-component="true"
+            data-post-slug="${postSlug}"
+            data-filename="${imageFilename}"
+            data-alt="${alt || imageFilename}"
+            data-caption="${title || ''}"
+            class="blog-image-container"
+          >
+            <div class="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 shadow-lg group">
+              <img 
+                src="${imagePath}"
+                alt="${alt || imageFilename}"
+                class="w-full h-auto object-cover transition-all duration-300 hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            ${title ? `<p class="text-center text-sm text-gray-600 dark:text-gray-400 mt-3 italic leading-relaxed">${title}</p>` : ''}
+          </div>
         </div>`;
       }
     });
@@ -100,6 +116,9 @@ export async function getMarkdownPost(slug: string, locale: Locale): Promise<Blo
     // 全言語の読了時間を計算
     const allReadingTime = await getAllLanguageReadingTime(slug);
 
+    // 記事の画像一覧を取得（Phase 3で強化）
+    const postImages = await getPostImages(slug, IMAGE_PRESETS.content);
+
     // BlogPost オブジェクトを構築
     const blogPost: BlogPost = {
       id: slug,
@@ -111,7 +130,7 @@ export async function getMarkdownPost(slug: string, locale: Locale): Promise<Blo
       tags: metadata.tags || [],
       publishDate: metadata.publishDate || new Date().toISOString(),
       heroImage: metadata.heroImage || '/images/blog/default-hero.jpg',
-      images: [], // Phase 3で実装
+      images: postImages, // Phase 3で実装完了
       readingTime: allReadingTime,
       featured: metadata.featured || false,
       status: 'published',

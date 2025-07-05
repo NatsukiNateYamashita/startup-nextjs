@@ -20,6 +20,18 @@ export interface ResponsiveSize {
   breakpoint: string;
 }
 
+// 画像最適化設定
+export interface ImageOptimizationConfig {
+  quality: number;
+  formats: readonly string[];
+  enableLazyLoading: boolean;
+  enableBlurDataURL: boolean;
+  compression: {
+    readonly webp: { readonly quality: number };
+    readonly avif: { readonly quality: number };
+  };
+}
+
 // ブログ画像
 export interface BlogImage {
   filename: string;
@@ -28,6 +40,14 @@ export interface BlogImage {
   width: number;
   height: number;
   sizes: ResponsiveSize[];
+  mimeType?: string;
+  fileSize?: number;
+  blurDataURL?: string;
+  optimized?: {
+    webp?: string;
+    avif?: string;
+    original: string;
+  };
 }
 
 // 目次アイテム
