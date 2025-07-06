@@ -1,19 +1,5 @@
 {
-  "author": {
-    "name": {
-      "ja": "サミュエル・ジョシ",
-      "en": "Samuel Josh",
-      "zh-CN": "萨缪尔·乔什",
-      "zh-TW": "薩繆爾·喬什"
-    },
-    "image": "/images/blog/author-01.png",
-    "designation": {
-      "ja": "グラフィックデザイナー",
-      "en": "Graphic Designer",
-      "zh-CN": "平面设计师",
-      "zh-TW": "平面設計師"
-    }
-  },
+  "authorId": "natsuki-yamashita",
   "tags": {
     "ja": ["創造的な", "UIコンポーネント", "デザイン"],
     "en": ["Creative", "UI Components", "Design"],

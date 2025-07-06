@@ -1,11 +1,29 @@
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
-import { BlogPost, BlogMetadata, BlogIndex } from '@/app/[locale]/types/blog';
+import { BlogPost, BlogMetadata, BlogIndex, AuthorId } from '@/app/[locale]/types/blog';
 import { Locale } from '@/i18n/routing';
 import { getAllPosts } from './markdown';
 
 // インデックスファイルのパス
 const INDEX_FILE = join(process.cwd(), 'src/content/blog/index.json');
+
+/**
+ * BlogPostからauthorIdを抽出するヘルパー関数
+ * (将来的にはmeta.jsonで直接authorIdを管理するようになるが、
+ *  現在は著者オブジェクトから逆算する必要がある)
+ */
+function getAuthorIdFromPost(post: BlogPost): AuthorId {
+  // NIHONGO-AIの場合
+  if (post.author.name.ja === 'NIHONGO-AI') {
+    return 'nihongo-ai';
+  }
+  // Samuel Joshの場合
+  if (post.author.name.en === 'Samuel Josh') {
+    return 'samuel-josh';
+  }
+  // デフォルトはnihongo-ai
+  return 'nihongo-ai';
+}
 
 /**
  * ブログインデックスを構築
@@ -17,15 +35,15 @@ export async function buildBlogIndex(): Promise<BlogIndex> {
       id: post.id,
       slug: post.slug,
       publishDate: post.publishDate,
-      author: post.author,
-      tags: post.tags,
+      authorId: getAuthorIdFromPost(post), // authorIdを使用
+      tags: Object.values(post.tags).flat(), // 多言語タグを平坦化
       heroImage: post.heroImage,
       featured: post.featured,
       status: post.status,
     }));
 
-    // すべてのタグを収集
-    const allTags = [...new Set(posts.flatMap(post => post.tags))];
+    // すべてのタグを収集（多言語対応）
+    const allTags = [...new Set(posts.flatMap(post => Object.values(post.tags).flat()))];
 
     const index: BlogIndex = {
       posts: metadata,
@@ -70,8 +88,8 @@ export async function updateBlogIndex(post: BlogPost): Promise<void> {
       id: post.id,
       slug: post.slug,
       publishDate: post.publishDate,
-      author: post.author,
-      tags: post.tags,
+      authorId: getAuthorIdFromPost(post), // authorIdを使用
+      tags: Object.values(post.tags).flat(), // 多言語タグを平坦化
       heroImage: post.heroImage,
       featured: post.featured,
       status: post.status,
@@ -108,7 +126,7 @@ export async function searchPosts(query: string, locale: Locale): Promise<BlogPo
     return posts.filter(post => {
       const title = post.title[locale]?.toLowerCase() || '';
       const excerpt = post.excerpt[locale]?.toLowerCase() || '';
-      const tags = post.tags.map(tag => tag.toLowerCase()).join(' ');
+      const tags = Object.values(post.tags).flat().map(tag => tag.toLowerCase()).join(' ');
       const content = post.content[locale]?.toLowerCase() || '';
 
       return title.includes(searchTerm) || 
@@ -151,9 +169,11 @@ export async function getRelatedPosts(currentPost: BlogPost, locale: Locale, lim
     const allPosts = await getAllPosts(locale);
     const relatedPosts = allPosts.filter(post => post.id !== currentPost.id);
 
-    // タグの一致度で関連度を計算
+    // タグの一致度で関連度を計算（多言語対応）
     const postsWithScore = relatedPosts.map(post => {
-      const commonTags = post.tags.filter(tag => currentPost.tags.includes(tag));
+      const postTags = Object.values(post.tags).flat();
+      const currentPostTags = Object.values(currentPost.tags).flat();
+      const commonTags = postTags.filter(tag => currentPostTags.includes(tag));
       const score = commonTags.length;
       return { post, score };
     });

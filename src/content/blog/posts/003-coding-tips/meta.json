@@ -1,30 +1,7 @@
 {
   "id": "003-coding-tips",
   "slug": "coding-tips",
-    "author": {
-    "name": {
-      "ja": "NIHONGO-AI",
-      "en": "NIHONGO-AI",
-      "zh-CN": "NIHONGO-AI",
-      "zh-TW": "NIHONGO-AI"
-    },
-    "image": "/images/blog/author-nihongoai.png",
-    "designation": {
-      "ja": "AIエンジニア/日本語教師",
-      "en": "AI Engineer/Japanese Language Educator",
-      "zh-CN": "AI工程师/日语老师",
-      "zh-TW": "AI工程師/日語老師"
-    },
-    "bio": {
-      "ja": "AIと日本語教育の未来を切り開く、NIHONGO-AI。",
-      "en": "NIHONGO-AI, pioneering the future of AI and Japanese language education.",
-      "zh-CN": "NIHONGO-AI，开拓AI与日语教育的未来。",
-      "zh-TW": "NIHONGO-AI，開拓AI與日語教育的未來。"
-    },
-    "socials": {
-      "x": "https://x.com/NIHONGO_AI_X"
-    }
-  },
+  "authorId": "nihongo-ai",
   "heroImage": "/images/blog/003-coding-tips/hero.jpg",
   "tags": {
     "ja": ["デザイン", "コーディング", "生産性"],

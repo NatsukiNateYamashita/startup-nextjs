@@ -8,9 +8,10 @@ import rehypeStringify from 'rehype-stringify';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { visit } from 'unist-util-visit';
-import { BlogPost, BlogMetadata, TOCItem, Author } from '@/app/[locale]/types/blog';
+import { BlogPost, BlogMetadata, TOCItem, Author, AuthorId } from '@/app/[locale]/types/blog';
 import { Locale } from '@/i18n/routing';
 import { getPostImages, IMAGE_PRESETS } from './images';
+import { getAuthor, getDefaultAuthor as getDefaultAuthorData } from './authors';
 
 // コンテンツディレクトリのパス
 const CONTENT_DIR = join(process.cwd(), 'src/content/blog/posts');
@@ -118,6 +119,20 @@ export async function getMarkdownPost(slug: string, locale: Locale): Promise<Blo
     // 記事の画像一覧を取得（Phase 3で強化）
     const postImages = await getPostImages(slug, IMAGE_PRESETS.content);
 
+    // 著者情報の解決
+    let resolvedAuthor: Author;
+    if (metadata.authorId) {
+      // 新しい形式: authorIdから著者情報を解決
+      const author = await getAuthor(metadata.authorId);
+      resolvedAuthor = author || getDefaultAuthorData();
+    } else if (metadata.author) {
+      // 古い形式: 直接埋め込まれた著者情報（下位互換性のため）
+      resolvedAuthor = metadata.author;
+    } else {
+      // デフォルト著者を使用
+      resolvedAuthor = getDefaultAuthorData();
+    }
+
     // BlogPost オブジェクトを構築
     const blogPost: BlogPost = {
       id: slug,
@@ -125,7 +140,7 @@ export async function getMarkdownPost(slug: string, locale: Locale): Promise<Blo
       title: allTitles,
       excerpt: allExcerpts,
       content: allContent,
-      author: metadata.author || getDefaultAuthor(),
+      author: resolvedAuthor,
       tags: metadata.tags || [],
       publishDate: metadata.publishDate || new Date().toISOString(),
       heroImage: metadata.heroImage || '/images/blog/default-hero.jpg',

@@ -1,0 +1,25 @@
+{
+  "id": "natsuki-yamashita",
+  "name": {
+    "ja": "山下夏輝",
+    "en": "Natsuki Yamashita",
+    "zh-CN": "山下夏辉",
+    "zh-TW": "山下夏輝"
+  },
+  "image": "/images/blog/author-natsukiyamashita.png",
+  "designation": {
+    "ja": "AIエンジニア/日本語教師",
+    "en": "AI Engineer/Japanese Language Educator",
+    "zh-CN": "AI工程师/日语老师",
+    "zh-TW": "AI工程師/日語老師"
+  },
+  "bio": {
+    "ja": "NIHONGO-AI開発者",
+    "en": "NIHONGO-AI Developer",
+    "zh-CN": "NIHONGO-AI开发者",
+    "zh-TW": "NIHONGO-AI開發者"
+  },
+  "socials": {
+    "x": "https://x.com/natsuki_ai_nlp"
+  }
+}

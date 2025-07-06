@@ -1,5 +1,8 @@
 import { Locale } from "@/i18n/routing";
 
+// 著者ID型
+export type AuthorId = string;
+
 // 検索ハイライト
 export interface SearchHighlight {
   query: string;
@@ -125,12 +128,12 @@ export interface BlogPost {
   bilingualContent?: BilingualContent; // Phase 4で使用
 }
 
-// 記事メタデータ
+// 記事メタデータ（AuthorIdを使用）
 export interface BlogMetadata {
   id: string;
   slug: string;
   publishDate: string;
-  author: Author;
+  authorId: AuthorId; // Authorオブジェクトの代わりにIDを使用
   tags: string[];
   heroImage: string;
   featured: boolean;
