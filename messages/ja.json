@@ -184,6 +184,8 @@
     "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。最新のブログ記事をチェックしてください。"
   },
   "BlogDetailsPage": {
+    "by": "著者",
+    "shareThisPost": "この記事をシェア",
     "designTag": "設計",
     "bodyParagraph1": "これは詳細なブログ記事です。",
     "bodyParagraph2": "記事は続きます。",

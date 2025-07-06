@@ -44,10 +44,15 @@ export function useSearchBlogs(posts: BlogPost[], locale: Locale) {
     return buildSearchIndex(posts);
   }, [posts]);
 
-  // 利用可能なタグ一覧
+  // 利用可能なタグ一覧（現在のロケールのみ）
   const availableTags = useMemo(() => {
-    return searchIndex.tags;
-  }, [searchIndex]);
+    const localeTagsSet = new Set<string>();
+    posts.forEach(post => {
+      const localeTags = post.tags[locale] || [];
+      localeTags.forEach(tag => localeTagsSet.add(tag));
+    });
+    return Array.from(localeTagsSet).sort();
+  }, [posts, locale]);
 
   // 検索とフィルタリングの実行
   const filteredAndSearchedPosts = useMemo(() => {

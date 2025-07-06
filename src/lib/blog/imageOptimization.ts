@@ -82,7 +82,7 @@ export async function getOptimizedImageUrl(
   postSlug: string,
   config: Partial<ImageOptimizationConfig> = {}
 ): Promise<string> {
-  const basePath = `/content/blog/posts/${postSlug}/images/${image.filename}`;
+  const basePath = `/images/blog/${postSlug}/${image.filename}`;
   
   // 最適化が無効または最適化済み画像がない場合
   if (!config.formats || !image.optimized) {

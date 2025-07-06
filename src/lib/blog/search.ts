@@ -102,12 +102,19 @@ const searchOptions: IFuseOptions<BlogPost> = {
  */
 export function buildSearchIndex(posts: BlogPost[]): SearchIndex {
   const fuse = new Fuse(posts, searchOptions);
-  const allTags = [...new Set(posts.flatMap(post => post.tags))];
+  
+  // 全言語のタグを収集（重複排除）
+  const allTags = new Set<string>();
+  posts.forEach(post => {
+    Object.values(post.tags).forEach(langTags => {
+      langTags.forEach(tag => allTags.add(tag));
+    });
+  });
 
   return {
     posts,
     fuse,
-    tags: allTags,
+    tags: Array.from(allTags),
     lastUpdated: new Date().toISOString(),
   };
 }
@@ -145,16 +152,18 @@ export function searchPosts(
 }
 
 /**
- * タグで記事をフィルタリング
+ * タグで記事をフィルタリング（多言語対応）
  */
 export function filterPostsByTag(posts: BlogPost[], tags: string[]): BlogPost[] {
   if (tags.length === 0) {
     return posts;
   }
 
-  return posts.filter(post =>
-    tags.some(tag => post.tags.includes(tag))
-  );
+  return posts.filter(post => {
+    // 全言語のタグを確認
+    const allPostTags = Object.values(post.tags).flat();
+    return tags.some(tag => allPostTags.includes(tag));
+  });
 }
 
 /**

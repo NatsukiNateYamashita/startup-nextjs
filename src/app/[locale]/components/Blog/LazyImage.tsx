@@ -50,7 +50,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         setImageSrc(url);
       } catch (error) {
         console.error('Failed to get optimized image URL:', error);
-        setImageSrc(`/content/blog/posts/${postSlug}/images/${image.filename}`);
+        setImageSrc(`/images/blog/${postSlug}/${image.filename}`);
       }
     };
 

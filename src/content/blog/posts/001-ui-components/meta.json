@@ -1,10 +1,25 @@
 {
   "author": {
-    "name": "サミュエル・ジョシ",
+    "name": {
+      "ja": "サミュエル・ジョシ",
+      "en": "Samuel Josh",
+      "zh-CN": "萨缪尔·乔什",
+      "zh-TW": "薩繆爾·喬什"
+    },
     "image": "/images/blog/author-01.png",
-    "designation": "グラフィックデザイナー"
+    "designation": {
+      "ja": "グラフィックデザイナー",
+      "en": "Graphic Designer",
+      "zh-CN": "平面设计师",
+      "zh-TW": "平面設計師"
+    }
   },
-  "tags": ["創造的な", "UIコンポーネント", "デザイン"],
+  "tags": {
+    "ja": ["創造的な", "UIコンポーネント", "デザイン"],
+    "en": ["Creative", "UI Components", "Design"],
+    "zh-CN": ["创意", "UI组件", "设计"],
+    "zh-TW": ["創意", "UI組件", "設計"]
+  },
   "publishDate": "2025-01-15T09:00:00.000Z",
   "heroImage": "/images/blog/001-ui-components/hero.jpg",
   "featured": true,

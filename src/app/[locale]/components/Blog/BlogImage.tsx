@@ -57,7 +57,7 @@ const BlogImageComponent: React.FC<BlogImageProps> = ({
 
   // 画像のソースパスを構築（最適化対応）
   const getImageSrc = () => {
-    const basePath = `/content/blog/posts/${postSlug}/images/${image.filename}`;
+    const basePath = `/images/blog/${postSlug}/${image.filename}`;
     
     if (!enableOptimization) return basePath;
     

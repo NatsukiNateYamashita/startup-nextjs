@@ -5,8 +5,6 @@ excerpt: "This article introduces real examples of using the latest AI tools lik
 
 # The Frontier of Japanese Language Education with AI: A New Relationship Between Teachers and Learners
 
-![Hero Image](/images/blog/004-ai-japanese-education/hero.png "An image symbolizing the future of Japanese language education with AI")
-
 ## Introduction
 
 In the field of Japanese language education, rapidly evolving AI technologies are drawing increasing attention. Tools like generative AI (e.g., ChatGPT), speech recognition apps, and translation software are transforming the way we learn and teach.
@@ -37,16 +35,16 @@ If a learner submits a written text:
 - Suggests more natural expressions
 - Offers corrections with explanations
 
-![Example of Essay Correction](/images/blog/004-ai-japanese-education/conversation-practice.png "A screenshot of ChatGPT helping with conversation practice")
+![Example of Essay Correction](/images/blog/004-ai-japanese-education/conversation-practice.png)
 
 ## Using AI Translators and Dictionary Apps
 
 ### DeepL vs Google Translate Comparison
 | Feature       | DeepL            | Google Translate     |
-|--------------|------------------|----------------------|
-| Naturalness  | ◎                | ○                    |
+|---|:---:|:---:|
+| Naturalness| ◎                | ○                    |
 | Technical Terminology | ○       | ◎                    |
-| Editability  | ◎ (easy to revise) | △                   |
+| Editability| ◎ (easy to revise) | △                   |
 
 Teachers can use these translation apps to check learners’ compositions or assist in translating specialized documents. However, it's crucial not to accept translations as final answers but to analyze *why* they were translated that way.
 

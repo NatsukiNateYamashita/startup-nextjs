@@ -7,6 +7,7 @@ import Image from "next/image";
 import SharePost from "@/app/[locale]/components/Blog/SharePost";
 import TagButton from "@/app/[locale]/components/Blog/TagButton";
 import NewsLatterBox from "@/app/[locale]/components/Contact/NewsLatterBox";
+import BlogContent from "@/app/[locale]/components/Blog/BlogContent";
 
 type Props = {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -32,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [post.heroImage],
       type: "article",
       publishedTime: post.publishDate,
-      authors: [post.author.name],
-      tags: post.tags,
+      authors: [post.author.name[locale]],
+      tags: post.tags[locale],
     },
   };
 }
@@ -77,10 +78,10 @@ const BlogDetailsPage = async ({ params }: Props) => {
                       </div>
                       <div className="w-full">
                         <h4 className="text-body-color dark:text-body-color-dark mb-1 text-sm font-medium">
-                          By {post.author.name}
+                          {t('by')} {post.author.name[locale]}
                         </h4>
                         <p className="text-body-color/80 dark:text-body-color-dark/80 text-xs">
-                          {post.author.designation}
+                          {post.author.designation[locale]}
                         </p>
                       </div>
                     </div>
@@ -110,7 +111,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                   </div>
                   <div className="mb-5">
                     <div className="flex flex-wrap">
-                      {post.tags.map((tag, index) => (
+                      {post.tags[locale]?.map((tag, index) => (
                         <TagButton key={index} text={tag} />
                       ))}
                     </div>
@@ -130,21 +131,22 @@ const BlogDetailsPage = async ({ params }: Props) => {
                 </div>
 
                 {/* 記事内容 */}
-                <div
-                  className="blog-details prose prose-lg dark:prose-invert max-w-none"
-                  dangerouslySetInnerHTML={{ __html: post.content[locale] }}
+                <BlogContent 
+                  content={post.content[locale]}
+                  postSlug={slug}
+                  locale={locale}
                 />
 
                 {/* タグとシェアボタン */}
                 <div className="border-body-color/10 mt-12 flex flex-wrap items-center justify-between border-t pt-8 dark:border-white/10">
                   <div className="flex flex-wrap">
-                    {post.tags.map((tag, index) => (
+                    {post.tags[locale]?.map((tag, index) => (
                       <TagButton key={index} text={tag} />
                     ))}
                   </div>
                   <div className="mb-5">
                     <h5 className="text-body-color dark:text-body-color-dark mb-3 text-sm font-medium sm:text-right">
-                      Share this post :
+                      {t('shareThisPost')} :
                     </h5>
                     <div className="flex items-center sm:justify-end">
                       <SharePost />
@@ -168,10 +170,10 @@ const BlogDetailsPage = async ({ params }: Props) => {
                     </div>
                     <div className="w-full">
                       <h4 className="text-body-color dark:text-body-color-dark mb-1 text-base font-medium">
-                        <span className="text-primary">{post.author.name}</span>
+                        <span className="text-primary">{post.author.name[locale]}</span>
                       </h4>
                       <p className="text-body-color dark:text-body-color-dark text-sm">
-                        {post.author.designation}
+                        {post.author.designation[locale]}
                       </p>
                     </div>
                   </div>

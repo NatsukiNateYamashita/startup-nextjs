@@ -5,7 +5,7 @@ excerpt: "本文介紹如何運用ChatGPT與語音辨識等最新AI工具於日�
 
 # 人工智慧在日語教育中的最前線：教師與學習者的新關係
 
-![主圖](/images/blog/004-ai-japanese-education/hero.png "象徵AI日語教育未來的圖像")
+
 
 ## 引言
 
@@ -37,13 +37,13 @@ ChatGPT是一個非常實用的虛擬對話夥伴。
 - 提出更自然的表達方式  
 - 搭配解釋給予修改建議  
 
-![作文批改示例](/images/blog/004-ai-japanese-education/conversation-practice.png "ChatGPT幫助對話練習的示例")
+![作文批改示例](/images/blog/004-ai-japanese-education/conversation-practice.png)
 
 ## AI翻譯工具與字典App的應用方式
 
 ### DeepL與Google翻譯比較  
 | 項目         | DeepL              | Google翻譯       |
-|--------------|--------------------|------------------|
+|---|:---:|:---:|
 | 自然程度     | ◎                  | ○                |
 | 專業用語處理 | ○                  | ◎                |
 | 易於編輯性   | ◎（便於修正潤飾） | △                |

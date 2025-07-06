@@ -122,6 +122,7 @@
     "title": "Latest Blogs",
     "paragraph": "Check out our latest blogs.",
     "search": {
+      "searchByKeyword": "Search by keyword",
       "placeholder": "Search articles...",
       "searchFor": "Searching for",
       "searchQuery": "Search Query",
@@ -183,6 +184,8 @@
     "metaDescription": "To Japanese language learners, Japanese educators, and everyone who loves Japan. Check out our latest blog posts."
   },
   "BlogDetailsPage": {
+    "by": "By",
+    "shareThisPost": "Share this post",
     "designTag": "design",
     "bodyParagraph1": "This is a detailed blog post.",
     "bodyParagraph2": "The article continues:",

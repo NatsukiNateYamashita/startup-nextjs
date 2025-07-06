@@ -14,6 +14,14 @@ const SingleBlog = ({
 }) => {
   const { slug, title, excerpt, heroImage, tags, publishDate, author } = blog;
 
+  // 簡易的な翻訳マップ
+  const byText = {
+    ja: '著者',
+    en: 'By',
+    'zh-CN': '作者', 
+    'zh-TW': '作者'
+  };
+
   // Helper function to highlight search terms
   const highlightText = (text: string, field: string): string => {
     if (!searchHighlight || !searchHighlight.highlights[field]) {
@@ -30,7 +38,7 @@ const SingleBlog = ({
           className="relative block aspect-37/22 w-full"
         >
           <span className="bg-primary absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white capitalize">
-            {tags[0] || 'Blog'}
+            {tags[locale]?.[0] || 'Blog'}
           </span>
           <Image src={heroImage} alt={title[locale] || 'Blog post'} fill />
         </Link>
@@ -67,9 +75,9 @@ const SingleBlog = ({
               </div>
               <div className="w-full">
                 <h4 className="text-body-color mb-1 text-sm font-medium dark:text-body-color-dark">
-                  By {author.name}
+                  {byText[locale]} {author.name[locale]}
                 </h4>
-                <p className="text-body-color/80 text-xs dark:text-body-color-dark/80">{author.designation}</p>
+                <p className="text-body-color/80 text-xs dark:text-body-color-dark/80">{author.designation[locale]}</p>
               </div>
             </div>
             <div className="inline-block">

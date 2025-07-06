@@ -4,6 +4,15 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 /**
+ * 画像キャプション情報の型定義
+ */
+export interface ImageCaptionData {
+  alt: Record<Locale, string>;
+  caption: Record<Locale, string>;
+  metadata?: Record<string, any>;
+}
+
+/**
  * 最適化された画像の型定義
  */
 export interface OptimizedImage {
@@ -94,7 +103,7 @@ export async function getPostImages(
   postSlug: string, 
   config: Partial<ImageOptimizationConfig> = {}
 ): Promise<BlogImage[]> {
-  const imagesDir = path.join(process.cwd(), 'src/content/blog/posts', postSlug, 'images');
+  const imagesDir = path.join(process.cwd(), 'public/images/blog', postSlug);
   const finalConfig = { ...DEFAULT_IMAGE_CONFIG, ...config };
   
   try {
@@ -109,20 +118,30 @@ export async function getPostImages(
     const allCaptions = await getAllImageCaptions(postSlug);
     
     for (const file of imageFiles) {
-      const captions = allCaptions[file] || {};
-      const imagePath = `/content/blog/posts/${postSlug}/images/${file}`;
-      const actualImagePath = path.join(process.cwd(), 'src/content/blog/posts', postSlug, 'images', file);
+      const captions = allCaptions[file] as ImageCaptionData || {};
+      const imagePath = `/images/blog/${postSlug}/${file}`;
+      const actualImagePath = path.join(process.cwd(), 'public/images/blog', postSlug, file);
       
       // 画像メタデータを取得
       const metadata = await getImageMetadata(actualImagePath);
       
-      // デフォルトのalt/caption（ファイル名ベース）
+      // デフォルトのテキスト（ファイル名ベース）
       const defaultText = file.replace(/\.(jpg|jpeg|png|gif|webp|avif)$/i, '');
+      
+      // altテキストを構築（アクセシビリティ用）
       const alt: Record<Locale, string> = {
-        ja: captions.ja || defaultText,
-        en: captions.en || defaultText,
-        'zh-TW': captions['zh-TW'] || defaultText,
-        'zh-CN': captions['zh-CN'] || defaultText,
+        ja: captions.alt?.ja || defaultText,
+        en: captions.alt?.en || defaultText,
+        'zh-TW': captions.alt?.['zh-TW'] || defaultText,
+        'zh-CN': captions.alt?.['zh-CN'] || defaultText,
+      };
+      
+      // キャプションを構築（UI表示用）
+      const caption: Record<Locale, string> = {
+        ja: captions.caption?.ja || '',
+        en: captions.caption?.en || '',
+        'zh-TW': captions.caption?.['zh-TW'] || '',
+        'zh-CN': captions.caption?.['zh-CN'] || '',
       };
       
       // 最適化された画像パスを構築
@@ -139,7 +158,7 @@ export async function getPostImages(
       images.push({
         filename: file,
         alt,
-        caption: alt,
+        caption,
         width: metadata?.width || 800,
         height: metadata?.height || 600,
         mimeType: metadata?.mimeType,
@@ -168,9 +187,8 @@ export async function getImageCaptions(
 ): Promise<Record<string, string>> {
   const captionsPath = path.join(
     process.cwd(), 
-    'src/content/blog/posts', 
+    'public/images/blog', 
     postSlug, 
-    'images', 
     'captions.json'
   );
   
@@ -202,12 +220,11 @@ export async function getImageCaptions(
  */
 export async function getAllImageCaptions(
   postSlug: string
-): Promise<Record<string, Record<Locale, string>>> {
+): Promise<Record<string, ImageCaptionData>> {
   const captionsPath = path.join(
     process.cwd(), 
-    'src/content/blog/posts', 
+    'public/images/blog', 
     postSlug, 
-    'images', 
     'captions.json'
   );
   
@@ -285,7 +302,7 @@ export function optimizeImage(
  * 画像パスを解決（相対パスから絶対パスへ）
  */
 export function resolveImagePath(postSlug: string, imageName: string): string {
-  return `/content/blog/posts/${postSlug}/images/${imageName}`;
+  return `/images/blog/${postSlug}/${imageName}`;
 }
 
 /**

@@ -28,7 +28,7 @@ function remarkBlogImages(postSlug: string) {
       if (!url.startsWith('http')) {
         // 画像ファイル名を取得
         const imageFilename = url.split('/').pop() || url;
-        const imagePath = `/content/blog/posts/${postSlug}/images/${imageFilename}`;
+        const imagePath = `/images/blog/${postSlug}/${imageFilename}`;
         
         // BlogImageコンポーネントのJSXに変換（Phase 3機能対応）
         node.type = 'html';
@@ -38,7 +38,6 @@ function remarkBlogImages(postSlug: string) {
             data-post-slug="${postSlug}"
             data-filename="${imageFilename}"
             data-alt="${alt || imageFilename}"
-            data-caption="${title || ''}"
             class="blog-image-container"
           >
             <div class="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 shadow-lg group">
@@ -137,7 +136,7 @@ export async function getMarkdownPost(slug: string, locale: Locale): Promise<Blo
       seoData: {
         title: allTitles,
         description: allExcerpts,
-        keywords: metadata.tags || [],
+        keywords: metadata.tags ? (Object.values(metadata.tags).flat() as string[]) : [],
         ogImage: metadata.heroImage,
       },
       relatedPosts: metadata.relatedPosts || [],
@@ -188,11 +187,15 @@ export async function getAllPosts(locale?: Locale): Promise<BlogPost[]> {
 }
 
 /**
- * タグで記事を絞り込み
+ * タグで記事を絞り込み（多言語対応）
  */
 export async function getPostsByTag(tag: string, locale?: Locale): Promise<BlogPost[]> {
   const allPosts = await getAllPosts(locale);
-  return allPosts.filter(post => post.tags.includes(tag));
+  return allPosts.filter(post => {
+    // 全言語のタグを確認
+    const allPostTags = Object.values(post.tags).flat();
+    return allPostTags.includes(tag);
+  });
 }
 
 /**
@@ -349,13 +352,23 @@ function getWordCount(content: string, locale: Locale): number {
 }
 
 /**
- * デフォルトの著者情報
+ * デフォルトの著者情報（多言語対応）
  */
 function getDefaultAuthor(): Author {
   return {
-    name: 'NIHONGO-AI',
+    name: {
+      ja: 'NIHONGO-AI',
+      en: 'NIHONGO-AI',
+      'zh-CN': 'NIHONGO-AI',
+      'zh-TW': 'NIHONGO-AI'
+    },
     image: '/images/blog/default-author.png',
-    designation: 'AI Assistant',
+    designation: {
+      ja: 'AIアシスタント',
+      en: 'AI Assistant',
+      'zh-CN': 'AI助手',
+      'zh-TW': 'AI助手'
+    },
   };
 }
 

@@ -6,11 +6,17 @@ export interface SearchHighlight {
   highlights: Record<string, string>;
 }
 
-// 著者情報
+// 著者情報（多言語対応）
 export type Author = {
-  name: string;
+  name: Record<Locale, string>;
   image: string;
-  designation: string;
+  designation: Record<Locale, string>;
+  bio?: Record<Locale, string>;
+  socials?: {
+    x?: string;
+    linkedin?: string;
+    github?: string;
+  };
 };
 
 // レスポンシブ画像サイズ
@@ -106,7 +112,7 @@ export interface BlogPost {
   excerpt: Record<Locale, string>;
   content: Record<Locale, string>;
   author: Author;
-  tags: string[];
+  tags: Record<Locale, string[]>;
   publishDate: string;
   heroImage: string;
   images: BlogImage[];

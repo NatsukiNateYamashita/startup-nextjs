@@ -122,6 +122,7 @@
     "title": "最新博客",
     "paragraph": "查看我们的最新博客。",
     "search": {
+      "searchByKeyword": "按关键词搜索",
       "placeholder": "搜索文章...",
       "searchFor": "搜索",
       "searchQuery": "搜索关键词",
@@ -183,6 +184,8 @@
     "metaDescription": "致日语学习者、日本教育工作者和所有热爱日本的人。 查看我们最新的博客文章。"
   },
   "BlogDetailsPage": {
+    "by": "作者",
+    "shareThisPost": "分享这篇文章",
     "designTag": "设计",
     "bodyParagraph1": "这是一篇详细的博客文章。",
     "bodyParagraph2": "文章继续写道：",
