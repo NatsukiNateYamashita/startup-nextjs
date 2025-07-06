@@ -1,0 +1,44 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "オンライン授業を象徴する未来的な教室の様子",
+      "en": "A futuristic classroom representing online Japanese language lessons",
+      "zh-TW": "象徵線上日語課程的未來教室情境",
+      "zh-CN": "象征线上日语课程的未来教室场景"
+    },
+    "caption": {
+      "ja": "多様な学習者がAIとつながる次世代の教室風景",
+      "en": "A next-generation classroom where diverse learners connect through AI",
+      "zh-TW": "多元學習者透過AI互動的未來教室風貌",
+      "zh-CN": "多元学习者通过AI互动的未来教室场景"
+    }
+  },
+  "jamboard-example.jpg": {
+    "alt": {
+      "ja": "Jamboardで文型を整理する様子",
+      "en": "Organizing Japanese grammar structures using Google Jamboard",
+      "zh-TW": "使用Jamboard整理日語文型的情景",
+      "zh-CN": "使用Jamboard整理日语文型的情景"
+    },
+    "caption": {
+      "ja": "オンラインでも視覚的に理解できる文法指導の工夫",
+      "en": "Visual grammar instruction strategies for online classes",
+      "zh-TW": "線上課程中實現視覺化文法教學的策略",
+      "zh-CN": "线上课堂中实现可视化语法教学的策略"
+    }
+  },
+  "success-kotoba.jpg": {
+    "alt": {
+      "ja": "ことば学院のオンライン授業構成",
+      "en": "Online lesson structure at Kotoba Academy",
+      "zh-TW": "Kotoba學院的線上課程架構圖",
+      "zh-CN": "Kotoba学院的线上课程结构图"
+    },
+    "caption": {
+      "ja": "3つの段階で構成された成功事例：導入・会話・発表",
+      "en": "Successful 3-stage model: introduction, conversation, presentation",
+      "zh-TW": "成功的三階段教學範例：導入、會話、發表",
+      "zh-CN": "成功的三阶段教学范例：导入、会话、发表"
+    }
+  }
+}

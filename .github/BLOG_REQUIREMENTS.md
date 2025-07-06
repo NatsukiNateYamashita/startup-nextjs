@@ -2,8 +2,8 @@
 
 > **プロジェクト**: NIHONGO-AI ブログ機能改修  
 > **作成日**: 2025年7月3日  
-> **更新日**: 2025年7月5日  
-> **ステータス**: Phase 1 完了 ✅ | Phase 2 完了 ✅ | Phase 3 完了 ✅ | Phase 4 準備中 🚀
+> **更新日**: 2025年7月6日  
+> **ステータス**: Phase 1 完了 ✅ | Phase 1.5 完了 ✅ | Phase 2 完了 ✅ | Phase 3 完了 ✅ | Phase 4 準備中 🚀
 
 ---
 
@@ -80,8 +80,8 @@ interface BlogPost {
   title: Record<Locale, string>;
   excerpt: Record<Locale, string>;
   content: Record<Locale, string>;
-  author: Author;
-  tags: string[];
+  author: Author; // 解決後の著者オブジェクト
+  tags: Record<Locale, string[]>; // 多言語対応タグ
   publishDate: string;
   heroImage: string;
   images: BlogImage[];
@@ -91,6 +91,33 @@ interface BlogPost {
   seoData: SEOData;
   relatedPosts: string[];
   tableOfContents: Record<Locale, TOCItem[]>;
+}
+
+// 著者管理データ（Phase 1.5で実装済み）
+interface Author {
+  name: Record<Locale, string>;
+  image: string;
+  designation: Record<Locale, string>;
+  bio?: Record<Locale, string>;
+  socials?: {
+    x?: string;
+    linkedin?: string;
+    github?: string;
+  };
+}
+
+type AuthorId = string; // 著者ID型
+
+// 記事メタデータ（Phase 1.5で著者正規化済み）
+interface BlogMetadata {
+  id: string;
+  slug: string;
+  publishDate: string;
+  authorId: AuthorId; // 著者IDで参照
+  tags: string[];
+  heroImage: string;
+  featured: boolean;
+  status: 'published';
 }
 
 // 左右表示対応データ構造
@@ -131,26 +158,36 @@ interface BlogImage {
 - **レスポンシブ対応**: モバイル・タブレット・デスクトップ ✅
 - **多言語対応**: 4言語完全対応 ✅
 
-### 3.2 画像管理
+### 3.2 著者管理システム（Phase 1.5実装済み ✅）
+- **データ構造**: 独立した著者データファイル管理
+- **正規化**: meta.jsonでauthorIdのみ保持、著者詳細は分離
+- **ファイル配置**: `src/content/authors/{authorId}.json`
+- **ID形式**: kebab-case（例: samuel-josh, nihongo-ai）
+- **解決方式**: ビルド時の著者情報解決・キャッシュ機能
+- **型安全性**: AuthorId型による参照整合性保証
+- **拡張性**: 新著者追加の容易性・バイオ・SNS情報対応
+- **DB移行準備**: authorIdによる正規化済み構造
+
+### 3.3 画像管理
 - **保存場所**: 各記事フォルダ内 (`/images/`)
 - **最適化**: Next.js Image コンポーネント使用
 - **形式**: WebP対応 + レスポンシブ対応
 - **キャプション**: 多言語対応キャプション
 - **サイズ制限**: 適切なサイズ制限とリサイズ
 
-### 3.3 翻訳管理
+### 3.4 翻訳管理
 - **翻訳者**: 開発者 + Microsoft Translator API
 - **翻訳状態**: 翻訳済み.mdがあれば表示、なければエラーページ
 - **翻訳更新**: 原文更新時のAPI自動翻訳
 - **翻訳ツール**: `translate_json.py`を改修してMarkdown対応
 
-### 3.4 左右表示機能（今回実装）
+### 3.5 左右表示機能（今回実装）
 - **表示形式**: 左右分割レイアウト
 - **ハイライト**: 文単位でのマウスオーバーハイライト
 - **データ構造**: 文単位での対応関係データ
 - **UI制御**: スクロール同期、対応文強調表示
 
-### 3.5 記事管理
+### 3.6 記事管理
 - **記事作成**: 開発者による手動作成
 - **下書き機能**: 不要
 - **更新履歴**: 不要

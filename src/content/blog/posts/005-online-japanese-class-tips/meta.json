@@ -1,0 +1,13 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": ["AI", "オンライン授業", "日本語教育"],
+    "en": ["AI", "online class", "Japanese Education"],
+    "zh-CN": ["AI", "线上教育", "日语教育"],
+    "zh-TW": ["AI", "線上教育", "日語教育"]
+  },
+  "publishDate": "2025-07-06T11:33:00.000Z",
+  "heroImage": "/images/blog/005-online-japanese-class-tips/hero.png",
+  "featured": false,
+  "relatedPosts": []
+}
