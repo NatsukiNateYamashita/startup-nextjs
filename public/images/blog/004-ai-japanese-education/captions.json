@@ -1,0 +1,14 @@
+{
+  "hero.jpg": {
+    "ja": "AIと日本語教育の未来を切り開くヒーロー画像",
+    "en": "Hero image for AI and Japanese education",
+    "zh-TW": "AI與日語教育的未來英雄圖片",
+    "zh-CN": "AI与日语教育的未来英雄图片"
+  },
+"conversation-practice.png": {
+  "ja": "ChatGPTを使って会話練習をする学習者",
+  "en": "A learner practicing conversation using ChatGPT",
+  "zh-cn": "使用ChatGPT进行会话练习的学习者",
+  "zh-tw": "使用ChatGPT進行會話練習的學習者"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "author": {
+    "name": "NIHONGO-AI",
+    "image": "/images/blog/author-nihongoai.png",
+    "designation": "AI Engineer/Japanese Language Educator",
+    "bio": "AIと日本語教育の未来を切り開く、NIHONGO-AI。",
+    "socials": {
+      "x": "https://x.com/NIHONGO_AI_X"
+    }
+  },
+  "tags": ["AI", "NLP", "日本語教育"],
+  "publishDate": "2025-07-06T06:33:00.000Z",
+  "heroImage": "/images/blog/004-ai-japanese-education/hero.png",
+  "featured": false,
+  "relatedPosts": []
+}
