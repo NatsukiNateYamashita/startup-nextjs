@@ -3,6 +3,11 @@
 ## 概要
 Anthropic Claude APIを使用してブログ記事を自動生成・翻訳・画像作成・配置するシステムです。
 
+> **🔗 関連ドキュメント**  
+> - [プロジェクト全体概要](../PROJECT_DOCUMENTATION.md) - NIHONGO-AIプロジェクト全体情報  
+> - [ブログ要件定義](../.github/BLOG_REQUIREMENTS.md) - ブログ機能の要件・進捗  
+> - [GitHub Copilot実装ガイド](../.github/.copilot-instructions.md) - 開発ルール・設計規則
+
 ## システム構成
 
 ### 実行ファイル

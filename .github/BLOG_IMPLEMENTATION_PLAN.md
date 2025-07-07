@@ -3,8 +3,8 @@
 > **プロジェクト**: NIHONGO-AI ブログ機能改修  
 > **関連ドキュメント**: [要件定義書](./BLOG_REQUIREMENTS.md)  
 > **作成日**: 2025年7月3日  
-> **更新日**: 2025年7月6日  
-> **ステータス**: Phase 1-3実装完了 ✅ | Phase 4準備中 🚀
+> **更新日**: 2025年7月7日  
+> **ステータス**: Phase 1-3実装完了 ✅ | 記事自動生成システム完了 ✅ | Phase 4準備中 🚀
 
 ---
 
@@ -839,19 +839,7 @@ interface BlogImage {
   export function generateRobotsTxt(): string
   ```
 
-### 🔧 **5.8 翻訳自動化ツール改修**
-- [ ] **タスク**: translate_json.pyをマークダウン対応に改修
-- [ ] **更新対象ファイル**: `utils/translate_json.py`
-- [ ] **更新内容**:
-  ```python
-  # 新規追加関数
-  def translate_markdown_file(file_path: str, target_langs: List[str]) -> Dict[str, str]
-  def extract_translatable_content(markdown_content: str) -> List[str]
-  def merge_translated_content(original: str, translations: Dict[str, str]) -> Dict[str, str]
-  def sync_markdown_translations(post_slug: str) -> None
-  ```
-
-### 📋 **5.9 Phase 5 完了チェック**
+### 📋 **5.8 Phase 5 完了チェック**
 - [ ] **パフォーマンス**: 初期表示2秒以内、検索300ms以内
 - [ ] **無限スクロール**: スムーズなスクロール・読み込み
 - [ ] **目次**: 自動生成・アクティブセクション追跡

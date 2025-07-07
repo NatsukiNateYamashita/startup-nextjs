@@ -2,7 +2,7 @@
 
 > **プロジェクト**: NIHONGO-AI ブログ機能改修  
 > **作成日**: 2025年7月3日  
-> **更新日**: 2025年7月6日  
+> **更新日**: 2025年7月7日  
 > **ステータス**: Phase 1-3完了 ✅ | Phase 4準備中 🚀
 
 ---
@@ -15,11 +15,12 @@
 - **将来**: データベース管理への移行容易性を確保
 
 ### 1.2 スコープ
-- マークダウンファイルでの記事管理（5記事×4言語）
+- マークダウンファイルでの記事管理（9記事×4言語）
 - 多言語対応ブログシステム（ja/en/zh-TW/zh-CN）
 - 高度な検索・フィルタリング機能（Fuse.js）
 - 画像最適化・管理システム（WebP/AVIF対応）
 - 著者管理システム（独立ファイル・型安全参照）
+- 記事自動生成システム（utils/ - Claude API連携）
 - 将来のデータベース移行容易性
 
 ### 1.3 完了済み実装（Phase 1-3）
@@ -27,6 +28,7 @@
 - **Phase 1.5**: 著者管理システム統一・DRY原則実装
 - **Phase 2**: 検索エンジン・フィルタ・ソート機能  
 - **Phase 3**: 画像最適化・遅延読み込み・多言語キャプション
+- **記事自動生成**: Claude API活用・Unsplash画像・多言語翻訳システム
 
 ---
 
@@ -104,9 +106,33 @@ interface BlogImage {
 
 ---
 
-## 🔍 **3. 機能要件**
+## � **3. 実装済みコンテンツ**
 
-### 3.1 実装済み機能（Phase 1-3完了）
+### 3.1 記事一覧（9記事×4言語完全対応）
+| ID | タイトル | 英語スラッグ | 公開日 | 著者 | 状況 |
+|----|---------|-------------|--------|------|------|
+| 001 | UIコンポーネント設計 | ui-components | 2024-12-15 | natsuki-yamashita | ✅ 完成 |
+| 002 | デザインスキル向上 | design-skills | 2024-12-20 | natsuki-yamashita | ✅ 完成 |
+| 003 | 効率的コーディング | coding-tips | 2024-12-25 | natsuki-yamashita | ✅ 完成 |
+| 004 | AI×日本語教育 | ai-japanese-education | 2024-12-30 | nihongo-ai | ✅ 完成 |
+| 005 | オンライン授業のコツ | online-japanese-class-tips | 2025-01-05 | nihongo-ai | ✅ 完成 |
+| 006 | 日本語学習AI活用 | ai-japanese-learning | 2025-01-10 | nihongo-ai | ✅ 完成 |
+| 007 | AI学習教材作成術 | ai-learning-material-creation | 2025-01-12 | nihongo-ai | ✅ 完成 |
+| 008 | 日本語入力最適化 | japanese-input-optimization | 2025-01-14 | nihongo-ai | ✅ 完成 |
+| 009 | 日本語AIツール評価 | japanese-ai-tool-evaluation | 2025-01-16 | nihongo-ai | ✅ 完成 |
+
+### 3.2 記事自動生成システム（実装済み）
+- **アイディア生成**: Claude APIによる企画生成 (`utils/idea_generator.py`)
+- **記事生成**: 多言語記事・メタデータ自動作成 (`utils/article_generator.py`)
+- **画像生成**: Unsplash API連携・関連性向上 (`utils/image_generator.py`)
+- **翻訳システム**: 4言語自動翻訳 (`utils/translator.py`)
+- **セキュリティ**: 環境変数管理・APIキー保護 (`utils/config.py`)
+
+---
+
+## �🔍 **4. 機能要件**
+
+### 4.1 実装済み機能（Phase 1-3完了）
 
 #### ✅ **検索・フィルタリング機能**
 - **高精度検索**: Fuse.js によるあいまい検索（50ms以下応答）
