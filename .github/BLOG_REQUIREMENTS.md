@@ -124,9 +124,9 @@ interface BlogImage {
 ### 3.2 記事自動生成システム（実装済み）
 - **アイディア生成**: Claude APIによる企画生成 (`utils/idea_generator.py`)
 - **記事生成**: 多言語記事・メタデータ自動作成 (`utils/article_generator.py`)
-- **画像生成**: Unsplash API連携・関連性向上 (`utils/image_generator.py`)
+- **画像生成**: DALL·E 3/Unsplash API両対応・デフォルト: DALL·E 3 (`utils/image_generator.py`)
 - **翻訳システム**: 4言語自動翻訳 (`utils/translator.py`)
-- **セキュリティ**: 環境変数管理・APIキー保護 (`utils/config.py`)
+- **セキュリティ**: 環境変数管理・APIキー統一取得・config.py一元管理 (`utils/config.py`)
 
 ---
 

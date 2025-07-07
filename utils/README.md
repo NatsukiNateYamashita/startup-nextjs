@@ -14,7 +14,7 @@ Anthropic Claude APIを使用してブログ記事を自動生成・翻訳・画
 - `idea_generator.py` - 記事アイディア生成
 - `article_generator.py` - 記事・メタデータ・画像情報生成
 - `translator.py` - 多言語翻訳
-- `image_generator.py` - 画像生成（AI画像生成API連携）
+- `image_generator.py` - 画像生成（DALL·E 3/Unsplash API連携・デフォルト: DALL·E 3）
 - `validator.py` - ファイル構成検証・修正
 
 ### 設定・プロンプトファイル
@@ -32,13 +32,16 @@ Anthropic Claude APIを使用してブログ記事を自動生成・翻訳・画
 
 ### 2. 環境変数設定
 ```bash
-# .env.exampleをコピーして.envファイルを作成
-cp .env.example .env
+# .env.localをコピーして.envファイルを作成
+cp .env.local .env
 
 # .envファイルを編集してAPIキーを設定
 # ANTHROPIC_API_KEY=your_anthropic_api_key_here
-# UNSPLASH_ACCESS_KEY=your_unsplash_access_key_here
+# UNSPLASH_ACCESS_KEY=your_unsplash_access_key_here  
+# OPENAI_API_KEY=your_openai_api_key_here
 ```
+
+> **🔐 APIキー管理**: 全てのAPIキーは`config.py`の`get_api_key()`関数で統一管理されています。
 
 ### 3. メインスクリプトで一括操作
 ```bash
@@ -53,7 +56,7 @@ python main.py ideas --theme "AI教育"
 # 記事生成（アイディアIDを指定）
 python main.py generate 006
 
-# 翻訳〜検証まで一括実行
+# 記事生成〜検証まで一括実行
 python main.py full 006
 ```
 
@@ -68,8 +71,14 @@ python article_generator.py --idea-id "006"
 # 翻訳実行
 python translator.py --article-id "006"
 
-# 画像生成
+# 画像生成（デフォルト: DALL·E 3）
 python image_generator.py --article-id "006"
+
+# Unsplash使用の場合
+python image_generator.py --article-id "006" --service unsplash
+
+# DALL·E 3使用の場合（デフォルト）
+python image_generator.py --article-id "006" --service dalle
 
 # 検証・修正
 python validator.py --article-id "006" --fix
@@ -92,12 +101,39 @@ startup-nextjs/
     └── *.jpg          # その他の画像
 ```
 
+## 画像生成システム
+
+### サポートされている画像生成サービス
+- **DALL·E 3** (デフォルト): OpenAI APIによる高品質画像生成
+  - 画像サイズ: 1024x1024, 1024x1792, 1792x1024のみサポート
+  - 高品質でコンテキストに適した画像生成
+- **Unsplash**: 写真素材からの検索・ダウンロード
+  - 任意サイズ対応
+  - 実際の写真素材
+
+### 使用方法
+```bash
+# DALL·E 3で画像生成（デフォルト）
+python image_generator.py --article-id "006" --service dalle
+
+# Unsplashで画像生成
+python image_generator.py --article-id "006" --service unsplash
+```
+
 ## API設定
-- Anthropic API Keyは `config.py` で管理
-- ローカル開発時のみ使用
+
+### APIキー管理
+- 全てのAPIキーは `config.py` の `get_api_key()` 関数で統一管理
+- 環境変数（`.env`ファイル）から安全に取得
+- 必要なAPIキー:
+  - `ANTHROPIC_API_KEY`: Claude API（記事生成・翻訳）
+  - `UNSPLASH_ACCESS_KEY`: Unsplash API（画像検索）
+  - `OPENAI_API_KEY`: OpenAI API（DALL·E 3画像生成）
 
 ## 注意事項
 - 本システムはローカル開発環境での使用を想定
+- DALL·E 3使用時は画像サイズが制限されます（1024x1024等）
+- APIキーは必ず環境変数で管理し、コードにハードコーディングしないでください
 - API Keyの本番環境での直接使用は禁止
 - 生成されたコンテンツは必ず人間による確認・編集を推奨
 

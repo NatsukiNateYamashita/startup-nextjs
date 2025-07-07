@@ -931,3 +931,88 @@ interface BlogImage {
 > **次のステップ**: Phase 4（左右表示・対照翻訳システム）の詳細設計・実装開始  
 > **更新ルール**: 各タスク完了時にチェックマーク更新・進捗記録  
 > **問題発生時**: 本ドキュメントの関連箇所を確認・更新
+
+---
+
+## 🤖 **記事自動生成システム実装詳細（完了✅）**
+
+### **実装完了日**: 2025年7月7日
+### **システム概要**: Claude API・DALL·E 3・Unsplash・翻訳の統合自動化
+
+### 🔧 **実装ファイル構成**
+```
+utils/
+├── main.py                    # 一括実行メインスクリプト
+├── config.py                  # APIキー統一管理・get_api_key()
+├── idea_generator.py          # Claude API - アイディア生成
+├── article_generator.py       # Claude API - 記事・メタデータ生成
+├── translator.py              # Claude API - 4言語翻訳
+├── image_generator.py         # DALL·E 3/Unsplash画像生成
+├── validator.py               # ファイル構成検証・修正
+├── prompts/                   # プロンプトテンプレート
+│   ├── article_generation.md
+│   ├── translation.md
+│   └── image_captions.md
+└── requirements.txt           # Python依存関係
+```
+
+### 🎯 **画像生成システム実装詳細**
+#### **サポート画像生成サービス**
+- **DALL·E 3** (デフォルト):
+  - OpenAI API連携
+  - 画像サイズ制約: 1024x1024, 1024x1792, 1792x1024のみ
+  - 高品質AIコンテンツ生成
+- **Unsplash**:
+  - 写真素材検索・ダウンロード
+  - 任意サイズ対応
+  - 実際の写真素材
+
+#### **実装コマンド例**
+```bash
+# DALL·E 3で画像生成（デフォルト）
+python main.py images 006 --service dalle
+
+# Unsplashで画像生成
+python main.py images 006 --service unsplash
+
+# フルパイプライン（DALL·E 3使用）
+python main.py full 006
+```
+
+### 🔐 **APIキー管理システム実装**
+#### **統一管理方式** (`config.py`)
+```python
+def get_api_key(key_name: str) -> str:
+    """全APIキーの統一取得関数"""
+    v = os.getenv(key_name)
+    if not v:
+        raise ValueError(f"環境変数 {key_name} が設定されていません")
+    return v
+
+# 使用例
+ANTHROPIC_API_KEY = get_api_key("ANTHROPIC_API_KEY")
+OPENAI_API_KEY = get_api_key("OPENAI_API_KEY")
+UNSPLASH_ACCESS_KEY = get_api_key("UNSPLASH_ACCESS_KEY")
+```
+
+#### **必要な環境変数**
+```bash
+# .env ファイル設定
+ANTHROPIC_API_KEY=your_anthropic_api_key
+OPENAI_API_KEY=your_openai_api_key
+UNSPLASH_ACCESS_KEY=your_unsplash_access_key
+```
+
+### 📊 **自動生成システム実績**
+- **対応記事**: 9記事×4言語（004-009番完全自動生成）
+- **画像生成**: DALL·E 3/Unsplash両対応・記事ごと4-5枚自動生成
+- **翻訳精度**: Claude APIによる高精度4言語翻訳
+- **メタデータ**: 自動タグ生成・公開日・著者管理・SEO最適化
+- **検証機能**: ファイル構造・記事品質・画像整合性の自動チェック
+
+### 🚀 **パイプライン実行例**
+```bash
+# 完全自動化フロー
+python main.py ideas --theme "AI教育"     # アイディア生成
+python main.py full 010                   # 記事生成〜検証まで一括
+```
