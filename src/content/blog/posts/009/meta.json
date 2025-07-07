@@ -1,0 +1,37 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": [
+      "音声認識",
+      "AI",
+      "日本語教育",
+      "アプリ開発",
+      "発音練習"
+    ],
+    "en": [
+      "speech-recognition",
+      "ai",
+      "japanese-education",
+      "app-development",
+      "pronunciation-training"
+    ],
+    "zh-CN": [
+      "语音识别",
+      "人工智能",
+      "日语教育",
+      "应用开发",
+      "发音练习"
+    ],
+    "zh-TW": [
+      "語音識別",
+      "人工智慧",
+      "日語教育",
+      "應用開發",
+      "發音練習"
+    ]
+  },
+  "publishDate": "2025-07-07T15:38:26.466470",
+  "heroImage": "/images/blog/009/hero.jpg",
+  "featured": false,
+  "relatedPosts": []
+}

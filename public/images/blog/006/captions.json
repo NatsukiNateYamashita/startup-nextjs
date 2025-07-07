@@ -1,0 +1,70 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "AIを活用した日本語学習ロードマップの作成イメージ",
+      "en": "Creating Japanese learning roadmap with AI",
+      "zh-CN": "AIを活用した日本語学習ロードマップの作成イメージ",
+      "zh-TW": "AIを活用した日本語学習ロードマップの作成イメージ"
+    },
+    "caption": {
+      "ja": "AIツールを使って効率的な学習計画を立てる",
+      "en": "Creating efficient study plans using AI tools",
+      "zh-CN": "AIツールを使って効率的な学習計画を立てる",
+      "zh-TW": "AIツールを使って効率的な学習計画を立てる"
+    },
+    "photographer": "MIGUEL BAIXAULI",
+    "unsplash_url": "https://unsplash.com/photos/a-bunch-of-signs-that-are-on-a-wall-AkQ_qWSfQy4",
+    "source": "Unsplash"
+  },
+  "ai-learning.jpg": {
+    "alt": {
+      "ja": "AI支援による日本語学習のプロセス",
+      "en": "AI-assisted Japanese learning process",
+      "zh-CN": "AI支援による日本語学習のプロセス",
+      "zh-TW": "AI支援による日本語学習のプロセス"
+    },
+    "caption": {
+      "ja": "AIが支援する効率的な日本語学習の様子",
+      "en": "Efficient Japanese learning supported by AI",
+      "zh-CN": "AIが支援する効率的な日本語学習の様子",
+      "zh-TW": "AIが支援する効率的な日本語学習の様子"
+    },
+    "photographer": "Ryoji Hayasaka",
+    "unsplash_url": "https://unsplash.com/photos/a-narrow-street-with-traffic-lights-and-signs-ZprKf5Wuv6k",
+    "source": "Unsplash"
+  },
+  "goal-setting.jpg": {
+    "alt": {
+      "ja": "目標設定のプロセス図",
+      "en": "Goal setting process diagram",
+      "zh-CN": "目標設定のプロセス図",
+      "zh-TW": "目標設定のプロセス図"
+    },
+    "caption": {
+      "ja": "効果的な目標設定の手順と要素",
+      "en": "Steps and elements of effective goal setting",
+      "zh-CN": "効果的な目標設定の手順と要素",
+      "zh-TW": "効果的な目標設定の手順と要素"
+    },
+    "photographer": "Juno Jo",
+    "unsplash_url": "https://unsplash.com/photos/man-sitting-near-table-Um4iB59lS2A",
+    "source": "Unsplash"
+  },
+  "progress-tracking.jpg": {
+    "alt": {
+      "ja": "学習進捗管理ダッシュボード",
+      "en": "Learning progress tracking dashboard",
+      "zh-CN": "学習進捗管理ダッシュボード",
+      "zh-TW": "学習進捗管理ダッシュボード"
+    },
+    "caption": {
+      "ja": "AIによる学習進捗の可視化と分析",
+      "en": "Visualization and analysis of learning progress by AI",
+      "zh-CN": "AIによる学習進捗の可視化と分析",
+      "zh-TW": "AIによる学習進捗の可視化と分析"
+    },
+    "photographer": "Jeswin Thomas",
+    "unsplash_url": "https://unsplash.com/photos/blue-and-yellow-round-plastic-toy-0NpgbQWugTI",
+    "source": "Unsplash"
+  }
+}

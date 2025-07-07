@@ -1,0 +1,72 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "ChatGPTを使って日本語教材を作成している様子を示すイメージ",
+      "en": "Image showing the process of creating Japanese learning materials using ChatGPT"
+    },
+    "caption": {
+      "ja": "AIを活用した効率的な日本語教材作成",
+      "en": "Efficient Japanese material creation using AI"
+    },
+    "photographer": "Leon Gao",
+    "unsplash_url": "https://unsplash.com/photos/brown-wooden-framed-white-and-black-calendar-ooX-lfJqzhE",
+    "source": "Unsplash",
+    "search_query": "Create with ChatGPT! Efficient Japanese Teaching Image showing"
+  },
+  "prompt-structure.jpg": {
+    "alt": {
+      "ja": "効果的なプロンプトの構造と要素を説明する図表",
+      "en": "Diagram explaining the structure and elements of effective prompts"
+    },
+    "caption": {
+      "ja": "プロンプト作成の基本構造",
+      "en": "Basic structure of prompt creation"
+    },
+    "photographer": "Jason Coudriet",
+    "unsplash_url": "https://unsplash.com/photos/white-printer-paper-and-assorted-color-markers-eQux_nmDew0",
+    "source": "Unsplash",
+    "search_query": "Create with ChatGPT! Efficient Japanese Teaching Diagram explaining"
+  },
+  "quality-check.jpg": {
+    "alt": {
+      "ja": "教材の品質チェックポイントを示すチェックリスト",
+      "en": "Checklist showing quality check points for educational materials"
+    },
+    "caption": {
+      "ja": "教材品質管理のためのチェックポイント",
+      "en": "Check points for educational material quality management"
+    },
+    "photographer": "Bohdan Maylove",
+    "unsplash_url": "https://unsplash.com/photos/woman-riding-bicycle-in-intersection-at-night-sIjeoZzujOo",
+    "source": "Unsplash",
+    "search_query": "Create with ChatGPT! Efficient Japanese Teaching Checklist showing"
+  },
+  "copyright-guidelines.jpg": {
+    "alt": {
+      "ja": "著作権に配慮した教材作成のガイドラインを示す図",
+      "en": "Guidelines for creating materials with copyright considerations"
+    },
+    "caption": {
+      "ja": "著作権を考慮した安全な教材作成方法",
+      "en": "Safe material creation methods considering copyright"
+    },
+    "photographer": "Vitaly Gariev",
+    "unsplash_url": "https://unsplash.com/photos/a-man-sitting-at-a-desk-in-front-of-a-computer-zUlSVsq7JqQ",
+    "source": "Unsplash",
+    "search_query": "Create with ChatGPT! Efficient Japanese Teaching Guidelines for"
+  },
+  "material-examples.jpg": {
+    "alt": {
+      "ja": "ChatGPTで作成した日本語教材の具体例を比較する画像",
+      "en": "Comparison of specific examples of Japanese materials created with ChatGPT"
+    },
+    "caption": {
+      "ja": "AI生成教材の実践例と効果比較",
+      "en": "Practical examples and effectiveness comparison of AI-generated materials"
+    },
+    "photographer": "Fabio Sasso",
+    "unsplash_url": "https://unsplash.com/photos/low-angle-photography-of-sensho-ji-temple-Tnh5JemUFU0",
+    "source": "Unsplash",
+    "search_query": "Create with ChatGPT! Efficient Japanese Teaching Comparison of"
+  }
+}

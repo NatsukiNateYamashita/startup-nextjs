@@ -1,0 +1,41 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": [
+      "Web開発",
+      "日本語入力",
+      "IME",
+      "フロントエンド",
+      "JavaScript",
+      "UI/UX"
+    ],
+    "en": [
+      "web-development",
+      "japanese-input",
+      "ime",
+      "frontend",
+      "javascript",
+      "ui-ux"
+    ],
+    "zh-CN": [
+      "网页开发",
+      "日语输入",
+      "输入法",
+      "前端",
+      "JavaScript",
+      "用户界面"
+    ],
+    "zh-TW": [
+      "網頁開發",
+      "日語輸入",
+      "輸入法",
+      "前端",
+      "JavaScript",
+      "使用者介面"
+    ]
+  },
+  "publishDate": "2025-07-07T16:05:59.784924",
+  "heroImage": "/images/blog/008/hero.jpg",
+  "featured": false,
+  "relatedPosts": []
+}

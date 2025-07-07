@@ -1,0 +1,41 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": [
+      "日本語学習",
+      "AI学習支援",
+      "学習計画",
+      "JLPT対策",
+      "語学学習"
+    ],
+    "en": [
+      "Japanese Learning",
+      "AI Learning",
+      "Study Planning",
+      "JLPT",
+      "Language Learning"
+    ],
+    "zh-CN": [
+      "日语学习",
+      "AI辅助学习",
+      "学习计划",
+      "JLPT备考",
+      "语言学习"
+    ],
+    "zh-TW": [
+      "日語學習",
+      "AI輔助學習",
+      "學習計劃",
+      "JLPT備考",
+      "語言學習"
+    ]
+  },
+  "publishDate": "2025-07-07T10:27:04.560821",
+  "heroImage": "/images/blog/006/hero.jpg",
+  "featured": true,
+  "relatedPosts": [
+    "japanese-learning-tools",
+    "ai-language-learning",
+    "jlpt-preparation"
+  ]
+}

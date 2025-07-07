@@ -1,0 +1,37 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": [
+      "ChatGPT",
+      "日本語教育",
+      "AI教材作成",
+      "プロンプト",
+      "教育DX"
+    ],
+    "en": [
+      "ChatGPT",
+      "Japanese-education",
+      "AI-materials",
+      "prompt",
+      "educational-technology"
+    ],
+    "zh-CN": [
+      "ChatGPT",
+      "日语教育",
+      "AI教材",
+      "提示词",
+      "教育技术"
+    ],
+    "zh-TW": [
+      "ChatGPT",
+      "日語教育",
+      "AI教材",
+      "提示詞",
+      "教育科技"
+    ]
+  },
+  "publishDate": "2025-07-07T15:36:07.889420",
+  "heroImage": "/images/blog/007/hero.jpg",
+  "featured": false,
+  "relatedPosts": []
+}

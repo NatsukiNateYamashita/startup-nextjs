@@ -1,0 +1,92 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "日本語入力システムの実装を表現したコードエディタとIME変換候補ウィンドウの画面",
+      "en": "Code editor and IME conversion candidate window representing Japanese input system implementation",
+      "zh-CN": "日本語入力システムの実装を表現したコードエディタとIME変換候補ウィンドウの画面",
+      "zh-TW": "日本語入力システムの実装を表現したコードエディタとIME変換候補ウィンドウの画面"
+    },
+    "caption": {
+      "ja": "Web開発における日本語入力システムの実装例",
+      "en": "Example of Japanese input system implementation in web development",
+      "zh-CN": "Web開発における日本語入力システムの実装例",
+      "zh-TW": "Web開発における日本語入力システムの実装例"
+    },
+    "photographer": "Claudio Springolo",
+    "unsplash_url": "https://unsplash.com/photos/kanji-labeled-case-lot-Qm_Fih6aIFc",
+    "source": "Unsplash",
+    "search_query": "Japanese Input System Implementation Guide for Code editor"
+  },
+  "ime-flow.jpg": {
+    "alt": {
+      "ja": "IMEの動作フローを示すフローチャート図",
+      "en": "Flowchart showing IME operation flow",
+      "zh-CN": "IMEの動作フローを示すフローチャート図",
+      "zh-TW": "IMEの動作フローを示すフローチャート図"
+    },
+    "caption": {
+      "ja": "日本語入力システムの基本的な動作フロー",
+      "en": "Basic operation flow of Japanese input system",
+      "zh-CN": "日本語入力システムの基本的な動作フロー",
+      "zh-TW": "日本語入力システムの基本的な動作フロー"
+    },
+    "photographer": "Testeur de CBD",
+    "unsplash_url": "https://unsplash.com/photos/a-notebook-with-a-pen-and-paper-on-top-of-it-9RY1Z6aDWy8",
+    "source": "Unsplash",
+    "search_query": "Japanese Input System Implementation Guide for Flowchart showing"
+  },
+  "form-validation.jpg": {
+    "alt": {
+      "ja": "日本語入力対応フォームバリデーションの処理フローを示す図",
+      "en": "Diagram showing form validation process flow for Japanese input",
+      "zh-CN": "日本語入力対応フォームバリデーションの処理フローを示す図",
+      "zh-TW": "日本語入力対応フォームバリデーションの処理フローを示す図"
+    },
+    "caption": {
+      "ja": "日本語入力を考慮したフォームバリデーションの流れ",
+      "en": "Form validation flow considering Japanese input",
+      "zh-CN": "日本語入力を考慮したフォームバリデーションの流れ",
+      "zh-TW": "日本語入力を考慮したフォームバリデーションの流れ"
+    },
+    "photographer": "Bruno Aguirre",
+    "unsplash_url": "https://unsplash.com/photos/white-tori-gate-near-body-of-water-ZuxKqOdjX9s",
+    "source": "Unsplash",
+    "search_query": "Japanese Input System Implementation Guide for Diagram showing"
+  },
+  "performance-optimization.jpg": {
+    "alt": {
+      "ja": "パフォーマンス最適化前後の処理時間を比較したグラフ",
+      "en": "Graph comparing processing time before and after performance optimization",
+      "zh-CN": "パフォーマンス最適化前後の処理時間を比較したグラフ",
+      "zh-TW": "パフォーマンス最適化前後の処理時間を比較したグラフ"
+    },
+    "caption": {
+      "ja": "日本語入力システムのパフォーマンス最適化効果",
+      "en": "Performance optimization effects of Japanese input system",
+      "zh-CN": "日本語入力システムのパフォーマンス最適化効果",
+      "zh-TW": "日本語入力システムのパフォーマンス最適化効果"
+    },
+    "photographer": "Tim D",
+    "unsplash_url": "https://unsplash.com/photos/a-tall-white-and-black-building-surrounded-by-trees-XL7BJV4zWhg",
+    "source": "Unsplash",
+    "search_query": "Japanese Input System Implementation Guide for Graph comparing"
+  },
+  "debug-tools.jpg": {
+    "alt": {
+      "ja": "IMEデバッグツールの画面インターフェース",
+      "en": "Screen interface of IME debugging tools",
+      "zh-CN": "IMEデバッグツールの画面インターフェース",
+      "zh-TW": "IMEデバッグツールの画面インターフェース"
+    },
+    "caption": {
+      "ja": "日本語入力システムのデバッグツール画面",
+      "en": "Debug tool screen for Japanese input system",
+      "zh-CN": "日本語入力システムのデバッグツール画面",
+      "zh-TW": "日本語入力システムのデバッグツール画面"
+    },
+    "photographer": "Il Vagabiondo",
+    "unsplash_url": "https://unsplash.com/photos/a-large-orange-gate-with-a-sky-background--U6ZgxuBTtQ",
+    "source": "Unsplash",
+    "search_query": "Japanese Input System Implementation Guide for Screen interface"
+  }
+}
