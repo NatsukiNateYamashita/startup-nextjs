@@ -65,9 +65,9 @@ def translate_article(article_id, languages=None):
     
     return run_script("translator.py", args)
 
-def generate_images(article_id, service="unsplash"):
+def generate_images(article_id, service="dalle"):
     """画像生成"""
-    print(f"🖼️  画像生成を開始... (ID: {article_id})")
+    print(f"🖼️  画像生成を開始... (ID: {article_id}, service: {service})")
     
     args = ["--article-id", article_id, "--service", service]
     return run_script("image_generator.py", args)
@@ -145,7 +145,7 @@ def main():
     # 画像生成
     images_parser = subparsers.add_parser("images", help="画像を生成")
     images_parser.add_argument("article_id", help="画像を生成する記事ID")
-    images_parser.add_argument("--service", default="unsplash", help="画像生成サービス")
+    images_parser.add_argument("--service", default="dalle", help="画像生成サービス")
     
     # 検証
     validate_parser = subparsers.add_parser("validate", help="記事を検証")

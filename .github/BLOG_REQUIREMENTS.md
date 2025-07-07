@@ -127,6 +127,8 @@ interface BlogImage {
 - **画像生成**: DALL·E 3/Unsplash API両対応・デフォルト: DALL·E 3 (`utils/image_generator.py`)
 - **翻訳システム**: 4言語自動翻訳 (`utils/translator.py`)
 - **セキュリティ**: 環境変数管理・APIキー統一取得・config.py一元管理 (`utils/config.py`)
+- **統合実行**: main.py による一括実行・個別実行対応
+- **検証システム**: validator.py によるファイル構成検証・自動修正
 
 ---
 

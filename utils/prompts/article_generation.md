@@ -67,21 +67,29 @@ excerpt: "記事の要約（100-150文字）"
   "hero.jpg": {
     "alt": {
       "ja": "ヒーロー画像の説明",
-      "en": "Hero image description"
+      "en": "Hero image description",
+      "zh-CH": "Hero图像捕捉",
+      "zh-TW": "Hero圖像捕捉"
     },
     "caption": {
       "ja": "画像キャプション",
-      "en": "Image caption"
+      "en": "Image caption",
+      "zh-CH": "图像捕捉",
+      "zh-TW": "圖像捕捉"
     }
   },
   "other-image.jpg": {
     "alt": {
       "ja": "その他画像の説明",
-      "en": "Other image description"
+      "en": "Other image description",
+      "zh-CH": "其他图像捕捉",
+      "zh-TW": "其他圖像捕捉"
     },
     "caption": {
       "ja": "画像キャプション",
-      "en": "Image caption"
+      "en": "Image caption",
+      "zh-CH": "图像捕捉",
+      "zh-TW": "圖像捕捉"
     }
   }
 }

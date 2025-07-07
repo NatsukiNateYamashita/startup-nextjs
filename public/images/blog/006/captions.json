@@ -1,70 +1,110 @@
 {
   "hero.jpg": {
     "alt": {
-      "ja": "AIを活用した日本語学習ロードマップの作成イメージ",
-      "en": "Creating Japanese learning roadmap with AI",
-      "zh-CN": "AIを活用した日本語学習ロードマップの作成イメージ",
-      "zh-TW": "AIを活用した日本語学習ロードマップの作成イメージ"
+      "ja": "AIを活用した日本語学習ロードマップのイメージ図",
+      "en": "AI-powered Japanese learning roadmap visualization",
+      "zh-CN": "AIを活用した日本語学習ロードマップのイメージ図",
+      "zh-TW": "AIを活用した日本語学習ロードマップのイメージ図"
     },
     "caption": {
-      "ja": "AIツールを使って効率的な学習計画を立てる",
-      "en": "Creating efficient study plans using AI tools",
-      "zh-CN": "AIツールを使って効率的な学習計画を立てる",
-      "zh-TW": "AIツールを使って効率的な学習計画を立てる"
+      "ja": "AIツールを使って効率的な日本語学習計画を立てる",
+      "en": "Creating efficient Japanese learning plans with AI tools",
+      "zh-CN": "AIツールを使って効率的な日本語学習計画を立てる",
+      "zh-TW": "AIツールを使って効率的な日本語学習計画を立てる"
     },
-    "photographer": "MIGUEL BAIXAULI",
-    "unsplash_url": "https://unsplash.com/photos/a-bunch-of-signs-that-are-on-a-wall-AkQ_qWSfQy4",
-    "source": "Unsplash"
+    "photographer": "mos design",
+    "unsplash_url": "https://unsplash.com/photos/a-group-of-people-walking-down-a-street-at-night-EtYUNdk9SxM",
+    "source": "Unsplash",
+    "search_query": "AI-powered Japanese learning roadmap visualization Creating efficient Japanese"
   },
-  "ai-learning.jpg": {
+  "ai-level-assessment.jpg": {
     "alt": {
-      "ja": "AI支援による日本語学習のプロセス",
-      "en": "AI-assisted Japanese learning process",
-      "zh-CN": "AI支援による日本語学習のプロセス",
-      "zh-TW": "AI支援による日本語学習のプロセス"
+      "ja": "AIによる日本語レベル評価システムの画面",
+      "en": "AI Japanese level assessment system interface",
+      "zh-CN": "AIによる日本語レベル評価システムの画面",
+      "zh-TW": "AIによる日本語レベル評価システムの画面"
     },
     "caption": {
-      "ja": "AIが支援する効率的な日本語学習の様子",
-      "en": "Efficient Japanese learning supported by AI",
-      "zh-CN": "AIが支援する効率的な日本語学習の様子",
-      "zh-TW": "AIが支援する効率的な日本語学習の様子"
+      "ja": "AIが学習者の現在のレベルを正確に評価",
+      "en": "AI accurately assesses learner's current level",
+      "zh-CN": "AIが学習者の現在のレベルを正確に評価",
+      "zh-TW": "AIが学習者の現在のレベルを正確に評価"
     },
-    "photographer": "Ryoji Hayasaka",
-    "unsplash_url": "https://unsplash.com/photos/a-narrow-street-with-traffic-lights-and-signs-ZprKf5Wuv6k",
-    "source": "Unsplash"
+    "photographer": "James Pere",
+    "unsplash_url": "https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-HGlakKf68rg",
+    "source": "Unsplash",
+    "search_query": "AI Japanese level assessment system interface AI accurately"
   },
-  "goal-setting.jpg": {
+  "beginner-roadmap.jpg": {
     "alt": {
-      "ja": "目標設定のプロセス図",
-      "en": "Goal setting process diagram",
-      "zh-CN": "目標設定のプロセス図",
-      "zh-TW": "目標設定のプロセス図"
+      "ja": "初級レベル向けの学習ロードマップ図",
+      "en": "Learning roadmap for beginner level students",
+      "zh-CN": "初級レベル向けの学習ロードマップ図",
+      "zh-TW": "初級レベル向けの学習ロードマップ図"
     },
     "caption": {
-      "ja": "効果的な目標設定の手順と要素",
-      "en": "Steps and elements of effective goal setting",
-      "zh-CN": "効果的な目標設定の手順と要素",
-      "zh-TW": "効果的な目標設定の手順と要素"
+      "ja": "初級学習者向けの体系的な学習計画",
+      "en": "Systematic learning plan for beginner students",
+      "zh-CN": "初級学習者向けの体系的な学習計画",
+      "zh-TW": "初級学習者向けの体系的な学習計画"
     },
-    "photographer": "Juno Jo",
-    "unsplash_url": "https://unsplash.com/photos/man-sitting-near-table-Um4iB59lS2A",
-    "source": "Unsplash"
+    "photographer": "Remi Chow",
+    "unsplash_url": "https://unsplash.com/photos/a-person-drawing-on-a-piece-of-paper-dBoaeqHsK3k",
+    "source": "Unsplash",
+    "search_query": "Learning roadmap for beginner level students Systematic learning"
   },
-  "progress-tracking.jpg": {
+  "advanced-roadmap.jpg": {
     "alt": {
-      "ja": "学習進捗管理ダッシュボード",
-      "en": "Learning progress tracking dashboard",
-      "zh-CN": "学習進捗管理ダッシュボード",
-      "zh-TW": "学習進捗管理ダッシュボード"
+      "ja": "上級レベル向けの専門的な学習ロードマップ",
+      "en": "Specialized learning roadmap for advanced level",
+      "zh-CN": "上級レベル向けの専門的な学習ロードマップ",
+      "zh-TW": "上級レベル向けの専門的な学習ロードマップ"
     },
     "caption": {
-      "ja": "AIによる学習進捗の可視化と分析",
-      "en": "Visualization and analysis of learning progress by AI",
-      "zh-CN": "AIによる学習進捗の可視化と分析",
-      "zh-TW": "AIによる学習進捗の可視化と分析"
+      "ja": "上級学習者向けの高度な学習戦略",
+      "en": "Advanced learning strategies for upper-level students",
+      "zh-CN": "上級学習者向けの高度な学習戦略",
+      "zh-TW": "上級学習者向けの高度な学習戦略"
     },
-    "photographer": "Jeswin Thomas",
-    "unsplash_url": "https://unsplash.com/photos/blue-and-yellow-round-plastic-toy-0NpgbQWugTI",
-    "source": "Unsplash"
+    "photographer": "- Landsmann -",
+    "unsplash_url": "https://unsplash.com/photos/a-red-apple-sitting-on-top-of-a-book-ev0qf1tStbQ",
+    "source": "Unsplash",
+    "search_query": "Specialized learning roadmap for advanced level Advanced learning"
+  },
+  "resource-selection.jpg": {
+    "alt": {
+      "ja": "AIによる学習リソース選択システム",
+      "en": "AI-powered learning resource selection system",
+      "zh-CN": "AIによる学習リソース選択システム",
+      "zh-TW": "AIによる学習リソース選択システム"
+    },
+    "caption": {
+      "ja": "個人に最適化された学習リソースの推薦",
+      "en": "Personalized learning resource recommendations",
+      "zh-CN": "個人に最適化された学習リソースの推薦",
+      "zh-TW": "個人に最適化された学習リソースの推薦"
+    },
+    "photographer": "Brett Jordan",
+    "unsplash_url": "https://unsplash.com/photos/brown-wooden-blocks-on-white-surface-4csdTPXTM1A",
+    "source": "Unsplash",
+    "search_query": "AI-powered learning resource selection system Personalized learning resource"
+  },
+  "progress-dashboard.jpg": {
+    "alt": {
+      "ja": "学習進捗管理ダッシュボードの画面",
+      "en": "Learning progress management dashboard",
+      "zh-CN": "学習進捗管理ダッシュボードの画面",
+      "zh-TW": "学習進捗管理ダッシュボードの画面"
+    },
+    "caption": {
+      "ja": "AIによる詳細な学習進捗の可視化",
+      "en": "Detailed learning progress visualization by AI",
+      "zh-CN": "AIによる詳細な学習進捗の可視化",
+      "zh-TW": "AIによる詳細な学習進捗の可視化"
+    },
+    "photographer": "Pawel Czerwinski",
+    "unsplash_url": "https://unsplash.com/photos/a-white-wall-with-a-bunch-of-shelves-on-it-VypYlmYTu7Y",
+    "source": "Unsplash",
+    "search_query": "Learning progress management dashboard Detailed learning progress visualization"
   }
 }

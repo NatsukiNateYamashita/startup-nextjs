@@ -345,7 +345,7 @@ def main():
     
     args = parser.parse_args()
     
-    print("🚀 記事生成システム")
+    print("🚀 article_generator.py")
     print("-" * 50)
     
     if args.list:

@@ -216,14 +216,6 @@ def main():
             print("⚠️  日本語は元記事なのでスキップします")
             continue
         
-        # 既存ファイルのチェック
-        article_dir = BLOG_POSTS_DIR / args.article_id
-        existing_file = article_dir / f"{language}.md"
-        
-        if existing_file.exists() and not args.force:
-            print(f"⚠️  {language}.md は既に存在します。上書きするには --force を使用してください")
-            continue
-        
         # 翻訳実行
         translated_content = translate_article(source_content, language)
         

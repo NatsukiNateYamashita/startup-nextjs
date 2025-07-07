@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "id": "006",
+      "slug": "006",
+      "publishDate": "2025-07-07T17:51:55.528858",
+      "featured": false,
+      "authorId": "nihongo-ai"
+    },
+    {
       "id": "008",
       "slug": "008",
       "publishDate": "2025-07-07T16:05:59.784924",
@@ -19,13 +26,6 @@
       "slug": "007",
       "publishDate": "2025-07-07T15:36:07.889420",
       "featured": false,
-      "authorId": "nihongo-ai"
-    },
-    {
-      "id": "006",
-      "slug": "006",
-      "publishDate": "2025-07-07T10:27:04.560821",
-      "featured": true,
       "authorId": "nihongo-ai"
     },
     {
@@ -66,13 +66,13 @@
   ],
   "tags": [
     "AI",
-    "AI Learning",
+    "AI learning",
     "AI-materials",
-    "AI学習支援",
+    "AI学习",
+    "AI学習",
+    "AI學習",
     "AI教材",
     "AI教材作成",
-    "AI輔助學習",
-    "AI辅助学习",
     "ChatGPT",
     "Computer",
     "Creative",
@@ -80,17 +80,12 @@
     "Design Skills",
     "IME",
     "JLPT",
-    "JLPT備考",
-    "JLPT备考",
-    "JLPT対策",
     "Japanese Education",
-    "Japanese Learning",
+    "Japanese education",
     "Japanese-education",
     "JavaScript",
-    "Language Learning",
     "Learning",
     "NLP",
-    "Study Planning",
     "UI Components",
     "UI/UX",
     "UIコンポーネント",
@@ -107,11 +102,13 @@
     "japanese-education",
     "japanese-input",
     "javascript",
+    "language learning",
     "online class",
     "productivity",
     "prompt",
     "pronunciation-training",
     "speech-recognition",
+    "study plan",
     "ui-ux",
     "web-development",
     "アプリ開発",
@@ -144,12 +141,9 @@
     "教育技术",
     "教育科技",
     "日本語入力",
-    "日本語学習",
     "日本語教育",
-    "日語學習",
     "日語教育",
     "日語輸入",
-    "日语学习",
     "日语教育",
     "日语输入",
     "生产力",
@@ -179,6 +173,6 @@
     "電腦",
     "音声認識"
   ],
-  "lastUpdated": "2025-07-07T16:07:58.901605",
+  "lastUpdated": "2025-07-07T17:53:20.930959",
   "totalPosts": 9
 }
