@@ -287,6 +287,21 @@
     "description": "ページが見つかりませんでした。",
     "backToHomepage": "ホームに戻る"
   },
+  "Compare": {
+    "title": "対訳表示: {slug}",
+    "description": "記事の対訳表示・文単位ハイライト機能",
+    "selectLanguages": "言語を選択してください",
+    "leftLanguage": "左",
+    "rightLanguage": "右",
+    "noCorrespondingSentence": "（対応文なし）",
+    "languageLabels": {
+      "ja": "日本語",
+      "en": "English",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文"
+    },
+    "hoverToHighlight": "文にマウスを乗せると対応する文がハイライトされます"
+  },
   "Footer": {
     "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "usefulLinks": "Links",

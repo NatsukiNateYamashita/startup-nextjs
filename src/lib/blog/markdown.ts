@@ -60,7 +60,7 @@ function remarkBlogImages(postSlug: string) {
 }
 
 // マークダウン処理のプロセッサー（画像変換機能付き）
-function createMarkdownProcessor(postSlug: string) {
+export function createMarkdownProcessor(postSlug: string) {
   return remark()
     .use(remarkParse)
     .use(remarkGfm)
