@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
-記事生成システム
+記事生成システム（左右対訳対応版）
+
+新機能:
+- sentenceタグ自動挿入
+- 多言語間のsentenceタグID整合性チェック
+- 左右対訳ページ対応記事生成
 
 使用方法:
-    python article_generator.py --idea-id "006"
+    python article_generator.py --idea-id "010"
     python article_generator.py --custom-title "カスタムタイトル"
 """
 
 import json
+import re
 import argparse
 from datetime import datetime
 from pathlib import Path
@@ -25,8 +31,14 @@ from config import (
 )
 
 def load_prompt_template():
-    """記事生成プロンプトテンプレートを読み込み"""
-    prompt_file = PROMPTS_DIR / "article_generation.md"
+    """記事生成プロンプトテンプレートを読み込み（左右対訳対応版）"""
+    # 新しいsentenceタグ対応プロンプトを優先的に使用
+    prompt_file = PROMPTS_DIR / "article_generation_with_sentence_tags.md"
+    
+    if not prompt_file.exists():
+        print(f"⚠️  左右対訳対応プロンプトが見つかりません: {prompt_file}")
+        print("⚠️  従来版のプロンプトを使用します")
+        prompt_file = PROMPTS_DIR / "article_generation.md"
     
     if not prompt_file.exists():
         print(f"❌ プロンプトファイルが見つかりません: {prompt_file}")
@@ -34,6 +46,86 @@ def load_prompt_template():
         
     with open(prompt_file, "r", encoding="utf-8") as f:
         return f.read()
+
+def validate_sentence_tags(content: str):
+    """sentenceタグの妥当性をチェック"""
+    tags = re.findall(r'<!--\s*s(\d+)\s*-->', content)
+    tag_numbers = [int(tag) for tag in tags]
+    
+    return {
+        "has_tags": len(tag_numbers) > 0,
+        "total_tags": len(tag_numbers),
+        "tag_numbers": tag_numbers,
+        "is_sequential": tag_numbers == list(range(1, len(tag_numbers) + 1)),
+        "duplicates": len(tag_numbers) != len(set(tag_numbers))
+    }
+
+def inject_sentence_tags(content: str) -> str:
+    """生成されたマークダウンにsentenceタグを自動挿入"""
+    if '<!-- s1 -->' in content:
+        print("✅ sentenceタグが既に含まれています")
+        return content
+    
+    print("🔧 sentenceタグを自動挿入中...")
+    
+    lines = content.split('\n')
+    result = []
+    tag_counter = 1
+    
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        
+        # 空行はそのまま追加
+        if not stripped:
+            result.append(line)
+            continue
+        
+        # frontmatterは保持
+        if stripped == '---' and i < 5:
+            result.append(line)
+            continue
+        
+        # sentenceタグを追加する条件をチェック
+        should_add_tag = False
+        
+        # H1, H2, H3見出し
+        if re.match(r'^#{1,3}\s+', stripped):
+            should_add_tag = True
+        
+        # 段落（文字で始まる行、コードブロックや特殊記号以外）
+        elif re.match(r'^[^\-\*\`\#\|\<\>\[]', stripped) and not stripped.startswith('```'):
+            # 前の行が空行または見出しの場合のみ段落開始とみなす
+            if i == 0 or not lines[i-1].strip() or re.match(r'^#{1,3}\s+', lines[i-1].strip()):
+                should_add_tag = True
+        
+        # リスト項目の最初
+        elif re.match(r'^[\-\*]\s+\*\*', stripped):  # "- **項目**:" 形式
+            should_add_tag = True
+        
+        # 番号リストの最初
+        elif re.match(r'^\d+\.\s+\*\*', stripped):  # "1. **項目**:" 形式
+            should_add_tag = True
+        
+        # コードブロックの前
+        elif stripped.startswith('```') and not any('```' in prev_line for prev_line in lines[max(0, i-3):i]):
+            should_add_tag = True
+        
+        if should_add_tag:
+            result.append(f"<!-- s{tag_counter} -->")
+            result.append(line)
+            tag_counter += 1
+        else:
+            result.append(line)
+    
+    final_content = '\n'.join(result)
+    
+    # バリデーション
+    validation = validate_sentence_tags(final_content)
+    print(f"📊 sentenceタグ統計: {validation['total_tags']}個のタグ")
+    if not validation['is_sequential']:
+        print("⚠️  警告: sentenceタグの番号が連続していません")
+    
+    return final_content
 
 def load_ideas():
     """保存されたアイディアを読み込み"""
@@ -83,14 +175,9 @@ def create_article_directory(article_id):
     
     return article_dir, images_dir
 
-def generate_article_content(idea):
-    """Anthropic APIを使って記事コンテンツを生成"""
-    print("🤖 記事生成中...")
-    
-    # Anthropicクライアントを取得
-    client = get_anthropic_client()
-    if not client:
-        return None
+def generate_article_content(client, idea):
+    """Claude APIを使用して記事コンテンツを生成"""
+    print(f"🤖 記事生成中: {idea.get('title', {}).get('ja', '')}")
     
     # プロンプトテンプレートを読み込み
     prompt_template = load_prompt_template()
@@ -100,7 +187,6 @@ def generate_article_content(idea):
     # プロンプトにアイディア情報を挿入
     current_date = datetime.now().isoformat()
     
-    # プロンプトテンプレートのプレースホルダーを置換（format()の代わりにreplace()を使用）
     prompt = prompt_template
     prompt = prompt.replace("{title}", idea.get('title', {}).get('ja', ''))
     prompt = prompt.replace("{category}", idea.get('category', ''))
@@ -113,10 +199,8 @@ def generate_article_content(idea):
     try:
         # API呼び出し
         response = client.messages.create(
-            # model="claude-3-5-sonnet-20241022",
-            # max_tokens=8000,  # Claude-3.5-sonnetの上限に合わせる
             model="claude-sonnet-4-20250514",
-            max_tokens=16000,  # Claude-4-sonnetの上限に合わせる
+            max_tokens=16000,
             temperature=0.7,
             messages=[
                 {
@@ -128,12 +212,7 @@ def generate_article_content(idea):
         
         content = response.content[0].text
         
-        # レスポンス全体をファイルに出力してデバッグ
-        debug_file = "/tmp/claude_response_debug.txt"
-        with open(debug_file, "w", encoding="utf-8") as f:
-            f.write(content)
-        print(f"🔍 デバッグ: 全レスポンスを {debug_file} に保存しました")
-        print(f"🔍 APIレスポンス長: {len(content)} 文字")
+        print(f"✅ Claude API レスポンス取得完了 ({len(content)} 文字)")
         
         return parse_generated_content(content, idea)
         
@@ -150,58 +229,113 @@ def parse_generated_content(content, idea):
         "captions_json": {}
     }
     
-    # Markdownコンテンツを抽出
-    md_start = content.find("# 1. 日本語記事（ja.md）")
-    meta_start = content.find("# 2. メタデータ（meta.json）")
-    
-    if md_start != -1:
-        md_content_start = content.find("```markdown", md_start)
-        if md_content_start != -1:
-            md_content_start = content.find("\n", md_content_start) + 1
-            # meta_startの前にある```を見つける
-            if meta_start != -1:
-                # meta_startより前の最後の```を探す
-                md_content_end = content.rfind("```", md_content_start, meta_start)
-            else:
-                # meta_startが見つからない場合は通常通り最初の```を使用
-                md_content_end = content.find("```", md_content_start)
+    try:
+        # マークダウン部分を抽出
+        markdown_match = re.search(r'```markdown\s*\n(.*?)(?=\n```json|\n```\s*$|$)', content, re.DOTALL)
+        if markdown_match:
+            result["markdown"] = markdown_match.group(1).strip()
             
-            if md_content_end != -1:
-                result["markdown"] = content[md_content_start:md_content_end].strip()
-    
-    # meta.jsonを抽出
-    if meta_start != -1:
-        meta_json_start = content.find("```json", meta_start)
-        if meta_json_start != -1:
-            meta_json_start = content.find("\n", meta_json_start) + 1
-            meta_json_end = content.find("```", meta_json_start)
-            if meta_json_end != -1:
+            # sentenceタグの自動挿入
+            result["markdown"] = inject_sentence_tags(result["markdown"])
+        
+        # meta.json部分を抽出
+        meta_match = re.search(r'```json\s*\n(\{.*?"authorId".*?\})\s*\n```', content, re.DOTALL)
+        if meta_match:
+            try:
+                result["meta_json"] = json.loads(meta_match.group(1))
+                print("✅ meta.jsonを正常にパースしました")
+            except json.JSONDecodeError:
+                print("⚠️  meta.json のパースに失敗しました")
+        
+        # captions.json部分を抽出（戦略的アプローチ）
+        # 1. まずすべてのJSONブロックを見つける
+        all_json_blocks = re.findall(r'```json\s*\n(.*?)\n```', content, re.DOTALL)
+        print(f"🔍 見つかったJSONブロック数: {len(all_json_blocks)}")
+        
+        captions_found = False
+        for i, json_block in enumerate(all_json_blocks):
+            print(f"🔍 JSONブロック {i+1} の分析中...")
+            
+            # meta.jsonは既に処理したのでスキップ
+            if '"authorId"' in json_block:
+                print(f"   → meta.jsonブロック、スキップ")
+                continue
+            
+            # captions.jsonの特徴を探す
+            has_image_keys = any(ext in json_block for ext in ['.jpg', '.jpeg', '.png', '.webp'])
+            has_lang_keys = any(lang in json_block for lang in ['"ja":', '"en":', '"zh-CN":', '"zh-TW":'])
+            has_alt_or_caption = any(key in json_block for key in ['"alt":', '"caption":'])
+            
+            print(f"   → 画像ファイル拡張子: {has_image_keys}")
+            print(f"   → 言語キー: {has_lang_keys}")
+            print(f"   → alt/captionキー: {has_alt_or_caption}")
+            
+            # captions.jsonの可能性が高い場合
+            if has_image_keys or (has_lang_keys and has_alt_or_caption):
+                print(f"   → captions.jsonの可能性が高い、パース試行")
                 try:
-                    meta_json_str = content[meta_json_start:meta_json_end].strip()
-                    result["meta_json"] = json.loads(meta_json_str)
-                except json.JSONDecodeError:
-                    print("⚠️  メタデータJSONの解析に失敗しました。デフォルト値を使用します。")
-                    result["meta_json"] = create_default_meta(idea)
-    
-    # captions.jsonを抽出
-    captions_start = content.find("# 3. 画像情報（captions.json）")
-    if captions_start != -1:
-        captions_json_start = content.find("```json", captions_start)
-        if captions_json_start != -1:
-            captions_json_start = content.find("\n", captions_json_start) + 1
-            captions_json_end = content.find("```", captions_json_start)
-            if captions_json_end != -1:
-                try:
-                    captions_json_str = content[captions_json_start:captions_json_end].strip()
-                    result["captions_json"] = json.loads(captions_json_str)
-                except json.JSONDecodeError:
-                    print("⚠️  画像JSONの解析に失敗しました。デフォルト値を使用します。")
-                    result["captions_json"] = create_default_captions(idea)
-    
-    # デフォルト値の設定
-    if not result["markdown"]:
-        print("⚠️  Markdownコンテンツの抽出に失敗しました。")
+                    # JSON開始の { から最後の } までを抽出
+                    json_start = json_block.find('{')
+                    if json_start >= 0:
+                        json_end = json_block.rfind('}')
+                        if json_end > json_start:
+                            clean_json = json_block[json_start:json_end+1]
+                            result["captions_json"] = json.loads(clean_json)
+                            print("✅ captions.jsonを正常にパースしました")
+                            captions_found = True
+                            break
+                except json.JSONDecodeError as e:
+                    print(f"   → パースエラー: {str(e)}")
+                    continue
+            else:
+                print(f"   → captions.jsonの特徴なし、スキップ")
+        
+        # captions.jsonが見つからない場合のフォールバック
+        if not captions_found:
+            print("⚠️  captions.jsonが見つかりません。デフォルトを作成します")
+            result["captions_json"] = create_default_captions(idea)
+        
+        return result
+        
+    except Exception as e:
+        print(f"❌ コンテンツ解析エラー: {e}")
         return None
+
+def save_article_files(article_data, article_id):
+    """記事ファイルを保存"""
+    article_dir = BLOG_POSTS_DIR / article_id
+    images_dir = BLOG_IMAGES_DIR / article_id
+    
+    # ディレクトリ作成
+    article_dir.mkdir(parents=True, exist_ok=True)
+    images_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 日本語マークダウンファイル
+    if article_data["markdown"]:
+        ja_file = article_dir / "ja.md"
+        with open(ja_file, "w", encoding="utf-8") as f:
+            f.write(article_data["markdown"])
+        print(f"✅ 日本語記事を保存: {ja_file}")
+        
+        # sentenceタグの統計表示
+        validation = validate_sentence_tags(article_data["markdown"])
+        print(f"📊 sentenceタグ統計: {validation['total_tags']}個")
+    
+    # meta.jsonファイル
+    if article_data["meta_json"]:
+        meta_file = article_dir / "meta.json"
+        with open(meta_file, "w", encoding="utf-8") as f:
+            json.dump(article_data["meta_json"], f, ensure_ascii=False, indent=2)
+        print(f"✅ メタデータを保存: {meta_file}")
+    
+    # captions.jsonファイル
+    if article_data["captions_json"]:
+        captions_file = images_dir / "captions.json"
+        with open(captions_file, "w", encoding="utf-8") as f:
+            json.dump(article_data["captions_json"], f, ensure_ascii=False, indent=2)
+        print(f"✅ 画像キャプションを保存: {captions_file}")
+    
+    return article_dir
     
     if not result["meta_json"]:
         result["meta_json"] = create_default_meta(idea)
@@ -239,39 +373,6 @@ def create_default_captions(idea):
                 "ja": "記事のヒーロー画像",
                 "en": "Hero image for the article"
             }
-        }
-    }
-
-def save_generated_files(article_id, content_data):
-    """生成されたファイルを保存"""
-    
-    article_dir, images_dir = create_article_directory(article_id)
-    
-    # ja.mdを保存
-    ja_md_path = article_dir / "ja.md"
-    with open(ja_md_path, "w", encoding="utf-8") as f:
-        f.write(content_data["markdown"])
-    print(f"✅ 日本語記事を保存: {ja_md_path}")
-    
-    # meta.jsonを保存
-    meta_json_path = article_dir / "meta.json"
-    with open(meta_json_path, "w", encoding="utf-8") as f:
-        json.dump(content_data["meta_json"], f, ensure_ascii=False, indent=2)
-    print(f"✅ メタデータを保存: {meta_json_path}")
-    
-    # captions.jsonを保存
-    captions_json_path = images_dir / "captions.json"
-    with open(captions_json_path, "w", encoding="utf-8") as f:
-        json.dump(content_data["captions_json"], f, ensure_ascii=False, indent=2)
-    print(f"✅ 画像情報を保存: {captions_json_path}")
-    
-    return {
-        "article_dir": article_dir,
-        "images_dir": images_dir,
-        "files": {
-            "ja_md": ja_md_path,
-            "meta_json": meta_json_path,
-            "captions_json": captions_json_path
         }
     }
 
@@ -339,58 +440,70 @@ def rebuild_blog_index():
     print(f"📊 総記事数: {len(posts)}")
 
 def main():
-    parser = argparse.ArgumentParser(description="ブログ記事を生成します")
+    """メイン実行関数"""
+    parser = argparse.ArgumentParser(description="記事生成システム（左右対訳対応版）")
     parser.add_argument("--idea-id", help="使用するアイディアのID")
+    parser.add_argument("--custom-title", help="カスタムタイトル")
     parser.add_argument("--list", action="store_true", help="利用可能なアイディア一覧を表示")
     
     args = parser.parse_args()
     
-    print("🚀 article_generator.py")
-    print("-" * 50)
+    print("🚀 記事生成システム（左右対訳対応版）")
+    print("=" * 50)
     
     if args.list:
         list_available_ideas()
         return
     
-    if not args.idea_id:
-        print("❌ --idea-id を指定してください")
-        print("利用可能なアイディア一覧を見るには --list を使用してください")
+    # ディレクトリ確認
+    ensure_directories()
+    
+    # Claude APIクライアント初期化
+    client = get_anthropic_client()
+    if not client:
         return
     
-    # アイディアを読み込み
-    ideas_data = load_ideas()
-    if not ideas_data:
-        return
-    
-    # 指定されたIDのアイディアを検索
-    idea = find_idea_by_id(ideas_data, args.idea_id)
-    if not idea:
-        print(f"❌ ID '{args.idea_id}' のアイディアが見つかりません")
+    # アイディアの準備
+    if args.custom_title:
+        idea = {
+            "id": f"custom-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+            "title": {"ja": args.custom_title},
+            "category": "カスタム",
+            "target_audience": "一般",
+            "key_points": ["カスタム記事"],
+            "estimated_word_count": 3000
+        }
+    elif args.idea_id:
+        ideas_data = load_ideas()
+        if not ideas_data:
+            return
+        
+        idea = find_idea_by_id(ideas_data, args.idea_id)
+        if not idea:
+            print(f"❌ アイディアID '{args.idea_id}' が見つかりません")
+            list_available_ideas()
+            return
+    else:
+        print("❌ --idea-id または --custom-title を指定してください")
         list_available_ideas()
         return
     
-    print(f"📝 記事を生成します: {idea.get('title', {}).get('ja', 'N/A')}")
-    print(f"🏷️  ID: {args.idea_id}")
-    
-    # 記事コンテンツを生成
-    content_data = generate_article_content(idea)
-    if not content_data:
-        print("❌ 記事の生成に失敗しました")
+    # 記事生成
+    article_data = generate_article_content(client, idea)
+    if not article_data:
+        print("❌ 記事生成に失敗しました")
         return
     
-    # ファイルを保存
-    saved_files = save_generated_files(args.idea_id, content_data)
+    # ファイル保存
+    article_dir = save_article_files(article_data, idea["id"])
     
-    # ブログインデックスを再構築
-    rebuild_blog_index()
-    
-    print("\n✅ 記事生成が完了しました！")
-    print(f"📁 記事ディレクトリ: {saved_files['article_dir']}")
-    print(f"🖼️  画像ディレクトリ: {saved_files['images_dir']}")
-    print("\n次のステップ:")
-    print("1. translator.py で他言語への翻訳")
-    print("2. image_generator.py で画像生成")
-    print("3. validator.py でファイル構成チェック")
+    print(f"\n🎉 記事生成完了!")
+    print(f"📁 保存先: {article_dir}")
+    print(f"� 左右対訳ページで確認:")
+    print(f"   http://localhost:3001/ja/compare/{idea['id']}?left=ja&right=en")
+    print(f"\n📝 次のステップ:")
+    print(f"   1. translator.py で多言語化")
+    print(f"   2. image_generator.py で画像生成")
 
 if __name__ == "__main__":
     main()

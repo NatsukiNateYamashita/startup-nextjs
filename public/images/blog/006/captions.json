@@ -1,110 +1,38 @@
 {
   "hero.jpg": {
-    "alt": {
-      "ja": "AIを活用した日本語学習ロードマップのイメージ図",
-      "en": "AI-powered Japanese learning roadmap visualization",
-      "zh-CN": "AIを活用した日本語学習ロードマップのイメージ図",
-      "zh-TW": "AIを活用した日本語学習ロードマップのイメージ図"
-    },
-    "caption": {
-      "ja": "AIツールを使って効率的な日本語学習計画を立てる",
-      "en": "Creating efficient Japanese learning plans with AI tools",
-      "zh-CN": "AIツールを使って効率的な日本語学習計画を立てる",
-      "zh-TW": "AIツールを使って効率的な日本語学習計画を立てる"
-    },
-    "photographer": "mos design",
-    "unsplash_url": "https://unsplash.com/photos/a-group-of-people-walking-down-a-street-at-night-EtYUNdk9SxM",
-    "source": "Unsplash",
-    "search_query": "AI-powered Japanese learning roadmap visualization Creating efficient Japanese"
+    "ja": "AIを活用した日本語学習のイメージ図",
+    "en": "Image of AI-powered Japanese language learning",
+    "zh-CN": "AI辅助日语学习的示意图",
+    "zh-TW": "AI輔助日語學習的示意圖",
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-oxYDkHXnH6rEzHKwvcBW8pu6.png?st=2025-07-08T13%3A05%3A29Z&se=2025-07-08T15%3A05%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T04%3A28%3A04Z&ske=2025-07-09T04%3A28%3A04Z&sks=b&skv=2024-08-04&sig=6rUNMDSQCah8BNfu5LwJwUMePLqu2aG5lA0035s4RJk%3D",
+    "prompt": "Image of AI-powered Japanese language learning | Hero image, modern, clean, web design"
   },
-  "ai-level-assessment.jpg": {
-    "alt": {
-      "ja": "AIによる日本語レベル評価システムの画面",
-      "en": "AI Japanese level assessment system interface",
-      "zh-CN": "AIによる日本語レベル評価システムの画面",
-      "zh-TW": "AIによる日本語レベル評価システムの画面"
-    },
-    "caption": {
-      "ja": "AIが学習者の現在のレベルを正確に評価",
-      "en": "AI accurately assesses learner's current level",
-      "zh-CN": "AIが学習者の現在のレベルを正確に評価",
-      "zh-TW": "AIが学習者の現在のレベルを正確に評価"
-    },
-    "photographer": "James Pere",
-    "unsplash_url": "https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-HGlakKf68rg",
-    "source": "Unsplash",
-    "search_query": "AI Japanese level assessment system interface AI accurately"
+  "ai-learning-plan.jpg": {
+    "ja": "AIツールを使った学習計画作成の流れ",
+    "en": "Flow of creating learning plans using AI tools",
+    "zh-CN": "使用AI工具制定学习计划的流程",
+    "zh-TW": "使用AI工具制定學習計劃的流程",
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-GBhQTOXsPQ3gPmN046B2dQQL.png?st=2025-07-08T13%3A05%3A50Z&se=2025-07-08T15%3A05%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A34%3A20Z&ske=2025-07-08T21%3A34%3A20Z&sks=b&skv=2024-08-04&sig=qZtyn7WCz5q%2BkBec7lEXlm1KcczsF7sTzrt6%2BhDqs5Q%3D",
+    "prompt": "Flow of creating learning plans using AI tools"
   },
-  "beginner-roadmap.jpg": {
-    "alt": {
-      "ja": "初級レベル向けの学習ロードマップ図",
-      "en": "Learning roadmap for beginner level students",
-      "zh-CN": "初級レベル向けの学習ロードマップ図",
-      "zh-TW": "初級レベル向けの学習ロードマップ図"
-    },
-    "caption": {
-      "ja": "初級学習者向けの体系的な学習計画",
-      "en": "Systematic learning plan for beginner students",
-      "zh-CN": "初級学習者向けの体系的な学習計画",
-      "zh-TW": "初級学習者向けの体系的な学習計画"
-    },
-    "photographer": "Remi Chow",
-    "unsplash_url": "https://unsplash.com/photos/a-person-drawing-on-a-piece-of-paper-dBoaeqHsK3k",
-    "source": "Unsplash",
-    "search_query": "Learning roadmap for beginner level students Systematic learning"
+  "level-roadmap.jpg": {
+    "ja": "レベル別日本語学習ロードマップの概要図",
+    "en": "Overview of level-specific Japanese learning roadmaps",
+    "zh-CN": "分级日语学习路线图概览",
+    "zh-TW": "分級日語學習路線圖概覽",
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-P6wX5uOPeYG4N1sH8nzZU9Ea.png?st=2025-07-08T13%3A06%3A16Z&se=2025-07-08T15%3A06%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T08%3A24%3A47Z&ske=2025-07-09T08%3A24%3A47Z&sks=b&skv=2024-08-04&sig=C4DOEyYhO72dpRHxrK4ngQP0kI5nLBBGXOjHZrSBz1o%3D",
+    "prompt": "Overview of level-specific Japanese learning roadmaps"
   },
-  "advanced-roadmap.jpg": {
-    "alt": {
-      "ja": "上級レベル向けの専門的な学習ロードマップ",
-      "en": "Specialized learning roadmap for advanced level",
-      "zh-CN": "上級レベル向けの専門的な学習ロードマップ",
-      "zh-TW": "上級レベル向けの専門的な学習ロードマップ"
-    },
-    "caption": {
-      "ja": "上級学習者向けの高度な学習戦略",
-      "en": "Advanced learning strategies for upper-level students",
-      "zh-CN": "上級学習者向けの高度な学習戦略",
-      "zh-TW": "上級学習者向けの高度な学習戦略"
-    },
-    "photographer": "- Landsmann -",
-    "unsplash_url": "https://unsplash.com/photos/a-red-apple-sitting-on-top-of-a-book-ev0qf1tStbQ",
-    "source": "Unsplash",
-    "search_query": "Specialized learning roadmap for advanced level Advanced learning"
-  },
-  "resource-selection.jpg": {
-    "alt": {
-      "ja": "AIによる学習リソース選択システム",
-      "en": "AI-powered learning resource selection system",
-      "zh-CN": "AIによる学習リソース選択システム",
-      "zh-TW": "AIによる学習リソース選択システム"
-    },
-    "caption": {
-      "ja": "個人に最適化された学習リソースの推薦",
-      "en": "Personalized learning resource recommendations",
-      "zh-CN": "個人に最適化された学習リソースの推薦",
-      "zh-TW": "個人に最適化された学習リソースの推薦"
-    },
-    "photographer": "Brett Jordan",
-    "unsplash_url": "https://unsplash.com/photos/brown-wooden-blocks-on-white-surface-4csdTPXTM1A",
-    "source": "Unsplash",
-    "search_query": "AI-powered learning resource selection system Personalized learning resource"
-  },
-  "progress-dashboard.jpg": {
-    "alt": {
-      "ja": "学習進捗管理ダッシュボードの画面",
-      "en": "Learning progress management dashboard",
-      "zh-CN": "学習進捗管理ダッシュボードの画面",
-      "zh-TW": "学習進捗管理ダッシュボードの画面"
-    },
-    "caption": {
-      "ja": "AIによる詳細な学習進捗の可視化",
-      "en": "Detailed learning progress visualization by AI",
-      "zh-CN": "AIによる詳細な学習進捗の可視化",
-      "zh-TW": "AIによる詳細な学習進捗の可視化"
-    },
-    "photographer": "Pawel Czerwinski",
-    "unsplash_url": "https://unsplash.com/photos/a-white-wall-with-a-bunch-of-shelves-on-it-VypYlmYTu7Y",
-    "source": "Unsplash",
-    "search_query": "Learning progress management dashboard Detailed learning progress visualization"
+  "learning-dashboard.jpg": {
+    "ja": "学習データ分析ダッシュボードの表示例",
+    "en": "Example display of learning data analysis dashboard",
+    "zh-CN": "学习数据分析仪表板显示示例",
+    "zh-TW": "學習數據分析儀表板顯示示例",
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-LwOPdZcJWVgivBmJyI1Q3wjx.png?st=2025-07-08T13%3A06%3A39Z&se=2025-07-08T15%3A06%3A39Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A56%3A17Z&ske=2025-07-08T21%3A56%3A17Z&sks=b&skv=2024-08-04&sig=gPhpMpGXuwBLWwaz67PVdN0fmkOP2BpPOsvWjH1Mdmc%3D",
+    "prompt": "Example display of learning data analysis dashboard | Dashboard interface, data visualization"
   }
 }

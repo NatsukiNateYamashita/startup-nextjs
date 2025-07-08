@@ -2,20 +2,33 @@
 
 ## 概要
 Anthropic Claude APIを使用してブログ記事を自動生成・翻訳・画像作成・配置するシステムです。
+**左右対訳表示機能に対応した記事生成に完全対応**しています。
 
 > **🔗 関連ドキュメント**  
 > - [プロジェクト全体概要](../PROJECT_DOCUMENTATION.md) - NIHONGO-AIプロジェクト全体情報  
 > - [ブログ要件定義](../.github/BLOG_REQUIREMENTS.md) - ブログ機能の要件・進捗  
 > - [GitHub Copilot実装ガイド](../.github/.copilot-instructions.md) - 開発ルール・設計規則
 
+## 重要機能：左右対訳対応（sentenceタグ）
+
+当システムは左右対訳表示機能に完全対応しています：
+
+- **sentenceタグの自動付与**: `<!-- s1 -->`, `<!-- s2 -->` などのタグを文章に自動挿入
+- **多言語間の対応関係を保持**: 翻訳時にタグの整合性を維持
+- **既存記事の対応**: `add_sentence_tags.py` で既存記事にもタグ付け可能
+
+左右対訳ページ（`/ja/compare/[slug]?left=ja&right=en`）でシームレスな2言語表示が可能です。
+
 ## システム構成
 
 ### 実行ファイル
 - `idea_generator.py` - 記事アイディア生成
-- `article_generator.py` - 記事・メタデータ・画像情報生成
-- `translator.py` - 多言語翻訳
+- `article_generator.py` - 記事・メタデータ・画像情報生成（左右対訳・sentenceタグ対応）
+- `translator.py` - 多言語翻訳（sentenceタグ保持対応）
 - `image_generator.py` - 画像生成（DALL·E 3/Unsplash API連携・デフォルト: DALL·E 3）
 - `validator.py` - ファイル構成検証・修正
+- `add_sentence_tags.py` - 既存記事のsentenceタグ自動付与ツール
+- `main.py` - 上記ツールを一括実行するメインスクリプト
 
 ### 設定・プロンプトファイル
 - `config.py` - 設定管理
@@ -65,8 +78,11 @@ python main.py full 006
 # 記事アイディア生成
 python idea_generator.py --save
 
-# 記事生成
+# 記事生成（アイディアIDから）
 python article_generator.py --idea-id "006"
+
+# 記事生成（カスタムタイトルで）
+python article_generator.py --custom-title "カスタムタイトル"
 
 # 翻訳実行
 python translator.py --article-id "006"
@@ -100,6 +116,27 @@ startup-nextjs/
     ├── captions.json  # 画像キャプション
     └── *.jpg          # その他の画像
 ```
+
+## 左右対訳対応手順
+
+### 新規記事の場合
+新規記事は `article_generator.py` により自動的にsentenceタグが付与されます。
+
+1. 記事生成: `python article_generator.py --idea-id "011"`
+2. 多言語翻訳: `python translator.py --article-id "011"` 
+3. ブラウザで確認: `http://localhost:3000/ja/compare/011?left=ja&right=en`
+
+### 既存記事の場合
+既存記事には `add_sentence_tags.py` を使用してタグを付与します。
+
+```bash
+# すべての記事にsentenceタグを自動付与
+python add_sentence_tags.py
+
+# 特定の記事のみ処理したい場合はオプション追加予定
+```
+
+左右対訳ページで確認: `http://localhost:3000/ja/compare/[記事ID]?left=ja&right=en`
 
 ## 画像生成システム
 

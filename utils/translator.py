@@ -114,12 +114,23 @@ def update_meta_tags(article_id, translations):
         with open(meta_json_path, "r", encoding="utf-8") as f:
             meta_data = json.load(f)
         
-        # 既存のタグを各言語に適用（簡易実装）
+        # タグの形式をチェック（配列形式か多言語オブジェクト形式か）
         if "tags" in meta_data:
-            base_tags = meta_data["tags"].get("ja", [])
-            for lang in translations.keys():
-                if lang not in meta_data["tags"]:
-                    meta_data["tags"][lang] = base_tags  # 一旦同じタグを設定
+            if isinstance(meta_data["tags"], list):
+                # 新形式：配列の場合は多言語オブジェクトに変換
+                base_tags = meta_data["tags"]
+                meta_data["tags"] = {
+                    "ja": base_tags,
+                    "en": base_tags,  # 一旦同じタグを設定（将来的には翻訳可能）
+                    "zh-CN": base_tags,
+                    "zh-TW": base_tags
+                }
+            elif isinstance(meta_data["tags"], dict):
+                # 旧形式：多言語オブジェクトの場合
+                base_tags = meta_data["tags"].get("ja", [])
+                for lang in translations.keys():
+                    if lang not in meta_data["tags"]:
+                        meta_data["tags"][lang] = base_tags
         
         with open(meta_json_path, "w", encoding="utf-8") as f:
             json.dump(meta_data, f, ensure_ascii=False, indent=2)

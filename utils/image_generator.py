@@ -204,22 +204,44 @@ def create_search_query(
     return full_query.strip()
 
 def generate_image_prompt(image_key: str, caption_data: Dict[str, Any]) -> str:
-    """画像生成用のプロンプトを作成"""
+    """画像生成用のプロンプトを作成（両形式対応）"""
     prompt_parts: list[str] = []
     
-    try: 
-        en_alt: str = caption_data.get("alt", {}).get("en")
-        en_caption: str = caption_data.get("caption", {}).get("en")
-        prompt_parts.append(en_alt)
-        prompt_parts.append(f"Context: {en_caption}")
-    except KeyError:
-        raise ValueError("caption_dataの中にcaption, altのテキストが見つかりません。")
+    # 新形式（直接言語キー）への対応
+    if "en" in caption_data and isinstance(caption_data["en"], str):
+        prompt_parts.append(caption_data["en"])
+        print(f"🔍 新形式のキャプション使用: {caption_data['en']}")
+    # 旧形式（alt/caption構造）への対応  
+    elif "alt" in caption_data or "caption" in caption_data:
+        try: 
+            en_alt: str = caption_data.get("alt", {}).get("en", "")
+            en_caption: str = caption_data.get("caption", {}).get("en", "")
+            if en_alt:
+                prompt_parts.append(en_alt)
+            if en_caption and en_caption != en_alt:
+                prompt_parts.append(f"Context: {en_caption}")
+            print(f"🔍 旧形式のキャプション使用: alt={en_alt}, caption={en_caption}")
+        except AttributeError:
+            # alt/captionがディクショナリでない場合のフォールバック
+            prompt_parts.append("AI learning concept")
+            print(f"⚠️  キャプション形式が不正、デフォルト使用")
+    else:
+        # どちらの形式でもない場合のフォールバック
+        prompt_parts.append("Educational concept illustration")
+        print(f"⚠️  キャプションが見つからない、デフォルト使用")
         
     # 画像の種類に応じたスタイル指定
     if "hero" in image_key.lower():
         prompt_parts.append("Hero image, modern, clean, web design")
+    elif "dashboard" in image_key.lower():
+        prompt_parts.append("Dashboard interface, data visualization")
+    elif "chart" in image_key.lower() or "graph" in image_key.lower():
+        prompt_parts.append("Chart, graph, data visualization")
+    elif "diagram" in image_key.lower():
+        prompt_parts.append("Diagram, flowchart, process illustration")
     
-    prompt: str = " | ".join(prompt_parts)
+    prompt: str = " | ".join(filter(None, prompt_parts))
+    print(f"🎨 生成プロンプト: {prompt}")
     return prompt
 
 def generate_with_unsplash(article_id: str, captions_data: Dict[str, Any]) -> list[str]:

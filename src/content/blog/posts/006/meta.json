@@ -1,37 +1,40 @@
 {
   "authorId": "nihongo-ai",
+  "publishDate": "2025-07-08T23:01:15.714496",
+  "category": "日本語教育/AI",
   "tags": {
     "ja": [
       "AI学習",
       "日本語教育",
       "学習計画",
       "JLPT",
-      "語学学習"
+      "個別化学習"
     ],
     "en": [
-      "AI learning",
-      "Japanese education",
-      "study plan",
+      "AI学習",
+      "日本語教育",
+      "学習計画",
       "JLPT",
-      "language learning"
+      "個別化学習"
     ],
     "zh-CN": [
-      "AI学习",
-      "日语教育",
-      "学习计划",
+      "AI学習",
+      "日本語教育",
+      "学習計画",
       "JLPT",
-      "语言学习"
+      "個別化学習"
     ],
     "zh-TW": [
-      "AI學習",
-      "日語教育",
-      "學習計劃",
+      "AI学習",
+      "日本語教育",
+      "学習計画",
       "JLPT",
-      "語言學習"
+      "個別化学習"
     ]
   },
-  "publishDate": "2025-07-07T17:51:55.528858",
+  "readingTime": "8分",
+  "difficulty": "初級",
   "heroImage": "/images/blog/006/hero.jpg",
-  "featured": false,
+  "featured": true,
   "relatedPosts": []
 }

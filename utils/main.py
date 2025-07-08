@@ -48,11 +48,18 @@ def generate_ideas(theme=None):
     
     return run_script("idea_generator.py", args)
 
-def generate_article(idea_id):
+def generate_article(idea_id=None, custom_title=None):
     """記事生成"""
-    print(f"📝 記事生成を開始... (ID: {idea_id})")
-    
-    args = ["--idea-id", idea_id]
+    if idea_id:
+        print(f"📝 記事生成を開始... (ID: {idea_id})")
+        args = ["--idea-id", idea_id]
+    elif custom_title:
+        print(f"📝 カスタムタイトルで記事生成を開始... (タイトル: {custom_title})")
+        args = ["--custom-title", custom_title]
+    else:
+        print("❌ idea_idまたはcustom_titleが必要です")
+        return False
+        
     return run_script("article_generator.py", args)
 
 def translate_article(article_id, languages=None):
@@ -135,7 +142,9 @@ def main():
     
     # 記事生成
     generate_parser = subparsers.add_parser("generate", help="記事を生成")
-    generate_parser.add_argument("idea_id", help="使用するアイディアID")
+    generate_group = generate_parser.add_mutually_exclusive_group(required=True)
+    generate_group.add_argument("--idea-id", help="使用するアイディアID")
+    generate_group.add_argument("--custom-title", help="カスタムタイトル")
     
     # 翻訳
     translate_parser = subparsers.add_parser("translate", help="記事を翻訳")
@@ -172,7 +181,7 @@ def main():
         success = generate_ideas(args.theme)
         
     elif args.command == "generate":
-        success = generate_article(args.idea_id)
+        success = generate_article(args.idea_id, args.custom_title)
         
     elif args.command == "translate":
         success = translate_article(args.article_id, args.languages)

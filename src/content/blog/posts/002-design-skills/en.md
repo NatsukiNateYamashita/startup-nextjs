@@ -3,33 +3,45 @@ title: "9 Easy Ways to Improve Your Design Skills"
 excerpt: "Discover practical methods to efficiently improve your design skills. From beginners to advanced designers, learn specific techniques and learning methods you can implement immediately."
 ---
 
+<!-- s1 -->
 # 9 Easy Ways to Improve Your Design Skills
 
+<!-- s2 -->
 Improving design skills is achieved through continuous learning and practice. Here are nine practical methods to efficiently enhance your abilities.
 
+<!-- s3 -->
 ## 1. Make Daily Design Observation a Habit
 
+<!-- s4 -->
 ### Analyze Excellent Designs
 
+<!-- s5 -->
 Develop a habit of consciously observing and analyzing excellent designs in daily life.
 
+<!-- s6 -->
 - **Websites**: Browse design gallery sites
 - **Print Materials**: Posters, brochures, book designs
 - **App UI**: Analyze user-friendly app interfaces
 
+<!-- s7 -->
 ### Break Down Design Elements
 
+<!-- s8 -->
 When you find excellent design, analyze it by breaking it down into these elements:
 
+<!-- s9 -->
 - **Color Composition**: What color combinations are used
 - **Typography**: Font selection and usage
 - **Layout**: Element placement and balance
 - **White Space**: Effective use of negative space
 
+<!-- s10 -->
 ## 2. Master Basic Design Principles
 
+<!-- s11 -->
 ### The Four Principles of Design
 
+<!-- s12 -->
 Understand and practice these four fundamental principles of effective design:
 
 1. **Proximity**
