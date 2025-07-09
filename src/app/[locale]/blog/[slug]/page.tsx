@@ -8,6 +8,8 @@ import SharePost from "@/app/[locale]/components/Blog/SharePost";
 import TagButton from "@/app/[locale]/components/Blog/TagButton";
 import NewsLatterBox from "@/app/[locale]/components/Contact/NewsLatterBox";
 import BlogContent from "@/app/[locale]/components/Blog/BlogContent";
+import ScrollToTop from "@/app/[locale]/components/ScrollToTop";
+import CompareToggleButton from "@/app/[locale]/components/CompareToggleButton";
 
 type Props = {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -362,6 +364,15 @@ const BlogDetailsPage = async ({ params }: Props) => {
           </span>
         </div>
       </section>
+
+      {/* フローティングボタン群 */}
+      <div className="fixed right-8 bottom-20 z-99">
+        {/* 対訳ボタン */}
+        <CompareToggleButton locale={locale} slug={slug} />
+        
+        {/* ScrollToTopボタン */}
+        <ScrollToTop />
+      </div>
     </>
   );
 };

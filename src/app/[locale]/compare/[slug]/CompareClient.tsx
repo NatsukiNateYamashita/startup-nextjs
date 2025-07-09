@@ -3,12 +3,15 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { BilingualSentenceWithTag } from "@/lib/blog/compare";
+import ScrollToTop from "@/app/[locale]/components/ScrollToTop";
+import CompareToggleButton from "@/app/[locale]/components/CompareToggleButton";
 
 interface Props {
   leftLang: string;
   rightLang: string;
   bilingual: BilingualSentenceWithTag[];
   slug: string;
+  locale: string;
 }
 
 // 文レンダリング用コンポーネント分割（高さ同期対応版）
@@ -47,9 +50,9 @@ const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isE
         };
       default:
         return {
-          containerMargin: 'mb-1',
-          innerMargin: 'mb-0.5',
-          padding: 'p-2'
+          containerMargin: "mb-0.5",
+          innerMargin: "mb-0.5",
+          padding: "p-2",
         };
     }
   };
@@ -120,15 +123,15 @@ const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isE
         );
       case "li": 
         return (
-          <div 
-            className={`${spacing.innerMargin} ${getFontSizeClasses('default')} text-body-color dark:text-body-color-dark`}
+          <div
+            className={`${spacing.innerMargin} ${getFontSizeClasses("default")} ${commonClasses}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       default: 
         return (
           <div 
-            className={`${spacing.innerMargin} ${getFontSizeClasses('default')} text-body-color dark:text-body-color-dark`}
+            className={`${spacing.innerMargin} ${getFontSizeClasses('default')} ${commonClasses}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
@@ -283,9 +286,9 @@ const BilingualPair = ({
   );
 };
 
-export default function CompareClient({ leftLang, rightLang, bilingual, slug }: Props) {
+export default function CompareClient({ leftLang, rightLang, bilingual, slug, locale }: Props) {
   const [hoverId, setHoverId] = useState<string | null>(null);
-  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
+  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('small');
   const t = useTranslations('Compare');
   const router = useRouter();
   const searchParams = useSearchParams();
