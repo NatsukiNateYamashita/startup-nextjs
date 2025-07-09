@@ -24,34 +24,66 @@ interface SentenceProps {
 }
 
 const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isEmpty = false, fontSize, minHeight }: SentenceProps) => {
-  const baseClasses = `mb-4 transition-all duration-200 cursor-pointer rounded-md ${
+  // フォントサイズ別の余白設定
+  const getSpacingClasses = (fontSize: 'small' | 'medium' | 'large') => {
+    switch (fontSize) {
+      case 'small':
+        return {
+          containerMargin: 'mb-0.5',
+          innerMargin: 'mb-0.5',
+          padding: 'p-2'
+        };
+      case 'medium':
+        return {
+          containerMargin: 'mb-1',
+          innerMargin: 'mb-0.5',
+          padding: 'p-2'
+        };
+      case 'large':
+        return {
+          containerMargin: 'mb-1.5',
+          innerMargin: 'mb-1',
+          padding: 'p-2'
+        };
+      default:
+        return {
+          containerMargin: 'mb-1',
+          innerMargin: 'mb-0.5',
+          padding: 'p-2'
+        };
+    }
+  };
+
+  const spacing = getSpacingClasses(fontSize);
+
+  const baseClasses = `${spacing.containerMargin} transition-all duration-200 cursor-pointer rounded-md ${
     isActive 
-      ? "bg-primary/20 ring-2 ring-primary/30 p-3" 
+      ? `bg-primary/20 ring-2 ring-primary/30 ${spacing.padding}` 
       : isEmpty 
-        ? "hover:bg-gray-50/50 dark:hover:bg-gray-800/50 p-2" 
-        : "hover:bg-gray-50 dark:hover:bg-gray-800 p-2"
+        ? `hover:bg-gray-50/50 dark:hover:bg-gray-800/50 ${spacing.padding}` 
+        : `hover:bg-gray-50 dark:hover:bg-gray-800 ${spacing.padding}`
   } ${isEmpty ? "opacity-60" : ""}`;
   
-  // フォントサイズのマッピング
+  // フォントサイズと行間を一緒に管理
   const getFontSizeClasses = (tag: string) => {
     const sizeMap = {
       small: {
-        h1: "text-lg sm:text-2xl md:text-3xl",
-        h2: "text-base sm:text-lg lg:text-base xl:text-lg",
-        h3: "text-sm sm:text-base",
-        default: "text-xs sm:text-sm"
+        h1: "text-lg sm:text-2xl md:text-3xl leading-tight",
+        h2: "text-base sm:text-lg lg:text-base xl:text-lg leading-snug",
+        h3: "text-sm sm:text-base leading-normal",
+        default: "text-xs sm:text-sm leading-normal"
       },
       medium: {
-        h1: "text-2xl sm:text-3xl md:text-4xl",
-        h2: "text-xl sm:text-2xl lg:text-xl xl:text-2xl",
-        h3: "text-lg sm:text-xl",
-        default: "text-base sm:text-lg"
+        h1: "text-2xl sm:text-3xl md:text-4xl leading-tight",
+        h2: "text-xl sm:text-2xl lg:text-xl xl:text-2xl leading-snug",
+        h3: "text-lg sm:text-xl leading-normal",
+        default: "text-base sm:text-lg leading-relaxed"
       },
       large: {
-        h1: "text-3xl sm:text-4xl md:text-5xl",
-        h2: "text-2xl sm:text-3xl lg:text-2xl xl:text-3xl",
-        h3: "text-xl sm:text-2xl",
-        default: "text-lg sm:text-xl"
+        h1: "text-3xl sm:text-4xl md:text-5xl leading-tight",
+        h2: "text-2xl sm:text-3xl lg:text-2xl xl:text-3xl leading-snug",
+        h3: "text-xl sm:text-2xl leading-normal",
+        default: "text-lg sm:text-xl leading-relaxed"
       }
     };
     
@@ -68,35 +100,35 @@ const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isE
       case "h1": 
         return (
           <div 
-            className={`mb-1 ${getFontSizeClasses('h1')} font-bold leading-tight ${commonClasses} leading-tight prose-h1:mb-0`}
+            className={`${spacing.innerMargin} ${getFontSizeClasses('h1')} font-bold ${commonClasses}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       case "h2": 
         return (
           <div 
-            className={`mb-1 ${getFontSizeClasses('h2')} font-bold ${commonClasses} prose-h2:mb-0`}
+            className={`${spacing.innerMargin} ${getFontSizeClasses('h2')} font-bold ${commonClasses}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       case "h3": 
         return (
           <div 
-            className={`mb-1 ${getFontSizeClasses('h3')} font-semibold ${commonClasses} prose-h3:mb-0`}
+            className={`${spacing.innerMargin} ${getFontSizeClasses('h3')} font-semibold ${commonClasses}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       case "li": 
         return (
           <div 
-            className={`mb-1 ${getFontSizeClasses('default')} !leading-relaxed text-body-color dark:text-body-color-dark prose-li:mb-0`}
+            className={`${spacing.innerMargin} ${getFontSizeClasses('default')} text-body-color dark:text-body-color-dark`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       default: 
         return (
           <div 
-            className={`mb-1 ${getFontSizeClasses('default')} !leading-relaxed text-body-color dark:text-body-color-dark prose-p:mb-0`}
+            className={`${spacing.innerMargin} ${getFontSizeClasses('default')} text-body-color dark:text-body-color-dark`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
@@ -141,34 +173,79 @@ const BilingualPair = ({
   const rightRef = useRef<HTMLDivElement>(null);
   const [minHeight, setMinHeight] = useState<string>('auto');
 
-  // 高さを同期させる効果
-  const syncHeight = useCallback(() => {
+  // 高さ同期のリセット機能追加
+  const resetHeight = useCallback(() => {
+    setMinHeight('auto');
     if (leftRef.current && rightRef.current) {
-      // 一度高さをリセット
       leftRef.current.style.minHeight = 'auto';
       rightRef.current.style.minHeight = 'auto';
-      
-      // 自然な高さを取得
-      const leftHeight = leftRef.current.offsetHeight;
-      const rightHeight = rightRef.current.offsetHeight;
-      const maxHeight = Math.max(leftHeight, rightHeight);
-      
-      // 両方に同じ最小高さを設定
-      const newMinHeight = `${maxHeight}px`;
-      setMinHeight(newMinHeight);
     }
   }, []);
 
-  // コンテンツが変更されたときに高さを同期
+  // 高さを同期させる効果（完全リセット版）
+  const syncHeight = useCallback(() => {
+    // まず完全にリセット
+    resetHeight();
+    
+    // CSS適用を確実に待つ
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        if (leftRef.current && rightRef.current) {
+          // 自然な高さを取得
+          const leftHeight = leftRef.current.offsetHeight;
+          const rightHeight = rightRef.current.offsetHeight;
+          const maxHeight = Math.max(leftHeight, rightHeight);
+          
+          // 同じ高さを設定（ただし、差が小さい場合はスキップ）
+          if (Math.abs(leftHeight - rightHeight) > 5) {
+            const newMinHeight = `${maxHeight}px`;
+            setMinHeight(newMinHeight);
+          }
+        }
+      });
+    }, 150); // より長い遅延でCSS適用確実に待機
+  }, [resetHeight]);
+
+  // フォントサイズ変更時は必ずリセット
   useEffect(() => {
-    syncHeight();
-    // ウィンドウリサイズ時にも再計算
-    window.addEventListener('resize', syncHeight);
-    return () => window.removeEventListener('resize', syncHeight);
-  }, [sentence.left, sentence.right, fontSize, syncHeight]);
+    resetHeight(); // まずリセット
+    const timer = setTimeout(() => {
+      syncHeight(); // その後同期
+    }, 200); // フォントサイズ変更後に十分な遅延
+    
+    return () => clearTimeout(timer);
+  }, [fontSize, resetHeight, syncHeight]);
+
+  // コンテンツ変更時の同期（フォントサイズ変更以外）
+  useEffect(() => {
+    if (sentence.left || sentence.right) {
+      syncHeight();
+    }
+  }, [sentence.left, sentence.right, syncHeight]);
+
+  // ウィンドウリサイズ時の同期
+  useEffect(() => {
+    const handleResize = () => {
+      resetHeight();
+      setTimeout(() => syncHeight(), 100);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [resetHeight, syncHeight]);
+
+  // ペア間の余白もフォントサイズに連動
+  const getPairMargin = (fontSize: 'small' | 'medium' | 'large') => {
+    switch (fontSize) {
+      case 'small': return 'mb-1';
+      case 'medium': return 'mb-1.5';
+      case 'large': return 'mb-2';
+      default: return 'mb-1.5';
+    }
+  };
 
   return (
-    <div className="grid grid-cols-2 gap-4 mb-4">
+    <div className={`grid grid-cols-2 gap-4 ${getPairMargin(fontSize)}`}>
       {/* Left Panel */}
       <div ref={leftRef}>
         <SentenceRenderer
