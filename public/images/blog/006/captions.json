@@ -1,38 +1,87 @@
 {
   "hero.jpg": {
-    "ja": "AIを活用した日本語学習のイメージ図",
-    "en": "Image of AI-powered Japanese language learning",
-    "zh-CN": "AI辅助日语学习的示意图",
-    "zh-TW": "AI輔助日語學習的示意圖",
+    "alt": {
+      "ja": "AIを活用した日本語学習のイメージ",
+      "en": "AI-powered Japanese learning concept",
+      "zh-CN": "AI辅助日语学习概念图",
+      "zh-TW": "AI輔助日語學習概念圖"
+    },
+    "caption": {
+      "ja": "現代のAI技術が日本語学習を革新している様子",
+      "en": "Modern AI technology revolutionizing Japanese language learning",
+      "zh-CN": "现代AI技术正在革新日语学习",
+      "zh-TW": "現代AI技術正在革新日語學習"
+    },
     "source": "OpenAI DALL·E 3",
-    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-oxYDkHXnH6rEzHKwvcBW8pu6.png?st=2025-07-08T13%3A05%3A29Z&se=2025-07-08T15%3A05%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T04%3A28%3A04Z&ske=2025-07-09T04%3A28%3A04Z&sks=b&skv=2024-08-04&sig=6rUNMDSQCah8BNfu5LwJwUMePLqu2aG5lA0035s4RJk%3D",
-    "prompt": "Image of AI-powered Japanese language learning | Hero image, modern, clean, web design"
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-UdSgzYfBPL0pm4prm5GIRqns.png?st=2025-07-08T23%3A46%3A45Z&se=2025-07-09T01%3A46%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T02%3A07%3A03Z&ske=2025-07-09T02%3A07%3A03Z&sks=b&skv=2024-08-04&sig=ErzlJ2zrXbj0YYHCl5o/OcOtnOHbQ0NNFaLg2x5q85A%3D",
+    "prompt": "AI-powered Japanese learning concept | Context: Modern AI technology revolutionizing Japanese language learning | Hero image, modern, clean, web design"
   },
-  "ai-learning-plan.jpg": {
-    "ja": "AIツールを使った学習計画作成の流れ",
-    "en": "Flow of creating learning plans using AI tools",
-    "zh-CN": "使用AI工具制定学习计划的流程",
-    "zh-TW": "使用AI工具制定學習計劃的流程",
+  "ai-tools-types.jpg": {
+    "alt": {
+      "ja": "AI学習ツールの種類を示すインフォグラフィック",
+      "en": "Infographic showing types of AI learning tools",
+      "zh-CN": "展示AI学习工具类型的信息图",
+      "zh-TW": "展示AI學習工具類型的資訊圖"
+    },
+    "caption": {
+      "ja": "様々なAI学習支援ツールの分類と特徴",
+      "en": "Classification and features of various AI learning support tools",
+      "zh-CN": "各种AI学习支援工具的分类与特征",
+      "zh-TW": "各種AI學習支援工具的分類與特徵"
+    },
     "source": "OpenAI DALL·E 3",
-    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-GBhQTOXsPQ3gPmN046B2dQQL.png?st=2025-07-08T13%3A05%3A50Z&se=2025-07-08T15%3A05%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A34%3A20Z&ske=2025-07-08T21%3A34%3A20Z&sks=b&skv=2024-08-04&sig=qZtyn7WCz5q%2BkBec7lEXlm1KcczsF7sTzrt6%2BhDqs5Q%3D",
-    "prompt": "Flow of creating learning plans using AI tools"
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-S5PRVTwAGrZlnZt7qY1Sp1QN.png?st=2025-07-08T23%3A47%3A09Z&se=2025-07-09T01%3A47%3A09Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-09T00%3A47%3A09Z&ske=2025-07-10T00%3A47%3A09Z&sks=b&skv=2024-08-04&sig=Xi76njwVx6zHh4rwIvWpj%2BJYbzNDItWFrJ3ws1LBiAg%3D",
+    "prompt": "Infographic showing types of AI learning tools | Context: Classification and features of various AI learning support tools"
   },
-  "level-roadmap.jpg": {
-    "ja": "レベル別日本語学習ロードマップの概要図",
-    "en": "Overview of level-specific Japanese learning roadmaps",
-    "zh-CN": "分级日语学习路线图概览",
-    "zh-TW": "分級日語學習路線圖概覽",
+  "intermediate-learning.jpg": {
+    "alt": {
+      "ja": "中級レベルの日本語学習風景",
+      "en": "Intermediate level Japanese learning scene",
+      "zh-CN": "中级日语学习场景",
+      "zh-TW": "中級日語學習場景"
+    },
+    "caption": {
+      "ja": "AIツールを活用した中級レベルの実践的学習",
+      "en": "Practical intermediate-level learning using AI tools",
+      "zh-CN": "使用AI工具进行中级实践学习",
+      "zh-TW": "使用AI工具進行中級實踐學習"
+    },
     "source": "OpenAI DALL·E 3",
-    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-P6wX5uOPeYG4N1sH8nzZU9Ea.png?st=2025-07-08T13%3A06%3A16Z&se=2025-07-08T15%3A06%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T08%3A24%3A47Z&ske=2025-07-09T08%3A24%3A47Z&sks=b&skv=2024-08-04&sig=C4DOEyYhO72dpRHxrK4ngQP0kI5nLBBGXOjHZrSBz1o%3D",
-    "prompt": "Overview of level-specific Japanese learning roadmaps"
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-iQ5ntuMgCRSXAifhU8PpFhTa.png?st=2025-07-08T23%3A47%3A30Z&se=2025-07-09T01%3A47%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T10%3A36%3A57Z&ske=2025-07-09T10%3A36%3A57Z&sks=b&skv=2024-08-04&sig=McBN5qJgD/faxYRCr2a4pEiYAL3x%2B%2BV9lE/6OCdc8Kc%3D",
+    "prompt": "Intermediate level Japanese learning scene | Context: Practical intermediate-level learning using AI tools"
   },
-  "learning-dashboard.jpg": {
-    "ja": "学習データ分析ダッシュボードの表示例",
-    "en": "Example display of learning data analysis dashboard",
-    "zh-CN": "学习数据分析仪表板显示示例",
-    "zh-TW": "學習數據分析儀表板顯示示例",
+  "learning-analytics.jpg": {
+    "alt": {
+      "ja": "学習データの分析画面",
+      "en": "Learning data analysis dashboard",
+      "zh-CN": "学习数据分析界面",
+      "zh-TW": "學習數據分析界面"
+    },
+    "caption": {
+      "ja": "AIによる学習進捗の詳細分析とレポート",
+      "en": "Detailed analysis and reporting of learning progress by AI",
+      "zh-CN": "AI对学习进度的详细分析与报告",
+      "zh-TW": "AI對學習進度的詳細分析與報告"
+    },
     "source": "OpenAI DALL·E 3",
-    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-LwOPdZcJWVgivBmJyI1Q3wjx.png?st=2025-07-08T13%3A06%3A39Z&se=2025-07-08T15%3A06%3A39Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A56%3A17Z&ske=2025-07-08T21%3A56%3A17Z&sks=b&skv=2024-08-04&sig=gPhpMpGXuwBLWwaz67PVdN0fmkOP2BpPOsvWjH1Mdmc%3D",
-    "prompt": "Example display of learning data analysis dashboard | Dashboard interface, data visualization"
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-xK86ZzP9UN8COA2tf0AEQARr.png?st=2025-07-08T23%3A47%3A57Z&se=2025-07-09T01%3A47%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-09T00%3A47%3A57Z&ske=2025-07-10T00%3A47%3A57Z&sks=b&skv=2024-08-04&sig=Nkv4GNFXSZ2Ng595T9H7tyBw%2BerYJHVoyaq8jaITe8M%3D",
+    "prompt": "Learning data analysis dashboard | Context: Detailed analysis and reporting of learning progress by AI"
+  },
+  "tool-selection-chart.jpg": {
+    "alt": {
+      "ja": "目標別ツール選択チャート",
+      "en": "Goal-based tool selection chart",
+      "zh-CN": "基于目标的工具选择图表",
+      "zh-TW": "基於目標的工具選擇圖表"
+    },
+    "caption": {
+      "ja": "学習目標に応じた最適なAIツールの選択ガイド",
+      "en": "Guide for selecting optimal AI tools based on learning goals",
+      "zh-CN": "根据学习目标选择最佳AI工具的指南",
+      "zh-TW": "根據學習目標選擇最佳AI工具的指南"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-YKXKn3Pkj7zz56LyzUpo5Qar.png?st=2025-07-08T23%3A48%3A16Z&se=2025-07-09T01%3A48%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T15%3A52%3A48Z&ske=2025-07-09T15%3A52%3A48Z&sks=b&skv=2024-08-04&sig=4lyzQ50tu8a9Gck4s3FptsvrOnS0hED9PRCtgGaDGaE%3D",
+    "prompt": "Goal-based tool selection chart | Context: Guide for selecting optimal AI tools based on learning goals | Chart, graph, data visualization"
   }
 }
