@@ -1,36 +1,39 @@
 {
   "authorId": "nihongo-ai",
+  "publishDate": "2025-07-09T12:59:21.960688",
+  "category": "日本語教育/AI",
   "tags": {
     "ja": [
       "ChatGPT",
       "日本語教育",
-      "AI教材作成",
-      "プロンプト",
-      "教育DX"
+      "教材作成",
+      "AI活用",
+      "効率化"
     ],
     "en": [
       "ChatGPT",
-      "Japanese-education",
-      "AI-materials",
-      "prompt",
-      "educational-technology"
+      "日本語教育",
+      "教材作成",
+      "AI活用",
+      "効率化"
     ],
     "zh-CN": [
       "ChatGPT",
-      "日语教育",
-      "AI教材",
-      "提示词",
-      "教育技术"
+      "日本語教育",
+      "教材作成",
+      "AI活用",
+      "効率化"
     ],
     "zh-TW": [
       "ChatGPT",
-      "日語教育",
-      "AI教材",
-      "提示詞",
-      "教育科技"
+      "日本語教育",
+      "教材作成",
+      "AI活用",
+      "効率化"
     ]
   },
-  "publishDate": "2025-07-07T15:36:07.889420",
+  "readingTime": "7分",
+  "difficulty": "初級",
   "heroImage": "/images/blog/007/hero.jpg",
   "featured": false,
   "relatedPosts": []

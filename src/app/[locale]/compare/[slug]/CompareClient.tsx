@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { BilingualSentenceWithTag } from "@/lib/blog/compare";
@@ -11,7 +11,7 @@ interface Props {
   slug: string;
 }
 
-// 文レンダリング用コンポーネント分割
+// 文レンダリング用コンポーネント分割（高さ同期対応版）
 interface SentenceProps {
   html: string;
   tag?: string;
@@ -20,9 +20,10 @@ interface SentenceProps {
   onMouseLeave: () => void;
   isEmpty?: boolean;
   fontSize: 'small' | 'medium' | 'large';
+  minHeight?: string; // 最小高さを指定
 }
 
-const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isEmpty = false, fontSize }: SentenceProps) => {
+const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isEmpty = false, fontSize, minHeight }: SentenceProps) => {
   const baseClasses = `mb-4 transition-all duration-200 cursor-pointer rounded-md ${
     isActive 
       ? "bg-primary/20 ring-2 ring-primary/30 p-3" 
@@ -67,35 +68,35 @@ const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isE
       case "h1": 
         return (
           <div 
-            className={`mb-5 ${getFontSizeClasses('h1')} font-bold leading-tight ${commonClasses} leading-tight prose-h1:mb-0`}
+            className={`mb-1 ${getFontSizeClasses('h1')} font-bold leading-tight ${commonClasses} leading-tight prose-h1:mb-0`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       case "h2": 
         return (
           <div 
-            className={`mb-4 ${getFontSizeClasses('h2')} font-bold ${commonClasses} prose-h2:mb-0`}
+            className={`mb-1 ${getFontSizeClasses('h2')} font-bold ${commonClasses} prose-h2:mb-0`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       case "h3": 
         return (
           <div 
-            className={`mb-3 ${getFontSizeClasses('h3')} font-semibold ${commonClasses} prose-h3:mb-0`}
+            className={`mb-1 ${getFontSizeClasses('h3')} font-semibold ${commonClasses} prose-h3:mb-0`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       case "li": 
         return (
           <div 
-            className={`mb-2 ${getFontSizeClasses('default')} !leading-relaxed text-body-color dark:text-body-color-dark prose-li:mb-0`}
+            className={`mb-1 ${getFontSizeClasses('default')} !leading-relaxed text-body-color dark:text-body-color-dark prose-li:mb-0`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
       default: 
         return (
           <div 
-            className={`mb-2 ${getFontSizeClasses('default')} !leading-relaxed text-body-color dark:text-body-color-dark prose-p:mb-0`}
+            className={`mb-1 ${getFontSizeClasses('default')} !leading-relaxed text-body-color dark:text-body-color-dark prose-p:mb-0`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         );
@@ -105,10 +106,102 @@ const SentenceRenderer = ({ html, tag, isActive, onMouseEnter, onMouseLeave, isE
   return (
     <div
       className={baseClasses}
+      style={{ minHeight: minHeight || 'auto' }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       {renderContent()}
+    </div>
+  );
+};
+
+// 新しい対訳ペアコンポーネント
+interface BilingualPairProps {
+  sentence: BilingualSentenceWithTag;
+  leftLang: string;
+  rightLang: string;
+  isActive: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+  fontSize: 'small' | 'medium' | 'large';
+  noCorrespondingMessage: string;
+}
+
+const BilingualPair = ({ 
+  sentence, 
+  leftLang, 
+  rightLang, 
+  isActive, 
+  onMouseEnter, 
+  onMouseLeave, 
+  fontSize,
+  noCorrespondingMessage 
+}: BilingualPairProps) => {
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+  const [minHeight, setMinHeight] = useState<string>('auto');
+
+  // 高さを同期させる効果
+  const syncHeight = useCallback(() => {
+    if (leftRef.current && rightRef.current) {
+      // 一度高さをリセット
+      leftRef.current.style.minHeight = 'auto';
+      rightRef.current.style.minHeight = 'auto';
+      
+      // 自然な高さを取得
+      const leftHeight = leftRef.current.offsetHeight;
+      const rightHeight = rightRef.current.offsetHeight;
+      const maxHeight = Math.max(leftHeight, rightHeight);
+      
+      // 両方に同じ最小高さを設定
+      const newMinHeight = `${maxHeight}px`;
+      setMinHeight(newMinHeight);
+    }
+  }, []);
+
+  // コンテンツが変更されたときに高さを同期
+  useEffect(() => {
+    syncHeight();
+    // ウィンドウリサイズ時にも再計算
+    window.addEventListener('resize', syncHeight);
+    return () => window.removeEventListener('resize', syncHeight);
+  }, [sentence.left, sentence.right, fontSize, syncHeight]);
+
+  return (
+    <div className="grid grid-cols-2 gap-4 mb-4">
+      {/* Left Panel */}
+      <div ref={leftRef}>
+        <SentenceRenderer
+          html={
+            sentence.left ||
+            `<div class="text-gray-400 italic">${noCorrespondingMessage}</div>`
+          }
+          tag={sentence.leftTag}
+          isActive={isActive}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          isEmpty={!sentence.left}
+          fontSize={fontSize}
+          minHeight={minHeight}
+        />
+      </div>
+
+      {/* Right Panel */}
+      <div ref={rightRef}>
+        <SentenceRenderer
+          html={
+            sentence.right ||
+            `<div class="text-gray-400 italic">${noCorrespondingMessage}</div>`
+          }
+          tag={sentence.rightTag}
+          isActive={isActive}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          isEmpty={!sentence.right}
+          fontSize={fontSize}
+          minHeight={minHeight}
+        />
+      </div>
     </div>
   );
 };
@@ -134,32 +227,6 @@ export default function CompareClient({ leftLang, rightLang, bilingual, slug }: 
     params.set(side === 'left' ? 'left' : 'right', newLang);
     router.push(`?${params.toString()}`);
   };
-
-  // スクロール同期用のrefs
-  const leftPanelRef = useRef<HTMLDivElement>(null);
-  const rightPanelRef = useRef<HTMLDivElement>(null);
-
-  // スクロール同期用の状態
-  const [isScrolling, setIsScrolling] = useState(false);
-
-  // スクロール同期ハンドラー
-  const handleScrollSync = useCallback((source: 'left' | 'right') => {
-    if (isScrolling) return;
-    
-    setIsScrolling(true);
-    
-    const sourcePanel = source === 'left' ? leftPanelRef.current : rightPanelRef.current;
-    const targetPanel = source === 'left' ? rightPanelRef.current : leftPanelRef.current;
-    
-    if (sourcePanel && targetPanel) {
-      const scrollRatio = sourcePanel.scrollTop / (sourcePanel.scrollHeight - sourcePanel.clientHeight);
-      const targetScrollTop = scrollRatio * (targetPanel.scrollHeight - targetPanel.clientHeight);
-      targetPanel.scrollTop = targetScrollTop;
-    }
-    
-    // 短時間でスクロールを再度有効化
-    setTimeout(() => setIsScrolling(false), 50);
-  }, [isScrolling]);
 
   return (
     <>
@@ -257,68 +324,35 @@ export default function CompareClient({ leftLang, rightLang, bilingual, slug }: 
         </div>
       </section>
 
-      {/* Comparison Content */}
+      {/* Comparison Content - 新しいレイアウト */}
       <section className="pt-[0px] pb-[120px]">
         <div className="container">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Left Panel */}
-            <div className="w-full">
-              <div className="shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h2 className="mb-6 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-                  {LANG_OPTIONS.find((l) => l.value === leftLang)?.label}
-                </h2>
-                <div
-                  ref={leftPanelRef}
-                  className="max-h-[70vh] space-y-2 overflow-y-auto"
-                  onScroll={() => handleScrollSync("left")}
-                >
-                  {bilingual.map((s) => (
-                    <SentenceRenderer
-                      key={`left-${s.id}`}
-                      html={
-                        s.left ||
-                        `<div class="text-gray-400 italic">${t("noCorrespondingSentence")}</div>`
-                      }
-                      tag={s.leftTag}
-                      isActive={hoverId === s.id}
-                      onMouseEnter={() => setHoverId(s.id)}
-                      onMouseLeave={() => setHoverId(null)}
-                      isEmpty={!s.left}
-                      fontSize={fontSize}
-                    />
-                  ))}
-                </div>
-              </div>
+          <div className="shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
+            {/* Header Row */}
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <h2 className="text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+                {LANG_OPTIONS.find((l) => l.value === leftLang)?.label}
+              </h2>
+              <h2 className="text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+                {LANG_OPTIONS.find((l) => l.value === rightLang)?.label}
+              </h2>
             </div>
 
-            {/* Right Panel */}
-            <div className="w-full">
-              <div className="shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h2 className="mb-6 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-                  {LANG_OPTIONS.find((l) => l.value === rightLang)?.label}
-                </h2>
-                <div
-                  ref={rightPanelRef}
-                  className="max-h-[70vh] space-y-2 overflow-y-auto"
-                  onScroll={() => handleScrollSync("right")}
-                >
-                  {bilingual.map((s) => (
-                    <SentenceRenderer
-                      key={`right-${s.id}`}
-                      html={
-                        s.right ||
-                        `<div class="text-gray-400 italic">${t("noCorrespondingSentence")}</div>`
-                      }
-                      tag={s.rightTag}
-                      isActive={hoverId === s.id}
-                      onMouseEnter={() => setHoverId(s.id)}
-                      onMouseLeave={() => setHoverId(null)}
-                      isEmpty={!s.right}
-                      fontSize={fontSize}
-                    />
-                  ))}
-                </div>
-              </div>
+            {/* Content Rows */}
+            <div className="max-h-[70vh] overflow-y-auto">
+              {bilingual.map((sentence) => (
+                <BilingualPair
+                  key={sentence.id}
+                  sentence={sentence}
+                  leftLang={leftLang}
+                  rightLang={rightLang}
+                  isActive={hoverId === sentence.id}
+                  onMouseEnter={() => setHoverId(sentence.id)}
+                  onMouseLeave={() => setHoverId(null)}
+                  fontSize={fontSize}
+                  noCorrespondingMessage={t("noCorrespondingSentence")}
+                />
+              ))}
             </div>
           </div>
         </div>

@@ -1,41 +1,44 @@
 {
   "authorId": "nihongo-ai",
+  "publishDate": "2025-07-09T13:05:31.682541",
+  "category": "Web開発/日本語教育",
   "tags": {
     "ja": [
-      "Web開発",
       "日本語入力",
       "IME",
-      "フロントエンド",
+      "Web開発",
       "JavaScript",
-      "UI/UX"
+      "フロントエンド",
+      "CompositionEvent"
     ],
     "en": [
-      "web-development",
-      "japanese-input",
-      "ime",
-      "frontend",
-      "javascript",
-      "ui-ux"
+      "日本語入力",
+      "IME",
+      "Web開発",
+      "JavaScript",
+      "フロントエンド",
+      "CompositionEvent"
     ],
     "zh-CN": [
-      "网页开发",
-      "日语输入",
-      "输入法",
-      "前端",
+      "日本語入力",
+      "IME",
+      "Web開発",
       "JavaScript",
-      "用户界面"
+      "フロントエンド",
+      "CompositionEvent"
     ],
     "zh-TW": [
-      "網頁開發",
-      "日語輸入",
-      "輸入法",
-      "前端",
+      "日本語入力",
+      "IME",
+      "Web開発",
       "JavaScript",
-      "使用者介面"
+      "フロントエンド",
+      "CompositionEvent"
     ]
   },
-  "publishDate": "2025-07-07T16:05:59.784924",
+  "readingTime": "8分",
+  "difficulty": "中級",
   "heroImage": "/images/blog/008/hero.jpg",
-  "featured": false,
+  "featured": true,
   "relatedPosts": []
 }
