@@ -36,13 +36,8 @@ def load_prompt_template():
     prompt_file = PROMPTS_DIR / "article_generation_with_sentence_tags.md"
     
     if not prompt_file.exists():
-        print(f"⚠️  左右対訳対応プロンプトが見つかりません: {prompt_file}")
-        print("⚠️  従来版のプロンプトを使用します")
-        prompt_file = PROMPTS_DIR / "article_generation.md"
-    
-    if not prompt_file.exists():
         print(f"❌ プロンプトファイルが見つかりません: {prompt_file}")
-        return None
+        raise FileNotFoundError(f"プロンプトファイルが見つかりません: {prompt_file}")
         
     with open(prompt_file, "r", encoding="utf-8") as f:
         return f.read()
@@ -132,24 +127,24 @@ def load_ideas():
     if not IDEAS_FILE.exists():
         print(f"❌ アイディアファイルが見つかりません: {IDEAS_FILE}")
         print("まず idea_generator.py を実行してアイディアを生成してください。")
-        return None
+        raise FileNotFoundError(f"アイディアファイルが見つかりません: {IDEAS_FILE}")
         
     with open(IDEAS_FILE, "r", encoding="utf-8") as f:
         try:
             return json.load(f)
         except json.JSONDecodeError:
             print("❌ アイディアファイルの形式が不正です")
-            return None
+            raise ValueError("アイディアファイルの形式が不正です")
 
 def find_idea_by_id(ideas_data, idea_id):
     """IDでアイディアを検索"""
     if not ideas_data or "ideas" not in ideas_data:
-        return None
+        raise ValueError("idea_idが不正です")
         
     for idea in ideas_data["ideas"]:
         if idea.get("id") == idea_id:
             return idea
-    return None
+    raise ValueError(f"アイディアID '{idea_id}' が見つかりません")
 
 def list_available_ideas():
     """利用可能なアイディア一覧を表示"""
@@ -218,11 +213,13 @@ def generate_article_content(client, idea):
         
     except Exception as e:
         print(f"❌ API呼び出しエラー: {e}")
-        return None
+        raise RuntimeError(f"API呼び出しに失敗しました: {e}")
 
 def parse_generated_content(content, idea):
     """生成されたコンテンツを解析してファイルごとに分離"""
-    
+    with open("debug_generated_content.txt", "w", encoding="utf-8") as debug_file:
+        debug_file.write(content)
+
     result = {
         "markdown": "",
         "meta_json": {},
@@ -231,7 +228,7 @@ def parse_generated_content(content, idea):
     
     try:
         # マークダウン部分を抽出
-        markdown_match = re.search(r'```markdown\s*\n(.*?)(?=\n```json|\n```\s*$|$)', content, re.DOTALL)
+        markdown_match = re.search(r'```markdown\s*\n(.*?)(?=\n```\n+# 2\. メタデータ（meta\.json）)', content, re.DOTALL)
         if markdown_match:
             result["markdown"] = markdown_match.group(1).strip()
             
