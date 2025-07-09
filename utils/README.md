@@ -175,4 +175,5 @@ python image_generator.py --article-id "006" --service unsplash
 - 生成されたコンテンツは必ず人間による確認・編集を推奨
 
 ## 更新履歴
+- 2025-07-09: UX改善対応・CompareToggleButton機能強化・フォントサイズ調整機能追加
 - 2025-07-07: 初版作成
