@@ -213,3 +213,34 @@ layer(base); */
     @apply bg-transparent p-0;
   }
 }
+
+/* CompareToggleButton ツールチップアニメーション */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px) translateY(-50%);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.3s ease-in forwards;
+}

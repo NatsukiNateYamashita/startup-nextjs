@@ -14,6 +14,15 @@
     },
     "hoverToHighlight": "Hover over sentences to highlight corresponding sentences"
   },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 Compare View Feature",
+      "description": "Display articles in two languages side by side!",
+      "backToNormal": "Click this button again to return to normal view.",
+      "dontShowAgain": "Don't show again",
+      "close": "Close"
+    }
+  },
   "HomePage": {
     "title": "NIHONGO-AI. AI makes the world of Nihongo more interesting.",
     "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."

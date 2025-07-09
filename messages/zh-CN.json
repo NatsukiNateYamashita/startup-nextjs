@@ -302,6 +302,15 @@
     },
     "hoverToHighlight": "将鼠标悬停在句子上以突出显示相应的句子"
   },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 对照显示功能",
+      "description": "可以同时显示两种语言的文章！",
+      "backToNormal": "再次点击此按钮可返回正常视图。",
+      "dontShowAgain": "不再显示",
+      "close": "关闭"
+    }
+  },
   "Footer": {
     "description": "这是一个新的平台，让日语学习者、日本教育工作者和所有热爱日本的人克服语言障碍，带领您进入文化的深处。",
     "usefulLinks": "链接",

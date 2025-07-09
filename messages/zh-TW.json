@@ -302,6 +302,15 @@
     },
     "hoverToHighlight": "將滑鼠懸停在句子上以突出顯示相應的句子"
   },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 對照顯示功能",
+      "description": "可以同時顯示兩種語言的文章！",
+      "backToNormal": "再次點擊此按鈕可返回正常視圖。",
+      "dontShowAgain": "不再顯示",
+      "close": "關閉"
+    }
+  },
   "Footer": {
     "description": "這是一個新的平臺，讓日語學習者、日本教育工作者和所有熱愛日本的人克服語言障礙，帶領您進入文化的深處。",
     "usefulLinks": "連結",

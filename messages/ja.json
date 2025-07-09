@@ -302,6 +302,15 @@
     },
     "hoverToHighlight": "文にマウスを乗せると対応する文がハイライトされます"
   },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 対訳表示機能",
+      "description": "記事を2言語で並べて比較表示できるよ！",
+      "backToNormal": "通常表示に戻る時もこのボタンをクリックしてね。",
+      "dontShowAgain": "次回から表示しない",
+      "close": "閉じる"
+    }
+  },
   "Footer": {
     "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "usefulLinks": "Links",
