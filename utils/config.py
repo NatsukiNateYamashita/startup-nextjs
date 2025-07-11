@@ -33,6 +33,8 @@ ARTICLE_ID_PREFIX = ""
 
 def get_api_key(key_name: str) -> str:
     """環境変数からAPIキーを取得"""
+    print(key_name)
+    print(os.getenv(key_name))
     v = os.getenv(key_name)
     if not v:
         raise ValueError(f"環境変数 {key_name} が設定されていません")

@@ -2,447 +2,226 @@
 
 ```markdown
 ---
-title: "Web開発者のための日本語入力システム実装ガイド"
-excerpt: "日本語入力システムの基本概念から実装方法まで、Web開発者が知っておくべき日本語IMEの仕組みとマルチプラットフォーム対応のポイントを詳しく解説します。"
+title: "音声認識AIを使った日本語発音練習アプリの作り方"
+excerpt: "音声認識技術を活用して、日本語学習者の発音を効果的に評価・改善するアプリケーションの開発手法を詳しく解説します。APIの選定から実装、ユーザーフィードバックまで実践的に学べます。"
 ---
 
 <!-- s1 -->
-# Web開発者のための日本語入力システム実装ガイド
+# 音声認識AIを使った日本語発音練習アプリの作り方
 
 <!-- s2 -->
 ## はじめに
 
 <!-- s3 -->
-日本語入力システム（IME：Input Method Editor）は、私たち日本人が日常的に使用している技術でありながら、その複雑さと奥深さはWeb開発者にとって大きな挑戦となることがあります。
+日本語学習において、発音の習得は最も困難な課題の一つです。特に外国人学習者にとって、日本語特有の音韻体系や音調変化を正確に身につけることは容易ではありません。従来の学習方法では、教師による直接指導に依存することが多く、個別の発音練習機会が限られていました。
 
 <!-- s4 -->
-特に、ひらがな、カタカナ、漢字、そして半角・全角文字が混在する日本語の特性は、単純な英語圏のキーボード入力とは根本的に異なるアプローチを必要とします。
+しかし、近年の音声認識AI技術の発達により、個人でも高精度な発音評価システムを構築できるようになりました。本記事では、音声認識APIを活用して日本語発音練習アプリを開発する具体的な手法を、実装例とともに詳しく解説します。
 
 <!-- s5 -->
-本記事では、Web開発者が日本語入力システムを理解し、効果的に実装するための実践的なガイドを提供します。
+## 音声認識APIの選定と比較
 
 <!-- s6 -->
-## 日本語入力システムの基本概念
+### 主要な音声認識APIの特徴
 
 <!-- s7 -->
-### IMEの動作原理
+日本語発音練習アプリに適した音声認識APIを選定する際は、以下の要素を考慮する必要があります。まず、日本語の音韻認識精度が高いこと、リアルタイム処理に対応していること、そして発音評価に必要な詳細な音素情報を取得できることが重要です。
 
 <!-- s8 -->
-日本語入力システムは、基本的に「変換前の文字列（読み）」から「変換後の文字列（確定文字）」への変換プロセスを管理します。
+Google Speech-to-Text APIは、日本語の認識精度が高く、音素レベルの詳細情報も取得可能です。一方、Microsoft Azure Speech Servicesは、発音評価専用の機能を提供しており、特に教育アプリケーションに適しています。Amazon Transcribeは、コスト効率が良く、大量の音声データを処理する場合に有効です。
 
 <!-- s9 -->
-例えば、ユーザーが「にほんご」と入力すると、IMEは以下の候補を提示します：
-- 日本語
-- 日本後
-- ニホンゴ
-- にほんご
+### 実装における技術的考慮点
 
 <!-- s10 -->
-この変換プロセスは、単なる文字置換ではなく、文脈を考慮した高度な自然言語処理技術に基づいています。
+音声認識APIを選定する際は、レスポンス時間も重要な要素です。発音練習アプリでは、学習者がすぐにフィードバックを得られることが学習効果を高めます。理想的には、音声入力から結果表示まで2秒以内に完了することが望ましいでしょう。
 
 <!-- s11 -->
-### 入力モードの理解
+![API比較表](/images/blog/009/api-comparison.jpg)
 
 <!-- s12 -->
-日本語IMEには複数の入力モードが存在します：
+## 発音評価アルゴリズムの設計
 
 <!-- s13 -->
-**ひらがな入力モード**: 最も基本的なモードで、ローマ字入力から平仮名への変換を行います。
+### 日本語特有の評価基準
 
 <!-- s14 -->
-**カタカナ入力モード**: 外来語や擬音語の入力に特化したモードです。
+日本語の発音評価では、単純な音素の正確性だけでなく、モーラ（拍）の長さ、アクセントの位置、音調変化なども考慮する必要があります。例えば、「はし」という単語は、アクセントの位置によって「箸」「橋」「端」の意味が変わるため、音調パターンの評価が不可欠です。
 
 <!-- s15 -->
-**半角英数モード**: 英語や数字の入力時に使用されます。
+評価アルゴリズムでは、まず音素レベルでの正確性を測定し、次にモーラ単位での時間的な適切性を評価します。さらに、文全体のアクセントパターンを分析し、自然な日本語の韻律に近いかどうかを判定します。
 
 <!-- s16 -->
-**全角英数モード**: 日本語文書内で英数字を全角で表示する際に使用されます。
+### 機械学習モデルの活用
 
 <!-- s17 -->
-![日本語入力システムの基本構造](/images/blog/008/ime-structure.jpg)
+より高精度な評価を実現するため、機械学習モデルを組み込むことが効果的です。日本語ネイティブスピーカーの発音データを教師データとして使用し、学習者の発音との類似度を計算します。この際、Deep Learning技術を活用したスペクトログラム解析により、微細な音響特徴の違いも検出できます。
 
 <!-- s18 -->
-## Web開発における日本語入力の実装
+```python
+import librosa
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
+def evaluate_pronunciation(user_audio, reference_audio):
+    # 音響特徴量の抽出
+    user_mfcc = librosa.feature.mfcc(user_audio, sr=22050, n_mfcc=13)
+    ref_mfcc = librosa.feature.mfcc(reference_audio, sr=22050, n_mfcc=13)
+    
+    # 類似度計算
+    similarity = cosine_similarity(user_mfcc.T, ref_mfcc.T)
+    score = np.mean(similarity.diagonal())
+    
+    return score * 100  # 0-100のスコアに変換
+```
 
 <!-- s19 -->
-### CompositionEventの活用
+![発音評価の流れ](/images/blog/009/evaluation-flow.jpg)
 
 <!-- s20 -->
-Web開発において日本語入力を適切に処理するためには、CompositionEventの理解が不可欠です。
+## ユーザーフィードバックの実装方法
 
 <!-- s21 -->
-```javascript
-const inputElement = document.getElementById('japanese-input');
-
-inputElement.addEventListener('compositionstart', (e) => {
-  // 日本語入力開始時の処理
-  console.log('入力開始:', e.data);
-});
-
-inputElement.addEventListener('compositionupdate', (e) => {
-  // 変換中の処理
-  console.log('変換中:', e.data);
-});
-
-inputElement.addEventListener('compositionend', (e) => {
-  // 入力確定時の処理
-  console.log('入力確定:', e.data);
-});
-```
+### 視覚的フィードバックの設計
 
 <!-- s22 -->
-このイベントシステムにより、変換中の未確定文字と確定文字を適切に区別して処理できます。
+効果的な発音練習アプリには、学習者が直感的に理解できる視覚的フィードバックが不可欠です。音素ごとの正確性を色分けで表示したり、アクセントの高低を波形グラフで示したりすることで、学習者は自分の発音の問題点を具体的に把握できます。
 
 <!-- s23 -->
-### 実践的な実装例
+特に日本語学習者にとって重要なのは、長音（ー）や促音（っ）、撥音（ん）の区別です。これらの特殊音素は、視覚的に強調表示することで、学習者の注意を引きつけ、正確な発音を促進できます。
 
 <!-- s24 -->
-リアルタイム検索機能を実装する際の日本語対応の例を見てみましょう：
+### リアルタイム音声可視化
 
 <!-- s25 -->
-```javascript
-class JapaneseInputHandler {
-  constructor(inputElement, searchFunction) {
-    this.inputElement = inputElement;
-    this.searchFunction = searchFunction;
-    this.isComposing = false;
-    this.setupEventListeners();
-  }
-
-  setupEventListeners() {
-    this.inputElement.addEventListener('compositionstart', () => {
-      this.isComposing = true;
-    });
-
-    this.inputElement.addEventListener('compositionend', (e) => {
-      this.isComposing = false;
-      this.handleSearch(e.target.value);
-    });
-
-    this.inputElement.addEventListener('input', (e) => {
-      if (!this.isComposing) {
-        this.handleSearch(e.target.value);
-      }
-    });
-  }
-
-  handleSearch(query) {
-    // 日本語入力が確定した後のみ検索を実行
-    if (query.trim()) {
-      this.searchFunction(query);
-    }
-  }
-}
-```
+リアルタイムで音声を可視化することで、学習者は発音中にも自分の声の特徴を確認できます。WebAudioAPIを活用して、ブラウザ上で音声波形やスペクトログラムをリアルタイム表示する実装例を以下に示します。
 
 <!-- s26 -->
-## マルチプラットフォーム対応のポイント
+```javascript
+// WebAudioAPIを使用したリアルタイム音声可視化
+class VoiceVisualizer {
+    constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+        this.audioContext = new AudioContext();
+        this.analyser = this.audioContext.createAnalyser();
+        this.dataArray = new Uint8Array(this.analyser.frequencyBinCount);
+    }
+    
+    startVisualization() {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                const source = this.audioContext.createMediaStreamSource(stream);
+                source.connect(this.analyser);
+                this.draw();
+            });
+    }
+    
+    draw() {
+        this.analyser.getByteFrequencyData(this.dataArray);
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // 音声波形の描画
+        const barWidth = this.canvas.width / this.dataArray.length;
+        for (let i = 0; i < this.dataArray.length; i++) {
+            const barHeight = this.dataArray[i] / 255 * this.canvas.height;
+            this.ctx.fillStyle = `hsl(${i * 2}, 100%, 50%)`;
+            this.ctx.fillRect(i * barWidth, this.canvas.height - barHeight, barWidth, barHeight);
+        }
+        
+        requestAnimationFrame(() => this.draw());
+    }
+}
+```
 
 <!-- s27 -->
-### OS別の挙動の違い
+### 段階的な学習支援
 
 <!-- s28 -->
-日本語入力システムは、オペレーティングシステムによって微妙に動作が異なります。
+学習者のレベルに応じた段階的なフィードバックシステムを構築することで、継続的な学習を促進できます。初級者には基本的な音素の正確性に焦点を当て、上級者にはより細かな音調変化や自然性の評価を提供します。
 
 <!-- s29 -->
-**Windows**: Microsoft IMEやATOKなど、複数のIMEが共存する環境です。
+![フィードバック画面](/images/blog/009/feedback-interface.jpg)
 
 <!-- s30 -->
-**macOS**: 標準の日本語IM（Input Method）が統一された体験を提供します。
+## 技術実装のベストプラクティス
 
 <!-- s31 -->
-**Linux**: IBus、fcitx、uimなど、多様な入力メソッドフレームワークが存在します。
+### フロントエンド実装のポイント
 
 <!-- s32 -->
-### ブラウザ間の差異への対応
+発音練習アプリのフロントエンド開発では、レスポンシブデザインとアクセシビリティを重視する必要があります。特に、マイクの使用許可やブラウザの音声認識機能への対応は、ユーザーエクスペリエンスに大きく影響します。
 
 <!-- s33 -->
-各ブラウザでCompositionEventの実装に微妙な違いがあるため、クロスブラウザ対応が重要です：
+React.jsを使用した実装例では、useEffectフックを活用して音声認識の開始・停止を管理し、状態管理にはReduxやContext APIを使用して、録音状態や評価結果を適切に管理します。
 
 <!-- s34 -->
-```javascript
-function detectBrowserIMEBehavior() {
-  const userAgent = navigator.userAgent;
-  
-  if (userAgent.includes('Chrome')) {
-    return 'chrome';
-  } else if (userAgent.includes('Firefox')) {
-    return 'firefox';
-  } else if (userAgent.includes('Safari')) {
-    return 'safari';
-  }
-  
-  return 'unknown';
-}
-
-function handleCompositionEvent(e) {
-  const browserType = detectBrowserIMEBehavior();
-  
-  switch (browserType) {
-    case 'chrome':
-      // Chrome固有の処理
-      break;
-    case 'firefox':
-      // Firefox固有の処理
-      break;
-    case 'safari':
-      // Safari固有の処理
-      break;
-  }
-}
-```
+### バックエンド設計の考慮点
 
 <!-- s35 -->
-![マルチプラットフォーム対応の概念図](/images/blog/008/multiplatform-support.jpg)
+音声データの処理には相当な計算リソースが必要となるため、バックエンドの設計では非同期処理とキューイングシステムの実装が重要です。Node.jsとExpress.jsを使用した場合、音声ファイルのアップロード、処理、結果の返却を効率的に管理できます。
 
 <!-- s36 -->
-## パフォーマンス最適化テクニック
+```javascript
+// Express.jsを使用した音声処理エンドポイント
+const express = require('express');
+const multer = require('multer');
+const { evaluatePronunciation } = require('./pronunciation-evaluator');
+
+const app = express();
+const upload = multer({ dest: 'uploads/' });
+
+app.post('/evaluate-pronunciation', upload.single('audio'), async (req, res) => {
+    try {
+        const audioFile = req.file;
+        const referenceText = req.body.text;
+        
+        // 音声認識と評価の実行
+        const result = await evaluatePronunciation(audioFile.path, referenceText);
+        
+        res.json({
+            score: result.score,
+            feedback: result.feedback,
+            detailedAnalysis: result.analysis
+        });
+    } catch (error) {
+        res.status(500).json({ error: 'Processing failed' });
+    }
+});
+```
 
 <!-- s37 -->
-### デバウンシングの実装
+## 学習効果を高める追加機能
 
 <!-- s38 -->
-日本語入力では、変換中に頻繁にイベントが発生するため、適切なデバウンシング処理が重要です：
+### ゲーミフィケーション要素
 
 <!-- s39 -->
-```javascript
-class OptimizedJapaneseInput {
-  constructor(inputElement, callback, delay = 300) {
-    this.inputElement = inputElement;
-    this.callback = callback;
-    this.delay = delay;
-    this.timeoutId = null;
-    this.isComposing = false;
-    
-    this.setupOptimizedListeners();
-  }
-
-  setupOptimizedListeners() {
-    this.inputElement.addEventListener('compositionstart', () => {
-      this.isComposing = true;
-      this.clearTimeout();
-    });
-
-    this.inputElement.addEventListener('compositionend', (e) => {
-      this.isComposing = false;
-      this.debouncedCallback(e.target.value);
-    });
-
-    this.inputElement.addEventListener('input', (e) => {
-      if (!this.isComposing) {
-        this.debouncedCallback(e.target.value);
-      }
-    });
-  }
-
-  debouncedCallback(value) {
-    this.clearTimeout();
-    this.timeoutId = setTimeout(() => {
-      this.callback(value);
-    }, this.delay);
-  }
-
-  clearTimeout() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
-      this.timeoutId = null;
-    }
-  }
-}
-```
+継続的な学習を促進するため、ゲーミフィケーション要素を取り入れることが効果的です。発音スコアに応じたポイント制度、連続学習日数の記録、レベルアップシステムなどを実装することで、学習者のモチベーションを維持できます。
 
 <!-- s40 -->
-### メモリ効率の向上
+特に日本語学習では、ひらがな、カタカナ、漢字の発音練習を段階的に進められるレベル設計が重要です。各レベルで達成すべき目標を明確にし、学習者が自分の進歩を実感できるようにします。
 
 <!-- s41 -->
-大量の日本語テキストを処理する際は、メモリ使用量の最適化も重要な考慮事項です：
+### ソーシャル機能の活用
 
 <!-- s42 -->
-```javascript
-class EfficientTextProcessor {
-  constructor() {
-    this.cache = new Map();
-    this.maxCacheSize = 1000;
-  }
-
-  processJapaneseText(text) {
-    // キャッシュから結果を取得
-    if (this.cache.has(text)) {
-      return this.cache.get(text);
-    }
-
-    // 新しいテキストを処理
-    const result = this.performTextProcessing(text);
-    
-    // キャッシュサイズの管理
-    if (this.cache.size >= this.maxCacheSize) {
-      const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
-    }
-    
-    this.cache.set(text, result);
-    return result;
-  }
-
-  performTextProcessing(text) {
-    // 実際のテキスト処理ロジック
-    return text.normalize('NFC');
-  }
-}
-```
+学習者同士の交流を促進するソーシャル機能を実装することで、学習の動機付けを強化できます。発音コンテストの開催、学習記録の共有、相互評価システムなどを通じて、コミュニティベースの学習環境を構築します。
 
 <!-- s43 -->
-### 文字正規化の重要性
+![ソーシャル機能画面](/images/blog/009/social-features.jpg)
 
 <!-- s44 -->
-日本語では、同じ文字でも複数の表現方法が存在する場合があります。
-
-<!-- s45 -->
-```javascript
-function normalizeJapaneseText(text) {
-  return text
-    .normalize('NFC')  // Unicode正規化
-    .replace(/[Ａ-Ｚａ-ｚ０-９]/g, (char) => {
-      // 全角英数字を半角に変換
-      return String.fromCharCode(char.charCodeAt(0) - 0xFEE0);
-    })
-    .replace(/　/g, ' ');  // 全角スペースを半角に変換
-}
-```
-
-<!-- s46 -->
-![パフォーマンス最適化の効果](/images/blog/008/performance-optimization.jpg)
-
-<!-- s47 -->
-## 実践的な応用例
-
-<!-- s48 -->
-### 自動補完機能の実装
-
-<!-- s49 -->
-日本語入力に対応した自動補完機能を実装する際の考慮点：
-
-<!-- s50 -->
-```javascript
-class JapaneseAutoComplete {
-  constructor(inputElement, suggestions) {
-    this.inputElement = inputElement;
-    this.suggestions = suggestions;
-    this.currentSuggestions = [];
-    this.isComposing = false;
-    
-    this.setupAutoComplete();
-  }
-
-  setupAutoComplete() {
-    this.inputElement.addEventListener('compositionstart', () => {
-      this.isComposing = true;
-      this.hideSuggestions();
-    });
-
-    this.inputElement.addEventListener('compositionend', (e) => {
-      this.isComposing = false;
-      this.updateSuggestions(e.target.value);
-    });
-
-    this.inputElement.addEventListener('input', (e) => {
-      if (!this.isComposing) {
-        this.updateSuggestions(e.target.value);
-      }
-    });
-  }
-
-  updateSuggestions(query) {
-    if (query.length < 2) {
-      this.hideSuggestions();
-      return;
-    }
-
-    const normalizedQuery = normalizeJapaneseText(query);
-    this.currentSuggestions = this.suggestions.filter(suggestion => 
-      normalizeJapaneseText(suggestion).includes(normalizedQuery)
-    );
-
-    this.showSuggestions();
-  }
-
-  showSuggestions() {
-    // 候補表示のロジック
-  }
-
-  hideSuggestions() {
-    // 候補非表示のロジック
-  }
-}
-```
-
-<!-- s51 -->
-### フォームバリデーションの実装
-
-<!-- s52 -->
-日本語入力を考慮したフォームバリデーションの例：
-
-<!-- s53 -->
-```javascript
-class JapaneseFormValidator {
-  static validateJapaneseName(name) {
-    // ひらがな、カタカナ、漢字のみを許可
-    const japaneseNameRegex = /^[ひ-ゆァ-ヶ一-龯々]+$/;
-    return japaneseNameRegex.test(name);
-  }
-
-  static validateEmail(email) {
-    // 日本語ドメインにも対応
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  static validatePhoneNumber(phone) {
-    // 日本の電話番号形式をチェック
-    const phoneRegex = /^0\d{1,4}-\d{1,4}-\d{4}$/;
-    return phoneRegex.test(phone);
-  }
-}
-```
-
-<!-- s54 -->
-## トラブルシューティング
-
-<!-- s55 -->
-### 一般的な問題と解決策
-
-<!-- s56 -->
-**問題1**: 変換中の文字が重複して表示される
-
-<!-- s57 -->
-**解決策**: CompositionEventの適切な処理により、変換中と確定後の状態を明確に区別する。
-
-<!-- s58 -->
-**問題2**: 検索機能が変換途中で実行される
-
-<!-- s59 -->
-**解決策**: `isComposing`フラグを使用して、変換確定後のみ処理を実行する。
-
-<!-- s60 -->
-**問題3**: ブラウザ間で動作が異なる
-
-<!-- s61 -->
-**解決策**: ブラウザ判定を行い、それぞれに適した処理を実装する。
-
-<!-- s62 -->
 ## まとめ
 
-<!-- s63 -->
-日本語入力システムの実装は、Web開発者にとって複雑な課題ですが、適切な理解と実装により、ユーザーにとって快適な日本語入力体験を提供できます。
+<!-- s45 -->
+音声認識AIを活用した日本語発音練習アプリの開発は、適切な技術選択と実装により、学習者に大きな価値を提供できます。音声認識APIの選定では、日本語特有の音韻体系に対応した高精度なサービスを選択し、発音評価アルゴリズムでは音素レベルからアクセントパターンまで包括的に評価することが重要です。
 
-<!-- s64 -->
-CompositionEventの活用、マルチプラットフォーム対応、パフォーマンス最適化の3つの柱を意識することで、品質の高い日本語対応Webアプリケーションを開発できるでしょう。
+<!-- s46 -->
+ユーザーフィードバックの実装では、視覚的な表現とリアルタイム処理により、学習者が直感的に理解できるインターフェースを構築しましょう。また、ゲーミフィケーション要素やソーシャル機能を組み込むことで、継続的な学習を促進できます。
 
-<!-- s65 -->
-今後も日本語入力技術は進化し続けるため、最新の動向を把握し、継続的な改善を行うことが重要です。
-
-<!-- s66 -->
-本記事で紹介したテクニックを活用して、より良い日本語Web体験の実現に貢献してください。
+<!-- s47 -->
+今後のAI技術の発展により、さらに高精度で自然な発音評価が可能になることが期待されます。開発者の皆さんも、これらの技術を活用して、日本語学習者の発音習得を支援する革新的なアプリケーションを開発してみてください。
 ```
 
 # 2. メタデータ（meta.json）
@@ -450,12 +229,12 @@ CompositionEventの活用、マルチプラットフォーム対応、パフォ�
 ```json
 {
   "authorId": "nihongo-ai",
-  "publishDate": "2025-07-09T13:05:31.682541",
-  "category": "Web開発/日本語教育",
-  "tags": ["日本語入力", "IME", "Web開発", "JavaScript", "フロントエンド", "CompositionEvent"],
+  "publishDate": "2025-07-11T10:58:26.024966",
+  "category": "AI/Web開発/日本語教育",
+  "tags": ["音声認識", "AI", "日本語教育", "発音練習", "Web開発", "機械学習"],
   "readingTime": "8分",
   "difficulty": "中級",
-  "heroImage": "/images/blog/008/hero.jpg",
+  "heroImage": "/images/blog/009/hero.jpg",
   "featured": true
 }
 ```
@@ -466,58 +245,72 @@ CompositionEventの活用、マルチプラットフォーム対応、パフォ�
 {
   "hero.jpg": {
     "alt": {
-      "ja": "日本語入力システムとキーボードの概念図",
-      "en": "Japanese input system and keyboard concept diagram",
-      "zh-CN": "日语输入系统和键盘概念图",
-      "zh-TW": "日語輸入系統和鍵盤概念圖"
+      "ja": "音声認識AIを使った日本語発音練習アプリの開発画面",
+      "en": "Development screen of Japanese pronunciation practice app using voice recognition AI",
+      "zh-CN": "使用语音识别AI的日语发音练习应用开发界面",
+      "zh-TW": "使用語音識別AI的日語發音練習應用開發介面"
     },
     "caption": {
-      "ja": "Web開発における日本語入力システムの実装",
-      "en": "Implementation of Japanese input systems in web development",
-      "zh-CN": "Web开发中日语输入系统的实现",
-      "zh-TW": "Web開發中日語輸入系統的實現"
+      "ja": "音声認識技術を活用した日本語学習アプリの開発風景",
+      "en": "Development scene of Japanese learning app utilizing voice recognition technology",
+      "zh-CN": "利用语音识别技术的日语学习应用开发场景",
+      "zh-TW": "利用語音識別技術的日語學習應用開發場景"
     }
   },
-  "ime-structure.jpg": {
+  "api-comparison.jpg": {
     "alt": {
-      "ja": "IMEの基本構造と動作フローを示す図",
-      "en": "Diagram showing basic IME structure and workflow",
-      "zh-CN": "显示IME基本结构和工作流程的图表",
-      "zh-TW": "顯示IME基本結構和工作流程的圖表"
+      "ja": "主要な音声認識APIの機能比較表",
+      "en": "Feature comparison table of major voice recognition APIs",
+      "zh-CN": "主要语音识别API功能对比表",
+      "zh-TW": "主要語音識別API功能對比表"
     },
     "caption": {
-      "ja": "日本語入力システムの基本構造と変換プロセス",
-      "en": "Basic structure and conversion process of Japanese input systems",
-      "zh-CN": "日语输入系统的基本结构和转换过程",
-      "zh-TW": "日語輸入系統的基本結構和轉換過程"
+      "ja": "Google、Microsoft、Amazonの音声認識APIの特徴と性能比較",
+      "en": "Feature and performance comparison of Google, Microsoft, and Amazon voice recognition APIs",
+      "zh-CN": "Google、Microsoft、Amazon语音识别API的特点和性能对比",
+      "zh-TW": "Google、Microsoft、Amazon語音識別API的特點和性能對比"
     }
   },
-  "multiplatform-support.jpg": {
+  "evaluation-flow.jpg": {
     "alt": {
-      "ja": "複数のプラットフォームでの日本語入力対応を示す図",
-      "en": "Diagram showing Japanese input support across multiple platforms",
-      "zh-CN": "显示多平台日语输入支持的图表",
-      "zh-TW": "顯示多平台日語輸入支持的圖表"
+      "ja": "発音評価アルゴリズムの処理フロー図",
+      "en": "Processing flow diagram of pronunciation evaluation algorithm",
+      "zh-CN": "发音评估算法处理流程图",
+      "zh-TW": "發音評估算法處理流程圖"
     },
     "caption": {
-      "ja": "マルチプラットフォーム環境での日本語入力システム対応",
-      "en": "Japanese input system support in multi-platform environments",
-      "zh-CN": "多平台环境中的日语输入系统支持",
-      "zh-TW": "多平台環境中的日語輸入系統支持"
+      "ja": "音声入力から評価結果出力までの詳細な処理手順",
+      "en": "Detailed processing steps from voice input to evaluation result output",
+      "zh-CN": "从语音输入到评估结果输出的详细处理步骤",
+      "zh-TW": "從語音輸入到評估結果輸出的詳細處理步驟"
     }
   },
-  "performance-optimization.jpg": {
+  "feedback-interface.jpg": {
     "alt": {
-      "ja": "パフォーマンス最適化の効果を示すグラフ",
-      "en": "Graph showing the effects of performance optimization",
-      "zh-CN": "显示性能优化效果的图表",
-      "zh-TW": "顯示性能優化效果的圖表"
+      "ja": "ユーザーフィードバック画面のインターフェース",
+      "en": "User feedback interface screen",
+      "zh-CN": "用户反馈界面屏幕",
+      "zh-TW": "用戶反饋介面螢幕"
     },
     "caption": {
-      "ja": "日本語入力システムのパフォーマンス最適化による改善効果",
-      "en": "Improvement effects through performance optimization of Japanese input systems",
-      "zh-CN": "通过日语输入系统性能优化实现的改善效果",
-      "zh-TW": "通過日語輸入系統性能優化實現的改善效果"
+      "ja": "発音評価結果を視覚的に表示するユーザーインターフェース",
+      "en": "User interface that visually displays pronunciation evaluation results",
+      "zh-CN": "可视化显示发音评估结果的用户界面",
+      "zh-TW": "可視化顯示發音評估結果的用戶界面"
+    }
+  },
+  "social-features.jpg": {
+    "alt": {
+      "ja": "ソーシャル機能を含むアプリ画面",
+      "en": "App screen including social features",
+      "zh-CN": "包含社交功能的应用界面",
+      "zh-TW": "包含社交功能的應用介面"
+    },
+    "caption": {
+      "ja": "学習者同士の交流を促進するソーシャル機能の実装例",
+      "en": "Implementation example of social features that promote interaction among learners",
+      "zh-CN": "促进学习者之间交流的社交功能实现示例",
+      "zh-TW": "促進學習者之間交流的社交功能實現示例"
     }
   }
 }
