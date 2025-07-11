@@ -121,6 +121,38 @@
   "BlogPage": {
     "title": "最新博客",
     "paragraph": "查看我们的最新博客。",
+    "search": {
+      "searchByKeyword": "按关键词搜索",
+      "placeholder": "搜索文章...",
+      "searchFor": "搜索",
+      "searchQuery": "搜索关键词",
+      "noResults": "没有找到搜索结果",
+      "searchResultsCount": "找到{count}篇文章",
+      "showingResults": "显示搜索结果",
+      "clearSearch": "清除搜索",
+      "clearButton": "清除搜索",
+      "filteredByTags": "按标签筛选",
+      "allPosts": "全部{count}篇文章",
+      "noResultsWithFilters": "当前搜索条件未找到文章",
+      "noPostsAvailable": "没有可用文章",
+      "searchSuggestions": "请尝试更改搜索关键词或调整筛选器"
+    },
+    "filter": {
+      "allTags": "所有标签",
+      "filterByTag": "按标签过滤",
+      "clearFilters": "清除过滤器"
+    },
+    "sort": {
+      "sortBy": "排序",
+      "newest": "最新优先",
+      "oldest": "最旧优先",
+      "titleAsc": "标题（升序）",
+      "titleDesc": "标题（降序）",
+      "relevant": "最相关",
+      "relevance": "最相关",
+      "date": "日期",
+      "title": "标题"
+    },
     "blog1": {
       "title": "现代网站的最佳 UI 组件",
       "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit. Cras sit sit amet dictum neque， laoreet dolor.",
@@ -152,6 +184,8 @@
     "metaDescription": "致日语学习者、日本教育工作者和所有热爱日本的人。 查看我们最新的博客文章。"
   },
   "BlogDetailsPage": {
+    "by": "作者",
+    "shareThisPost": "分享这篇文章",
     "designTag": "设计",
     "bodyParagraph1": "这是一篇详细的博客文章。",
     "bodyParagraph2": "文章继续写道：",
@@ -251,7 +285,31 @@
   },
   "ErrorPage": {
     "description": "找不到该页面。",
-    "backToHomepage": "返回首页"
+    "backToHomepage": "回到主页"
+  },
+  "Compare": {
+    "title": "文章对比：{slug}",
+    "description": "双语文章对比，支持句子级高亮显示",
+    "selectLanguages": "选择语言",
+    "leftLanguage": "左",
+    "rightLanguage": "右",
+    "noCorrespondingSentence": "（无对应句子）",
+    "languageLabels": {
+      "ja": "日本語",
+      "en": "English",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文"
+    },
+    "hoverToHighlight": "将鼠标悬停在句子上以突出显示相应的句子"
+  },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 对照显示功能",
+      "description": "可以同时显示两种语言的文章！",
+      "backToNormal": "再次点击此按钮可返回正常视图。",
+      "dontShowAgain": "不再显示",
+      "close": "关闭"
+    }
   },
   "Footer": {
     "description": "这是一个新的平台，让日语学习者、日本教育工作者和所有热爱日本的人克服语言障碍，带领您进入文化的深处。",

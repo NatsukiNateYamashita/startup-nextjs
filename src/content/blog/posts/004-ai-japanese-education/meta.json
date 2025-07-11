@@ -1,0 +1,13 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": ["AI", "NLP", "日本語教育"],
+    "en": ["AI", "NLP", "Japanese Education"],
+    "zh-CN": ["AI", "NLP", "日语教育"],
+    "zh-TW": ["AI", "NLP", "日語教育"]
+  },
+  "publishDate": "2025-07-06T06:33:00.000Z",
+  "heroImage": "/images/blog/004-ai-japanese-education/hero.png",
+  "featured": false,
+  "relatedPosts": []
+}

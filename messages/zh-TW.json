@@ -121,6 +121,38 @@
   "BlogPage": {
     "title": "最新博客",
     "paragraph": "查看我們的最新博客。",
+    "search": {
+      "searchByKeyword": "按關鍵詞搜索",
+      "placeholder": "搜索文章...",
+      "searchFor": "搜索",
+      "searchQuery": "搜索關鍵詞",
+      "noResults": "沒有找到搜索結果",
+      "searchResultsCount": "找到{count}篇文章",
+      "showingResults": "顯示搜索結果",
+      "clearSearch": "清除搜索",
+      "clearButton": "清除搜索",
+      "filteredByTags": "按標籤篩選",
+      "allPosts": "全部{count}篇文章",
+      "noResultsWithFilters": "當前搜索條件未找到文章",
+      "noPostsAvailable": "沒有可用文章",
+      "searchSuggestions": "請嘗試更改搜索關鍵詞或調整篩選器"
+    },
+    "filter": {
+      "allTags": "所有標籤",
+      "filterByTag": "按標籤過濾",
+      "clearFilters": "清除過濾器"
+    },
+    "sort": {
+      "sortBy": "排序",
+      "newest": "最新優先",
+      "oldest": "最舊優先",
+      "titleAsc": "標題（升序）",
+      "titleDesc": "標題（降序）",
+      "relevant": "最相關",
+      "relevance": "最相關",
+      "date": "日期",
+      "title": "標題"
+    },
     "blog1": {
       "title": "現代網站的最佳UI元件",
       "paragraph": "Lorem ipsum dolor sit amet， consectetur adipiscing elit. Cras sit sit amet dictum neque， laoreet dolor.",
@@ -152,6 +184,8 @@
     "metaDescription": "致日語學習者、日本教育工作者和所有熱愛日本的人。 查看我們最新的博客文章。"
   },
   "BlogDetailsPage": {
+    "by": "作者",
+    "shareThisPost": "分享這篇文章",
     "designTag": "設計",
     "bodyParagraph1": "這是一篇詳細的博客文章。",
     "bodyParagraph2": "文章繼續寫道：",
@@ -252,6 +286,30 @@
   "ErrorPage": {
     "description": "找不到該頁面。",
     "backToHomepage": "返回首頁"
+  },
+  "Compare": {
+    "title": "文章對比：{slug}",
+    "description": "雙語文章對比，支援句子級高亮顯示",
+    "selectLanguages": "選擇語言",
+    "leftLanguage": "左",
+    "rightLanguage": "右",
+    "noCorrespondingSentence": "（無對應句子）",
+    "languageLabels": {
+      "ja": "日本語",
+      "en": "English",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文"
+    },
+    "hoverToHighlight": "將滑鼠懸停在句子上以突出顯示相應的句子"
+  },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 對照顯示功能",
+      "description": "可以同時顯示兩種語言的文章！",
+      "backToNormal": "再次點擊此按鈕可返回正常視圖。",
+      "dontShowAgain": "不再顯示",
+      "close": "關閉"
+    }
   },
   "Footer": {
     "description": "這是一個新的平臺，讓日語學習者、日本教育工作者和所有熱愛日本的人克服語言障礙，帶領您進入文化的深處。",

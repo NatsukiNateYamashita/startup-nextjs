@@ -1,0 +1,271 @@
+{
+  "ideas": [
+    {
+      "id": "006",
+      "title": {
+        "ja": "AIを活用した日本語学習ロードマップの作り方：レベル別カスタマイズガイド",
+        "en": "Creating a Personalized Japanese Learning Roadmap with AI: Level-by-Level Guide"
+      },
+      "category": "日本語教育/AI",
+      "target_audience": "日本語学習者（初中級）、日本語教師",
+      "key_points": [
+        "AIツールを使った学習計画の立て方",
+        "レベル別の最適な学習リソースの選び方",
+        "進捗管理におけるAIの活用方法"
+      ],
+      "estimated_word_count": 2000,
+      "difficulty_level": "中級",
+      "seo_keywords": [
+        "AI",
+        "日本語学習",
+        "日本語教育"
+      ],
+      "potential_images": [
+        "学習ロードマップの図解",
+        "AI学習ツールのスクリーンショット",
+        "レベル別学習計画のインフォグラフィック"
+      ]
+    },
+    {
+      "id": "007",
+      "title": {
+        "ja": "ChatGPTで作る！日本語教材作成の効率化テクニック",
+        "en": "Efficient Japanese Teaching Material Creation with ChatGPT"
+      },
+      "category": "日本語教育/AI",
+      "target_audience": "日本語教師、教材作成者",
+      "key_points": [
+        "効果的なプロンプトの書き方",
+        "教材の質を保証するためのチェックポイント",
+        "著作権に配慮した活用方法"
+      ],
+      "estimated_word_count": 1800,
+      "difficulty_level": "中級",
+      "seo_keywords": [
+        "ChatGPT 教材作成",
+        "日本語教材 AI",
+        "教材作成 効率化"
+      ],
+      "potential_images": [
+        "ChatGPTプロンプト例のスクリーンショット",
+        "作成された教材のサンプル",
+        "教材作成ワークフロー図"
+      ]
+    },
+    {
+      "id": "008",
+      "title": {
+        "ja": "Web開発者のための日本語入力システム実装ガイド",
+        "en": "Japanese Input System Implementation Guide for Web Developers"
+      },
+      "category": "Web開発/日本語教育",
+      "target_audience": "Webエンジニア、フロントエンド開発者",
+      "key_points": [
+        "IMEの基本概念と実装方法",
+        "マルチプラットフォーム対応のポイント",
+        "パフォーマンス最適化テクニック"
+      ],
+      "estimated_word_count": 2500,
+      "difficulty_level": "上級",
+      "seo_keywords": [
+        "日本語入力 実装",
+        "IME 開発",
+        "Web開発 日本語"
+      ],
+      "potential_images": [
+        "システム構成図",
+        "コード実装例のスニペット",
+        "デモアプリケーションのスクリーンショット"
+      ]
+    },
+    {
+      "id": "009",
+      "title": {
+        "ja": "音声認識AIを使った日本語発音練習アプリの作り方",
+        "en": "Building a Japanese Pronunciation Practice App with Speech Recognition AI"
+      },
+      "category": "AI/Web開発/日本語教育",
+      "target_audience": "アプリ開発者、EdTechスタートアップ",
+      "key_points": [
+        "音声認識APIの選定と実装",
+        "発音評価アルゴリズムの設計",
+        "ユーザーフィードバックの実装方法"
+      ],
+      "estimated_word_count": 2200,
+      "difficulty_level": "上級",
+      "seo_keywords": [
+        "音声認識 アプリ開発",
+        "日本語発音 AI",
+        "発音練習 アプリ"
+      ],
+      "potential_images": [
+        "アプリのUI/UXデザイン",
+        "システムアーキテクチャ図",
+        "実装手順のフローチャート"
+      ]
+    },
+    {
+      "id": "010",
+      "title": {
+        "ja": "最新AI技術で進化する日本語学習メソッド2024",
+        "en": "Evolution of Japanese Learning Methods with Latest AI Technology 2024"
+      },
+      "category": "AI/日本語教育",
+      "target_audience": "日本語学習者、教育関係者",
+      "key_points": [
+        "最新のAI学習ツールとその特徴",
+        "効果的な活用事例と結果",
+        "将来の展望と課題"
+      ],
+      "estimated_word_count": 1800,
+      "difficulty_level": "初級",
+      "seo_keywords": [
+        "AI 日本語学習",
+        "最新学習法",
+        "2024 日本語教育"
+      ],
+      "potential_images": [
+        "最新AIツールの比較表",
+        "学習効果のグラフ",
+        "活用事例のスクリーンショット"
+      ]
+    },
+    {
+      "id": "011",
+      "title": {
+        "ja": "ChatGPTを活用した日本語作文添削システムの構築方法",
+        "en": "How to Build a Japanese Writing Correction System Using ChatGPT"
+      },
+      "category": "AI・日本語教育",
+      "target_audience": "日本語教師、EdTechエンジニア",
+      "key_points": [
+        "ChatGPT APIを使った添削システムの基本設計",
+        "日本語特有の文法エラー検出ロジックの実装",
+        "フィードバックの自動生成と改善提案の方法"
+      ],
+      "difficulty_level": "中級",
+      "seo_keywords": [
+        "ChatGPT 日本語添削",
+        "AI 作文添削",
+        "日本語教育 AI"
+      ],
+      "potential_images": [
+        "システム構成図",
+        "添削画面のモックアップ",
+        "フィードバック例のスクリーンショット"
+      ]
+    },
+    {
+      "id": "012",
+      "title": {
+        "ja": "音声認識AIを使った日本語発音練習アプリの比較研究",
+        "en": "Comparative Study of Japanese Pronunciation Apps Using Speech Recognition AI"
+      },
+      "category": "AI・言語学習",
+      "target_audience": "日本語学習者、語学アプリ開発者",
+      "key_points": [
+        "主要な発音練習アプリの特徴と性能比較",
+        "各アプリの音声認識精度の検証結果",
+        "学習効果の実証データ分析"
+      ],
+      "difficulty_level": "初級",
+      "seo_keywords": [
+        "日本語発音アプリ",
+        "AI音声認識",
+        "発音練習ツール"
+      ],
+      "potential_images": [
+        "アプリ比較表",
+        "精度検証グラフ",
+        "ユーザーインターフェース例"
+      ]
+    },
+    {
+      "id": "013",
+      "title": {
+        "ja": "機械学習モデルを活用した漢字学習最適化システムの開発",
+        "en": "Developing an Optimized Kanji Learning System Using Machine Learning"
+      },
+      "category": "AI・教育工学",
+      "target_audience": "教育システム開発者、日本語教師",
+      "key_points": [
+        "学習者データに基づく個別最適化アルゴリズム",
+        "漢字の効率的な学習順序の決定方法",
+        "スペース効果を考慮した復習スケジューリング"
+      ],
+      "difficulty_level": "上級",
+      "seo_keywords": [
+        "漢字学習 AI",
+        "機械学習 教育",
+        "個別最適化学習"
+      ],
+      "potential_images": [
+        "システムアーキテクチャ図",
+        "学習進捗データビジュアライゼーション",
+        "ユーザーダッシュボード例"
+      ]
+    },
+    {
+      "id": "014",
+      "title": {
+        "ja": "自然言語処理を用いた日本語読解力評価システムの実装",
+        "en": "Implementing a Japanese Reading Comprehension Assessment System Using NLP"
+      },
+      "category": "AI・評価システム",
+      "target_audience": "教育機関、システム開発者",
+      "key_points": [
+        "テキスト難易度の自動評価手法",
+        "理解度テストの自動生成アルゴリズム",
+        "学習者の回答分析と評価方法"
+      ],
+      "difficulty_level": "上級",
+      "seo_keywords": [
+        "読解力評価 AI",
+        "日本語能力測定",
+        "NLP教育応用"
+      ],
+      "potential_images": [
+        "評価システムフロー図",
+        "難易度判定の仕組み図",
+        "評価結果レポート例"
+      ]
+    },
+    {
+      "id": "015",
+      "title": {
+        "ja": "AIチャットボットを活用した日本語会話練習プラットフォームの設計",
+        "en": "Designing a Japanese Conversation Practice Platform Using AI Chatbots"
+      },
+      "category": "AI・会話学習",
+      "target_audience": "語学学習プラットフォーム開発者",
+      "key_points": [
+        "自然な会話フローの設計手法",
+        "文脈理解と適切な応答生成の実装",
+        "学習者レベルに応じた会話調整機能"
+      ],
+      "difficulty_level": "中級",
+      "seo_keywords": [
+        "AI会話練習",
+        "日本語チャットボット",
+        "会話学習システム"
+      ],
+      "potential_images": [
+        "会話フロー図",
+        "ユーザーインターフェースデザイン",
+        "レベル調整機能の説明図"
+      ]
+    }
+  ],
+  "generated_at": [
+    {
+      "timestamp": "2025-07-07T10:24:54.505562",
+      "theme": "日本語教育・AI・技術関連のトピック",
+      "count": 5
+    },
+    {
+      "timestamp": "2025-07-07T12:28:24.603852",
+      "theme": "AI学習支援ツール",
+      "count": 5
+    }
+  ]
+}

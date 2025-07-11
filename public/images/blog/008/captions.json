@@ -1,0 +1,70 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "日本語入力システムとキーボードの概念図",
+      "en": "Japanese input system and keyboard concept diagram",
+      "zh-CN": "日语输入系统和键盘概念图",
+      "zh-TW": "日語輸入系統和鍵盤概念圖"
+    },
+    "caption": {
+      "ja": "Web開発における日本語入力システムの実装",
+      "en": "Implementation of Japanese input systems in web development",
+      "zh-CN": "Web开发中日语输入系统的实现",
+      "zh-TW": "Web開發中日語輸入系統的實現"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-SfMRUuuQLv71T3ckAZd131aQ.png?st=2025-07-09T03%3A09%3A34Z&se=2025-07-09T05%3A09%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T15%3A29%3A21Z&ske=2025-07-09T15%3A29%3A21Z&sks=b&skv=2024-08-04&sig=GQCtaukJlDXc6I1itKIritjYUWhCdmvmU4GzoNK5pdI%3D",
+    "prompt": "Japanese input system and keyboard concept diagram | Context: Implementation of Japanese input systems in web development | Hero image, modern, clean, web design"
+  },
+  "ime-structure.jpg": {
+    "alt": {
+      "ja": "IMEの基本構造と動作フローを示す図",
+      "en": "Diagram showing basic IME structure and workflow",
+      "zh-CN": "显示IME基本结构和工作流程的图表",
+      "zh-TW": "顯示IME基本結構和工作流程的圖表"
+    },
+    "caption": {
+      "ja": "日本語入力システムの基本構造と変換プロセス",
+      "en": "Basic structure and conversion process of Japanese input systems",
+      "zh-CN": "日语输入系统的基本结构和转换过程",
+      "zh-TW": "日語輸入系統的基本結構和轉換過程"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-Iw22VUmBFtLpv6Eq5jm0KR3s.png?st=2025-07-09T03%3A09%3A52Z&se=2025-07-09T05%3A09%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-09T00%3A17%3A56Z&ske=2025-07-10T00%3A17%3A56Z&sks=b&skv=2024-08-04&sig=aGd5MbTBGYwZrjw5YtNVvR5ZFEKoim9K72IppBaUr%2B8%3D",
+    "prompt": "Diagram showing basic IME structure and workflow | Context: Basic structure and conversion process of Japanese input systems"
+  },
+  "multiplatform-support.jpg": {
+    "alt": {
+      "ja": "複数のプラットフォームでの日本語入力対応を示す図",
+      "en": "Diagram showing Japanese input support across multiple platforms",
+      "zh-CN": "显示多平台日语输入支持的图表",
+      "zh-TW": "顯示多平台日語輸入支持的圖表"
+    },
+    "caption": {
+      "ja": "マルチプラットフォーム環境での日本語入力システム対応",
+      "en": "Japanese input system support in multi-platform environments",
+      "zh-CN": "多平台环境中的日语输入系统支持",
+      "zh-TW": "多平台環境中的日語輸入系統支持"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-oocWZpPcsJKFOuoCc5px1adf.png?st=2025-07-09T03%3A10%3A13Z&se=2025-07-09T05%3A10%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-09T04%3A10%3A13Z&ske=2025-07-10T04%3A10%3A13Z&sks=b&skv=2024-08-04&sig=N%2BSYc0iKm/u9VEnDZMA9MuqduvK1lgOs%2BPS7QVcaVxA%3D",
+    "prompt": "Diagram showing Japanese input support across multiple platforms | Context: Japanese input system support in multi-platform environments"
+  },
+  "performance-optimization.jpg": {
+    "alt": {
+      "ja": "パフォーマンス最適化の効果を示すグラフ",
+      "en": "Graph showing the effects of performance optimization",
+      "zh-CN": "显示性能优化效果的图表",
+      "zh-TW": "顯示性能優化效果的圖表"
+    },
+    "caption": {
+      "ja": "日本語入力システムのパフォーマンス最適化による改善効果",
+      "en": "Improvement effects through performance optimization of Japanese input systems",
+      "zh-CN": "通过日语输入系统性能优化实现的改善效果",
+      "zh-TW": "通過日語輸入系統性能優化實現的改善效果"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-TYQNBGQcm0YZ8p1JPabOfRfR.png?st=2025-07-09T03%3A10%3A30Z&se=2025-07-09T05%3A10%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T11%3A16%3A51Z&ske=2025-07-09T11%3A16%3A51Z&sks=b&skv=2024-08-04&sig=W4Sc4F4sbVP967xo3V5qJha0OqXAIhNyZnQbmPJmLuA%3D",
+    "prompt": "Graph showing the effects of performance optimization | Context: Improvement effects through performance optimization of Japanese input systems"
+  }
+}

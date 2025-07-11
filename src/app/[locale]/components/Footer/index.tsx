@@ -216,11 +216,7 @@ const Footer = async ({ locale }: { locale: string }) => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D8A77B83] to-transparent dark:via-[#D8A77B83]"></div>
           <div className="py-8">
             <p className="text-body-color/80 dark:text-body-color-dark/80 text-center text-base">
-              Copyright &copy;{" "}
-              <script type="text/javascript">
-                myDate = new Date() ;myYear = myDate.getFullYear
-                ();document.write(myYear);
-              </script>{" "}
+              Copyright &copy;{"2025 "}
               <Link href="/">Natsuki Yamashita</Link> All Rights Reserved.
             </p>
             <p className="mt-4 text-body-color/70 dark:text-body-color-dark/70 text-center text-sm">

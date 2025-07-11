@@ -1,0 +1,121 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "AIを活用した日本語学習のイメージ",
+      "en": "AI-powered Japanese learning concept",
+      "zh-CN": "AI辅助日语学习概念图",
+      "zh-TW": "AI輔助日語學習概念圖"
+    },
+    "caption": {
+      "ja": "AIツールを使って効率的に日本語を学習する現代的なアプローチ",
+      "en": "Modern approach to learning Japanese efficiently using AI tools",
+      "zh-CN": "使用AI工具高效学习日语的现代方法",
+      "zh-TW": "使用AI工具高效學習日語的現代方法"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-r4Hy6Ih80g8JLY5ornFLRL5h.png?st=2025-07-09T02%3A55%3A37Z&se=2025-07-09T04%3A55%3A37Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T15%3A08%3A49Z&ske=2025-07-09T15%3A08%3A49Z&sks=b&skv=2024-08-04&sig=3EskxQ6CGE5qbl32nYRzeydFnljMDQ80Cd/vvdNbcjU%3D",
+    "prompt": "AI-powered Japanese learning concept | Context: Modern approach to learning Japanese efficiently using AI tools | Hero image, modern, clean, web design"
+  },
+  "goal-setting.jpg": {
+    "alt": {
+      "ja": "学習目標設定のプロセス",
+      "en": "Learning goal setting process",
+      "zh-CN": "学习目标设定过程",
+      "zh-TW": "學習目標設定過程"
+    },
+    "caption": {
+      "ja": "AIとの対話を通じて具体的な学習目標を設定する様子",
+      "en": "Setting specific learning goals through dialogue with AI",
+      "zh-CN": "通过与AI对话设定具体学习目标",
+      "zh-TW": "透過與AI對話設定具體學習目標"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-VMSSbTf9UFHaflJrL4gh8yiT.png?st=2025-07-09T02%3A56%3A00Z&se=2025-07-09T04%3A56%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-09T03%3A56%3A00Z&ske=2025-07-10T03%3A56%3A00Z&sks=b&skv=2024-08-04&sig=L3jxoOuYkGbyjvl39Y51TxccnpYVvRmpDMKt848fv50%3D",
+    "prompt": "Learning goal setting process | Context: Setting specific learning goals through dialogue with AI"
+  },
+  "vocabulary-app.jpg": {
+    "alt": {
+      "ja": "語彙学習アプリの画面",
+      "en": "Vocabulary learning app interface",
+      "zh-CN": "词汇学习应用界面",
+      "zh-TW": "詞彙學習應用介面"
+    },
+    "caption": {
+      "ja": "AIが個人の興味に応じてカスタマイズした語彙学習画面",
+      "en": "AI-customized vocabulary learning screen based on personal interests",
+      "zh-CN": "AI根据个人兴趣定制的词汇学习界面",
+      "zh-TW": "AI根據個人興趣定製的詞彙學習介面"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-GYVmAePyjAN4AoiUdOKgGLYG.png?st=2025-07-09T02%3A56%3A19Z&se=2025-07-09T04%3A56%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T20%3A29%3A37Z&ske=2025-07-09T20%3A29%3A37Z&sks=b&skv=2024-08-04&sig=beb%2Bsc0vfWATFiuBICaDlrxo03DHFvxG4yEhHOjExQ0%3D",
+    "prompt": "Vocabulary learning app interface | Context: AI-customized vocabulary learning screen based on personal interests"
+  },
+  "reading-practice.jpg": {
+    "alt": {
+      "ja": "読解練習の様子",
+      "en": "Reading comprehension practice",
+      "zh-CN": "阅读理解练习",
+      "zh-TW": "閱讀理解練習"
+    },
+    "caption": {
+      "ja": "AIが難易度を調整した文章で読解力を段階的に向上させる練習",
+      "en": "Gradual reading improvement practice with AI-adjusted text difficulty",
+      "zh-CN": "使用AI调整难度的文章进行阅读能力的逐步提升练习",
+      "zh-TW": "使用AI調整難度的文章進行閱讀能力的逐步提升練習"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-Sft7SH60CW6O9qcO9bCG5VoF.png?st=2025-07-09T02%3A56%3A40Z&se=2025-07-09T04%3A56%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T14%3A24%3A19Z&ske=2025-07-09T14%3A24%3A19Z&sks=b&skv=2024-08-04&sig=l616AQm/OYDijUMmCdNcFRdjm8kWCWW7SffallCQ5Ag%3D",
+    "prompt": "Reading comprehension practice | Context: Gradual reading improvement practice with AI-adjusted text difficulty"
+  },
+  "cultural-context.jpg": {
+    "alt": {
+      "ja": "文化的コンテキストの学習",
+      "en": "Learning cultural context",
+      "zh-CN": "学习文化背景",
+      "zh-TW": "學習文化背景"
+    },
+    "caption": {
+      "ja": "日本語表現の背景にある文化的意味を理解する上級学習",
+      "en": "Advanced learning to understand cultural meanings behind Japanese expressions",
+      "zh-CN": "理解日语表达背后文化含义的高级学习",
+      "zh-TW": "理解日語表達背後文化含義的高級學習"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-kuY8Q16c5nza5SB3QRoIEcYH.png?st=2025-07-09T02%3A57%3A02Z&se=2025-07-09T04%3A57%3A02Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T06%3A44%3A31Z&ske=2025-07-09T06%3A44%3A31Z&sks=b&skv=2024-08-04&sig=i3KScLUApmyQoJWlYf%2BtvDl8jhj65SeqNYUfxkswNhc%3D",
+    "prompt": "Learning cultural context | Context: Advanced learning to understand cultural meanings behind Japanese expressions"
+  },
+  "progress-tracking.jpg": {
+    "alt": {
+      "ja": "学習進捗の可視化",
+      "en": "Learning progress visualization",
+      "zh-CN": "学习进度可视化",
+      "zh-TW": "學習進度可視化"
+    },
+    "caption": {
+      "ja": "AIによる学習記録の分析と進捗状況の可視化",
+      "en": "AI analysis of learning records and progress visualization",
+      "zh-CN": "AI分析学习记录和进度可视化",
+      "zh-TW": "AI分析學習記錄和進度可視化"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-0LjG1Bq7K70CW0b8LTJbb6s8.png?st=2025-07-09T02%3A57%3A19Z&se=2025-07-09T04%3A57%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T10%3A44%3A11Z&ske=2025-07-09T10%3A44%3A11Z&sks=b&skv=2024-08-04&sig=yTByuPUgIU2/KEViRL%2BtZLlmfRYDqgvNU6AnCyDjE4g%3D",
+    "prompt": "Learning progress visualization | Context: AI analysis of learning records and progress visualization"
+  },
+  "conversation-practice.jpg": {
+    "alt": {
+      "ja": "実際の会話練習の様子",
+      "en": "Real conversation practice session",
+      "zh-CN": "实际对话练习场景",
+      "zh-TW": "實際對話練習場景"
+    },
+    "caption": {
+      "ja": "AIで基礎を固めた後の日本語話者との実践的な会話練習",
+      "en": "Practical conversation practice with Japanese speakers after building foundation with AI",
+      "zh-CN": "在AI巩固基础后与日语使用者进行实践对话练习",
+      "zh-TW": "在AI鞏固基礎後與日語使用者進行實踐對話練習"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-fX6p1WtRY2ENOGIn44a3rCGH.png?st=2025-07-09T02%3A57%3A40Z&se=2025-07-09T04%3A57%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T06%3A52%3A48Z&ske=2025-07-09T06%3A52%3A48Z&sks=b&skv=2024-08-04&sig=HXcQ%2BpbGAW/lL8H31elNObbDDrV1u1z3T%2BNa%2BnnV5xM%3D",
+    "prompt": "Real conversation practice session | Context: Practical conversation practice with Japanese speakers after building foundation with AI"
+  }
+}

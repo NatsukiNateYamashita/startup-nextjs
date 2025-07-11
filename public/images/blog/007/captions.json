@@ -1,0 +1,87 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "ChatGPTを使って日本語教材を作成している教師のイメージ",
+      "en": "Teacher creating Japanese teaching materials using ChatGPT",
+      "zh-CN": "教师使用ChatGPT制作日语教材的形象",
+      "zh-TW": "教師使用ChatGPT製作日語教材的形象"
+    },
+    "caption": {
+      "ja": "AIを活用した効率的な日本語教材作成",
+      "en": "Efficient Japanese material creation using AI",
+      "zh-CN": "使用AI高效制作日语教材",
+      "zh-TW": "使用AI高效製作日語教材"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-aAjOLTxeTEjdTTC6glYmueqj.png?st=2025-07-09T03%3A02%3A45Z&se=2025-07-09T05%3A02%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T13%3A30%3A18Z&ske=2025-07-09T13%3A30%3A18Z&sks=b&skv=2024-08-04&sig=LP24/uTYq38ZkAez6biPbTHalckZiCaQa7vBNSzGw6w%3D",
+    "prompt": "Teacher creating Japanese teaching materials using ChatGPT | Context: Efficient Japanese material creation using AI | Hero image, modern, clean, web design"
+  },
+  "prompt-example.jpg": {
+    "alt": {
+      "ja": "効果的なプロンプトの書き方を示すサンプル画面",
+      "en": "Sample screen showing how to write effective prompts",
+      "zh-CN": "显示如何编写有效提示的示例屏幕",
+      "zh-TW": "顯示如何編寫有效提示的範例畫面"
+    },
+    "caption": {
+      "ja": "具体的で詳細なプロンプトの例",
+      "en": "Example of specific and detailed prompts",
+      "zh-CN": "具体详细的提示示例",
+      "zh-TW": "具體詳細的提示範例"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-S0PVQyGWQSkceuXkQWBlsl7m.png?st=2025-07-09T03%3A03%3A10Z&se=2025-07-09T05%3A03%3A10Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-09T01%3A00%3A58Z&ske=2025-07-10T01%3A00%3A58Z&sks=b&skv=2024-08-04&sig=gW%2BWlYpCNJ1p2jPmLQnRagzKqmBA7eRLtr9wKjsbgbE%3D",
+    "prompt": "Sample screen showing how to write effective prompts | Context: Example of specific and detailed prompts"
+  },
+  "grammar-check.jpg": {
+    "alt": {
+      "ja": "文法チェックのプロセスを表すフローチャート",
+      "en": "Flowchart showing the grammar checking process",
+      "zh-CN": "显示语法检查过程的流程图",
+      "zh-TW": "顯示語法檢查過程的流程圖"
+    },
+    "caption": {
+      "ja": "AI生成コンテンツの文法確認手順",
+      "en": "Grammar verification steps for AI-generated content",
+      "zh-CN": "AI生成内容的语法确认步骤",
+      "zh-TW": "AI生成內容的語法確認步驟"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-Dg8xs1hUMhRfd48njvmsLFRO.png?st=2025-07-09T03%3A03%3A37Z&se=2025-07-09T05%3A03%3A37Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T18%3A52%3A05Z&ske=2025-07-09T18%3A52%3A05Z&sks=b&skv=2024-08-04&sig=sxwwxlG/CCeD2Zged5Tj1%2BKixvjTIpWWYp50J9H3zOI%3D",
+    "prompt": "Flowchart showing the grammar checking process | Context: Grammar verification steps for AI-generated content"
+  },
+  "copyright-flow.jpg": {
+    "alt": {
+      "ja": "著作権配慮のためのチェックフローを示す図",
+      "en": "Diagram showing copyright consideration check flow",
+      "zh-CN": "显示版权考虑检查流程的图表",
+      "zh-TW": "顯示版權考慮檢查流程的圖表"
+    },
+    "caption": {
+      "ja": "著作権に配慮した教材作成のガイドライン",
+      "en": "Guidelines for creating materials with copyright consideration",
+      "zh-CN": "考虑版权的教材制作指南",
+      "zh-TW": "考慮版權的教材製作指南"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-UBOXudlQXBr4UcLYHPlUz0Tz.png?st=2025-07-09T03%3A04%3A00Z&se=2025-07-09T05%3A04%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T10%3A00%3A43Z&ske=2025-07-09T10%3A00%3A43Z&sks=b&skv=2024-08-04&sig=DJt6m5/TpOzitf2ODv5vSQu14Mx%2BjJXKiVYjuwHIRvY%3D",
+    "prompt": "Diagram showing copyright consideration check flow | Context: Guidelines for creating materials with copyright consideration"
+  },
+  "iterative-improvement.jpg": {
+    "alt": {
+      "ja": "段階的改善プロセスを表すステップ図",
+      "en": "Step diagram showing iterative improvement process",
+      "zh-CN": "显示渐进改进过程的步骤图",
+      "zh-TW": "顯示漸進改善過程的步驟圖"
+    },
+    "caption": {
+      "ja": "ChatGPTとの対話による教材の段階的改善",
+      "en": "Gradual improvement of materials through dialogue with ChatGPT",
+      "zh-CN": "通过与ChatGPT对话逐步改进教材",
+      "zh-TW": "透過與ChatGPT對話逐步改善教材"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-R7xunl9FeS6m5b46uVDLfIhO.png?st=2025-07-09T03%3A04%3A23Z&se=2025-07-09T05%3A04%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-08T17%3A52%3A31Z&ske=2025-07-09T17%3A52%3A31Z&sks=b&skv=2024-08-04&sig=7alAeFS/a3aHxpE7lWv/KaeuXffpAlw24Z4FlNq/RJk%3D",
+    "prompt": "Step diagram showing iterative improvement process | Context: Gradual improvement of materials through dialogue with ChatGPT"
+  }
+}

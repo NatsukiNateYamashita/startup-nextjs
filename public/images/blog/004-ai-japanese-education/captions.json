@@ -1,0 +1,30 @@
+{
+  "hero.png": {
+    "alt": {
+      "ja": "AIと日本語教育の未来を切り開くヒーロー画像",
+      "en": "Hero image for AI and Japanese education future",
+      "zh-TW": "AI與日語教育的未來英雄圖片",
+      "zh-CN": "AI与日语教育的未来英雄图片"
+    },
+    "caption": {
+      "ja": "最新技術と伝統的な教育が融合する新時代",
+      "en": "A new era where cutting-edge technology meets traditional education",
+      "zh-TW": "最新技術與傳統教育融合的新時代",
+      "zh-CN": "最新技术与传统教育融合的新时代"
+    }
+  },
+  "conversation-practice.png": {
+    "alt": {
+      "ja": "ChatGPTを使って会話練習をする学習者",
+      "en": "A learner practicing conversation using ChatGPT",
+      "zh-TW": "使用ChatGPT進行會話練習的學習者",
+      "zh-CN": "使用ChatGPT进行会话练习的学习者"
+    },
+    "caption": {
+      "ja": "AIツールを活用した個別指導の新しいスタイル",
+      "en": "New style of personalized instruction using AI tools",
+      "zh-TW": "使用AI工具的個人化指導新方式",
+      "zh-CN": "使用AI工具的个性化指导新方式"
+    }
+  }
+}

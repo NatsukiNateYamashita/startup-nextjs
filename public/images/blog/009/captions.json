@@ -1,0 +1,87 @@
+{
+  "hero.jpg": {
+    "alt": {
+      "ja": "音声認識AIを使った日本語発音練習アプリの開発画面",
+      "en": "Development screen of Japanese pronunciation practice app using voice recognition AI",
+      "zh-CN": "使用语音识别AI的日语发音练习应用开发界面",
+      "zh-TW": "使用語音識別AI的日語發音練習應用開發介面"
+    },
+    "caption": {
+      "ja": "音声認識技術を活用した日本語学習アプリの開発風景",
+      "en": "Development scene of Japanese learning app utilizing voice recognition technology",
+      "zh-CN": "利用语音识别技术的日语学习应用开发场景",
+      "zh-TW": "利用語音識別技術的日語學習應用開發場景"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-l9NFHEGPzNYnuMpyPtCxrK27.png?st=2025-07-11T02%3A20%3A23Z&se=2025-07-11T04%3A20%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-10T21%3A34%3A23Z&ske=2025-07-11T21%3A34%3A23Z&sks=b&skv=2024-08-04&sig=Ekh0pWI9XKiN8FRN9fEC89lErkiXNzS9oME4oJEO284%3D",
+    "prompt": "Development screen of Japanese pronunciation practice app using voice recognition AI | Context: Development scene of Japanese learning app utilizing voice recognition technology | Hero image, modern, clean, web design"
+  },
+  "api-comparison.jpg": {
+    "alt": {
+      "ja": "主要な音声認識APIの機能比較表",
+      "en": "Feature comparison table of major voice recognition APIs",
+      "zh-CN": "主要语音识别API功能对比表",
+      "zh-TW": "主要語音識別API功能對比表"
+    },
+    "caption": {
+      "ja": "Google、Microsoft、Amazonの音声認識APIの特徴と性能比較",
+      "en": "Feature and performance comparison of Google, Microsoft, and Amazon voice recognition APIs",
+      "zh-CN": "Google、Microsoft、Amazon语音识别API的特点和性能对比",
+      "zh-TW": "Google、Microsoft、Amazon語音識別API的特點和性能對比"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-hWfPSVhEYSUlukVMZJ6t5qXP.png?st=2025-07-11T02%3A20%3A41Z&se=2025-07-11T04%3A20%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-10T11%3A15%3A10Z&ske=2025-07-11T11%3A15%3A10Z&sks=b&skv=2024-08-04&sig=d2rsWD1zuWkqGSSovupB%2BA4hLVlJgfDmLaTcekIppUg%3D",
+    "prompt": "Feature comparison table of major voice recognition APIs | Context: Feature and performance comparison of Google, Microsoft, and Amazon voice recognition APIs"
+  },
+  "evaluation-flow.jpg": {
+    "alt": {
+      "ja": "発音評価アルゴリズムの処理フロー図",
+      "en": "Processing flow diagram of pronunciation evaluation algorithm",
+      "zh-CN": "发音评估算法处理流程图",
+      "zh-TW": "發音評估算法處理流程圖"
+    },
+    "caption": {
+      "ja": "音声入力から評価結果出力までの詳細な処理手順",
+      "en": "Detailed processing steps from voice input to evaluation result output",
+      "zh-CN": "从语音输入到评估结果输出的详细处理步骤",
+      "zh-TW": "從語音輸入到評估結果輸出的詳細處理步驟"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-vROBcBDaJEHVT747jY7mqCVh.png?st=2025-07-11T02%3A21%3A00Z&se=2025-07-11T04%3A21%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-11T00%3A52%3A53Z&ske=2025-07-12T00%3A52%3A53Z&sks=b&skv=2024-08-04&sig=%2BPQVYcZcIoFGkf5aR049G4PPR5XFTP62XgSiIGQvlnw%3D",
+    "prompt": "Processing flow diagram of pronunciation evaluation algorithm | Context: Detailed processing steps from voice input to evaluation result output"
+  },
+  "feedback-interface.jpg": {
+    "alt": {
+      "ja": "ユーザーフィードバック画面のインターフェース",
+      "en": "User feedback interface screen",
+      "zh-CN": "用户反馈界面屏幕",
+      "zh-TW": "用戶反饋介面螢幕"
+    },
+    "caption": {
+      "ja": "発音評価結果を視覚的に表示するユーザーインターフェース",
+      "en": "User interface that visually displays pronunciation evaluation results",
+      "zh-CN": "可视化显示发音评估结果的用户界面",
+      "zh-TW": "可視化顯示發音評估結果的用戶界面"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-aL5416cNxmQ33OrsCxCho9Nf.png?st=2025-07-11T02%3A21%3A23Z&se=2025-07-11T04%3A21%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-10T16%3A27%3A38Z&ske=2025-07-11T16%3A27%3A38Z&sks=b&skv=2024-08-04&sig=FPNcLS6S4flKZHcoGwGD%2BqCuee8/X1mHbH2TMobKD30%3D",
+    "prompt": "User feedback interface screen | Context: User interface that visually displays pronunciation evaluation results"
+  },
+  "social-features.jpg": {
+    "alt": {
+      "ja": "ソーシャル機能を含むアプリ画面",
+      "en": "App screen including social features",
+      "zh-CN": "包含社交功能的应用界面",
+      "zh-TW": "包含社交功能的應用介面"
+    },
+    "caption": {
+      "ja": "学習者同士の交流を促進するソーシャル機能の実装例",
+      "en": "Implementation example of social features that promote interaction among learners",
+      "zh-CN": "促进学习者之间交流的社交功能实现示例",
+      "zh-TW": "促進學習者之間交流的社交功能實現示例"
+    },
+    "source": "OpenAI DALL·E 3",
+    "dalle_url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-PCpWvkcDdLkCrH2j0RPPUX9R/user-JDBZlKyIHxN4aTsMUmS4xK3C/img-YLwWmmZe3rOhPI3QiTetg86O.png?st=2025-07-11T02%3A21%3A46Z&se=2025-07-11T04%3A21%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-11T03%3A21%3A46Z&ske=2025-07-12T03%3A21%3A46Z&sks=b&skv=2024-08-04&sig=isunoy%2B/1ov4xtYui97COQ%2B082DmiUja3JCz%2BR81t3g%3D",
+    "prompt": "App screen including social features | Context: Implementation example of social features that promote interaction among learners"
+  }
+}

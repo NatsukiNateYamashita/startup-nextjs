@@ -1,0 +1,13 @@
+{
+  "authorId": "nihongo-ai",
+  "tags": {
+    "ja": ["コンピュータ", "デザインスキル", "学習"],
+    "en": ["Computer", "Design Skills", "Learning"],
+    "zh-CN": ["计算机", "设计技能", "学习"],
+    "zh-TW": ["電腦", "設計技能", "學習"]
+  },
+  "publishDate": "2025-01-10T09:00:00.000Z",
+  "heroImage": "/images/blog/002-design-skills/hero.jpg",
+  "featured": false,
+  "relatedPosts": ["001-ui-components", "003-coding-tips"]
+}

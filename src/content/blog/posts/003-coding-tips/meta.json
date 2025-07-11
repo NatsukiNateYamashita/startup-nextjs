@@ -1,0 +1,48 @@
+{
+  "id": "003-coding-tips",
+  "slug": "coding-tips",
+  "authorId": "nihongo-ai",
+  "heroImage": "/images/blog/003-coding-tips/hero.jpg",
+  "tags": {
+    "ja": ["デザイン", "コーディング", "生産性"],
+    "en": ["design", "coding", "productivity"],
+    "zh-CN": ["设计", "编程", "生产力"],
+    "zh-TW": ["設計", "編程", "生產力"]
+  },
+  "publishDate": "2025-01-01T00:00:00Z",
+  "featured": false,
+  "status": "published",
+  "seoData": {
+    "metaTitle": {
+      "ja": "コーディングスピードを向上させる秘訣",
+      "en": "Tips to quickly improve your coding speed",
+      "zh-TW": "快速提升編程速度的技巧",
+      "zh-CN": "快速提升编程速度的技巧"
+    },
+    "metaDescription": {
+      "ja": "効率的なコーディングテクニックと開発スピードを向上させる実践的なアドバイス",
+      "en": "Practical advice for efficient coding techniques and improving development speed",
+      "zh-TW": "提高編程效率和開發速度的實用建議",
+      "zh-CN": "提高编程效率和开发速度的实用建议"
+    },
+    "keywords": ["coding", "programming", "productivity", "development", "tips"]
+  },
+  "images": [
+    {
+      "src": "/images/blog/003-coding-tips/hero.jpg",
+      "alt": {
+        "ja": "コーディングスピード向上のイメージ",
+        "en": "Coding speed improvement image",
+        "zh-TW": "提升編程速度的圖像",
+        "zh-CN": "提升编程速度的图像"
+      },
+      "caption": {
+        "ja": "効率的なコーディング環境",
+        "en": "Efficient coding environment",
+        "zh-TW": "高效的編程環境",
+        "zh-CN": "高效的编程环境"
+      }
+    }
+  ],
+  "relatedPosts": ["001-ui-components", "002-design-skills"]
+}

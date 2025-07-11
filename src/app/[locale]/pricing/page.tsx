@@ -26,7 +26,7 @@ const PricingPage = async ({ params }: Props) => {
   return (
     <>
       <Breadcrumb pageName="Pricing" description={t("description")} />
-\      <Pricing locale={locale} />
+      <Pricing locale={locale} />
     </>
   );
 };

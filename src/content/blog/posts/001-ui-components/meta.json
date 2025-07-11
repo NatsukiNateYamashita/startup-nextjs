@@ -1,0 +1,13 @@
+{
+  "authorId": "natsuki-yamashita",
+  "tags": {
+    "ja": ["創造的な", "UIコンポーネント", "デザイン"],
+    "en": ["Creative", "UI Components", "Design"],
+    "zh-CN": ["创意", "UI组件", "设计"],
+    "zh-TW": ["創意", "UI組件", "設計"]
+  },
+  "publishDate": "2025-01-15T09:00:00.000Z",
+  "heroImage": "/images/blog/001-ui-components/hero.jpg",
+  "featured": true,
+  "relatedPosts": ["002-design-skills", "003-coding-tips"]
+}

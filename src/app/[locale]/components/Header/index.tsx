@@ -29,7 +29,7 @@ const Header = () => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index) => {
+  const handleSubmenu = (index: number) => {
     if (openIndex === index) {
       setOpenIndex(-1);
     } else {
@@ -62,14 +62,16 @@ const Header = () => {
                   alt="logo"
                   width={140}
                   height={30}
-                  className="w-full dark:hidden"
+                  className="dark:hidden"
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
                   width={140}
                   height={30}
-                  className="hidden w-full dark:block"
+                  className="hidden dark:block"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </Link>
             </div>
@@ -142,9 +144,9 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
+                              {menuItem.submenu?.map((submenuItem, index) => (
                                 <Link
-                                  href={submenuItem.path}
+                                  href={submenuItem.path || "#"}
                                   key={index}
                                   className="text-body-color hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-body-color-dark/70 dark:hover:text-white"
                                 >

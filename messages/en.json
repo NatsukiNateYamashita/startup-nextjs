@@ -1,8 +1,31 @@
 {
+  "Compare": {
+    "title": "Article Comparison: {slug}",
+    "description": "Bilingual article comparison with sentence-level highlighting",
+    "selectLanguages": "Select languages",
+    "leftLanguage": "Left",
+    "rightLanguage": "Right",
+    "noCorrespondingSentence": "(No corresponding sentence)",
+    "languageLabels": {
+      "ja": "日本語",
+      "en": "English",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文"
+    },
+    "hoverToHighlight": "Hover over sentences to highlight corresponding sentences"
+  },
+  "CompareToggleButton": {
+    "tooltip": {
+      "title": "🔄 Compare View Feature",
+      "description": "Display articles in two languages side by side!",
+      "backToNormal": "Click this button again to return to normal view.",
+      "dontShowAgain": "Don't show again",
+      "close": "Close"
+    }
+  },
   "HomePage": {
     "title": "NIHONGO-AI. AI makes the world of Nihongo more interesting.",
-    "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture.",
-    "metaDescription": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
+    "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture."
   },
   "HeroPage": {
     "description": "To Japanese language learners, Japanese educators, and everyone who loves Japan. It is a new platform that transcends language barriers and leads you to the depths of culture.",
@@ -121,6 +144,38 @@
   "BlogPage": {
     "title": "Latest Blogs",
     "paragraph": "Check out our latest blogs.",
+    "search": {
+      "searchByKeyword": "Search by keyword",
+      "placeholder": "Search articles...",
+      "searchFor": "Searching for",
+      "searchQuery": "Search Query",
+      "noResults": "No search results found",
+      "searchResultsCount": "{count} articles found",
+      "showingResults": "Showing search results",
+      "clearSearch": "Clear search",
+      "clearButton": "Clear search",
+      "filteredByTags": "Filtered by tags",
+      "allPosts": "All {count} articles",
+      "noResultsWithFilters": "No articles found with current search criteria",
+      "noPostsAvailable": "No articles available",
+      "searchSuggestions": "Try changing your search keywords or adjusting filters"
+    },
+    "filter": {
+      "allTags": "All Tags",
+      "filterByTag": "Filter by tag",
+      "clearFilters": "Clear filters"
+    },
+    "sort": {
+      "sortBy": "Sort by",
+      "newest": "Newest first",
+      "oldest": "Oldest first",
+      "titleAsc": "Title (A-Z)",
+      "titleDesc": "Title (Z-A)",
+      "relevant": "Most relevant",
+      "relevance": "Most relevant",
+      "date": "Date",
+      "title": "Title"
+    },
     "blog1": {
       "title": "Best UI Components for Modern Websites",
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit sit amet dictum neque, laoreet dolor.",
@@ -152,6 +207,8 @@
     "metaDescription": "To Japanese language learners, Japanese educators, and everyone who loves Japan. Check out our latest blog posts."
   },
   "BlogDetailsPage": {
+    "by": "By",
+    "shareThisPost": "Share this post",
     "designTag": "design",
     "bodyParagraph1": "This is a detailed blog post.",
     "bodyParagraph2": "The article continues:",
