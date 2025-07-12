@@ -237,31 +237,35 @@
     "enterYourPasswordPlaceholder": "パスワードを入力します",
     "keepMeSignedIn": "ログインしたままにする",
     "forgotPassword": "パスワードをお忘れですか?",
-    "signInButton": "ログイン",
-    "noAccount": "アカウントをお持ちではありませんか?",
-    "signUpLink": "アカウント作成",
+    "signIn": "ログイン",
+    "dontHaveAccount": "アカウントをお持ちではありませんか?",
+    "signUp": "アカウント作成",
     "metaTitle": "ログイン | NIHONGO-AI",
     "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
   "SignupPage": {
     "title": "アカウント作成",
     "description": "簡単に無料でアカウントを作成できます",
-    "signupWithGoogle": "Google でサインアップ",
+    "signUpWithGoogle": "Google でサインアップ",
     "signupWithGithub": "Github でサインアップ",
-    "orRegisterWithEmail": "または、メールで登録してください",
-    "fullName": "フルネーム",
-    "enterFullNamePlaceholder": "フルネームを入力してください",
-    "workEmail": "仕事用メール",
-    "enterEmailPlaceholder": "メールアドレスを入力してください",
+    "orSignUpWithEmail": "または、メールで登録してください",
+    "yourName": "お名前",
+    "enterYourNamePlaceholder": "お名前を入力してください",
+    "yourEmail": "あなたのメール",
+    "enterYourEmailPlaceholder": "メールアドレスを入力してください",
     "yourPassword": "パスワード",
-    "enterPasswordPlaceholder": "パスワードを入力します",
-    "agreementPart1": "アカウントを作成することにより、お客様は以下に同意したことになります。",
-    "termsAndConditions": "規約と条件",
-    "agreementPart2": "および",
-    "privacyPolicy": "プライバシーポリシー",
-    "signUpButton": "サインアップ",
+    "enterYourPasswordPlaceholder": "パスワードを入力します",
+    "confirmPassword": "パスワード確認",
+    "confirmPasswordPlaceholder": "パスワードを再入力してください",
+    "yourAge": "年齢",
+    "optional": "任意",
+    "yourOrganization": "所属組織",
+    "organizationPlaceholder": "学校・会社名など",
+    "agreeToTerms": "利用規約に同意します",
+    "termsOfService": "利用規約",
+    "createAccount": "アカウント作成",
     "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
-    "signInLink": "ログイン",
+    "signIn": "ログイン",
     "metaTitle": "サインアップ | NIHONGO-AI",
     "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
@@ -283,9 +287,89 @@
       "submit": "サインアップ"
     }
   },
+  "Auth": {
+    "logout": "ログアウト",
+    "loggingOut": "ログアウト中...",
+    "logoutSuccess": "ログアウトしました",
+    "logoutError": "ログアウトに失敗しました"
+  },
   "ErrorPage": {
     "description": "ページが見つかりませんでした。",
-    "backToHomepage": "ホームに戻る"
+    "backToHomepage": "ホームに戻る",
+    "authError": "認証エラーが発生しました。",
+    "authErrorDescription": "サインインに失敗しました。もう一度お試しください。",
+    "accessDenied": "アクセスが拒否されました。",
+    "accessDeniedDescription": "このリソースにアクセスする権限がありません。"
+  },
+  "ProfileProgress": {
+    "title": "プロフィール完成度",
+    "remaining": "残り{count}項目で100%完成！",
+    "reward": "月額プランが10%オフになります",
+    "completed": "プロフィール完成！特典が適用されました",
+    "expand": "今すぐ完成させる",
+    "collapse": "閉じる"
+  },
+  "QuickProfile": {
+    "step": "ステップ {current} / {total}",
+    "skip": "スキップ",
+    "yes": "はい",
+    "no": "いいえ",
+    "questions": {
+      "role": {
+        "title": "あなたの立場を教えてください"
+      },
+      "japanese_language_level": {
+        "title": "日本語レベルはどのくらいですか？"
+      },
+      "is_educator": {
+        "title": "日本語教育に携わっていますか？"
+      },
+      "interests": {
+        "title": "最も興味がある機能は？（複数選択可）"
+      },
+      "goals": {
+        "title": "あなたの目標を教えてください"
+      },
+      "budget_range": {
+        "title": "ご予算はどのくらいですか？"
+      },
+      "age": {
+        "title": "年齢を教えてください（任意）"
+      },
+      "organization": {
+        "title": "所属組織を教えてください（任意）"
+      }
+    },
+    "options": {
+      "role": {
+        "japanese_teacher": "日本語教師",
+        "japanese_learner": "日本語学習者",
+        "school_staff": "学校関係者",
+        "engineer": "技術者",
+        "researcher": "研究者",
+        "other": "その他"
+      },
+      "japanese_level": {
+        "beginner": "初級（N5-N4）",
+        "elementary": "中級（N3）",
+        "intermediate": "中上級（N2）",
+        "advanced": "上級（N1）",
+        "super_advanced": "超上級",
+        "native": "ネイティブ"
+      },
+      "interests": {
+        "ai_article": "AI記事生成",
+        "material_creation": "教材作成",
+        "translation": "翻訳機能",
+        "community": "コミュニティ"
+      },
+      "budget": {
+        "free_only": "無料のみ",
+        "up_to_3000": "〜3,000円",
+        "up_to_10000": "〜10,000円",
+        "over_10000": "10,000円以上"
+      }
+    }
   },
   "Compare": {
     "title": "対訳表示: {slug}",
@@ -330,6 +414,30 @@
       "contact": "Contact",
       "termsOfUse": "利用規約",
       "about": "About"
+    }
+  },
+  "DashboardPage": {
+    "title": "ダッシュボード | NIHONGO-AI",
+    "description": "NIHONGO-AIダッシュボード",
+    "welcomeTitle": "🎉 ダッシュボード",
+    "welcomeMessage": "ようこそ、{name}さん！",
+    "loginSuccessMessage": "NIHONGO-AIにログインできました。認証機能が正常に動作しています！",
+    "accountInfo": {
+      "title": "アカウント情報",
+      "email": "メールアドレス",
+      "userId": "ユーザーID",
+      "currentPlan": "現在のプラン"
+    },
+    "upcomingFeatures": {
+      "title": "🚧 実装予定機能",
+      "profileManagement": "プロフィール管理",
+      "languageSkills": "言語スキル設定",
+      "subscriptionManagement": "サブスクリプション管理",
+      "usageHistory": "使用履歴確認",
+      "aiLearningTools": "AI学習ツール"
+    },
+    "developerInfo": {
+      "title": "🔧 開発者情報"
     }
   }
 }

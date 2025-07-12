@@ -18,9 +18,9 @@
 **NIHONGO-AI**は日本語学習者・教育者向けの**多言語対応Webアプリケーション**です。現在はNext.js 15ベースの高性能静的サイトとして完成し、将来のフル機能WebApp化を見据えた拡張可能な設計となっています。
 
 ### **ビジョン**
-- **現在**: 高品質な多言語対応静的サイト（マークダウンブログ・検索機能・画像最適化・左右対訳表示・DALL·E 3/Unsplash画像生成）
-- **近未来**: データベース統合による動的サイト（ブログCMS・お問い合わせ管理）
-- **将来**: フル機能WebApp（認証・課金・ダッシュボード・SaaS機能）
+- **現在**: 認証・プロフィール管理統合済み動的Webアプリ（マークダウンブログ・検索機能・画像最適化・左右対訳表示・DALL·E 3/Unsplash画像生成・Progressive Profile System）
+- **近未来**: 課金システム統合による SaaS 化（Stripe・プレミアム機能・使用量制限）
+- **将来**: フル機能AI教育プラットフォーム（分析ダッシュボード・企業向け機能・LINE/Instagram OAuth）
 
 ---
 
@@ -33,7 +33,11 @@
 - **✅ Phase 3**: 画像管理・最適化システム（2025年7月5日）
 - **✅ Phase 4**: 左右表示・対照翻訳機能・中国語対応完了（2025年7月8日）
 - **✅ 記事自動生成**: Claude API・DALL·E 3/Unsplash・翻訳システム（2025年7月7日）
-- **📋 詳細**: [ブログ要件定義](.github/BLOG_REQUIREMENTS.md) | [実装計画](.github/BLOG_IMPLEMENTATION_PLAN.md)
+
+### 🎉 **認証・プロフィール管理システム 完了 (Phase Auth-1&2)**
+- **✅ Auth Phase 1**: NextAuth.js v5・Google OAuth・JWT認証（2025年7月11日）
+- **✅ Auth Phase 2**: Progressive Gamified Profile Completion システム（2025年7月12日）
+- **📋 詳細**: [認証システム設計書](SYSTEM_DESIGN_for_auth.md)
 
 ### 🏆 **主要実装成果**
 - **マークダウンブログシステム**: 8記事×4言語（動的ルーティング・SEO最適化）
@@ -42,6 +46,8 @@
 - **画像管理システム**: WebP/AVIF最適化・遅延読み込み・多言語キャプション・70%サイズ削減
 - **対照翻訳システム**: `/compare/[slug]`による文単位左右表示・中国語完全対応・フォントサイズ調整機能
 - **記事自動生成システム**: Claude API・DALL·E 3/Unsplash画像・4言語翻訳・APIキー統一管理
+- **認証システム**: NextAuth.js v5・Google OAuth・メール認証・セッション管理
+- **プロフィール管理**: Progressive Gamified Completion・マーケティング属性収集・API統合
 - **完全多言語対応**: ja/en/zh-TW/zh-CN統一UX
 
 ### 🎯 **技術指標達成状況**
@@ -61,7 +67,7 @@
 > **⚙️ 実装詳細**: [GitHub Copilot開発指示書](.github/.copilot-instructions.md) を参照  
 > **📋 ブログ機能詳細**: [ブログ要件定義](.github/BLOG_REQUIREMENTS.md) | [実装計画](.github/BLOG_IMPLEMENTATION_PLAN.md)
 
-### **技術構成（2025年7月8日現在）**
+### **技術構成（2025年7月12日現在）**
 ```yaml
 # フロントエンド
 フレームワーク: Next.js 15.3.0 (App Router)
@@ -78,6 +84,14 @@ React: 19.1.0
 著者管理: 独立ファイル管理・AuthorId型安全参照
 左右対訳表示: 文単位ハイライト・センテンスタグ対応・フォントサイズ調整
 
+# 認証・プロフィール管理システム（実装済み）
+認証: NextAuth.js v5 + JWT + Google OAuth
+データベース: Supabase (PostgreSQL) + Prisma ORM v5.22.0
+バリデーション: Zod v3.23.8
+パスワードハッシュ: bcryptjs v2.4.3
+プロフィール管理: Progressive Gamified Completion System
+セッション管理: 30日有効期限 + 自動延長
+
 # 記事自動生成システム（実装済み）
 AI生成: Claude API・アイディア&記事生成
 画像生成: DALL·E 3/Unsplash API両対応
@@ -92,10 +106,9 @@ AI生成: Claude API・アイディア&記事生成
 ビルド状況: ✅ TypeScript・ESLintエラー0件
 
 # 将来予定技術
-データベース: Supabase (PostgreSQL) + Prisma ORM
-認証: NextAuth.js
 課金: Stripe
 テスト: Jest + Playwright
+追加OAuth: LINE, Instagram
 ```
 
 ### **アーキテクチャ設計原則**
@@ -151,17 +164,20 @@ AI生成: Claude API・アイディア&記事生成
 
 ## 🎯 **開発ロードマップ**
 
-### **📊 完成機能（Phase 1-4）**
+### **📊 完成機能（Phase 1-4 + Auth 1-2）**
 - **✅ Phase 1**: マークダウンブログ・動的ルーティング・SEO最適化
 - **✅ Phase 1.5**: 著者管理システム・独立ファイル・型安全参照
 - **✅ Phase 2**: Fuse.js検索・フィルタ・ソート・リアルタイムハイライト
 - **✅ Phase 3**: WebP/AVIF画像最適化・遅延読み込み・多言語対応
 - **✅ Phase 4**: 対照翻訳システム・左右表示・文単位ハイライト・中国語対応
 - **✅ 記事自動生成**: Claude API・DALL·E 3・翻訳・セキュリティ統合
+- **✅ Auth Phase 1**: NextAuth.js v5・Google OAuth・JWT認証・セッション管理
+- **✅ Auth Phase 2**: Progressive Gamified Profile Completion・マーケティング属性収集
 
 ### **🚀 今後の計画**
-- **Phase 5**: パフォーマンス最適化・UX向上（予定1週間）
-- **Phase 6**: データベース統合・動的サイト化（オプション）
+- **Phase 5**: Stripe課金システム統合（予定2週間）
+- **Phase 6**: 使用量制限・プレミアム機能・分析ダッシュボード（予定3週間）
+- **Phase 7**: LINE/Instagram OAuth・企業向け機能（将来）
 
 ### **📈 技術指標目標**
 - **パフォーマンス**: Core Web Vitals最適化・First Load JS < 150kB（現在達成中）
@@ -176,11 +192,14 @@ AI生成: Claude API・アイディア&記事生成
 ### **🔴 高優先度**
 - [x] **型安全性**: Props型定義完了・TypeScriptエラー0件達成
 - [x] **SEO**: ✅ サイトマップ自動生成完了（全言語・全ページ対応）
+- [x] **認証システム**: NextAuth.js v5統合・Google OAuth完了
+- [x] **プロフィール管理**: Progressive Completion システム完了
+- [ ] **課金システム**: Stripe統合・プレミアム機能実装
 - [ ] **アクセシビリティ**: WCAG 2.1 AA準拠強化
-- [ ] **SEO**: 構造化データ拡充
 
 ### **🟡 中優先度**  
 - [x] **パフォーマンス**: 画像遅延読み込み最適化完了
+- [ ] **データベース最適化**: クエリ効率化・インデックス最適化
 - [ ] **モバイルUX**: タッチ操作改善
 - [ ] **翻訳精度**: ネイティブチェック
 
@@ -195,12 +214,15 @@ AI生成: Claude API・アイディア&記事生成
 
 ### **プロジェクト内ドキュメント**
 - **[GitHub Copilot開発指示書](.github/.copilot-instructions.md)** - 実装ルール・コーディング規約
+- **[認証システム設計書](SYSTEM_DESIGN_for_auth.md)** - 認証・プロフィール管理・課金システム設計
 - **[ブログ要件定義](.github/BLOG_REQUIREMENTS.md)** - ブログ機能要件定義・実装状況
 - **[ブログ実装計画](.github/BLOG_IMPLEMENTATION_PLAN.md)** - Phase別実装計画・進捗管理
 - **[記事自動生成システム](utils/README.md)** - Python自動生成システムの使用方法
 
 ### **技術資料**
 - [Next.js 15 Documentation](https://nextjs.org/docs/app)
+- [NextAuth.js v5 Documentation](https://authjs.dev/)
+- [Prisma Documentation](https://www.prisma.io/docs)
 - [next-intl Documentation](https://next-intl-docs.vercel.app/)
 - [Fuse.js Documentation](https://fusejs.io/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -219,6 +241,8 @@ AI生成: Claude API・アイディア&記事生成
 | **2025-07-08** | **Phase 4完了・左右対訳表示・中国語対応実装完了反映** | システム |
 | **2025-07-08** | **ドキュメント整理・重複除去・役割明確化** | システム |
 | **2025-07-08** | **PHASE4_IMPLEMENTATION_PLAN.md削除（完了済み）** | システム |
+| **2025-07-11** | **Auth Phase 1完了・NextAuth.js v5・Google OAuth実装** | システム |
+| **2025-07-12** | **Auth Phase 2完了・Progressive Profile Completion実装完了** | システム |
 
 
 ---
@@ -232,11 +256,33 @@ startup-nextjs/
 │   ├── layout.tsx                # ルートレイアウト (Server)
 │   ├── page.tsx                  # ホームページ (Server)
 │   ├── components/               # UIコンポーネント群
+│   │   ├── Auth/                 # 認証関連コンポーネント
+│   │   │   ├── AuthProvider.tsx  # セッション管理プロバイダー
+│   │   │   ├── SignInClient.tsx  # サインインフォーム
+│   │   │   └── SignUpClient.tsx  # サインアップフォーム
+│   │   ├── Dashboard/            # ダッシュボード関連
+│   │   │   ├── ProfileProgress.tsx # プロフィール完成度バー
+│   │   │   └── QuickProfileForm.tsx # ステップ式プロフィール入力
 │   │   ├── CompareToggleButton/  # 対訳表示切り替えボタン（フォントサイズ調整付き）
 │   │   └── Blog/                 # ブログ関連コンポーネント
+│   ├── signin/page.tsx           # サインインページ
+│   ├── signup/page.tsx           # サインアップページ
+│   ├── dashboard/page.tsx        # 認証後ダッシュボード + プロフィール管理
 │   ├── blog/                     # ブログ関連ページ
 │   ├── compare/[slug]/           # 左右対訳表示ページ
 │   └── styles/                   # カスタムCSS・アニメーション
+├── 📁 src/lib/                   # ライブラリ・ユーティリティ
+│   ├── auth.ts                   # NextAuth.js設定
+│   ├── auth-utils.ts             # 認証ユーティリティ
+│   ├── blog/                     # ブログ機能ライブラリ
+│   └── constants/
+│       └── user-profile.ts       # プロフィール定数・計算ロジック
+├── 📁 src/app/api/               # API Routes
+│   ├── auth/                     # 認証API
+│   │   ├── [...nextauth]/route.ts # NextAuth.js API
+│   │   └── register/route.ts     # ユーザー登録API
+│   └── profile/
+│       └── update/route.ts       # プロフィール更新・取得API
 ├── 📁 src/content/               # コンテンツ管理
 │   ├── blog/posts/               # マークダウン記事（8記事×4言語）
 │   │   ├── 001-ui-components/    # UIコンポーネント記事
@@ -248,11 +294,13 @@ startup-nextjs/
 │   │   ├── 007/                  # 記事自動生成テスト記事
 │   │   └── 008/                  # 日本語入力システム記事
 │   └── authors/                  # 著者データ（独立ファイル管理）
-├── 📁 src/lib/blog/              # ブログ機能ライブラリ
 ├── 📁 messages/                  # 多言語翻訳ファイル（4言語対応）
+├── 📁 prisma/                    # データベース設定
+│   └── schema.prisma             # Prismaスキーマ（認証・プロフィール対応）
 ├── 📁 public/images/             # 静的画像アセット（WebP/AVIF最適化済み）
 ├── 📁 utils/                     # 記事自動生成システム（Python）
-└── 📁 .github/                   # 開発支援・ドキュメント・CI/CD
+├── 📁 .github/                   # 開発支援・ドキュメント・CI/CD
+└── 📁 middleware.ts              # 認証保護・国際化
 ```
 
 ### **コンポーネント分類（最適化済み）**

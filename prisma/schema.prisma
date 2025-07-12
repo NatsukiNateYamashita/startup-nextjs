@@ -1,0 +1,299 @@
+// 🚀 NIHONGO-AI 認証・課金システム Prismaスキーマ
+// 作成日: 2025-07-11
+// 説明: NextAuth.js v5 + Stripe統合対応のデータベーススキーマ
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ==========================================
+// NextAuth.js v5 標準テーブル
+// ==========================================
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model User {
+  id                   String   @id @default(cuid())
+  name                 String?
+  email                String   @unique
+  emailVerified        DateTime? @map("email_verified")
+  image                String?
+  password             String?  // ソーシャルログインのみの場合null
+  createdAt            DateTime @default(now()) @map("created_at")
+  updatedAt            DateTime @updatedAt @map("updated_at")
+
+  // プロフィール情報
+  age                  Int?
+  gender               Gender?
+  organization         String?
+  occupation           String?
+  location             String?  // 地域（国・都市）
+  timezone             String?  // タイムゾーン
+  
+  // 言語・教育関連情報
+  japanese_language_level Int?                    // 1,2,3,4,5,native(6)
+  is_educator            Boolean?
+  educate_experience     Int?                     // 年数
+  native_language        String?
+  available_languages    String[]                 // JSON配列
+  
+  // 日本語学習関連情報
+  learningGoals        String[] // 学習目標（複数選択可）
+  preferredLanguage    String   @default("ja") // UI表示言語
+  
+  // ユーザー属性（マーケティング用）
+  role                   String?                  // '日本語教師' | '日本語学習者' | '学校関係者' | '技術者' | '研究者' | 'その他'
+  experience             String?                  // '初心者' | '1-3年' | '3-10年' | '10年以上'
+  region                 String?                  // 自動検出 + 手動確認
+  
+  // 興味・ニーズ
+  interests              String[]                 // ['AI記事生成', '教材作成', '翻訳機能', 'コミュニティ']
+  pain_points            String[]                 // 現在の課題
+  goals                  String[]                 // 目標
+  
+  // 行動データ
+  device_type            String?                  // 'mobile' | 'tablet' | 'desktop'
+  access_pattern         String?                  // 'daily' | 'weekly' | 'occasional'
+  
+  // 商用分析
+  budget_range           String?                  // '無料のみ' | '〜3,000円' | '〜10,000円' | '10,000円以上'
+  decision_maker         Boolean?                 // 購入決定権の有無
+  
+  // プロフィール完成度管理
+  profile_completion     Int                      @default(20)  // 20% (基本情報のみ)
+  profile_last_updated   DateTime?
+  
+  // 使用状況追跡
+  lastLoginAt          DateTime? @map("last_login_at")
+  loginCount           Int      @default(0) @map("login_count")
+  
+  // Stripe顧客情報
+  stripeCustomerId     String?   @unique @map("stripe_customer_id")
+  stripeSubscriptionId String?   @unique @map("stripe_subscription_id")
+  currentPlan          Plan      @default(FREE) @map("current_plan")
+  subscriptionStatus   SubscriptionStatus? @map("subscription_status")
+  billingCycle         BillingCycle? @map("billing_cycle")
+  subscriptionEndsAt   DateTime? @map("subscription_ends_at")
+  trialEndsAt          DateTime? @map("trial_ends_at")
+
+  // リレーション
+  accounts         Account[]
+  sessions         Session[]
+  languageSkills   LanguageSkill[]
+  socialAccounts   SocialAccount[]
+  billingHistory   BillingHistory[]
+  planChangeHistory PlanChangeHistory[]
+  experimentTracking ExperimentTracking[]
+
+  @@map("users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verificationtokens")
+}
+
+// ==========================================
+// カスタムユーザーデータテーブル
+// ==========================================
+
+// 言語スキル（5段階評価）
+model LanguageSkill {
+  id                String @id @default(cuid())
+  userId            String @map("user_id")
+  language          String // 'japanese', 'english', 'chinese', etc.
+  skillType         String // 'speaking', 'listening', 'reading', 'writing'
+  level             Int    // 1-5のレベル
+  selfAssessment    String? // 自己評価コメント
+  lastAssessedAt    DateTime @default(now()) @map("last_assessed_at")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, language, skillType])
+  @@map("language_skills")
+}
+
+// ソーシャルアカウント連携情報
+model SocialAccount {
+  id                String @id @default(cuid())
+  userId            String @map("user_id")
+  provider          Provider
+  providerId        String @map("provider_id")
+  providerUsername  String? @map("provider_username")
+  profileUrl        String? @map("profile_url")
+  connectedAt       DateTime @default(now()) @map("connected_at")
+  lastSyncedAt      DateTime? @map("last_synced_at")
+  isActive          Boolean @default(true) @map("is_active")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, provider])
+  @@unique([provider, providerId])
+  @@map("social_accounts")
+}
+
+// ==========================================
+// 課金・支払い関連テーブル
+// ==========================================
+
+// 課金履歴（分析・サポート用）
+model BillingHistory {
+  id                        String @id @default(cuid())
+  userId                    String @map("user_id")
+  stripePaymentIntentId     String? @map("stripe_payment_intent_id")
+  stripeInvoiceId           String? @map("stripe_invoice_id")
+  amount                    Int    // セント単位
+  currency                  String @default("jpy")
+  plan                      Plan
+  billingCycle              BillingCycle?
+  paymentStatus             PaymentStatus
+  paymentMethod             String? // 'card', 'bank_transfer', etc.
+  failureReason             String? @map("failure_reason")
+  paidAt                    DateTime? @map("paid_at")
+  createdAt                 DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("billing_history")
+}
+
+// プラン変更履歴（マーケティング分析用）
+model PlanChangeHistory {
+  id                    String @id @default(cuid())
+  userId                String @map("user_id")
+  fromPlan              Plan? @map("from_plan") // 初回登録時はnull
+  toPlan                Plan @map("to_plan")
+  changeReason          ChangeReason @map("change_reason")
+  changeTrigger         ChangeTrigger @map("change_trigger")
+  effectiveDate         DateTime @map("effective_date")
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // マーケティング分析用
+  campaignSource        String? @map("campaign_source") // UTMパラメータ
+  discountApplied       String? @map("discount_applied") // 適用されたクーポン
+  customerLifetimeValue Decimal? @map("customer_lifetime_value") // CLV計算用
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("plan_change_history")
+}
+
+// A/Bテスト・実験追跡
+model ExperimentTracking {
+  id                String @id @default(cuid())
+  userId            String @map("user_id")
+  experimentName    String @map("experiment_name") // 'pricing_page_v2', 'onboarding_flow_a'
+  variant           String // 'control', 'treatment_a', 'treatment_b'
+  assignedAt        DateTime @default(now()) @map("assigned_at")
+  convertedAt       DateTime? @map("converted_at")
+  conversionValue   Decimal? @map("conversion_value") // 収益への影響
+  metadata          Json? // 実験固有のデータ
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, experimentName])
+  @@map("experiment_tracking")
+}
+
+// ==========================================
+// Enum定義
+// ==========================================
+
+enum Gender {
+  MALE
+  FEMALE
+  NON_BINARY
+  PREFER_NOT_TO_SAY
+}
+
+enum Provider {
+  GOOGLE
+  LINE
+  INSTAGRAM
+}
+
+enum Plan {
+  FREE
+  BASIC
+  PREMIUM
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  UNPAID
+  INCOMPLETE
+  INCOMPLETE_EXPIRED
+  TRIALING
+}
+
+enum BillingCycle {
+  MONTHLY
+  YEARLY
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  CANCELED
+  REFUNDED
+}
+
+enum ChangeReason {
+  UPGRADE
+  DOWNGRADE
+  CANCELED
+  REACTIVATED
+  TRIAL_ENDED
+}
+
+enum ChangeTrigger {
+  USER_INITIATED
+  AUTOMATIC
+  ADMIN_ACTION
+  EXPERIMENT
+  PROMOTION
+}

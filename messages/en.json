@@ -306,9 +306,89 @@
       "submit": "Sign up"
     }
   },
+  "Auth": {
+    "logout": "Logout",
+    "loggingOut": "Logging out...",
+    "logoutSuccess": "Successfully logged out",
+    "logoutError": "Failed to logout"
+  },
   "ErrorPage": {
     "description": "The page could not be found.",
-    "backToHomepage": "Back to Home"
+    "backToHomepage": "Back to Home",
+    "authError": "Authentication error occurred.",
+    "authErrorDescription": "Sign in failed. Please try again.",
+    "accessDenied": "Access denied.",
+    "accessDeniedDescription": "You don't have permission to access this resource."
+  },
+  "ProfileProgress": {
+    "title": "Profile Completion",
+    "remaining": "{count} more items to 100% completion!",
+    "reward": "Get 10% off monthly plans",
+    "completed": "Profile completed! Benefits applied",
+    "expand": "Complete now",
+    "collapse": "Collapse"
+  },
+  "QuickProfile": {
+    "step": "Step {current} / {total}",
+    "skip": "Skip",
+    "yes": "Yes",
+    "no": "No",
+    "questions": {
+      "role": {
+        "title": "What is your role?"
+      },
+      "japanese_language_level": {
+        "title": "What is your Japanese level?"
+      },
+      "is_educator": {
+        "title": "Are you involved in Japanese education?"
+      },
+      "interests": {
+        "title": "What features interest you most? (Multiple selection)"
+      },
+      "goals": {
+        "title": "What are your goals?"
+      },
+      "budget_range": {
+        "title": "What is your budget range?"
+      },
+      "age": {
+        "title": "What is your age? (Optional)"
+      },
+      "organization": {
+        "title": "What is your organization? (Optional)"
+      }
+    },
+    "options": {
+      "role": {
+        "japanese_teacher": "Japanese Language Teacher",
+        "japanese_learner": "Japanese Language Learner",
+        "school_staff": "Educational Institution Staff",
+        "engineer": "Engineer/Developer",
+        "researcher": "Researcher",
+        "other": "Other"
+      },
+      "japanese_level": {
+        "beginner": "Beginner (N5-N4)",
+        "elementary": "Elementary (N3)",
+        "intermediate": "Intermediate (N2)",
+        "advanced": "Advanced (N1)",
+        "super_advanced": "Super Advanced",
+        "native": "Native"
+      },
+      "interests": {
+        "ai_article": "AI Article Generation",
+        "material_creation": "Material Creation",
+        "translation": "Translation Function",
+        "community": "Community"
+      },
+      "budget": {
+        "free_only": "Free only",
+        "up_to_3000": "Up to ¥3,000",
+        "up_to_10000": "Up to ¥10,000",
+        "over_10000": "Over ¥10,000"
+      }
+    }
   },
   "Footer": {
     "description": "It is a new platform for Japanese language learners, Japanese educators, and everyone who loves Japan to overcome language barriers and lead you to the depths of culture.",
@@ -329,6 +409,30 @@
       "contact": "Contact",
       "termsOfUse": "Terms of Use",
       "about": "About"
+    }
+  },
+  "DashboardPage": {
+    "title": "Dashboard | NIHONGO-AI",
+    "description": "NIHONGO-AI Dashboard",
+    "welcomeTitle": "🎉 Dashboard",
+    "welcomeMessage": "Welcome, {name}!",
+    "loginSuccessMessage": "You have successfully logged into NIHONGO-AI. The authentication system is working properly!",
+    "accountInfo": {
+      "title": "Account Information",
+      "email": "Email Address",
+      "userId": "User ID",
+      "currentPlan": "Current Plan"
+    },
+    "upcomingFeatures": {
+      "title": "🚧 Upcoming Features",
+      "profileManagement": "Profile Management",
+      "languageSkills": "Language Skills Settings",
+      "subscriptionManagement": "Subscription Management",
+      "usageHistory": "Usage History",
+      "aiLearningTools": "AI Learning Tools"
+    },
+    "developerInfo": {
+      "title": "🔧 Developer Information"
     }
   }
 }

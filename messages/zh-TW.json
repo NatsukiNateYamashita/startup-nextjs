@@ -283,9 +283,19 @@
       "submit": "登記"
     }
   },
+  "Auth": {
+    "logout": "登出",
+    "loggingOut": "登出中...",
+    "logoutSuccess": "成功登出",
+    "logoutError": "登出失敗"
+  },
   "ErrorPage": {
     "description": "找不到該頁面。",
-    "backToHomepage": "返回首頁"
+    "backToHomepage": "返回首頁",
+    "authError": "身份驗證錯誤。",
+    "authErrorDescription": "登入失敗，請重試。",
+    "accessDenied": "存取被拒絕。",
+    "accessDeniedDescription": "您沒有存取此資源的權限。"
   },
   "Compare": {
     "title": "文章對比：{slug}",
@@ -330,6 +340,133 @@
       "contact": "聯繫",
       "termsOfUse": "使用條款",
       "about": "大約"
+    }
+  },
+  "DashboardPage": {
+    "title": "儀表板 | NIHONGO-AI",
+    "description": "NIHONGO-AI 儀表板",
+    "welcomeTitle": "🎉 儀表板",
+    "welcomeMessage": "歡迎，{name}！",
+    "loginSuccessMessage": "您已成功登入 NIHONGO-AI。身份驗證功能正常運作！",
+    "accountInfo": {
+      "title": "帳戶資訊",
+      "email": "電子郵件地址",
+      "userId": "用戶 ID",
+      "currentPlan": "目前計劃"
+    },
+    "upcomingFeatures": {
+      "title": "🚧 即將推出的功能",
+      "profileManagement": "個人資料管理",
+      "languageSkills": "語言技能設定",
+      "subscriptionManagement": "訂閱管理",
+      "usageHistory": "使用歷史",
+      "aiLearningTools": "AI 學習工具"
+    },
+    "developerInfo": {
+      "title": "🔧 開發者資訊"
+    }
+  },
+  "ProfileProgress": {
+    "title": "🎯 個人資料完成度",
+    "completionMessage": "完成度：{percentage}%",
+    "completeMessage": "太棒了！您的個人資料已完成！",
+    "incompleteMessage": "完善您的個人資料以獲得更好的推薦",
+    "nextStepsTitle": "建議的下一步",
+    "completeProfileButton": "完善個人資料"
+  },
+  "QuickProfileForm": {
+    "title": "📝 快速個人資料設定",
+    "stepTitle": "步驟 {step} / {total}",
+    "submitButton": "更新",
+    "nextButton": "下一步",
+    "skipButton": "跳過",
+    "doneButton": "完成",
+    "saving": "儲存中...",
+    "success": "已儲存！",
+    "error": "儲存失敗。請重試。",
+    "questions": {
+      "role": "您的角色是什麼？",
+      "experience": "您有多少年的經驗？",
+      "languageLevel": "您的日語水平如何？",
+      "interests": "您感興趣的領域是什麼？（可複選）",
+      "learningGoals": "您的學習目標是什麼？（可複選）",
+      "studyTime": "您每週能投入多少學習時間？",
+      "budget": "您的預算範圍是多少？",
+      "preferredStyle": "您喜歡什麼樣的學習風格？",
+      "motivation": "您學習日語的動機是什麼？",
+      "challenges": "您面臨什麼挑戰？（可複選）"
+    },
+    "options": {
+      "role": {
+        "japanese_teacher": "日語教師",
+        "japanese_learner": "日語學習者",
+        "school_staff": "學校相關人員",
+        "engineer": "工程師",
+        "researcher": "研究者",
+        "other": "其他"
+      },
+      "experience": {
+        "beginner": "初學者（0年）",
+        "one_to_three": "1-3年",
+        "three_to_ten": "3-10年",
+        "over_ten": "10年以上"
+      },
+      "japanese_level": {
+        "beginner": "初學者（N5-N4）",
+        "elementary": "初級（N4-N3）",
+        "intermediate": "中級（N3-N2）",
+        "advanced": "高級（N2-N1）",
+        "super_advanced": "超高級（N1+）",
+        "native": "母語水平"
+      },
+      "interests": {
+        "ai_article": "AI文章生成",
+        "material_creation": "教材製作",
+        "translation": "翻譯工具",
+        "community": "社群功能"
+      },
+      "learning_goals": {
+        "conversation": "對話能力提升",
+        "business": "商務日語",
+        "academic": "學術日語",
+        "jlpt": "JLPT考試",
+        "culture": "文化理解",
+        "teaching": "教學技能"
+      },
+      "study_time": {
+        "less_than_1": "少於1小時",
+        "one_to_three": "1-3小時",
+        "three_to_seven": "3-7小時",
+        "more_than_seven": "7小時以上"
+      },
+      "budget": {
+        "free_only": "僅免費",
+        "up_to_3000": "最多3,000日圓/月",
+        "up_to_10000": "最多10,000日圓/月",
+        "over_10000": "10,000日圓以上/月"
+      },
+      "preferred_style": {
+        "visual": "視覺學習",
+        "auditory": "聽覺學習",
+        "kinesthetic": "動手學習",
+        "reading": "閱讀學習"
+      },
+      "motivation": {
+        "career": "職業發展",
+        "hobby": "興趣愛好",
+        "travel": "旅行",
+        "culture": "文化興趣",
+        "family": "家庭原因",
+        "academic": "學術需求"
+      },
+      "challenges": {
+        "grammar": "語法",
+        "vocabulary": "詞彙",
+        "listening": "聽力",
+        "speaking": "口語",
+        "reading": "閱讀",
+        "writing": "寫作"
+      }
     }
   }
 }

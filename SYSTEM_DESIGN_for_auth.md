@@ -1,13 +1,147 @@
 # 🚀 認証・課金システム設計書
 
 > **📖 目的**: 日本語教育支援プラットフォームの認証・課金機能設計仕様  
-> **🎯 対象**: 開発チーム全体（フロントエンド・バックエンド・デザイナー）  
-> **🔄 最終更新**: 2025年7月11日  
+> **🎯 対---
+
+## 🚀 **次のステップ・設定ガイド**
+
+### 🔧 **1. Supabaseデータベース設定**
+```bash
+# 1. DATABASE_URLのパスワード設定
+# .env.localファイルの[PASSWORD]部分を実際のSupabaseパスワードに置換
+
+# 2. Prismaマイグレーション実行
+npx prisma db push
+
+# 3. データベース確認
+npx prisma studio
+```
+
+### 🎯 **2. 認証テスト手順**
+```bash
+# 1. 開発サーバー起動
+npm run dev
+
+# 2. テストアカウント作成
+# http://localhost:3000/ja/signup でアカウント作成
+
+# 3. サインイン確認
+# http://localhost:3000/ja/signin でログイン
+
+# 4. ダッシュボード確認
+# ログイン後 http://localhost:3000/ja/dashboard で認証状態確認
+```
+
+### 📱 **3. Google OAuth設定**
+- Google Cloud Console: OAuth 2.0クライアント設定
+- リダイレクトURI: `http://localhost:3000/api/auth/callback/google`
+- 本番環境: `https://your-domain.com/api/auth/callback/google`
+
+## 🔄 **4. 今後の実装予定**
+1. **Stripe課金システム統合** (Week 2)
+2. **LINE・Instagram OAuth追加** (将来)
+3. **Pricingページ課金統合** (Week 2)
+4. **使用状況分析・KPI追跡** (将来)
+
+---
+
+## 📋 **1. プロジェクト要件定義**: 開発チーム全体（フロントエンド・バックエンド・デザイナー）  
+> **🔄 最終更新**: 2025年7月12日 - Phase 2 プロフィール管理システム実装完了 ✅  
 > **📋 関連資料**: [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md)
 
 ---
 
-## 📋 **1. プロジェクト要件定義**
+## 📊 **実装進捗サマリー**
+
+### ✅ **Phase 1: 基本認証機能 (完了)**
+- **Prismaスキーマ設定**: NextAuth.js v5対応 + カスタムユーザーデータ
+- **NextAuth.js設定**: JWT + Google OAuth + メール・パスワード認証
+- **既存UI統合**: SignIn/SignUpページの機能統合完了
+- **API Route**: ユーザー登録API `/api/auth/register` 実装
+- **セッション管理**: AuthProvider + Middleware認証保護
+- **ダッシュボード**: 認証テスト用ページ実装
+- **ビルド**: TypeScriptエラー0件・ビルド成功 ✅
+
+### ✅ **Phase 2: プロフィール管理システム (完了)**
+- **Progressive Profile Completion**: ゲーミフィケーション型プロフィール完成システム
+- **マーケティング属性収集**: 役割、経験、言語レベル、興味、予算等の詳細データ
+- **API統合**: `/api/profile/update` CRUD操作・Zodバリデーション
+- **UI Components**: ProfileProgress・QuickProfileForm実装
+- **多言語対応**: 4言語完全対応（ja/en/zh-CN/zh-TW）
+- **UX最適化**: ステップバイステップ・成功アニメーション
+- **データベース統合**: Prisma schema拡張・型安全性確保
+
+### 🚧 **実装中・準備中**
+- **データベース接続**: Supabase環境設定（パスワード要設定）
+- **Stripe統合**: 課金システム実装
+- **LINE/Instagram OAuth**: 追加認証プロバイダー
+
+---
+
+## � **実装済み機能詳細**
+
+### 📁 **ファイル構成**
+```
+src/
+├── lib/
+│   ├── auth.ts                           # NextAuth.js設定
+│   ├── auth-utils.ts                     # 認証ユーティリティ
+│   └── constants/
+│       └── user-profile.ts               # プロフィール定数・計算ロジック
+├── app/[locale]/
+│   ├── components/Auth/
+│   │   ├── AuthProvider.tsx              # セッション管理プロバイダー
+│   │   ├── SignInClient.tsx              # サインインフォーム
+│   │   └── SignUpClient.tsx              # サインアップフォーム
+│   ├── components/Dashboard/
+│   │   ├── ProfileProgress.tsx           # プロフィール完成度バー
+│   │   └── QuickProfileForm.tsx          # ステップ式プロフィール入力
+│   ├── signin/page.tsx                   # サインインページ（既存UI統合）
+│   ├── signup/page.tsx                   # サインアップページ（既存UI統合）
+│   └── dashboard/page.tsx                # 認証後ダッシュボード + プロフィール管理
+├── api/auth/
+│   ├── [...nextauth]/route.ts            # NextAuth.js API
+│   └── register/route.ts                 # ユーザー登録API
+├── api/profile/
+│   └── update/route.ts                   # プロフィール更新・取得API
+├── middleware.ts                         # 認証保護・国際化
+└── prisma/schema.prisma                  # データベーススキーマ（拡張済み）
+```
+
+### 🔐 **認証フロー**
+1. **メール・パスワード認証**: bcryptjsでハッシュ化 + Zodバリデーション
+2. **Google OAuth**: 自動アカウント作成・プロフィール同期
+3. **セッション管理**: JWT + 30日有効期限
+4. **認証保護**: Middleware自動リダイレクト
+5. **プロフィール管理**: Progressive Completion + リアルタイム更新
+6. **既存UI活用**: 高品質デザインをそのまま活用
+
+### 🎯 **プロフィール完成システム**
+- **Progressive Disclosure**: 段階的情報開示・UX最適化
+- **Gamification**: 完成度バー・達成感・モチベーション向上
+- **Marketing Analytics**: ユーザー属性・行動データ・セグメンテーション
+- **Real-time Update**: API統合・即座反映・状態同期
+- **Multilingual**: 4言語完全対応・文化的適応
+
+### 📊 **データベース設計**
+- **NextAuth.js標準テーブル**: User, Account, Session, VerificationToken
+- **カスタムデータ**: LanguageSkill, SocialAccount, BillingHistory等
+- **マーケティング属性**: role, experience, interests, goals, budget_range等
+- **プロフィール管理**: profile_completion, profile_last_updated
+- **型安全性**: Prisma Client + TypeScript完全対応
+- **多言語対応**: 学習目標・言語スキル4言語対応
+
+### 🎨 **UI統合**
+- **既存デザイン保持**: 元の美しいUI/UXをそのまま活用
+- **インタラクティブ化**: フォーム送信・バリデーション・エラーハンドリング
+- **プロフィール管理UI**: Progressive・Gamified・Step-by-step
+- **アニメーション**: 成功表示・プログレスバー・ローディング
+- **多言語対応**: 翻訳キー更新・4言語完全対応
+- **レスポンシブ**: モバイル・タブレット・デスクトップ対応
+
+---
+
+## �📋 **1. プロジェクト要件定義**
 
 ### 1.1 プロジェクト概要
 ```yaml
