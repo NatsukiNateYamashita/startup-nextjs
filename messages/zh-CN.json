@@ -243,7 +243,8 @@
     "reward": "月费套餐享受10%优惠",
     "completed": "个人资料完成！特典已生效",
     "expand": "立即完成",
-    "collapse": "关闭"
+    "collapse": "关闭",
+    "remaining": "100% 完成，还剩下 {count} 个物品！"
   },
   "QuickProfile": {
     "skip": "跳过",
@@ -295,7 +296,8 @@
         "up_to_10000": "约10,000日元",
         "over_10000": "10,000日元以上"
       }
-    }
+    },
+    "step": "步骤 {当前} / {总计}"
   },
   "Compare": {
     "description": "双语文章对比，支持句子级高亮显示",

@@ -240,12 +240,14 @@
   },
   "ProfileProgress": {
     "title": "プロフィール完成度",
+    "remaining": "残り{count}項目で100%完成！",
     "reward": "月額プランが10%オフになります",
     "completed": "プロフィール完成！特典が適用されました",
     "expand": "今すぐ完成させる",
     "collapse": "閉じる"
   },
   "QuickProfile": {
+    "step": "ステップ {current} / {total}",
     "skip": "スキップ",
     "yes": "はい",
     "no": "いいえ",
