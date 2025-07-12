@@ -30,6 +30,71 @@ export const INTERESTS = {
 
 export type Interest = typeof INTERESTS[keyof typeof INTERESTS];
 
+// 母国語の選択肢
+export const NATIVE_LANGUAGES = {
+  JAPANESE: 'japanese',
+  ENGLISH: 'english',
+  CHINESE: 'chinese',
+  KOREAN: 'korean',
+  SPANISH: 'spanish',
+  FRENCH: 'french',
+  GERMAN: 'german',
+  THAI: 'thai',
+  VIETNAMESE: 'vietnamese',
+  PORTUGUESE: 'portuguese',
+  RUSSIAN: 'russian',
+  ARABIC: 'arabic',
+  OTHER: 'other'
+} as const;
+
+export type NativeLanguage = typeof NATIVE_LANGUAGES[keyof typeof NATIVE_LANGUAGES];
+
+// 話せる言語（複数選択可）
+export const AVAILABLE_LANGUAGES = {
+  JAPANESE: 'japanese',
+  ENGLISH: 'english', 
+  CHINESE: 'chinese',
+  KOREAN: 'korean',
+  SPANISH: 'spanish',
+  FRENCH: 'french',
+  GERMAN: 'german',
+  THAI: 'thai',
+  VIETNAMESE: 'vietnamese',
+  PORTUGUESE: 'portuguese',
+  RUSSIAN: 'russian',
+  ARABIC: 'arabic'
+} as const;
+
+export type AvailableLanguage = typeof AVAILABLE_LANGUAGES[keyof typeof AVAILABLE_LANGUAGES];
+
+// 現在の課題
+export const PAIN_POINTS = {
+  GRAMMAR_DIFFICULTY: 'grammar_difficulty',
+  VOCABULARY_SHORTAGE: 'vocabulary_shortage',
+  LISTENING_COMPREHENSION: 'listening_comprehension',
+  SPEAKING_CONFIDENCE: 'speaking_confidence',
+  CULTURAL_UNDERSTANDING: 'cultural_understanding',
+  LACK_OF_PRACTICE: 'lack_of_practice',
+  FINDING_MATERIALS: 'finding_materials',
+  TIME_MANAGEMENT: 'time_management'
+} as const;
+
+export type PainPoint = typeof PAIN_POINTS[keyof typeof PAIN_POINTS];
+
+// 学習目標
+export const LEARNING_GOALS = {
+  DAILY_CONVERSATION: 'daily_conversation',
+  BUSINESS_JAPANESE: 'business_japanese',
+  ACADEMIC_STUDY: 'academic_study',
+  TRAVEL_COMMUNICATION: 'travel_communication',
+  ANIME_UNDERSTANDING: 'anime_understanding',
+  JLPT_PREPARATION: 'jlpt_preparation',
+  CULTURAL_EXPLORATION: 'cultural_exploration',
+  TEACHING_PREPARATION: 'teaching_preparation'
+} as const;
+
+export type LearningGoal = typeof LEARNING_GOALS[keyof typeof LEARNING_GOALS];
+
 export const BUDGET_RANGES = {
   FREE_ONLY: 'free_only',
   UP_TO_3000: 'up_to_3000',
@@ -90,6 +155,59 @@ export const JAPANESE_LEVEL_TRANSLATION_KEYS = {
   [JAPANESE_LEVELS.NATIVE]: 'options.japanese_level.native'
 };
 
+export const NATIVE_LANGUAGE_TRANSLATION_KEYS = {
+  [NATIVE_LANGUAGES.JAPANESE]: 'options.native_language.japanese',
+  [NATIVE_LANGUAGES.ENGLISH]: 'options.native_language.english',
+  [NATIVE_LANGUAGES.CHINESE]: 'options.native_language.chinese',
+  [NATIVE_LANGUAGES.KOREAN]: 'options.native_language.korean',
+  [NATIVE_LANGUAGES.SPANISH]: 'options.native_language.spanish',
+  [NATIVE_LANGUAGES.FRENCH]: 'options.native_language.french',
+  [NATIVE_LANGUAGES.GERMAN]: 'options.native_language.german',
+  [NATIVE_LANGUAGES.THAI]: 'options.native_language.thai',
+  [NATIVE_LANGUAGES.VIETNAMESE]: 'options.native_language.vietnamese',
+  [NATIVE_LANGUAGES.PORTUGUESE]: 'options.native_language.portuguese',
+  [NATIVE_LANGUAGES.RUSSIAN]: 'options.native_language.russian',
+  [NATIVE_LANGUAGES.ARABIC]: 'options.native_language.arabic',
+  [NATIVE_LANGUAGES.OTHER]: 'options.native_language.other'
+};
+
+export const AVAILABLE_LANGUAGE_TRANSLATION_KEYS = {
+  [AVAILABLE_LANGUAGES.JAPANESE]: 'options.available_language.japanese',
+  [AVAILABLE_LANGUAGES.ENGLISH]: 'options.available_language.english',
+  [AVAILABLE_LANGUAGES.CHINESE]: 'options.available_language.chinese',
+  [AVAILABLE_LANGUAGES.KOREAN]: 'options.available_language.korean',
+  [AVAILABLE_LANGUAGES.SPANISH]: 'options.available_language.spanish',
+  [AVAILABLE_LANGUAGES.FRENCH]: 'options.available_language.french',
+  [AVAILABLE_LANGUAGES.GERMAN]: 'options.available_language.german',
+  [AVAILABLE_LANGUAGES.THAI]: 'options.available_language.thai',
+  [AVAILABLE_LANGUAGES.VIETNAMESE]: 'options.available_language.vietnamese',
+  [AVAILABLE_LANGUAGES.PORTUGUESE]: 'options.available_language.portuguese',
+  [AVAILABLE_LANGUAGES.RUSSIAN]: 'options.available_language.russian',
+  [AVAILABLE_LANGUAGES.ARABIC]: 'options.available_language.arabic'
+};
+
+export const PAIN_POINT_TRANSLATION_KEYS = {
+  [PAIN_POINTS.GRAMMAR_DIFFICULTY]: 'options.pain_points.grammar_difficulty',
+  [PAIN_POINTS.VOCABULARY_SHORTAGE]: 'options.pain_points.vocabulary_shortage', 
+  [PAIN_POINTS.LISTENING_COMPREHENSION]: 'options.pain_points.listening_comprehension',
+  [PAIN_POINTS.SPEAKING_CONFIDENCE]: 'options.pain_points.speaking_confidence',
+  [PAIN_POINTS.CULTURAL_UNDERSTANDING]: 'options.pain_points.cultural_understanding',
+  [PAIN_POINTS.LACK_OF_PRACTICE]: 'options.pain_points.lack_of_practice',
+  [PAIN_POINTS.FINDING_MATERIALS]: 'options.pain_points.finding_materials',
+  [PAIN_POINTS.TIME_MANAGEMENT]: 'options.pain_points.time_management'
+};
+
+export const LEARNING_GOAL_TRANSLATION_KEYS = {
+  [LEARNING_GOALS.DAILY_CONVERSATION]: 'options.learning_goals.daily_conversation',
+  [LEARNING_GOALS.BUSINESS_JAPANESE]: 'options.learning_goals.business_japanese',
+  [LEARNING_GOALS.ACADEMIC_STUDY]: 'options.learning_goals.academic_study',
+  [LEARNING_GOALS.TRAVEL_COMMUNICATION]: 'options.learning_goals.travel_communication',
+  [LEARNING_GOALS.ANIME_UNDERSTANDING]: 'options.learning_goals.anime_understanding',
+  [LEARNING_GOALS.JLPT_PREPARATION]: 'options.learning_goals.jlpt_preparation',
+  [LEARNING_GOALS.CULTURAL_EXPLORATION]: 'options.learning_goals.cultural_exploration',
+  [LEARNING_GOALS.TEACHING_PREPARATION]: 'options.learning_goals.teaching_preparation'
+};
+
 // プロフィール質問の定義
 export interface ProfileQuestion {
   field: string;
@@ -100,6 +218,7 @@ export interface ProfileQuestion {
 }
 
 export const PROFILE_QUESTIONS: ProfileQuestion[] = [
+  // 必須項目（優先度高）
   {
     field: 'role',
     type: 'select',
@@ -121,35 +240,80 @@ export const PROFILE_QUESTIONS: ProfileQuestion[] = [
     required: false
   },
   {
-    field: 'interests',
-    type: 'multiselect',
-    options: Object.values(INTERESTS),
-    weight: 15,
-    required: false
-  },
-  {
-    field: 'goals',
-    type: 'input',
-    weight: 10,
-    required: false
-  },
-  {
     field: 'budget_range',
     type: 'select',
     options: Object.values(BUDGET_RANGES),
     weight: 10,
     required: false
   },
+  
+  // 重要項目（優先度中）
   {
-    field: 'age',
+    field: 'experience',
+    type: 'select',
+    options: Object.values(EXPERIENCE_LEVELS),
+    weight: 8,
+    required: false
+  },
+  {
+    field: 'interests',
+    type: 'multiselect',
+    options: Object.values(INTERESTS),
+    weight: 8,
+    required: false
+  },
+  {
+    field: 'native_language',
+    type: 'select',
+    options: Object.values(NATIVE_LANGUAGES),
+    weight: 8,
+    required: false
+  },
+  {
+    field: 'learningGoals',  // Note: schema field name
+    type: 'multiselect',
+    options: Object.values(LEARNING_GOALS),
+    weight: 8,
+    required: false
+  },
+  {
+    field: 'decision_maker',
+    type: 'boolean',
+    weight: 5,
+    required: false
+  },
+  
+  // 任意項目（優先度低）
+  {
+    field: 'educate_experience',
     type: 'input',
     weight: 5,
     required: false
   },
   {
+    field: 'available_languages',
+    type: 'multiselect',
+    options: Object.values(AVAILABLE_LANGUAGES),
+    weight: 5,
+    required: false
+  },
+  {
+    field: 'pain_points',
+    type: 'multiselect',
+    options: Object.values(PAIN_POINTS),
+    weight: 5,
+    required: false
+  },
+  {
+    field: 'age',
+    type: 'input',
+    weight: 3,
+    required: false
+  },
+  {
     field: 'organization',
     type: 'input',
-    weight: 5,
+    weight: 3,
     required: false
   }
 ];

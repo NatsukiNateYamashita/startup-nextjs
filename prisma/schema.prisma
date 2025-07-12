@@ -47,68 +47,91 @@ model Session {
 }
 
 model User {
-  id                   String   @id @default(cuid())
-  name                 String?
-  email                String   @unique
-  emailVerified        DateTime? @map("email_verified")
-  image                String?
-  password             String?  // ソーシャルログインのみの場合null
-  createdAt            DateTime @default(now()) @map("created_at")
-  updatedAt            DateTime @updatedAt @map("updated_at")
+  // ==========================================
+  // NextAuth.js標準フィールド（認証時に自動収集）
+  // ==========================================
+  id                   String   @id @default(cuid())              // 自動生成
+  name                 String?                                      // 【Auth】OAuth・手動サインアップ時
+  email                String   @unique                            // 【Auth】OAuth・手動サインアップ時
+  emailVerified        DateTime? @map("email_verified")            // 【Auth】メール認証時
+  image                String?                                      // 【Auth】OAuth時のプロフィール画像
+  password             String?                                      // 【Auth】手動サインアップ時（ハッシュ化）
+  createdAt            DateTime @default(now()) @map("created_at") // 自動生成
+  updatedAt            DateTime @updatedAt @map("updated_at")      // 自動更新
 
-  // プロフィール情報
-  age                  Int?
-  gender               Gender?
-  organization         String?
-  occupation           String?
-  location             String?  // 地域（国・都市）
-  timezone             String?  // タイムゾーン
+  // ==========================================
+  // 基本プロフィール情報（Dashboard収集）
+  // ==========================================
+  age                  Int?                                        // 【Dashboard】任意入力
+  gender               Gender?                                     // 【Dashboard】任意選択
+  organization         String?                                     // 【Dashboard】任意入力（会社・学校名）
+  occupation           String?                                     // 【Dashboard】任意入力（職業）
+  location             String?                                     // 【Dashboard】手動選択 + IP自動検出補助
+  timezone             String?                                     // 【System】ブラウザ自動検出
   
-  // 言語・教育関連情報
-  japanese_language_level Int?                    // 1,2,3,4,5,native(6)
-  is_educator            Boolean?
-  educate_experience     Int?                     // 年数
-  native_language        String?
-  available_languages    String[]                 // JSON配列
+  // ==========================================
+  // 言語・教育情報（Dashboard収集 - 優先度高）
+  // ==========================================
+  japanese_language_level Int?                                    // 【Dashboard】必須選択 1-6 (N5〜ネイティブ)
+  is_educator            Boolean?                                 // 【Dashboard】必須Yes/No
+  educate_experience     Int?                                     // 【Dashboard】教育者の場合の年数
+  native_language        String?                                  // 【Dashboard】選択式
+  available_languages    String[]                                 // 【Dashboard】複数選択
   
-  // 日本語学習関連情報
-  learningGoals        String[] // 学習目標（複数選択可）
-  preferredLanguage    String   @default("ja") // UI表示言語
+  // ==========================================
+  // 学習・利用目的（Dashboard収集 - 優先度高）
+  // ==========================================
+  learningGoals        String[]                                   // 【Dashboard】複数選択（学習目標）
+  preferredLanguage    String   @default("ja")                   // 【System】初期値"ja"、設定で変更可
   
-  // ユーザー属性（マーケティング用）
-  role                   String?                  // '日本語教師' | '日本語学習者' | '学校関係者' | '技術者' | '研究者' | 'その他'
-  experience             String?                  // '初心者' | '1-3年' | '3-10年' | '10年以上'
-  region                 String?                  // 自動検出 + 手動確認
+  // ==========================================
+  // マーケティング属性（Dashboard収集 - 優先度高）
+  // ==========================================
+  role                   String?                                  // 【Dashboard】必須選択：teacher/learner/school/engineer/researcher/other
+  experience             String?                                  // 【Dashboard】選択：beginner/1-3years/3-10years/10years+
+  region                 String?                                  // 【Dashboard】手動確認 + IP自動検出
   
-  // 興味・ニーズ
-  interests              String[]                 // ['AI記事生成', '教材作成', '翻訳機能', 'コミュニティ']
-  pain_points            String[]                 // 現在の課題
-  goals                  String[]                 // 目標
+  // ==========================================
+  // 興味・ニーズ（Dashboard収集 - 優先度高）
+  // ==========================================
+  interests              String[]                                 // 【Dashboard】複数選択：ai_article/material_creation/translation/community
+  pain_points            String[]                                 // 【Dashboard】任意複数選択（現在の課題）
+  goals                  String[]                                 // 【Dashboard】複数選択（達成したい目標）
   
-  // 行動データ
-  device_type            String?                  // 'mobile' | 'tablet' | 'desktop'
-  access_pattern         String?                  // 'daily' | 'weekly' | 'occasional'
+  // ==========================================
+  // 行動データ（System自動収集）
+  // ==========================================
+  device_type            String?                                  // 【System】User-Agent自動検出
+  access_pattern         String?                                  // 【System】ログイン頻度から自動算出
   
-  // 商用分析
-  budget_range           String?                  // '無料のみ' | '〜3,000円' | '〜10,000円' | '10,000円以上'
-  decision_maker         Boolean?                 // 購入決定権の有無
+  // ==========================================
+  // 商用分析（Dashboard収集 - 優先度高）
+  // ==========================================
+  budget_range           String?                                  // 【Dashboard】必須選択：free_only/up_to_3000/up_to_10000/over_10000
+  decision_maker         Boolean?                                 // 【Dashboard】Yes/No（購入決定権）
   
-  // プロフィール完成度管理
-  profile_completion     Int                      @default(20)  // 20% (基本情報のみ)
-  profile_last_updated   DateTime?
+  // ==========================================
+  // プロフィール完成度管理（System自動計算）
+  // ==========================================
+  profile_completion     Int                      @default(20)  // 【System】自動計算：20%(Auth) -> 100%(全項目完了)
+  profile_last_updated   DateTime?                              // 【System】プロフィール更新時の自動記録
   
-  // 使用状況追跡
-  lastLoginAt          DateTime? @map("last_login_at")
-  loginCount           Int      @default(0) @map("login_count")
+  // ==========================================
+  // 使用状況追跡（System自動収集）
+  // ==========================================
+  lastLoginAt          DateTime? @map("last_login_at")          // 【System】ログイン時自動更新
+  loginCount           Int      @default(0) @map("login_count") // 【System】ログイン時自動インクリメント
   
-  // Stripe顧客情報
-  stripeCustomerId     String?   @unique @map("stripe_customer_id")
-  stripeSubscriptionId String?   @unique @map("stripe_subscription_id")
-  currentPlan          Plan      @default(FREE) @map("current_plan")
-  subscriptionStatus   SubscriptionStatus? @map("subscription_status")
-  billingCycle         BillingCycle? @map("billing_cycle")
-  subscriptionEndsAt   DateTime? @map("subscription_ends_at")
-  trialEndsAt          DateTime? @map("trial_ends_at")
+  // ==========================================
+  // Stripe課金情報（System自動管理）
+  // ==========================================
+  stripeCustomerId     String?   @unique @map("stripe_customer_id")     // 【System】Stripe連携時自動設定
+  stripeSubscriptionId String?   @unique @map("stripe_subscription_id") // 【System】サブスク開始時自動設定
+  currentPlan          Plan      @default(FREE) @map("current_plan")    // 【System】プラン変更時自動更新
+  subscriptionStatus   SubscriptionStatus? @map("subscription_status") // 【System】Stripe Webhook自動更新
+  billingCycle         BillingCycle? @map("billing_cycle")              // 【System】プラン選択時設定
+  subscriptionEndsAt   DateTime? @map("subscription_ends_at")           // 【System】サブスク管理自動計算
+  trialEndsAt          DateTime? @map("trial_ends_at")                  // 【System】トライアル開始時自動設定
 
   // リレーション
   accounts         Account[]

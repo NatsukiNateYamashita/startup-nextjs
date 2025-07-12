@@ -1,7 +1,5 @@
 {
   "HomePage": {
-    "title": "NIHONGO-AI. AI makes the world of Nihongo more interesting.",
-    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
   },
   "HeroPage": {
@@ -10,19 +8,15 @@
     "checkWebappButton": "ウェブアプリを使ってみる"
   },
   "FeaturesPage": {
-    "paragraph": "主な機能と特徴",
-    "feature1Title": "AI搭載ウェブアプリケーション",
-    "feature1Paragraph": "学びをもっと自由に、もっと賢く。あなたの目的やレベルに合わせて、パーソナライズ。AIがスマートにあなたをサポートします。（学習者、教育者、教育機関向け機能を続々実装予定）",
-    "feature2Title": "専門家が届けるブログ",
-    "feature2Paragraph": "「リアルな日本語」と「生きた日本文化」を深掘り。学習者向けの楽しい知識から、教育者向けの専門的な考察まで、ここでしか読めない情報が満載です。日本語教材としても最適です。（各種便利機能続々実装予定）",
-    "feature3Title": "「あったらいいな」を実現",
-    "feature3Paragraph": "開発者がユーザーの皆様からのご感想ご要望を直接受け付けます。皆様の声が、NIHONGO-AIの進化を加速させます。共に、より良いプラットフォームを創り上げましょう。"
+    "paragraph": "主な機能と特徴"
   },
   "VideoPage": {
     "paragraph": "IT苦手でも問題なし! ビデオを見ながら使ってみましょう!"
   },
   "AboutPage": {
     "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
+    "metaTitle": "About | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "sectionOne": {
       "title": "現代の日本語 x 最先端技術",
       "paragraph": "日本語学習が、日本を丸ごと楽しむことに繋がる。日本語を教えることが、日本を丸ごと世界に伝えることに繋がる。そんな体験を提供します。",
@@ -54,18 +48,8 @@
       }
     },
     "sectionDeveloper": {
-      "paragraph": "当サイトの開発者詳細",
-      "developer1Title": "日本語教育教育者",
-      "developer1Paragraph": "日本語教師資格を取得し、日本語学校および進学塾で外国人に対する日本語教育の経験あり",
-      "developer2Title": "日本文化伝道者",
-      "developer2Paragraph": "埼玉親善大使、人力車夫として、日本文化の魅力を伝えることに情熱を注いだ経験あり",
-      "developer3Title": "AI（自然言語処理）専門家",
-      "developer3Paragraph": "情報工学大学院で自然言語処理を専攻し、AI技術を駆使して、データサイエンティストとして就業",
-      "developer4Title": "多言語話者",
-      "developer4Paragraph": "日本語は母語。英語、中国語はビジネスレベル。韓国語、台湾語は日常会話レベル。外国語学習の楽しさと難しさの体感者"
-    },
-    "metaTitle": "About | NIHONGO-AI",
-    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
+      "paragraph": "当サイトの開発者詳細"
+    }
   },
   "TestimonialsPage": {
     "title": "ユーザーの声",
@@ -90,6 +74,8 @@
     "title": "シンプルでお手頃価格",
     "description": "シンプルでお手頃な価格設定を準備中です。現在は全てのサービスを無料で使えます。",
     "paragraph": "シンプルでお手頃な価格設定を準備中です。現在は全てのサービスを無料で使えます。",
+    "metaTitle": "価格 | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "monthly": "月額",
     "yearly": "年額",
     "plans": {
@@ -113,96 +99,44 @@
       "email": "メールサポート",
       "lifetime": "ライフタイムアクセス",
       "updates": "無料のライフタイムアップデート"
-    },
-    "startTrial": "無料トライアルを開始",
-    "metaTitle": "価格 | NIHONGO-AI",
-    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
+    }
   },
   "BlogPage": {
     "title": "最新のブログ",
+    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。最新のブログ記事をご覧ください。",
     "paragraph": "最新のブログをご覧ください。",
     "search": {
       "searchByKeyword": "キーワードで検索",
       "placeholder": "記事を検索...",
+      "noResults": "検索結果がありません",
+      "noResultsWithFilters": "現在の検索条件では記事が見つかりませんでした",
       "searchFor": "検索中",
       "searchQuery": "検索キーワード",
-      "noResults": "検索結果がありません",
-      "searchResultsCount": "{count}件の記事が見つかりました",
-      "showingResults": "検索結果を表示中",
-      "clearSearch": "検索をクリア",
       "clearButton": "検索をクリア",
-      "filteredByTags": "タグ絞り込み",
-      "allPosts": "全{count}件の記事",
-      "noResultsWithFilters": "現在の検索条件では記事が見つかりませんでした",
       "noPostsAvailable": "表示可能な記事がありません",
       "searchSuggestions": "検索キーワードを変更するか、フィルタを調整してください"
     },
     "filter": {
       "allTags": "すべてのタグ",
       "filterByTag": "タグで絞り込み",
-      "clearFilters": "フィルタをクリア"
+      "clearFilters": "フィルタをクリア",
+      "noTags": "タグがありません"
     },
     "sort": {
       "sortBy": "並び替え",
-      "newest": "新しい順",
-      "oldest": "古い順",
-      "titleAsc": "タイトル（昇順）",
-      "titleDesc": "タイトル（降順）",
-      "relevant": "関連度順",
       "relevance": "関連度順",
       "date": "日付順",
       "title": "タイトル順"
-    },
-    "blog1": {
-      "title": "最新のWebサイトに最適なUIコンポーネント",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
-      "author": "サミュエル・ジョシ",
-      "designation": "グラフィックデザイナー",
-      "tag": "創造的な",
-      "date": "2025"
-    },
-    "blog2": {
-      "title": "デザインスキルを向上させる9つの簡単な方法",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
-      "author": "ムシャロフ・チー",
-      "designation": "コンテンツライター",
-      "tag": "コンピュータ",
-      "date": "2025"
-    },
-    "blog3": {
-      "title": "コーディング速度をすばやく向上させるためのヒント。",
-      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras sit sit amet dictum neque, laoreet dolor.",
-      "author": "レシウム・デオ",
-      "designation": "グラフィックデザイナー",
-      "tag": "設計",
-      "date": "2025"
-    },
-    "by": "によって",
-    "date": "日付",
-    "description": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。最新のブログ記事をご覧ください。",
-    "metaTitle": "ブログ | NIHONGO-AI",
-    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ。最新のブログ記事をチェックしてください。"
+    }
   },
   "BlogDetailsPage": {
     "by": "著者",
-    "shareThisPost": "この記事をシェア",
-    "designTag": "設計",
-    "bodyParagraph1": "これは詳細なブログ記事です。",
-    "bodyParagraph2": "記事は続きます。",
-    "bodyParagraph3": "より多くのコンテンツ。",
-    "bodyParagraph4": "最後の段落。",
-    "subtitle": "字幕",
-    "listItem1": "リスト項目 1",
-    "listItem2": "リスト項目 2",
-    "listItem3": "リスト項目3",
-    "listItem4": "リスト項目4",
-    "quote": "これは引用です。",
-    "malesuada": "重要なコンテンツ",
-    "ametDictum": "強調されたコンテンツ",
-    "description": "これは詳細なブログ記事です。"
+    "shareThisPost": "この記事をシェア"
   },
   "ContactPage": {
     "description": "以下フォームよりお気軽にご連絡ください。カジュアルなコミュニケーションは、本ページ下部左側の各種SNSアイコンからも可能です。",
+    "metaTitle": "Contact | NIHONGO-AI",
+    "metaDescription": "これはスタートアップNextjsテンプレートのコンタクト",
     "title": "さらにお手伝いできることはありますか？",
     "paragraph": "開発者へお気軽にご連絡ください。メールアドレスを間違えますと、返信が届きませんのでご注意ください。",
     "form": {
@@ -221,15 +155,14 @@
       "emailPlaceholder": "メールアドレスを入力してください",
       "subscribe": "購読する",
       "noSpam": "当サイトは、個人開発のため、本当に必要な人だけ購読いただけますと幸いです。"
-    },
-    "metaTitle": "Contact | NIHONGO-AI",
-    "metaDescription": "これはスタートアップNextjsテンプレートのコンタクト"
+    }
   },
   "SigninPage": {
     "title": "ログイン",
     "description": "アカウントにログインする。",
+    "metaTitle": "ログイン | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "signInWithGoogle": "Google でログイン",
-    "signInWithGithub": "Github でログイン",
     "orSignInWithEmail": "または、メールアドレスでログインします",
     "yourEmail": "あなたのメール",
     "enterYourEmailPlaceholder": "メールアドレスを入力してください",
@@ -239,15 +172,14 @@
     "forgotPassword": "パスワードをお忘れですか?",
     "signIn": "ログイン",
     "dontHaveAccount": "アカウントをお持ちではありませんか?",
-    "signUp": "アカウント作成",
-    "metaTitle": "ログイン | NIHONGO-AI",
-    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
+    "signUp": "アカウント作成"
   },
   "SignupPage": {
     "title": "アカウント作成",
     "description": "簡単に無料でアカウントを作成できます",
+    "metaTitle": "サインアップ | NIHONGO-AI",
+    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。",
     "signUpWithGoogle": "Google でサインアップ",
-    "signupWithGithub": "Github でサインアップ",
     "orSignUpWithEmail": "または、メールで登録してください",
     "yourName": "お名前",
     "enterYourNamePlaceholder": "お名前を入力してください",
@@ -258,59 +190,62 @@
     "confirmPassword": "パスワード確認",
     "confirmPasswordPlaceholder": "パスワードを再入力してください",
     "yourAge": "年齢",
-    "optional": "任意",
     "yourOrganization": "所属組織",
-    "organizationPlaceholder": "学校・会社名など",
+    "organizationPlaceholder": "例：株式会社○○、○○大学など",
+    "optional": "任意",
     "agreeToTerms": "利用規約に同意します",
     "termsOfService": "利用規約",
     "createAccount": "アカウント作成",
     "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
-    "signIn": "ログイン",
-    "metaTitle": "サインアップ | NIHONGO-AI",
-    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
-  },
-  "Error": {
-    "title": "申し訳ありませんが、ページが見つかりません",
-    "description": "探していたページが移動、削除された、または存在しないようです。",
-    "backToHomepage": "ホームページに戻る",
-    "metaTitle": "エラー | NIHONGO-AI",
-    "metaDescription": "日本語学習者、日本語教育者、そして日本を愛するすべての人へ言葉の壁を越え、文化の深みへとあなたを導く、新しいプラットフォームです。"
-  },
-  "SignUpPage": {
-    "title": "サインアップ",
-    "paragraph": "新しいアカウントを作成します。",
-    "form": {
-      "name": "名前",
-      "email": "電子メール",
-      "password": "パスワード",
-      "confirmPassword": "パスワードの確認",
-      "submit": "サインアップ"
-    }
-  },
-  "Auth": {
-    "logout": "ログアウト",
-    "loggingOut": "ログアウト中...",
-    "logoutSuccess": "ログアウトしました",
-    "logoutError": "ログアウトに失敗しました"
+    "signIn": "ログイン"
   },
   "ErrorPage": {
-    "description": "ページが見つかりませんでした。",
-    "backToHomepage": "ホームに戻る",
     "authError": "認証エラーが発生しました。",
     "authErrorDescription": "サインインに失敗しました。もう一度お試しください。",
     "accessDenied": "アクセスが拒否されました。",
-    "accessDeniedDescription": "このリソースにアクセスする権限がありません。"
+    "accessDeniedDescription": "このリソースにアクセスする権限がありません。",
+    "description": "ページが見つかりませんでした。",
+    "backToHomepage": "ホームに戻る"
+  },
+  "Error": {
+    "description": "探していたページが移動、削除された、または存在しないようです。",
+    "backToHomepage": "ホームページに戻る"
+  },
+  "Auth": {
+    "logout": "ログアウト"
+  },
+  "DashboardPage": {
+    "title": "ダッシュボード | NIHONGO-AI",
+    "description": "NIHONGO-AIダッシュボード",
+    "welcomeTitle": "🎉 ダッシュボード",
+    "welcomeMessage": "ようこそ、{name}さん！",
+    "loginSuccessMessage": "NIHONGO-AIにログインできました。認証機能が正常に動作しています！",
+    "accountInfo": {
+      "title": "アカウント情報",
+      "email": "メールアドレス",
+      "userId": "ユーザーID",
+      "currentPlan": "現在のプラン"
+    },
+    "upcomingFeatures": {
+      "title": "🚧 実装予定機能",
+      "profileManagement": "プロフィール管理",
+      "languageSkills": "言語スキル設定",
+      "subscriptionManagement": "サブスクリプション管理",
+      "usageHistory": "使用履歴確認",
+      "aiLearningTools": "AI学習ツール"
+    },
+    "developerInfo": {
+      "title": "🔧 開発者情報"
+    }
   },
   "ProfileProgress": {
     "title": "プロフィール完成度",
-    "remaining": "残り{count}項目で100%完成！",
     "reward": "月額プランが10%オフになります",
     "completed": "プロフィール完成！特典が適用されました",
     "expand": "今すぐ完成させる",
     "collapse": "閉じる"
   },
   "QuickProfile": {
-    "step": "ステップ {current} / {total}",
     "skip": "スキップ",
     "yes": "はい",
     "no": "いいえ",
@@ -327,17 +262,8 @@
       "interests": {
         "title": "最も興味がある機能は？（複数選択可）"
       },
-      "goals": {
-        "title": "あなたの目標を教えてください"
-      },
       "budget_range": {
         "title": "ご予算はどのくらいですか？"
-      },
-      "age": {
-        "title": "年齢を教えてください（任意）"
-      },
-      "organization": {
-        "title": "所属組織を教えてください（任意）"
       }
     },
     "options": {
@@ -350,12 +276,12 @@
         "other": "その他"
       },
       "japanese_level": {
-        "beginner": "初級（N5-N4）",
-        "elementary": "中級（N3）",
-        "intermediate": "中上級（N2）",
-        "advanced": "上級（N1）",
-        "super_advanced": "超上級",
-        "native": "ネイティブ"
+        "1": "初級（N5-N4）",
+        "2": "中級（N3）",
+        "3": "中上級（N2）",
+        "4": "上級（N1）",
+        "5": "超上級",
+        "6": "ネイティブ"
       },
       "interests": {
         "ai_article": "AI記事生成",
@@ -372,9 +298,7 @@
     }
   },
   "Compare": {
-    "title": "対訳表示: {slug}",
     "description": "記事の対訳表示・文単位ハイライト機能",
-    "selectLanguages": "言語を選択してください",
     "leftLanguage": "左",
     "rightLanguage": "右",
     "noCorrespondingSentence": "（対応文なし）",
@@ -383,8 +307,7 @@
       "en": "English",
       "zh-CN": "简体中文",
       "zh-TW": "繁體中文"
-    },
-    "hoverToHighlight": "文にマウスを乗せると対応する文がハイライトされます"
+    }
   },
   "CompareToggleButton": {
     "tooltip": {
@@ -414,30 +337,6 @@
       "contact": "Contact",
       "termsOfUse": "利用規約",
       "about": "About"
-    }
-  },
-  "DashboardPage": {
-    "title": "ダッシュボード | NIHONGO-AI",
-    "description": "NIHONGO-AIダッシュボード",
-    "welcomeTitle": "🎉 ダッシュボード",
-    "welcomeMessage": "ようこそ、{name}さん！",
-    "loginSuccessMessage": "NIHONGO-AIにログインできました。認証機能が正常に動作しています！",
-    "accountInfo": {
-      "title": "アカウント情報",
-      "email": "メールアドレス",
-      "userId": "ユーザーID",
-      "currentPlan": "現在のプラン"
-    },
-    "upcomingFeatures": {
-      "title": "🚧 実装予定機能",
-      "profileManagement": "プロフィール管理",
-      "languageSkills": "言語スキル設定",
-      "subscriptionManagement": "サブスクリプション管理",
-      "usageHistory": "使用履歴確認",
-      "aiLearningTools": "AI学習ツール"
-    },
-    "developerInfo": {
-      "title": "🔧 開発者情報"
     }
   }
 }
